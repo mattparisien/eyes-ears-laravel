@@ -5,27 +5,12 @@ tree:
   -
     id: e10c58d6-e26f-441c-98ab-f893fff26a4f
     title: About
-    url: '/#about'
+    url: /about
   -
-    id: a1ab4ee7-f5fb-4d8b-b201-b2272a004973
-    title: Products
-    url: '/#products'
+    id: 2a36862e-d2d9-4175-be83-39d604c4d3e6
+    title: Projects
+    url: /projects
   -
-    id: e5d4cccf-495e-45c3-900e-8d8d05be9782
-    title: Pricing
-    url: /pricing-section
-  -
-    id: 171818eb-6dc8-40d1-ae97-4af96bffdf81
-    title: Blog
-    url: /posts
-  -
-    id: 6e88bdb9-88e2-4130-9def-3cabb0d12da6
-    title: Jobs
-    url: '/#jobs'
-  -
-    id: 9c30c0a4-e5c1-4350-80f8-60e0cf4037d5
-    title: More
-    url: '/#more'
-    data:
-      toggle_button: false
-      target_blank: true
+    id: cb9e86fb-2246-46be-95ea-644dfcf0bc69
+    title: Press
+    url: /press

@@ -1,13 +1,13 @@
 title: Theme
 data:
-  logo_normal: images/Dark.svg
-  logo_dark: images/Light.svg
-  logo_mark: images/White.svg
-  logo_position: left
-  menu_position: left
+  logo_normal: images/ee-header-logo.svg
+  logo_dark: header-logo-light-01.svg
+  logo_position: center
+  menu_position: right
   show_links: true
   links:
     -
+      id: 6b8S6zKR
       toggle: true
       label: Login
       link: 'https://www.google.com/'
@@ -17,6 +17,7 @@ data:
       type: button
       enabled: true
     -
+      id: 4NPZeGXS
       toggle: true
       label: Register
       link: 'https://www.google.com/'
@@ -26,54 +27,52 @@ data:
       type: button
       enabled: true
     -
-      image: apple-store.png
-      aria_label: 'Apple Store Link'
-      link: 'https://www.apple.com'
-      type: image_link
-      enabled: false
-    -
-      image: play-store.png
-      aria_label: 'Play Store'
-      link: 'https://www.google.com'
-      type: image_link
-      enabled: false
-    -
+      id: dmEgIZss
       toggle_social: true
       social_title: 'Social Media'
       social:
         -
+          id: ard28Ul4
           title: Twitter
           url: www.twitter.com
           icon: social/twitter-1641400598.svg
         -
+          id: duqzCwL0
           title: Facebook
           url: www.facebook.com
           icon: social/facebook-1641400589.svg
         -
+          id: ibZuitLH
           title: Dribble
           url: www.dribbble.com
           icon: social/dribbble-1641400584.svg
         -
+          id: h1Bz7VHL
           title: Instagram
           url: www.instagram.com
           icon: social/Instagram-1641400598.svg
         -
+          id: fjDAo1ts
           title: Behance
           url: www.behance.com
           icon: social/behance-1641400629.svg
         -
+          id: LqPrpMdk
           title: Github
           url: www.github.com
           icon: social/github-1641400598.svg
         -
+          id: 0RxP1Wxo
           title: Linkedin
           url: www.linkedin.com
           icon: social/linkedIn-1641400598.svg
         -
+          id: d5BVNT3o
           title: Pinterest
           url: www.pinterest.com
           icon: social/pinterest-1641400598.svg
         -
+          id: hVzGZKKR
           title: Youtube
           url: www.youtube.com
           icon: social/youtube-1641400598.svg
@@ -85,10 +84,12 @@ data:
   span_column: false
   footer_column:
     -
+      id: oahx5CFt
       image: images/Light.svg
       type: image
       enabled: true
     -
+      id: D61H6jMu
       rich_text:
         -
           type: paragraph
@@ -110,6 +111,7 @@ data:
       type: copyright
       enabled: true
     -
+      id: falk35v4
       toggle_social: true
       social_media:
         -
@@ -136,14 +138,17 @@ data:
       enabled: true
       social:
         -
+          id: 0vjACAux
           title: Twitter
           url: www.twitter.com
           icon: social/twitter-1641400598.svg
         -
+          id: tis0nOSW
           title: Github
           url: www.github.com
           icon: social/github-1641400598.svg
         -
+          id: vdkUYLzV
           title: Youtube
           url: www.youtube.com
           icon: social/youtube-1641400598.svg
@@ -151,6 +156,7 @@ data:
   display_divider: false
   footer_items:
     -
+      id: FjJN9wWu
       rich_text:
         -
           type: paragraph
@@ -173,11 +179,13 @@ data:
       enabled: true
       align: left
     -
+      id: fSCixnKo
       image: images/Light.svg
       type: image
       enabled: true
       align: center
     -
+      id: W7Caup5j
       structure: footer_nav
       type: menu
       enabled: true
@@ -206,5 +214,6 @@ data:
   page_target_blank: false
   sitemap_collections:
     - pages
+    - posts
   sitemap_change_frequency: weekly
   sitemap_priority: 0.5
