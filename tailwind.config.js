@@ -23,7 +23,7 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                sans: "Manrope",
+                sans: "Walsheim",
             },
             colors: {
                 light: "#f9f8f4",

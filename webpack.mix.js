@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,16 +11,21 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/site.js', 'public/js')
+mix.js("resources/js/site.js", "public/js").sass(
+    "resources/assets/sass/index.scss",
+    "public/css"
+);
 
-mix.postCss('resources/css/tailwind.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss/nesting'),
-    require('tailwindcss'),
-])
+mix.postCss("resources/css/tailwind.css", "public/css", [
+    require("postcss-import"),
+    require("tailwindcss/nesting"),
+    require("tailwindcss"),
+]);
+
+mix.copyDirectory("resources/assets/fonts", "public/fonts");
 
 if (mix.inProduction()) {
-   mix.version();
+    mix.version();
 }
 
 /*
