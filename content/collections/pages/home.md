@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1680980052
+updated_at: 1680987798
 blocks:
   -
     id: 0Ws43Wo1
@@ -171,24 +171,19 @@ blocks:
     enabled: true
   -
     id: byLr7uur
-    version: feature_single_1
+    version: feature_single_4
     title: 'High Security'
     description: |-
       The Eyes & Ears Agency creates sustained positive change by building a bridge between the music industry and impactful nonprofit organizations.
 
       We leverage the cultural and personal power of music by facilitating authentic cause-based partnerships to increase collective awareness, shift behaviors, and spark activism within audiences in support of social and environmental causes.
     image: images/Phone-Mockup-1640105713.png
-    toggle: true
-    label: 'Sign up'
-    link: 'https://www.luckymedia.dev/'
-    button_variant: brand
-    button_size: md
-    target_blank: true
+    toggle: false
     type: feature_single
     enabled: true
   -
     id: CBnV22Z8
-    version: feature_single_6
+    version: feature_single_4
     title: 'Accessible services for your company'
     description: 'Beautiful designs, powerful features is all you need. SEO friendly websites that match up with all the requirements of browsers.Beautiful designs, powerful features is all you need.'
     toggle: false
@@ -197,7 +192,7 @@ blocks:
     image: images/Cover-Image-1641396328.png
   -
     id: RKTQUMw7
-    version: cta_section_6
+    version: cta_section_7
     title: 'Manage your business as easy as possible'
     description: 'Having struggles to manage and organize your daily work and business needs? We have all the tools and services that you need for the best prices in the market.'
     image: images/Macbook-Pro.png
