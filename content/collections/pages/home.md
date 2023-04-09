@@ -11,23 +11,20 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1680987798
+updated_at: 1681071935
 blocks:
   -
     id: 0Ws43Wo1
-    version: hero_section_3
-    title: 'Transform the way you work.'
-    has_description: true
-    hero_image: images/Phone-Mockup.png
-    label: 'Buy now'
-    link: 'https://www.luckymedia.dev'
-    target_blank: true
+    version: hero_section_2
+    hero_image: favicons/favicon.png
     type: hero
     enabled: true
-    button_variant: brand
-    description: 'We have configured Statamic with beautiful components so you can build your website instantly.'
-    toggle: true
-    button_size: lg
+    toggle: false
+    broken_text: social-impact-agency
+    broken_heading:
+      word_1: Social
+      word_2: Impact
+      word_3: Agency
   -
     id: sxNRCPBo
     version: logo_cloud_1

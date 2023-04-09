@@ -19,6 +19,8 @@ fields:
       listable: hidden
       validate:
         - required
+      instructions_position: above
+      visibility: visible
   -
     handle: title
     field:
@@ -30,7 +32,11 @@ fields:
       instructions: 'Title of the hero'
       listable: hidden
       validate:
-        - required
+        - sometimes
+      instructions_position: above
+      visibility: visible
+      unless:
+        version: 'equals hero_section_2'
   -
     handle: has_description
     field:
@@ -40,6 +46,11 @@ fields:
       instructions: 'Toggle this to enable hero description, under the title.'
       listable: hidden
       width: 33
+      instructions_position: above
+      visibility: visible
+      default: false
+      unless:
+        version: 'equals hero_section_2'
   -
     handle: description
     field:
@@ -49,9 +60,12 @@ fields:
       icon: textarea
       instructions: 'Hero description if applicable'
       listable: hidden
+      width: 66
+      instructions_position: above
+      visibility: visible
       if:
         has_description: 'equals true'
-      width: 66
+        version: 'not hero_section_2'
   -
     handle: hero_image
     field:
@@ -67,4 +81,23 @@ fields:
       instructions_position: above
       show_filename: true
   -
-                  import: button
+    import: button
+  -
+    handle: broken_heading
+    field:
+      mode: single
+      keys:
+        word_1: 'Word 1'
+        word_2: 'Word 2'
+        word_3: 'Word 3'
+      display: 'Broken heading'
+      type: array
+      icon: array
+      instructions: 'Insert 3 words for the broken heading to display'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes
+      unless:
+        version: 'not hero_section_2'

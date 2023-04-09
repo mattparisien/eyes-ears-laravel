@@ -280,12 +280,12 @@
     "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-800-normal.woff2"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-e064c970.css",
+    "file": "assets/index-2b9b9c71.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-dfe69cc7.css",
+    "file": "assets/tailwind-4cab30c6.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
