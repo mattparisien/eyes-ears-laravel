@@ -1,11 +1,10 @@
 <button
-    @click.prevent="isOpen = ! isOpen"
     type="button"
-    class="toggle-button | block lg:hidden focus:outline-none relative w-20 h-8"
+    class="toggle-button | block lg:hidden focus:outline-none relative w-20 h-9 sm:w-24 sm:h-10"
     type="button"
-    :aria-expanded="isOpen"
+    aria-expanded="false"
     aria-controls="nav-list"
     aria-label="toggle menu"
 >
-    <div class="absolute left-1/2 top-1/2 -translate-x-2/4 rounded-3xl -translate-y-2/4 bg-black w-full h-full"></div>
+    <div class="toggle-button__circle | rounded-3xl bg-black w-full h-full"></div>
 </button>

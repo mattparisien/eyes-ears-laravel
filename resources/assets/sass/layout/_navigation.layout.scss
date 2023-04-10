@@ -1,0 +1,23 @@
+
+.global-header {
+    z-index: $header-z-index;
+}
+
+.global-header nav {
+    height: $header-height;
+}
+
+.mobile-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    padding-top: $header-height;
+    transition: transform 0.7s $ease-power3-in-out;
+    @apply bg-black;
+    
+    &:not(.is-show) {
+        transform: translateY(-100%);
+    }
+}
+

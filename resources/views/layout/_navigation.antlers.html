@@ -13,11 +13,10 @@
         {{ var:menu_classes value="lg:mr-auto lg:pl-8" }}
     {{ /if }}
 {{ /if }}
-<header class="fixed w-screen z-50 bg-white">
-    <nav class="py-5 bg-transparent md:py-6 shadow-nav" aria-labelledby="nav-heading" :aria-expanded="isOpen"
-        @keydown.escape="isOpen = false" x-data="{ isOpen: false }" @click.outside="isOpen = false">
+<header class="global-header | fixed w-screen z-50 bg-white">
+    <nav class="flex items-center justify-between bg-transparent shadow-nav" aria-labelledby="nav-heading" :aria-expanded="isOpen">
         <div class="container">
-            <div class="flex flex-wrap items-center justify-between">
+            <div class="relative flex flex-wrap items-center justify-between">
                 <div class="flex items-center flex-shrink-0 {{ var:logo_classes }}">
                     <a aria-label="logo" href="/">
                         {{
@@ -30,17 +29,16 @@
                 </div>
 
                 {{ partial:partials.toggle_button }}
-
-                <div class="w-full lg:flex lg:items-center lg:w-auto {{ var:menu_classes }}"
-                    :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }">
-                    <ul
-                        class="flex flex-col w-full px-3 mt-5 divide-y-2 lg:flex-row lg:items-center lg:divide-y-0 md:mt-0 lg:px-0 lg:py-0 lg:space-x-8">
-                        {{ nav:navigation include_home="true" }}
-                            {{ partial:components.menu_item }}
-                        {{ /nav:navigation }}
-                    </ul>
-                </div>
             </div>
         </div>
     </nav>
 </header>
+<div class="mobile-menu | bg-light lg:flex lg:items-center lg:w-auto {{ var:menu_classes }}"
+>
+    <ul
+        class="flex flex-col w-full px-3 mt-5 divide-y-2 lg:flex-row lg:items-center lg:divide-y-0 md:mt-0 lg:px-0 lg:py-0 lg:space-x-8">
+        {{ nav:navigation include_home="true" }}
+            {{ partial:components.menu_item }}
+        {{ /nav:navigation }}
+    </ul>
+</div>

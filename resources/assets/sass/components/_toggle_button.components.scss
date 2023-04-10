@@ -1,14 +1,40 @@
 .toggle-button {
+
+    &:hover &__circle {
+        transform: scale(1.1);
+    }
+
+    &__circle {
+        transform-origin: center;
+        transition: transform 0.4s $ease-bounce;
+    }
+
+    $self: &;
+
+    &[aria-expanded="true"]::before {
+        transform: translate(-50%, -50%)rotate(15deg);
+        top: 50%;
+        left: 50%;
+    }
+
+    &[aria-expanded="true"]::after {
+        transform: translate(-50%, -50%)rotate(-15deg);
+        top: 50%;
+        left: 50%;
+    }
+
     &::before {
         background-color: white;
         position: absolute;
         top: 43%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transform-origin: center;
         content: "";
         width: 70%;
         height: 2px;
         z-index: 2;
+        transition: transform 0.3s $ease-power2-in-out;
     }
 
     &::after {
@@ -16,10 +42,12 @@
         position: absolute;
         top: 57%;
         left: 50%;
+        transform-origin: center;
         transform: translate(-50%, -50%);
         content: "";
         width: 70%;
         height: 2px;
         z-index: 2;
+        transition: transform 0.3s $ease-power2-in-out;
     }
 }

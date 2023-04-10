@@ -1,5 +1,9 @@
-@import "./global/fonts";
-@import "./global/document";
+@import "./settings/fonts.settings";
+@import "./settings/variables.settings";
+@import "./elements/document.elements";
 @import "./components/toggle_button.components";
 @import "./utilities/position.utilities";
+@import "./utilities/styles.utilities";
+@import "./utilities/spacing.utilities";
+@import "./layout/navigation.layout";
 
