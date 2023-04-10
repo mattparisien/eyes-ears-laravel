@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681071935
+updated_at: 1681125448
 blocks:
   -
     id: 0Ws43Wo1
@@ -38,7 +38,7 @@ blocks:
   -
     id: srVxbzID
     version: testimonial_section_7
-    title: 'Our clients now best'
+    title: 'Our clients know best'
     description: 'Read about the stories of our clients'
     testimonials:
       -
@@ -72,7 +72,7 @@ blocks:
     enabled: true
   -
     id: eXboG76k
-    version: feature_multiple_5
+    version: feature_multiple_7
     title: 'Most Powerful Features'
     features:
       -

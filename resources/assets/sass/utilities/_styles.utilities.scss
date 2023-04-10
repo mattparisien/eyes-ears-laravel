@@ -10,7 +10,7 @@
         content: "";
         transform-origin: left;
         transition: transform 0.6s $ease-power2-in-out;
-        @apply bg-black;
+        @apply bg-dark;
     }
 
     &:not(.is-active)::after {

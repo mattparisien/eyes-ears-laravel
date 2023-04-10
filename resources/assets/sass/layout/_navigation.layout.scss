@@ -14,7 +14,7 @@
     z-index: 9;
     padding-top: $header-height;
     transition: transform 0.7s $ease-power3-in-out;
-    @apply bg-black;
+    @apply bg-dark;
     
     &:not(.is-show) {
         transform: translateY(-100%);

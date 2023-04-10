@@ -1,53 +1,72 @@
-.toggle-button {
+.global-header {
+    transition: background-color 300ms ease;
 
-    &:hover &__circle {
+    @apply bg-light;
+
+    &.is-dark {
+        @apply bg-transparent;
+
+        .toggle-button::before,
+        .toggle-button::after {
+            @apply bg-dark #{!important};
+        }
+
+        .toggle-button__circle {
+            @apply bg-light;
+        }
+    }
+
+    .toggle-button {
+        &__circle {
+            transform-origin: center;
+            transition: transform 0.4s $ease-bounce;
+            @apply bg-dark;
+        }
+
+        &[aria-expanded="true"]::before {
+            transform: translate(-50%, -50%) rotate(15deg);
+            top: 50%;
+            left: 50%;
+            @apply bg-light;
+        }
+
+        &[aria-expanded="true"]::after {
+            transform: translate(-50%, -50%) rotate(-15deg);
+            top: 50%;
+            left: 50%;
+            @apply bg-light;
+        }
+
+        &::before {
+            background-color: white;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            content: "";
+            width: 70%;
+            height: 2px;
+            z-index: 2;
+            transition: transform 0.3s $ease-power2-in-out;
+        }
+
+        &::after {
+            background-color: white;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform-origin: center;
+            transform: translate(-50%, -50%);
+            content: "";
+            width: 70%;
+            height: 2px;
+            z-index: 2;
+            transition: transform 0.3s $ease-power2-in-out;
+        }
+    }
+
+    .toggle-button:hover .toggle-button__circle {
         transform: scale(1.1);
-    }
-
-    &__circle {
-        transform-origin: center;
-        transition: transform 0.4s $ease-bounce;
-    }
-
-    $self: &;
-
-    &[aria-expanded="true"]::before {
-        transform: translate(-50%, -50%)rotate(15deg);
-        top: 50%;
-        left: 50%;
-    }
-
-    &[aria-expanded="true"]::after {
-        transform: translate(-50%, -50%)rotate(-15deg);
-        top: 50%;
-        left: 50%;
-    }
-
-    &::before {
-        background-color: white;
-        position: absolute;
-        top: 43%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transform-origin: center;
-        content: "";
-        width: 70%;
-        height: 2px;
-        z-index: 2;
-        transition: transform 0.3s $ease-power2-in-out;
-    }
-
-    &::after {
-        background-color: white;
-        position: absolute;
-        top: 57%;
-        left: 50%;
-        transform-origin: center;
-        transform: translate(-50%, -50%);
-        content: "";
-        width: 70%;
-        height: 2px;
-        z-index: 2;
-        transition: transform 0.3s $ease-power2-in-out;
     }
 }

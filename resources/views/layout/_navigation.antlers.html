@@ -13,7 +13,7 @@
         {{ var:menu_classes value="lg:mr-auto lg:pl-8" }}
     {{ /if }}
 {{ /if }}
-<header class="global-header | fixed w-screen z-50 bg-white">
+<header class="global-header | fixed w-screen z-50">
     <nav class="flex items-center justify-between bg-transparent shadow-nav" aria-labelledby="nav-heading" :aria-expanded="isOpen">
         <div class="container">
             <div class="relative flex flex-wrap items-center justify-between">
@@ -27,7 +27,12 @@
                         }}
                     </a>
                 </div>
-
+                <ul
+                class="d-none hidden lg:flex flex-col px-3 mt-5 divide-y-2 lg:flex-row lg:items-center lg:divide-y-0 md:mt-0 lg:px-0 lg:py-0 lg:space-x-8">
+                    {{ nav:navigation include_home="true" }}
+                        {{ partial:components.menu_item }}
+                    {{ /nav:navigation }}
+                </ul>
                 {{ partial:partials.toggle_button }}
             </div>
         </div>
