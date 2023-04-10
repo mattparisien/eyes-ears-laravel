@@ -1,14 +1,18 @@
-<div class="relative py-32 overflow-hidden">
-    <div class="absolute inset-0 w-full h-full bg-primary-900 bg-opacity-90"></div>
-    <div style="z-index: -1;" class="absolute inset-0 w-full h-full">
-        {{
-            partial:components/picture
-            :image="image"
-            cover="true"
-            sizes="(min-width: 200px) 35vw, 90vw"
-        }}
+<div
+    class="relative container py-32 overflow-hidden flex flex-col md:flex-row items-center justify-between"
+>
+    <div class="flex-1 relative mx-auto text-center">
+        {{ partial:components/heading size="h1" label="{title}"
+        class="text-dark" }} {{ partial:components/heading size="h6"
+        label="{client.title}" class="text-dark" }}
     </div>
-    <div class="relative z-10 max-w-3xl mx-auto text-center">
-        {{ partial:components/heading size="h2" label="{title}" color="white" }}
+    <div class="flex-1">
+        <div class="w-3/4 max-w-sm ml-auto">
+            <div class="image | ratio-5/4 relative">
+                <div class="absolute top-0 left-0 w-full h-full">
+                    {{ partial:components/picture :image="image" cover="true" }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>

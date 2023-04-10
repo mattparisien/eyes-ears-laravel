@@ -1,4 +1,3 @@
-title: Posts
 sections:
   main:
     display: Main
@@ -11,111 +10,32 @@ sections:
           validate:
             - required
       -
-        handle: image
+        handle: client
         field:
-          mode: grid
-          container: assets
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          max_files: 1
-          display: Image
-          type: assets
-          icon: assets
-          instructions: 'Will be displayed as featured image on post, and used as post thumbnail.'
+          mode: default
+          create: true
+          display: Client
+          type: entries
+          icon: entries
+          instructions: 'Link the client associated with this project'
           listable: hidden
+          instructions_position: above
+          visibility: visible
           validate:
             - required
+          max_items: 1
+          collections:
+            - clients
       -
-        handle: article
+        handle: image
+        field: feature_multiple.feature_image
+        config:
+          display: 'Feature image'
+      -
+        handle: content
         field:
-          always_show_set_button: false
-          sets:
-            image:
-              display: Image
-              fields:
-                -
-                  handle: image
-                  field:
-                    mode: grid
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: false
-                    max_files: 1
-                    display: Image
-                    type: assets
-                    icon: assets
-                    listable: hidden
-                    validate:
-                      - required
-            image_grid:
-              display: 'Image Grid'
-              fields:
-                -
-                  handle: image_grid
-                  field:
-                    options:
-                      two: 'Two Columns'
-                      three: 'Three Columns'
-                      four: 'Four Columns'
-                    default: two
-                    display: 'Image Grid'
-                    type: button_group
-                    icon: button_group
-                    instructions: 'Select grid columns, default is two.'
-                    listable: hidden
-                -
-                  handle: images
-                  field:
-                    mode: grid
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    display: Images
-                    type: assets
-                    icon: assets
-                    instructions: 'Displays images in a grid'
-                    listable: hidden
-                    validate:
-                      - required
-            video:
-              display: Video
-              fields:
-                -
-                  handle: video
-                  field:
-                    display: Video
-                    type: video
-                    icon: video
-                    instructions: 'Youtube or Vimeo Link'
-                    listable: hidden
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-          container: assets
-          save_html: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          reading_time: false
-          fullscreen: true
-          allow_source: false
-          enable_input_rules: true
-          enable_paste_rules: true
-          display: Article
-          type: bard
-          icon: bard
-          listable: hidden
+          type: markdown
+          localizable: true
   sidebar:
     display: Sidebar
     fields:
@@ -123,10 +43,7 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
-          validate:
-            - required
       -
         handle: date
         field:
@@ -134,34 +51,6 @@ sections:
           required: true
           validate:
             - required
-      -
-        handle: author
-        field:
-          max_items: 1
-          mode: select
-          display: Author
-          type: users
-          icon: users
-          listable: hidden
-      -
-        handle: category
-        field:
-          max_items: 1
-          mode: select
-          create: true
-          taxonomies:
-            - categories
-          display: Category
-          type: terms
-          icon: taxonomy
-          listable: hidden
-      -
-        handle: tags
-        field:
-          display: Tags
-          type: taggable
-          icon: tags
-          listable: hidden
   SEO:
     display: SEO
     fields:
@@ -171,7 +60,7 @@ sections:
           display: Meta
           listable: hidden
           type: section
-          localizable: false
+          localizable: true
       -
         handle: seotamic_title
         field:
@@ -185,7 +74,7 @@ sections:
           push_tags: false
           cast_booleans: false
           type: select
-          localizable: false
+          localizable: true
           listable: hidden
           default: title
           display: Title
@@ -196,7 +85,7 @@ sections:
           input_type: text
           character_limit: 100
           type: text
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Meta Title'
           if:
@@ -206,7 +95,7 @@ sections:
         field:
           type: toggle
           instructions: 'Prepends to title the text set in General SEO settings'
-          localizable: false
+          localizable: true
           default: true
           width: 50
           listable: hidden
@@ -215,7 +104,7 @@ sections:
         handle: seotamic_title_append
         field:
           type: toggle
-          localizable: false
+          localizable: true
           instructions: 'Appends to title the text set in General SEO settings'
           width: 50
           listable: hidden
@@ -237,7 +126,7 @@ sections:
           cast_booleans: false
           type: select
           instructions: 'It can be used to determine the text used under the title on search engine results pages. If empty, search engines will automatically generate this text.'
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Meta description'
       -
@@ -246,7 +135,7 @@ sections:
           input_type: text
           character_limit: 200
           type: textarea
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Meta description'
           if:
@@ -256,14 +145,14 @@ sections:
         field:
           type: link
           instructions: 'By default it will be set to the page url'
-          localizable: false
+          localizable: true
           listable: hidden
           display: Canonical
       -
         handle: seotamic_social
         field:
           type: section
-          localizable: false
+          localizable: true
           listable: hidden
           display: Social
       -
@@ -281,7 +170,7 @@ sections:
           push_tags: false
           cast_booleans: false
           type: select
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Open Graph title'
       -
@@ -290,7 +179,7 @@ sections:
           input_type: text
           character_limit: 100
           type: text
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Open Graph title'
           if:
@@ -310,7 +199,7 @@ sections:
           push_tags: false
           cast_booleans: false
           type: select
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Open Graph description'
       -
@@ -319,7 +208,7 @@ sections:
           input_type: text
           character_limit: 200
           type: textarea
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Open Graph description'
           if:
@@ -339,7 +228,7 @@ sections:
           push_tags: false
           cast_booleans: false
           type: select
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Twitter title'
       -
@@ -348,7 +237,7 @@ sections:
           input_type: text
           character_limit: 100
           type: text
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Twitter title'
           if:
@@ -368,7 +257,7 @@ sections:
           push_tags: false
           cast_booleans: false
           type: select
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Twitter description'
       -
@@ -377,7 +266,7 @@ sections:
           input_type: text
           character_limit: 200
           type: textarea
-          localizable: false
+          localizable: true
           listable: hidden
           display: 'Custom Twitter description'
           if:
@@ -391,7 +280,8 @@ sections:
           allow_uploads: true
           max_files: 1
           type: assets
-          instructions: 'If not set, the general image will be used. It''s best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width.'
-          localizable: false
+          instructions: "If not set, the general image will be used. It's best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width."
+          localizable: true
           listable: hidden
           display: Image
+title: Project
