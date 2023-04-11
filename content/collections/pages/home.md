@@ -11,12 +11,12 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681125448
+updated_at: 1681256811
 blocks:
   -
     id: 0Ws43Wo1
     version: hero_section_2
-    hero_image: favicons/favicon.png
+    hero_image: logos/animated-face-svg.svg
     type: hero
     enabled: true
     toggle: false
