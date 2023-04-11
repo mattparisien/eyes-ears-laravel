@@ -1,0 +1,28 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: breakpoint
+        field:
+          options:
+            sm: Small
+            md: Medium
+            lg: Large
+            xl: 'Extra large'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: md
+          display: Breakpoint
+          type: select
+          icon: select
+          instructions: 'Determines when the header navigation should switch from displaying a listed navigation to displaying a dropdon button (the sizes refer to the screen size and when the navigation should switch)'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required

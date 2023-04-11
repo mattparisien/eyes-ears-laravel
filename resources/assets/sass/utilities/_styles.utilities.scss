@@ -10,7 +10,14 @@
         content: "";
         transform-origin: left;
         transition: transform 0.6s $ease-power2-in-out;
+    }
+
+    &:not(.text-light)::after {
         @apply bg-dark;
+    }
+
+    &.text-light::after {
+        @apply bg-light;
     }
 
     &:not(.is-active)::after {

@@ -1,0 +1,34 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: site_name
+        field:
+          placeholder: 'The Eyes and Ears Agency'
+          input_type: text
+          antlers: false
+          display: 'Site Name'
+          type: text
+          icon: text
+          instructions: 'Used as a fallback logo on the header, as well as any other place where the logo is displayed'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: brand_line
+        field:
+          placeholder: 'Social Impact Agency'
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Brand Line'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required

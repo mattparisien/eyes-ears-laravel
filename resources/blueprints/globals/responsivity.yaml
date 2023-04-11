@@ -1,0 +1,28 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: breakpoint
+        field:
+          options:
+            sm: Small
+            md: Medium
+            lg: Large
+            xl: 'Extra large'
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: md
+          display: Breakpoint
+          type: select
+          icon: select
+          instructions: 'Determines when the header should break from a list navigation a mobile menu dropdown (the options refer to the size of the screen and thus when the breakpoint should be applied)'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required

@@ -1,3 +1,4 @@
+$base-delay: 0.17;
 
 .global-header {
     z-index: $header-z-index;
@@ -10,14 +11,67 @@
 .mobile-menu {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
+    min-height: 600px;
     z-index: 9;
     padding-top: $header-height;
     transition: transform 0.7s $ease-power3-in-out;
     @apply bg-dark;
-    
+
+    &__nav {
+        margin-top: calc((-#{$header-height}) / 2);
+
+        li {
+            transform: translateY(200px);
+            opacity: 0;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    $multiplier: 0.12;
+                    $current-delay: calc($base-delay + ($i * $multiplier));
+                    transition: transform 0.53s $ease-smooth #{$current-delay}s,
+                        opacity 0.53s $ease-smooth #{$current-delay}s;
+                }
+            }
+
+            a {
+                @apply text-4xl;
+                @apply sm:text-5xl;
+                @apply text-light;
+                @apply font-medium;
+                @apply leading-none #{!important};
+            }
+
+            &:not(:last-child) a {
+                @apply mb-6;
+            }
+
+            &:hover a {
+                @apply text-yellow-300;
+            }
+
+            &:hover a.hover-underline::after {
+                @apply bg-yellow-300;
+            }
+        }
+    }
+
     &:not(.is-show) {
         transform: translateY(-100%);
     }
-}
 
+    &__brand-line {
+        $brand-easing: #{calc($base-delay + 0.5)}s;
+
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.7s $ease-power3-out $brand-easing,
+            opacity 0.4s $ease-power3-out $brand-easing;
+    }
+
+    &.is-show &__brand-line,
+    &.is-show &__nav li {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

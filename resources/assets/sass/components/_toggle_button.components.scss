@@ -69,4 +69,36 @@
     .toggle-button:hover .toggle-button__circle {
         transform: scale(1.1);
     }
+
+    .desktop-nav {
+        display: none;
+
+        &.breakpoint-sm {
+            @screen md {
+                @apply flex;
+                @apply items-center;
+            }
+        }
+
+        &.breakpoint-md {
+            @screen md {
+                @apply flex;
+                @apply items-center;
+            }
+        }
+
+        &.breakpoint-lg {
+            @screen lg {
+                @apply flex;
+                @apply items-center;
+            }
+        }
+
+        &.breakpoint-xl {
+            @screen lg {
+                @apply flex;
+                @apply items-center;
+            }
+        }
+    }
 }
