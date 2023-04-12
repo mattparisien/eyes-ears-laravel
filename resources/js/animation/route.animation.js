@@ -1,14 +1,18 @@
 import barba from "@barba/core";
 import gsap from "gsap";
 import initLoader from "../animation/loader.animation";
+import { toggleLoading } from "../actions";
+
+const exitDelay = 0.4;
 
 const pageTransitionExit = () => {
     const transitionCard = document.getElementById("transition");
 
     return gsap.to(transitionCard, {
         opacity: 1,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power3.inOut",
+        delay: exitDelay
     });
 };
 
@@ -17,7 +21,7 @@ const pageTransitionEnter = () => {
 
     return gsap.to(transitionCard, {
         opacity: 0,
-        duration: 0.8,
+        duration: 0.5,
         ease: "power3.inOut",
     });
 };
@@ -31,35 +35,40 @@ const delay = (n = 2000) => {
 };
 
 const initRouteAnimation = () => {
-
     barba.init({
-
         sync: true,
 
-        transitions: [{
+        transitions: [
+            {
+                name: "default",
 
-            name: "default",
+                once() {
+                    //initial animation on page load
+                    initLoader(toggleLoading);
+                },
 
-            once(data) {
-                //initial animation on page load
-                initLoader();
+                async leave() {
+                    //animate leaving state
+
+                    const done = this.async();
+                    toggleLoading();
+
+                    await pageTransitionExit();
+                    await window.scrollTo(0, 0);
+                    await delay(1500);
+                    done();
+                },
+
+                async enter() {
+                    //animate enter state
+                    const done = this.async();
+                    pageTransitionEnter();
+                    done();
+                    await delay(350);
+                    await toggleLoading();
+                },
             },
-
-            async leave(data) {
-                //animate leaving state
-                const done = this.async();
-                pageTransitionExit();
-                await delay(1500);
-                done();
-            },
-
-            async enter(data) {
-                //animate enter state
-                const done = this.async();
-                pageTransitionEnter();
-                done();
-            },
-        }],
+        ],
     });
 };
 

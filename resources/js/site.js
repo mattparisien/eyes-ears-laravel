@@ -19,8 +19,4 @@ window.onload = (e) => {
 const init = () => {
     Alpine.start();
     initRouteAnimation();
-
-    html.classList.add(config.CSS_CLASS.LOADED);
-    html.classList.add(config.CSS_CLASS.READY);
-    html.classList.remove(config.CSS_CLASS.LOADING);
 };

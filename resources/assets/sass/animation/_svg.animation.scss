@@ -15,6 +15,17 @@
     }
 }
 
+svg.heading-underline {
+    transform-origin: left;
+    transition: transform 0.6s $ease-power3-in-out;
+}
+
+html:not(html.is-ready) {
+    svg.heading-underline {
+        transform: scaleX(0);
+    }
+}
+
 @keyframes wave-in {
     0% {
         transform: translateX(0);

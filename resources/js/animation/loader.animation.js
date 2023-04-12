@@ -21,11 +21,11 @@ const setInitialAttrs = () => {
     });
 };
 
-const onFinish = () => {
+const removeFromDOM = () => {
     introContainer.remove();
 };
 
-const animate = () => {
+const animate = (onCompleteCb) => {
     return tl
         .set(logo, {
             opacity: 1,
@@ -53,13 +53,16 @@ const animate = () => {
             duration: 2,
             width: headerLogoWidth,
             ease: "power3.inOut",
-            onComplete: onFinish,
+            onComplete: () => {
+                removeFromDOM();
+                onCompleteCb();
+            },
         });
 };
 
-const initLoader = () => {
+const initLoader = (onCompleteCb) => {
     setInitialAttrs();
-    animate();
+    animate(onCompleteCb);
 };
 
 export default initLoader;
