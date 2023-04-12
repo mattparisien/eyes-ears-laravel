@@ -1,0 +1,44 @@
+.site-intro {
+
+    $base-delay: 0.4;
+    
+    &__logo .letter {
+        transform: translateY(100%);
+        
+        @for $i from 1 through 15 {
+
+            $multiplier: 0.1;
+            $delay: calc($base-delay + ($i * $multiplier));
+
+            &[data-letter-id="#{$i}"] {
+                animation: animateLetter 2s $ease-power3-in-out #{$delay}s forwards;
+            }
+        }
+    }
+
+    &__logo .word-group {
+        opacity: 0;
+        animation: wordReveal 0.8s $ease-smooth #{calc($base-delay * 5)}s forwards;
+    }
+}
+
+
+@keyframes animateLetter {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes wordReveal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

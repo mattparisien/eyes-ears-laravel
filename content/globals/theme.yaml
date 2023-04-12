@@ -1,7 +1,19 @@
 title: Theme
 data:
-  logo_normal: images/ee-header-logo.svg
+  logo_normal: logos/logo-normal.svg
   logo_dark: header-logo-light-01.svg
+  site_name: 'The Eyes and Ears Agency'
+  socials:
+    -
+      id: lgdn8299
+      title: LinkedIn
+      url: 'https://www.linkedin.com/company/the-eyes-and-ears-agency/'
+      icon: social/linkedin.svg
+    -
+      id: lgdn8n94
+      title: Instagram
+      url: 'https://www.instagram.com/eyes__ears/'
+      icon: social/Instagram-1641400598.svg
   logo_position: center
   menu_position: right
   show_links: true
@@ -26,170 +38,11 @@ data:
       target_blank: false
       type: button
       enabled: true
-    -
-      id: dmEgIZss
-      toggle_social: true
-      social_title: 'Social Media'
-      social:
-        -
-          id: ard28Ul4
-          title: Twitter
-          url: www.twitter.com
-          icon: social/twitter-1641400598.svg
-        -
-          id: duqzCwL0
-          title: Facebook
-          url: www.facebook.com
-          icon: social/facebook-1641400589.svg
-        -
-          id: ibZuitLH
-          title: Dribble
-          url: www.dribbble.com
-          icon: social/dribbble-1641400584.svg
-        -
-          id: h1Bz7VHL
-          title: Instagram
-          url: www.instagram.com
-          icon: social/Instagram-1641400598.svg
-        -
-          id: fjDAo1ts
-          title: Behance
-          url: www.behance.com
-          icon: social/behance-1641400629.svg
-        -
-          id: LqPrpMdk
-          title: Github
-          url: www.github.com
-          icon: social/github-1641400598.svg
-        -
-          id: 0RxP1Wxo
-          title: Linkedin
-          url: www.linkedin.com
-          icon: social/linkedIn-1641400598.svg
-        -
-          id: d5BVNT3o
-          title: Pinterest
-          url: www.pinterest.com
-          icon: social/pinterest-1641400598.svg
-        -
-          id: hVzGZKKR
-          title: Youtube
-          url: www.youtube.com
-          icon: social/youtube-1641400598.svg
-      type: social_media
-      enabled: false
-  has_menu: true
-  footer_menu: footer_nav
-  custom_column: true
-  span_column: false
-  footer_column:
-    -
-      id: oahx5CFt
-      image: images/Light.svg
-      type: image
-      enabled: true
-    -
-      id: D61H6jMu
-      rich_text:
-        -
-          type: paragraph
-          content:
-            -
-              type: text
-              text: "Copyright © 2022 Landtamic UI Kit. Made with ❤️ by\_"
-            -
-              type: text
-              marks:
-                -
-                  type: link
-                  attrs:
-                    href: 'https://www.luckymedia.dev/'
-                    rel: 'noopener noreferrer'
-                    target: _blank
-                    title: null
-              text: 'Lucky Media'
-      type: copyright
-      enabled: true
-    -
-      id: falk35v4
-      toggle_social: true
-      social_media:
-        -
-          icon: twitter
-          url: 'https://www.twitter.com'
-          type: social_media
-          enabled: true
-        -
-          icon: instagram
-          url: 'https://www.instagram.com'
-          type: social_media
-          enabled: true
-        -
-          icon: facebook
-          url: 'https://www.facebook.com'
-          type: social_media
-          enabled: true
-        -
-          icon: linkedin
-          url: 'https://www.linkedin.com'
-          type: social_media
-          enabled: true
-      type: social_media
-      enabled: true
-      social:
-        -
-          id: 0vjACAux
-          title: Twitter
-          url: www.twitter.com
-          icon: social/twitter-1641400598.svg
-        -
-          id: tis0nOSW
-          title: Github
-          url: www.github.com
-          icon: social/github-1641400598.svg
-        -
-          id: vdkUYLzV
-          title: Youtube
-          url: www.youtube.com
-          icon: social/youtube-1641400598.svg
-  logo_overlay: false
+  has_menu: false
   display_divider: false
-  footer_items:
-    -
-      id: FjJN9wWu
-      rich_text:
-        -
-          type: paragraph
-          content:
-            -
-              type: text
-              text: 'Copyright © 2022 Landtamic UI Kit. Made with ❤️  by '
-            -
-              type: text
-              marks:
-                -
-                  type: link
-                  attrs:
-                    href: 'https://www.luckymedia.dev/'
-                    rel: 'noopener noreferrer'
-                    target: _blank
-                    title: null
-              text: 'Lucky Media'
-      type: copyright
-      enabled: true
-      align: left
-    -
-      id: fSCixnKo
-      image: images/Light.svg
-      type: image
-      enabled: true
-      align: center
-    -
-      id: W7Caup5j
-      structure: footer_nav
-      type: menu
-      enabled: true
-      align: right
+  display_footer_email: true
+  footer_heading: 'Hear to Listen'
+  footer_image: logos/animated-face-svg.svg
   favicon: favicons/favicon.png
   favicon_256: favicons/apple-touch-icon.png
   favicon_192: favicons/android-chrome-192x192.png
@@ -217,3 +70,4 @@ data:
     - posts
   sitemap_change_frequency: weekly
   sitemap_priority: 0.5
+  is_active: true

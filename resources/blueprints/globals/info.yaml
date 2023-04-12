@@ -32,3 +32,19 @@ sections:
           visibility: visible
           validate:
             - required
+      -
+        handle: email
+        field:
+          placeholder: hello@company.com
+          input_type: text
+          antlers: false
+          default: sammy@eyesandearsagency.com
+          display: Email
+          type: text
+          icon: text
+          instructions: "Your company's primary email"
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - email

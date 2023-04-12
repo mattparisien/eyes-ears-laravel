@@ -1,0 +1,9 @@
+section[data-theme="light"] {
+    @apply bg-light;
+    @apply text-dark;
+}
+
+section[data-theme="dark"] {
+    @apply bg-dark;
+    @apply text-light;
+}

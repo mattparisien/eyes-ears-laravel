@@ -13,9 +13,14 @@ sections:
           display: 'Logo Normal'
           type: assets
           icon: assets
-          instructions: 'Normal logo that will be displayed through the website, **SVG** is preferred.'
+          instructions: 'Normal logo that will be displayed through the website. Because of the way the site is configured, **only SVG file format is allowed**. This logo will also be the one used for the site intro.'
           width: 50
           listable: hidden
+          instructions_position: above
+          visibility: visible
+          show_filename: true
+          validate:
+            - 'mimes:svg'
       -
         handle: logo_dark
         field:
@@ -26,10 +31,13 @@ sections:
           display: 'Logo Dark'
           type: assets
           icon: assets
-          instructions: 'Dark version of the logo that will be displayed through the website, **SVG** is preferred.'
+          instructions: 'Logo to be displayed on dark backgrounds that will be displayed through the website. Because of the way the site is configured, **only SVG file format is allowed**.'
           width: 50
           listable: hidden
           max_files: 1
+          instructions_position: above
+          visibility: visible
+          show_filename: true
       -
         handle: logo_mark
         field:
@@ -45,6 +53,29 @@ sections:
           listable: hidden
           instructions_position: above
           max_files: 1
+      -
+        handle: site_name
+        field:
+          placeholder: 'The Eyes and Ears Agency'
+          input_type: text
+          antlers: false
+          display: 'Site Name'
+          type: text
+          icon: text
+          instructions: 'Your site name, usually this is your company name'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: socials
+        field: social_media.social
+        config:
+          display: Socials
+          instructions: 'Enter your social media accounts here'
+          validate:
+            - required
   menu:
     display: Menu
     fields:
@@ -80,7 +111,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Enable this to display links in the right side of the menu.'
           listable: hidden
       -
@@ -152,7 +182,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Toggle this to display mega menu in the footer.'
           width: 50
           listable: hidden
@@ -185,7 +214,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Toggle this to display custom column in the menu, you can use this column to add sets like logo, text or social media.'
           width: 50
           listable: hidden
@@ -198,7 +226,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Toggle this to span the column, useful if you have fewer footer menu items.'
           width: 50
           listable: hidden
@@ -265,10 +292,13 @@ sections:
           listable: hidden
           validate:
             - 'required_if:custom_column,true'
+          max_sets: 3
+          instructions_position: above
+          visibility: visible
+          previews: true
           if:
             has_menu: 'equals true'
             custom_column: 'equals true'
-          max_sets: 3
       -
         handle: logo_overlay
         field:
@@ -276,7 +306,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Enable this to display Logo Overlay in Footer Menu'
           width: 50
           listable: hidden
@@ -311,7 +340,6 @@ sections:
           type: toggle
           icon: toggle
           instructions_position: above
-          read_only: false
           instructions: 'Toggle this to show divider in top of the footer'
           width: 50
           listable: hidden
@@ -331,130 +359,51 @@ sections:
           if:
             display_divider: 'equals true'
       -
-        handle: footer_items
+        handle: display_footer_email
         field:
-          collapse: accordion
-          sets:
-            copyright:
-              display: Copyright
-              fields:
-                -
-                  handle: align
-                  field:
-                    options:
-                      left: Left
-                      center: Center
-                      right: Right
-                    default: center
-                    display: Align
-                    type: button_group
-                    icon: button_group
-                    instructions: 'Align this item inside the container'
-                    listable: hidden
-                -
-                  handle: rich_text
-                  field:
-                    always_show_set_button: false
-                    buttons:
-                      - h2
-                      - h3
-                      - bold
-                      - italic
-                      - anchor
-                    save_html: false
-                    toolbar_mode: fixed
-                    link_noopener: true
-                    link_noreferrer: true
-                    target_blank: true
-                    reading_time: false
-                    fullscreen: true
-                    allow_source: true
-                    enable_input_rules: true
-                    enable_paste_rules: true
-                    display: 'Rich Text'
-                    type: bard
-                    icon: bard
-                    listable: hidden
-            image:
-              display: Image
-              fields:
-                -
-                  handle: align
-                  field:
-                    options:
-                      left: Left
-                      center: Center
-                      right: Right
-                    default: center
-                    display: Align
-                    type: button_group
-                    icon: button_group
-                    instructions: 'Align this item inside the container'
-                    listable: hidden
-                    width: 50
-                -
-                  handle: image
-                  field:
-                    mode: list
-                    container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    max_files: 1
-                    display: Image
-                    type: assets
-                    icon: assets
-                    listable: hidden
-                    width: 50
-            social_media:
-              display: 'Social Media'
-              fields:
-                -
-                  handle: align
-                  field:
-                    options:
-                      left: Left
-                      center: Center
-                      right: Right
-                    default: center
-                    display: Align
-                    type: button_group
-                    icon: button_group
-                    instructions: 'Align this item inside the container'
-                    listable: hidden
-                -
-                  import: social_media
-            menu:
-              display: Menu
-              fields:
-                -
-                  handle: align
-                  field:
-                    options:
-                      left: Left
-                      center: Center
-                      right: Right
-                    default: center
-                    display: Align
-                    type: button_group
-                    icon: button_group
-                    instructions: 'Align this item inside the container'
-                    listable: hidden
-                -
-                  handle: structure
-                  field:
-                    max_items: 1
-                    mode: select
-                    display: Structure
-                    type: structures
-                    icon: structures
-                    listable: hidden
-          display: 'Footer Items'
-          type: replicator
-          icon: replicator
-          instructions: 'Here you can add the logo, copyright text, social media etc.'
+          default: false
+          display: 'Display Email'
+          type: toggle
+          icon: toggle
+          instructions: "Choose whether you would like to display your company's email below the heading"
           listable: hidden
-          max_sets: 3
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: footer_heading
+        field:
+          input_type: text
+          antlers: false
+          display: 'Footer Heading'
+          type: text
+          icon: text
+          instructions: 'Big heading displayed in the main content section'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
+        handle: footer_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Footer Image'
+          type: assets
+          icon: assets
+          instructions: 'Image displayed in the main section of the footer'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+            - 'mimes:jpg,jpeg,png,svg'
   favicon:
     display: Favicon
     fields:
@@ -599,7 +548,6 @@ sections:
           icon: bard
           listable: hidden
           instructions_position: above
-          read_only: false
           container: assets
       -
         handle: page_image
@@ -632,7 +580,7 @@ sections:
           width: 50
       -
         import: button
-        prefix: 'page_'
+        prefix: page_
   sitemap:
     display: Sitemap
     fields:
@@ -676,3 +624,17 @@ sections:
           instructions: 'Valid values range from 0.0 to 1.0. This value does not affect how your pages are compared to pages on other sites, it only lets the search engines know which pages you deem most important for the crawlers.'
           width: 50
           listable: hidden
+  site_intro:
+    display: 'Site Intro'
+    fields:
+      -
+        handle: is_active
+        field:
+          default: false
+          display: Active
+          type: toggle
+          icon: toggle
+          instructions: 'Toggle whether the site intro should be active or not'
+          listable: hidden
+          instructions_position: above
+          visibility: visible

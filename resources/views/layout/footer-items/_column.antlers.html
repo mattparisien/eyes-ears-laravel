@@ -1,7 +1,11 @@
 <div class="{{ theme:span_column ?= 'col-span-2' }} space-y-8">
     {{ theme:footer_column }}
         {{ if type === 'image' }}
-            {{ partial:layout/footer-items/image align="left" }}
+            {{ if image.extension == 'svg' }}
+                {{ svg :src="image" :class="image.classes" }}
+            {{ else }}
+                {{ partial:layout/footer-items/image align="left" }}
+            {{/if}}
         {{ else }}
             {{ partial src="layout/footer-items/{type}" }}
         {{ /if }}

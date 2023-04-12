@@ -1,10 +1,19 @@
 .global-header {
+    $header: &;
     transition: background-color 300ms ease;
-
+    
     @apply bg-light;
+
+    &__logo svg {
+        @apply fill-dark;
+    }
 
     &.is-dark {
         @apply bg-transparent;
+
+        #{$header}__logo svg {
+            @apply fill-light;
+        }
 
         .toggle-button::before,
         .toggle-button::after {

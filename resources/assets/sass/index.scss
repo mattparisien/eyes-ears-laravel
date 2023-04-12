@@ -1,12 +1,23 @@
 @import "./settings/fonts.settings";
 @import "./settings/variables.settings";
+
 @import "./elements/document.elements";
+@import "./elements/main.elements";
+
 @import "./components/toggle_button.components";
+
 @import "./utilities/position.utilities";
 @import "./utilities/styles.utilities";
 @import "./utilities/spacing.utilities";
 @import "./utilities/ratio.utilities";
+
 @import "./layout/navigation.layout";
+@import "./layout/footer.layout";
+
+
 @import "./animation/svg.animation";
+
+@import "./theming/section.theming";
+
 @import "./specific/svg.specific";
 

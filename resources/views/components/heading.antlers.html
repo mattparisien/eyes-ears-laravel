@@ -12,6 +12,9 @@ types:
     white: 'text-white'
 ---
 
-<{{ size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}">
+<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}">
 {{ label }}
-</{{ size or 'p' }}>
+{{ if underline }}
+{{ svg src="assets/images/decorative/strokes/stroke-underline.svg" class="heading-underline | fill-primary-900" }}
+{{ /if}}
+</{{ el or size or 'p' }}>

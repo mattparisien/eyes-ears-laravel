@@ -17,12 +17,14 @@
     <body
         class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}"
     >
-        <div class="relative overflow-hidden">
             {{# Navigation Partials #}} {{ partial:layout/navigation }}
+            {{# Intro Partials #}}      
+            {{ if theme:site_intro.is_active }}
+            {{ partial:layout/site_intro }}
+            {{ /if }}
 
             <!-- Content -->
-            <main class="header-offset">{{ template_content }}</main>
-        </div>
+            <main class="header-offset footer-offset bg-light">{{ template_content }}</main>
         {{# Footer Partials #}} {{ partial src="layout/_footer" }}
     </body>
 </html>

@@ -12,5 +12,14 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1680978866
+updated_at: 1681310771
+blocks:
+  -
+    id: lgdt0qj7
+    version: hero_section_1
+    title: Press
+    has_description: false
+    toggle: false
+    type: hero
+    enabled: true
 ---

@@ -4,6 +4,7 @@ theme:menu_position === 'center' }} {{ var:menu_classes value="mx-auto" }} {{
 elseif theme:menu_position === 'left' }} {{ if theme:logo_position === 'center'
 }} {{ var:menu_classes value="lg:order-first" }} {{ else }} {{ var:menu_classes
 value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
+
 <header class="global-header | fixed w-screen z-50">
     <nav
         class="flex items-center justify-between bg-transparent"
@@ -11,17 +12,13 @@ value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
     >
         <div class="container">
             <div class="relative flex flex-wrap items-center justify-between">
-                <div
-                    class="flex items-center flex-shrink-0 {{ var:logo_classes }}"
-                >
+                <div class="global-header__logo | md:absolute md:left-1/2 md:top-1/2 md:-translate-y-1/2 md:-translate-x-1/2 flex items-center {{ var:logo_classes }}" id="header-logo">
                     <a aria-label="logo" href="/">
-                        {{ partial:components/picture class="object-contain
-                        w-full h-auto max-w-[8rem]" :image="theme:logo_normal"
-                        sizes="(min-width: 200px) 35vw, 90vw" }}
+                        {{ svg :src="theme:logo_normal" aria-label="logo icon" role="img" class="object-contain w-full h-auto max-w-[8rem]" }}
                     </a>
                 </div>
                 <ul
-                    class="desktop-nav | breakpoint-{{mobile_menu:breakpoint}} space-x-8"
+                    class="desktop-nav | ml-auto breakpoint-{{mobile_menu:breakpoint}} space-x-8"
                 >
                     {{ nav:navigation include_home="true" }} {{
                     partial:components.menu_item }} {{ /nav:navigation }}
@@ -31,20 +28,4 @@ value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
         </div>
     </nav>
 </header>
-<div
-    class="mobile-menu | {{mobile_menu:breakpoint }}:hidden flex items-center justify-center relative bg-light flex items-center w-auto {{ var:menu_classes }}"
-    aria-expanded="false"
->
-    {{mobile_menu:breakpoint}}
-    <ul
-        class="mobile-menu__nav | flex flex-col items-center justify-center w-full px-3 lg:px-0 lg:py-0 lg:space-x-8"
-    >
-        {{ nav:navigation include_home="true" }} {{ partial:components.menu_item
-        color="light" }} {{ /nav:navigation }}
-    </ul>
-    <div
-        class="mobile-menu__brand-line | text-light absolute left-0 bottom-0 pb-4 pl-3"
-    >
-        {{ info:brand_line }}
-    </div>
-</div>
+{{ partial:layout.mobile_menu }}

@@ -17,7 +17,7 @@
     }
 
     &.text-light::after {
-        @apply bg-light;
+        @apply bg-light #{!important};
     }
 
     &:not(.is-active)::after {

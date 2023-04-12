@@ -1,7 +1,10 @@
-<div class="overflow-hidden">
+<div class="overflow-hidden bg-light">
     <div class="container md:pt-24 pt-14">
         <div class="flex flex-col items-center mb-16 md:mb-20">
-            {{ partial:components.heading label="{title}" size="h1" class="max-w-5xl text-center" }}
+            {{ partial:components.heading label="{title}" size="h1" underline="{true}" class="max-w-5xl text-center" }}
+            {{ if description }}
+            <p class="mt-5 text-center max-w-xl"> {{ description }} </p>
+            {{ /if}}
             {{ if toggle and label }}
                 <div class="mt-8">
                     {{ partial:components.button size="{button_size}" color="{button_variant}" }}

@@ -21,3 +21,17 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
+      -
+        handle: image_credit
+        field:
+          placeholder: 'Sammy Steiner'
+          input_type: text
+          prepend: 'Photo by'
+          antlers: false
+          display: 'Image Credit'
+          type: text
+          icon: text
+          instructions: "Only enter the person's name (i.e. Sammy Steiner)"
+          listable: hidden
+          instructions_position: above
+          visibility: visible

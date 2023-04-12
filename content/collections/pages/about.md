@@ -12,5 +12,14 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1680979071
+updated_at: 1681310636
+blocks:
+  -
+    id: lgdsxru7
+    version: hero_section_1
+    title: 'About the Founder'
+    has_description: false
+    toggle: false
+    type: hero
+    enabled: true
 ---

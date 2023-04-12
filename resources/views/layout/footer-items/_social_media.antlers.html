@@ -6,15 +6,14 @@
     {{ var:social_align value="mx-auto" }}
 {{ /if }}
 
-<ul class="flex flex-row items-center space-x-6 {{ var:social_align }}">
-    {{ social }}
+<ul class="flex flex-row items-center space-x-3 {{ var:social_align }}">
+    {{ theme:socials }}
         <li class="group">
             <a aria-label="visit {{ icon }}"
                 href="{{ url }}"
-                class="flex items-center justify-center w-8 h-8 transition-all duration-300 ease-in-out bg-white rounded-full bg-opacity-10 group-hover:bg-opacity-100">
-                {{ svg :src="icon" class="w-6 h-6 text-white fill-current group-hover:text-dark"
-                }}
+                >
+                {{ svg :src="icon" class="w-6 h-6 text-white fill-current"}}
             </a>
         </li>
-    {{ /social }}
+    {{ /theme:socials }}
 </ul>

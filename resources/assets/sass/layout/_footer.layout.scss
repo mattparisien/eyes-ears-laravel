@@ -1,0 +1,11 @@
+.global-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: $footer-height-mobile;
+
+    @screen #{$footer-breakpoint} {
+        height: $footer-height-desktop;
+    }
+}
