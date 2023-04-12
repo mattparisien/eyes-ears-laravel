@@ -285,7 +285,7 @@
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-e90aec4f.css",
+    "file": "assets/tailwind-0db9b627.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
@@ -334,7 +334,7 @@
     "css": [
       "assets/site-5ae91114.css"
     ],
-    "file": "assets/site-dccb729e.js",
+    "file": "assets/site-27e4860f.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }

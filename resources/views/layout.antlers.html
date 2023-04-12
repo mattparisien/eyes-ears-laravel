@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="is-loading">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +16,7 @@
 
     <body
         class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}"
+        aria-live="polite"
     >
             {{# Navigation Partials #}} {{ partial:layout/navigation }}
             {{# Intro Partials #}}      
@@ -24,7 +25,7 @@
             {{ /if }}
 
             <!-- Content -->
-            <main class="header-offset footer-offset bg-light">{{ template_content }}</main>
+            <main class="header-offset footer-offset bg-light" data-load-container>{{ template_content }}</main>
         {{# Footer Partials #}} {{ partial src="layout/_footer" }}
     </body>
 </html>
