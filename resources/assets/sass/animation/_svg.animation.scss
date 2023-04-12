@@ -1,0 +1,35 @@
+.animated-face-svg {
+    $animation-duration: 1.3s;
+    overflow: visible !important;
+
+    .wave {
+        animation: wave-in $animation-duration linear infinite;
+        opacity: 0;
+    }
+
+    .wave-center {
+        animation-delay: 0.2s;
+    }
+    .wave-inner {
+        animation-delay: 0.4s;
+    }
+}
+
+@keyframes wave-in {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}

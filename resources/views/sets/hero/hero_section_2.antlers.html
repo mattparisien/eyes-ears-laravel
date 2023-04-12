@@ -14,12 +14,16 @@
         </div>
 
         <div class="absolute-center object-fit">
-            {{
-                partial:components/picture
-                :image="hero_image"
-                class="mx-auto"
-                sizes="(min-width: 200px) 200px, 90vw"
-            }}
+            {{if hero_image.extension !== 'svg'}}
+                {{
+                    partial:components/picture
+                    :image="hero_image"
+                    class="mx-auto"
+                    sizes="(min-width: 200px) 200px, 90vw"
+                }}
+            {{ else }}
+                {{ svg :src="hero_image" :class="hero_image.classes" }}
+            {{ /if}}
         </div>
     </div>
 </div>

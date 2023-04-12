@@ -1,0 +1,14 @@
+.animated-face-svg {
+
+    width: 200px;
+    height: 200px;
+    transform: translateX(-10%);
+
+    .face {
+        @apply fill-dark #{!important};
+    }
+
+    .eye, .wave {
+        @apply fill-primary-900 #{!important};
+    }
+}

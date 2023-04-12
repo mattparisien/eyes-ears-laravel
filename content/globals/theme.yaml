@@ -190,7 +190,7 @@ data:
       type: menu
       enabled: true
       align: right
-  favicon: favicons/favicon.ico
+  favicon: favicons/favicon.png
   favicon_256: favicons/apple-touch-icon.png
   favicon_192: favicons/android-chrome-192x192.png
   favicon_180: favicons/apple-touch-icon.png

@@ -5,11 +5,11 @@ const menuBtn = document.querySelector(".toggle-button");
 const navSwitchBreakpoint = 768;
 
 menuBtn.addEventListener("click", (e) => {
-    toggleMobileMenu(e.currentTarget);
+    toggleMobileMenu();
 });
 
 window.addEventListener("resize", () => {
     if (window.innerWidth > navSwitchBreakpoint && STATES.isMenuOpen) {
-        toggleMobileMenu(menuBtn);
+        toggleMobileMenu();
     }
 });
