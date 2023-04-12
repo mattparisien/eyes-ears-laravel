@@ -6,7 +6,9 @@ const chars = [...introContainer.querySelectorAll("[data-letter-id]")].sort(
     (a, b) => a.dataset.letterId - b.dataset.letterId
 );
 const words = [...introContainer.querySelectorAll(".word-group")];
-const headerLogoWidth = document.getElementById("header-logo").getBoundingClientRect().width;
+const headerLogoWidth = document
+    .getElementById("header-logo")
+    .getBoundingClientRect().width;
 const tl = gsap.timeline();
 
 //Set intiial postiion of DOM elements to ready them for animation
@@ -21,7 +23,7 @@ const setInitialAttrs = () => {
 
 const onFinish = () => {
     introContainer.remove();
-}
+};
 
 const animate = () => {
     return tl
@@ -50,10 +52,14 @@ const animate = () => {
             ),
             duration: 2,
             width: headerLogoWidth,
-            ease: 'power3.inOut',
-            onComplete: onFinish
+            ease: "power3.inOut",
+            onComplete: onFinish,
         });
 };
 
-setInitialAttrs();
-animate();
+const initLoader = () => {
+    setInitialAttrs();
+    animate();
+};
+
+export default initLoader;

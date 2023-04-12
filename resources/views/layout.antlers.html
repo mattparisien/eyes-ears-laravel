@@ -16,13 +16,20 @@
         aria-live="polite"
         data-barba="wrapper"
     >
-        {{# Navigation Partials #}} {{ partial:layout/navigation }} {{# Intro
-        Partials #}} {{ if theme:site_intro.is_active }} {{
-        partial:layout/site_intro }} {{ /if }}
+        {{# Navigation Partials #}}
+        {{ partial:layout/navigation }}
+        
+        {{# Intro Partials #}}
+        {{ if theme:site_intro.is_active }}
+        {{ partial:layout/site_intro }}
+        {{ /if }}
 
+        {{# Transition Card #}}
+        {{ partial:layout/transition_card }}
+        
         <!-- Content -->
-        <main class="min-h-screen header-offset footer-offset bg-light">
-            <div data-barba="container" class="h-full">{{ template_content }}</div>
+        <main class="min-h-screen header-offset footer-offset bg-light" data-barba="container">
+            {{ template_content }}
         </main>
         {{# Footer Partials #}} {{ partial src="layout/_footer" }}
     </body>
