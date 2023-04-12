@@ -7,25 +7,23 @@
 
         {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}} {{
         seotamic }} {{ vite
-        src="resources/css/tailwind.css|resources/js/site.js" }}
-        {{
-            vite
-            src="resources/assets/sass/index.scss"
-        }}
+        src="resources/css/tailwind.css|resources/js/site.js" }} {{ vite
+        src="resources/assets/sass/index.scss" }}
     </head>
 
     <body
         class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}"
         aria-live="polite"
+        data-barba="wrapper"
     >
-            {{# Navigation Partials #}} {{ partial:layout/navigation }}
-            {{# Intro Partials #}}      
-            {{ if theme:site_intro.is_active }}
-            {{ partial:layout/site_intro }}
-            {{ /if }}
+        {{# Navigation Partials #}} {{ partial:layout/navigation }} {{# Intro
+        Partials #}} {{ if theme:site_intro.is_active }} {{
+        partial:layout/site_intro }} {{ /if }}
 
-            <!-- Content -->
-            <main class="header-offset footer-offset bg-light" data-load-container>{{ template_content }}</main>
+        <!-- Content -->
+        <main class="min-h-screen header-offset footer-offset bg-light">
+            <div data-barba="container" class="h-full">{{ template_content }}</div>
+        </main>
         {{# Footer Partials #}} {{ partial src="layout/_footer" }}
     </body>
 </html>

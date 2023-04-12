@@ -1,5 +1,4 @@
 // This is all you.
-import modular from "modujs";
 
 import "@fontsource/manrope/400.css";
 import "@fontsource/manrope/500.css";
@@ -9,23 +8,17 @@ import "@fontsource/manrope/800.css";
 
 import config from "./config";
 import { html } from "./utils/environment";
-import * as modules from "./modules";
 import Alpine from "alpinejs";
+import initRouteAnimation from "./animation/route.animation";
 import "./listeners/header.listeners";
-
-
-const app = new modular({
-    modules: modules,
-});
 
 window.onload = (e) => {
     init();
 };
 
-
 const init = () => {
     Alpine.start();
-    app.init(app);
+    initRouteAnimation();
 
     html.classList.add(config.CSS_CLASS.LOADED);
     html.classList.add(config.CSS_CLASS.READY);

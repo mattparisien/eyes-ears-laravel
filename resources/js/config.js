@@ -7,6 +7,7 @@
 const env = process.env.APP_ENV;
 
 const config = Object.freeze({
+    
     // Environments
     ENV: env,
     IS_PROD: env === "production",
