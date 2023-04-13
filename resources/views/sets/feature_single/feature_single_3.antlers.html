@@ -1,11 +1,15 @@
 <div class="pb-20">
     <div class="h-64 md:h-auto max-h-[600px] overflow-hidden">
+        {{ if image.extension != 'svg'  }} 
         {{
             partial:components/picture
             :image="image"
             cover="true"
             sizes="(min-width: 200px) 35vw, 90vw"
         }}
+        {{ else }}
+        {{ svg :src="image" :class="image.classes" }}
+        {{/if}}
     </div>
 
     <div class="container relative z-10">

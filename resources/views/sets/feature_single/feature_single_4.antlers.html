@@ -15,12 +15,16 @@
         </div>
 
         <div class="order-first mx-auto mb-8 md:mb-0 md:order-none lg:w-1/2 md:w-4/12 md:absolute md:right-0">
+            {{ if image.extension != 'svg'  }} 
             {{
                 partial:components/picture
                 :image="image"
-                class="w-full h-auto object-contain md:max-h-[600px]"
+                cover="true"
                 sizes="(min-width: 200px) 35vw, 90vw"
             }}
+            {{ else }}
+            {{ svg :src="image" :class="image.classes" }}
+            {{/if}}
         </div>
     </div>
 </div>

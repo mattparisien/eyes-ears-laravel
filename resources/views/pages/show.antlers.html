@@ -2,10 +2,9 @@
     {{ partial src="sets/headers/{header_version}" }}
 {{ /if }}
 
-{{template_content}}
 
 {{ blocks }}
-<section data-theme="light">
+<section data-theme="{{block_theme || 'light'}}">
     {{ partial src="sets/{type}/{version}" }}
 </section>
 {{ /blocks }}

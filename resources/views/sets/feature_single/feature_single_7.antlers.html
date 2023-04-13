@@ -1,13 +1,16 @@
 <div class="container py-16">
     <div class="flex flex-wrap items-center">
         <div class="w-full mb-12 md:w-1/2 md:mb-0">
+            {{ if image.extension != 'svg'  }} 
             {{
                 partial:components/picture
                 :image="image"
-                class="-mb-16"
                 cover="true"
                 sizes="(min-width: 200px) 35vw, 90vw"
             }}
+            {{ else }}
+            {{ svg :src="image" :class="image.classes" }}
+            {{/if}}
         </div>
         <div class="mt-12 md:mt-0 md:w-1/2">
             <div class="max-w-xl mx-auto">

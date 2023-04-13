@@ -30,7 +30,8 @@
         <!-- Content -->
         <main class="min-h-screen header-offset footer-offset bg-light" data-barba="container">
             {{ template_content }}
+            {{# Footer Partials #}} {{ partial src="layout/_footer" }}
         </main>
-        {{# Footer Partials #}} {{ partial src="layout/_footer" }}
+        
     </body>
 </html>

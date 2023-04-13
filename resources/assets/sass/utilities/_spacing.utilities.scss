@@ -2,11 +2,11 @@
     padding-top: $header-height;
 }
 
-.footer-offset {
+// .footer-offset {
 
-    margin-bottom: $footer-height-mobile;
+//     margin-bottom: $footer-height-mobile;
 
-    @screen #{$footer-breakpoint} {
-        margin-bottom: $footer-height-desktop;
-    }
-}
+//     @screen #{$footer-breakpoint} {
+//         margin-bottom: $footer-height-desktop;
+//     }
+// }

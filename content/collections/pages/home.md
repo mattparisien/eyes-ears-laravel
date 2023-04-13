@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681315248
+updated_at: 1681419891
 blocks:
   -
     id: 0Ws43Wo1
@@ -26,50 +26,18 @@ blocks:
       word_2: Impact
       word_3: Agency
   -
-    id: sxNRCPBo
-    version: logo_cloud_1
-    images:
-      - images/Booking-Frame.png
-      - images/Product-Hunt-Frame.png
-      - images/Amazon-Frame.png
-      - images/Ups-Frame.png
-    type: logo_cloud
+    id: CBnV22Z8
+    version: feature_single_1
+    title: 'Who We Are'
+    description: |-
+      The Eyes & Ears Agency creates sustained positive change by building a bridge between the music industry and impactful nonprofit organizations.
+
+      We leverage the cultural and personal power of music by facilitating authentic cause-based partnerships to increase collective awareness, shift behaviors, and spark activism within audiences in support of social and environmental causes.
+    toggle: false
+    type: feature_single
     enabled: true
-  -
-    id: srVxbzID
-    version: testimonial_section_7
-    title: 'Our clients know best'
-    description: 'Read about the stories of our clients'
-    testimonials:
-      -
-        id: BQh4guMw
-        description: "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landtamic is one of the best landing page UI kit I have come across. It's so flexible, well organised and easily editable."
-        has_author: true
-        full_name: 'John Doe'
-        position: 'President of Product Hunt'
-        type: new_set
-        enabled: true
-        image: images/Product-Hunt-Frame.png
-      -
-        id: FFNM6ewK
-        description: 'I used landtamic and created a landing page for my startup within a week. The Landtamic UI Kit is simple and highly intuitive, so anyone can use it.'
-        has_author: true
-        full_name: 'Jane Doe'
-        position: 'COO at Booking'
-        type: new_set
-        enabled: true
-        image: images/Booking-Frame.png
-      -
-        id: Dr7ny3vM
-        description: 'Landtamic saved our time in designing my company page.'
-        has_author: true
-        full_name: 'Doe John'
-        position: 'Founder of Amazon'
-        image: images/Amazon-Frame.png
-        type: new_set
-        enabled: true
-    type: testimonial
-    enabled: true
+    image: megaphone-svg.svg
+    block_theme: dark
   -
     id: eXboG76k
     version: feature_multiple_7
@@ -127,6 +95,61 @@ blocks:
     enabled: true
     description: 'Beautiful designs, powerful features is all you need. SEO friendly websites that match up with all the requirements of browsers.'
   -
+    id: sxNRCPBo
+    version: logo_cloud_1
+    images:
+      - images/Booking-Frame.png
+      - images/Product-Hunt-Frame.png
+      - images/Amazon-Frame.png
+      - images/Ups-Frame.png
+    type: logo_cloud
+    enabled: true
+  -
+    id: srVxbzID
+    version: testimonial_section_7
+    title: 'Our clients know best'
+    description: 'Read about the stories of our clients'
+    testimonials:
+      -
+        id: BQh4guMw
+        description: "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landtamic is one of the best landing page UI kit I have come across. It's so flexible, well organised and easily editable."
+        has_author: true
+        full_name: 'John Doe'
+        position: 'President of Product Hunt'
+        type: new_set
+        enabled: true
+        image: images/Product-Hunt-Frame.png
+      -
+        id: FFNM6ewK
+        description: 'I used landtamic and created a landing page for my startup within a week. The Landtamic UI Kit is simple and highly intuitive, so anyone can use it.'
+        has_author: true
+        full_name: 'Jane Doe'
+        position: 'COO at Booking'
+        type: new_set
+        enabled: true
+        image: images/Booking-Frame.png
+      -
+        id: Dr7ny3vM
+        description: 'Landtamic saved our time in designing my company page.'
+        has_author: true
+        full_name: 'Doe John'
+        position: 'Founder of Amazon'
+        image: images/Amazon-Frame.png
+        type: new_set
+        enabled: true
+    type: testimonial
+    enabled: true
+  -
+    id: lgfl5wmo
+    version: feature_single_1
+    title: title
+    description: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available.'
+    image: raveena_at_earth_sessions_in_san_francisco_0128c04e24.webp
+    toggle: false
+    type: feature_single
+    enabled: true
+    block_theme: light
+  -
     id: qdUBjAZi
     version: stats_section_6
     title: 'Because stats do matter'
@@ -178,15 +201,7 @@ blocks:
     toggle: false
     type: feature_single
     enabled: true
-  -
-    id: CBnV22Z8
-    version: feature_single_4
-    title: 'Accessible services for your company'
-    description: 'Beautiful designs, powerful features is all you need. SEO friendly websites that match up with all the requirements of browsers.Beautiful designs, powerful features is all you need.'
-    toggle: false
-    type: feature_single
-    enabled: true
-    image: images/Cover-Image-1641396328.png
+    block_theme: light
   -
     id: RKTQUMw7
     version: cta_section_7

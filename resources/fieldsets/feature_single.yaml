@@ -53,3 +53,23 @@ fields:
       max_files: 1
   -
     import: button
+  -
+    handle: block_theme
+    field:
+      options:
+        light: Light
+        dark: Dark
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: light
+      display: 'Block theme'
+      type: select
+      icon: select
+      instructions: 'Choose the theme for the section'
+      listable: hidden
+      instructions_position: above
+      visibility: visible

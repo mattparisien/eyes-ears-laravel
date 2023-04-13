@@ -94,11 +94,12 @@ export default class extends module {
     };
 
     updateModules(ctx = this, newContainer) {
+        console.log(ctx, 'the context')
         ctx.call('update', newContainer, 'app')
     }
 
     destroyModules(ctx = this, oldContainer) {
-        ctx.call('destroy', oldContainer, 'app')
+        ctx.call('destroy', document.body, 'app');
     }
 
 }
