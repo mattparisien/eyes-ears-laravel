@@ -4,16 +4,8 @@ import SplitText from 'gsap/SplitText';
 export default class extends module {
     constructor(m) {
         super(m);
-
         this.splitTypes = m.el.dataset.splitType.split(",");
         this.initSplitText(m);
-        
- 
-        // this.events = {
-        //     click: {
-        //         button: 'doSomething'
-        //     }
-        // }
     }
 
     init() { // Init is called automatically
@@ -26,9 +18,13 @@ export default class extends module {
             charsClass: "char"
         })
     }
- 
+    
+    refreshSplitText() {
+        this.splitText?.revert().split();
+    }
  
     doSomething() {
         console.log('Hello world');
     }
+
 }

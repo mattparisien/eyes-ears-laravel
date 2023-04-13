@@ -9,10 +9,12 @@ import "@fontsource/manrope/800.css";
 import config from "./config";
 import { html } from "./utils/environment";
 import Alpine from "alpinejs";
-import initRouteAnimation from "./animation/route.animation";
+// import initRouteAnimation from "./animation/route.animation";
 import modular from "modujs";
 import * as modules from "./modules";
 import "./listeners/header.listeners";
+
+
 
 
 window.onload = (e) => {
@@ -21,7 +23,7 @@ window.onload = (e) => {
 
 const init = () => {
     Alpine.start();
-    initRouteAnimation();
+    // initRouteAnimation();
 
     const app = new modular({
         modules: modules,
