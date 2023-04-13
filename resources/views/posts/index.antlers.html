@@ -1,7 +1,5 @@
-<div class="container py-16 md:py-20">
-    <div class="max-w-3xl mb-12">
-        {{ partial:components.heading label="{title}" size="h3" }}
-    </div>
+    {{ partial:sets.hero.hero_section_1 label="{title}" }}
+    
     {{ collection from="posts" limit="6" paginate="true" as="posts" }}
         <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {{ posts }}
@@ -20,4 +18,4 @@
             {{ /if }}
         {{ /paginate }}
     {{ /collection }}
-</div>
+

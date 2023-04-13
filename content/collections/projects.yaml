@@ -12,3 +12,5 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+inject:
+  view_model: App\ViewModels\OgImage

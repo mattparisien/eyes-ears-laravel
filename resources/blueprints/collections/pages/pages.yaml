@@ -89,6 +89,18 @@ sections:
             has_subtitle: 'equals true'
       -
         import: blocks
+      -
+        handle: page_template
+        field:
+          hide_partials: true
+          blueprint: false
+          display: 'Page Template'
+          type: template
+          icon: template
+          instructions: 'Choose a template for this page'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
   sidebar:
     display: Sidebar
     fields:

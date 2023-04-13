@@ -1,4 +1,4 @@
-title: Page Builder
+title: 'Page Builder'
 fields:
   -
     handle: blocks
@@ -11,7 +11,7 @@ fields:
             -
               import: cta_section
         contact_section:
-          display: 'contact_section'
+          display: contact_section
           fields:
             -
               import: contact_section
@@ -26,7 +26,7 @@ fields:
             -
               import: feature_single
         hero:
-          display: 'Hero'
+          display: Hero
           fields:
             -
               import: hero
@@ -61,12 +61,12 @@ fields:
             -
               import: social_media
         stats:
-          display: 'Stats'
+          display: Stats
           fields:
             -
               import: stats
         steps:
-          display: 'Steps'
+          display: Steps
           fields:
             -
               import: steps
@@ -76,7 +76,7 @@ fields:
             -
               import: team_section
         testimonial:
-          display: 'Testimonial'
+          display: Testimonial
           fields:
             -
               import: testimonial
