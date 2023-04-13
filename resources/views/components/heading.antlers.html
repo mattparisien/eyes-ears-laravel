@@ -12,7 +12,7 @@ types:
     white: 'text-white'
 ---
 
-<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}">
+<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ color ? view:types[color] : view:types['gray'] }} {{ class }}" data-module-split="{{ split-module }}" data-split-type="chars">
 {{ label }}
 {{ if underline }}
 {{ svg src="assets/images/decorative/strokes/stroke-underline.svg" class="heading-underline | fill-primary-900" }}

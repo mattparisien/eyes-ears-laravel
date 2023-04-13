@@ -16,12 +16,15 @@
 }
 
 svg.heading-underline {
-    transform-origin: left;
     transition: transform 0.6s $ease-power3-in-out;
+    max-height: 5px;
+    width: 100%;
+    transform-origin: left;
 }
 
 html:not(html.is-ready) {
     svg.heading-underline {
+        transform-origin: right;
         transform: scaleX(0);
     }
 }

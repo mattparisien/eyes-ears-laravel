@@ -3,7 +3,7 @@ import gsap from "gsap";
 import initLoader from "../animation/loader.animation";
 import { toggleLoading } from "../actions";
 
-const exitDelay = 0.4;
+const exitDelay = 1;
 
 const pageTransitionExit = () => {
     const transitionCard = document.getElementById("transition");
@@ -64,8 +64,7 @@ const initRouteAnimation = () => {
                     const done = this.async();
                     pageTransitionEnter();
                     done();
-                    await delay(350);
-                    await toggleLoading();
+                    toggleLoading();
                 },
             },
         ],
