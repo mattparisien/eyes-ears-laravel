@@ -18,6 +18,7 @@ const config = Object.freeze({
         LOADING: "is-loading",
         READY: "is-ready",
         LOADED: "is-loaded",
+        CHANGING_VIEWS: "is-changing-views"
     },
 });
 

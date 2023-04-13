@@ -2,7 +2,9 @@ import { module } from 'modujs';
 import barba from "@barba/core";
 import gsap from "gsap";
 import initLoader from "../animation/loader.animation";
-import { toggleLoading } from "../actions";
+import { toggleLoading, toggleChangingViews } from "../actions";
+import config from '../config';
+import {html} from "../utils/environment";
  
 export default class extends module {
 
@@ -34,6 +36,7 @@ export default class extends module {
     
                         const done = this.async();
                         toggleLoading();
+                        toggleChangingViews();
     
                         await exitAnimation();
                         await destroyModules(context, data.current.container);
@@ -50,7 +53,10 @@ export default class extends module {
                         enterAnimation();
                         await done();
                         await delay(300)
-                        await toggleLoading();
+                        toggleChangingViews();
+                        delay(900);
+                        toggleLoading();
+
                     },
                 },
             ],

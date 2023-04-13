@@ -15,6 +15,16 @@
     }
 }
 
+.hero-graphic {
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.8s $ease-power3-in-out 0.5s;
+}
+
+html.is-ready .hero-graphic {
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 2s $ease-power4-out 0.5s;
+}
+
 svg.heading-underline {
     transition: transform 0.6s $ease-power3-in-out;
     max-height: 5px;

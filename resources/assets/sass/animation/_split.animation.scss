@@ -1,3 +1,12 @@
+
+html.is-changing-viewss {
+    [data-module-split] {
+        .char {
+            transform: translateY(-150%);
+        }
+    }
+}
+
 [data-module-split] {
     overflow: hidden;
     .char {
@@ -12,6 +21,7 @@
         }
     }
 }
+
 
 html.is-ready {
     [data-module-split] {

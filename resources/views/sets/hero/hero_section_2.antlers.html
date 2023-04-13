@@ -4,14 +4,14 @@
         <div
             class="words | pt-72 sm:pt-0 text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight w-full h-full flex sm:flex-col justify-center sm:justify-between"
         >
-            <div class="word | pr-1 sm:pr-0">{{broken_heading.word_1}}</div>
-            <div class="word | pr-1 sm:pr-0 | self-end">
+            <div class="word | pr-1 sm:pr-0" data-module-split data-split-type="chars">{{broken_heading.word_1}}</div>
+            <div class="word | pr-1 sm:pr-0 | self-end" data-module-split data-split-type="chars">
                 {{broken_heading.word_2}}
             </div>
-            <div class="word">{{broken_heading.word_3}}</div>
+            <div class="word" data-module-split data-split-type="chars">{{broken_heading.word_3}}</div>
         </div>
 
-        <div class="absolute-center object-fit">
+        <div class="hero-graphic | absolute-center object-fit">
             {{if hero_image.extension !== 'svg'}} {{ partial:components/picture
             :image="hero_image" class="mx-auto" sizes="(min-width: 200px) 200px,
             90vw" }} {{ else }} {{ svg :src="hero_image"
