@@ -33,15 +33,17 @@ export default class extends module {
     
                     async leave(data) {
                         //animate leaving state
-    
+                        data.current.container.classList.add("is-old");
+                        
                         const done = this.async();
-                        toggleLoading();
                         toggleChangingViews();
+                        toggleLoading();
+                        
     
                         await exitAnimation();
                         await destroyModules(context, data.current.container);
                         await window.scrollTo(0, 0);
-                        await delay(1500);
+                        // await delay(1500);
                         done();
                     },
     

@@ -1,8 +1,19 @@
-
-html.is-changing-views {
+html.is-changing-views:not(html.is-ready) main.is-old {
     [data-module-split] {
         .char {
             transform: translateY(-150%);
+        }
+    }
+}
+
+html.is-ready {
+    [data-module-split] {
+        .char {
+            transform: none;
+        }
+
+        .heading-underline {
+            transition-delay: 1.5s !important;
         }
     }
 }
@@ -18,19 +29,6 @@ html.is-changing-views {
             &:nth-child(#{$i}) {
                 transition: transform 2s $ease-power3-in-out #{$delay}s;
             }
-        }
-    }
-}
-
-
-html.is-ready {
-    [data-module-split] {
-        .char {
-            transform: translateY(0);
-        }
-
-        .heading-underline {
-            transition-delay: 1.5s !important;
         }
     }
 }
