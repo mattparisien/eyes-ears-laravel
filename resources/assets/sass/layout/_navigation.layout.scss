@@ -21,7 +21,6 @@ html.is-page-bottom {
     z-index: 9;
     transition: background-color 0.3s $ease-smooth;
 
-
     &__inner {
         height: 60vh;
         min-height: 600px;
@@ -58,7 +57,7 @@ html.is-page-bottom {
         }
     }
 
-    &:not(.is-show)  {
+    &:not(.is-show) {
         pointer-events: none;
     }
 
@@ -67,11 +66,8 @@ html.is-page-bottom {
     }
 
     &__brand-line {
-        $brand-easing: #{calc($base-delay + 0.5)}s;
         transform: translateY(-100%);
         opacity: 0;
-        transition: transform 0.7s $ease-power3-out $brand-easing,
-            opacity 0.4s $ease-power3-out $brand-easing;
     }
 
     $menu: &;
@@ -100,6 +96,10 @@ html.is-page-bottom {
         #{$menu}__brand-line {
             transform: none;
             opacity: 1;
+
+            $brand-easing: #{calc($base-delay + 0.5)}s;
+            transition: transform 0.7s $ease-power3-out $brand-easing,
+                opacity 0.4s $ease-power3-out $brand-easing;
         }
     }
 }
