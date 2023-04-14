@@ -7,13 +7,15 @@ html.is-changing-views:not(html.is-ready) main.is-old {
 }
 
 html.is-ready {
-    [data-module-split] {
-        .char {
-            transform: none;
-        }
+    .hero {
+        [data-module-split] {
+            .char {
+                transform: none;
+            }
 
-        .heading-underline {
-            transition-delay: 1.5s !important;
+            .heading-underline {
+                transition-delay: 1.5s !important;
+            }
         }
     }
 }
