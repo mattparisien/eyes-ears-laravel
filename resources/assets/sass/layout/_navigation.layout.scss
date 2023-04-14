@@ -1,38 +1,39 @@
 $base-delay: 0.17;
 
-.global-header {
-    z-index: $header-z-index;
+html.is-page-bottom {
+    .global-header {
+        transform: translateY(-100%);
+    }
 }
 
-.global-header nav {
-    height: $header-height;
+.global-header {
+    z-index: $header-z-index;
+    transition: transform 0.4s $ease-smooth;
+
+    nav {
+        height: $header-height;
+    }
 }
 
 .mobile-menu {
     position: fixed;
     width: 100vw;
-    height: 60vh;
-    min-height: 600px;
     z-index: 9;
-    padding-top: $header-height;
-    transition: transform 0.7s $ease-power3-in-out;
-    @apply bg-dark;
+    transition: background-color 0.3s $ease-smooth;
+
+    &__inner {
+        height: 60vh;
+        min-height: 600px;
+        transition: transform 0.7s $ease-power3-in-out;
+    }
 
     &__nav {
         margin-top: calc((-#{$header-height}) / 2);
 
         li {
-            transform: translateY(200px);
+            transform: translateY(50px);
             opacity: 0;
-
-            @for $i from 1 through 10 {
-                &:nth-child(#{$i}) {
-                    $multiplier: 0.12;
-                    $current-delay: calc($base-delay + ($i * $multiplier));
-                    transition: transform 0.53s $ease-smooth #{$current-delay}s,
-                        opacity 0.53s $ease-smooth #{$current-delay}s;
-                }
-            }
+            transition: opacity 0.3s $ease-smooth, transform 0.3s $ease-smooth;
 
             a {
                 @apply text-4xl;
@@ -56,22 +57,43 @@ $base-delay: 0.17;
         }
     }
 
-    &:not(.is-show) {
+    &:not(.is-show) &__inner {
         transform: translateY(-100%);
     }
 
     &__brand-line {
         $brand-easing: #{calc($base-delay + 0.5)}s;
-
         transform: translateY(-100%);
         opacity: 0;
         transition: transform 0.7s $ease-power3-out $brand-easing,
             opacity 0.4s $ease-power3-out $brand-easing;
     }
 
-    &.is-show &__brand-line,
-    &.is-show &__nav li {
-        transform: translateY(0);
-        opacity: 1;
+    $menu: &;
+
+    &.is-show {
+        @apply bg-light;
+
+        #{$menu}__nav li {
+            transform: translateY(0);
+            opacity: 1;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    $multiplier: 0.12;
+                    $current-delay: calc($base-delay + ($i * $multiplier));
+                    transition: transform
+                            0.53s
+                            $ease-power2-out
+                            #{$current-delay}s,
+                        opacity 0.53s $ease-power2-out #{$current-delay}s;
+                }
+            }
+        }
+
+        #{$menu}__brand-line {
+            transform: none;
+            opacity: 1;
+        }
     }
 }

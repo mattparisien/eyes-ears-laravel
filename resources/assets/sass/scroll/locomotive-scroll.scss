@@ -34,6 +34,7 @@ html.has-scroll-dragging {
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     width: 11px;
+    z-index: $header-z-index + 1;
 }
 .c-scrollbar:hover {
     transform: scaleX(1.45);

@@ -412,7 +412,7 @@ sections:
         field:
           mode: list
           container: assets
-          folder: favicons
+          folder: images/favicons
           restrict: true
           allow_uploads: true
           show_filename: true
@@ -422,6 +422,8 @@ sections:
           icon: assets
           instructions: 'Ico file for favicon'
           listable: hidden
+          instructions_position: above
+          visibility: visible
       -
         handle: favicon_256
         field:
@@ -435,10 +437,12 @@ sections:
           instructions: 'PNG Format preffered, 256x256'
           listable: hidden
           container: assets
-          folder: favicons
+          folder: images/favicons
           max_files: 1
           validate:
             - image
+          instructions_position: above
+          visibility: visible
       -
         handle: favicon_192
         field:
@@ -452,10 +456,12 @@ sections:
           instructions: 'PNG Format preffered, 192x192'
           listable: hidden
           container: assets
-          folder: favicons
+          folder: images/favicons
           max_files: 1
           validate:
             - image
+          instructions_position: above
+          visibility: visible
       -
         handle: favicon_180
         field:
@@ -469,10 +475,12 @@ sections:
           instructions: 'Apple Touch Icon, PNG Format preffered, 180x180'
           listable: hidden
           container: assets
-          folder: favicons
+          folder: images/favicons
           max_files: 1
           validate:
             - image
+          instructions_position: above
+          visibility: visible
       -
         handle: favicon_32
         field:
@@ -486,10 +494,12 @@ sections:
           instructions: 'Icon, PNG Format preffered, 32x32'
           listable: hidden
           container: assets
-          folder: favicons
+          folder: images/favicons
           max_files: 1
           validate:
             - image
+          instructions_position: above
+          visibility: visible
       -
         handle: favicon_16
         field:
@@ -503,10 +513,12 @@ sections:
           instructions: 'Icon, PNG Format preffered, 16x16'
           listable: hidden
           container: assets
-          folder: favicons
+          folder: images/favicons
           max_files: 1
           validate:
             - image
+          instructions_position: above
+          visibility: visible
   404_page:
     display: '404 Page'
     fields:

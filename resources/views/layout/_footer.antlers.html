@@ -6,31 +6,33 @@
     {{ var:grid_classes value="grid-cols-1" }}
 {{ /if }}
 
-<footer class="global-footer | relative w-full overflow-hidden bg-dark">
-    <div class="global-footer__main | container h-full md:py-24 py-14 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
-        <div class="mb-10 sm:mb-0">
-        {{
-            partial:components/heading
-            size="h1"
-            el="h3"
-            label="{theme:footer_heading}"
-            class="text-light text-center sm:text-left"
-        }}
-        {{ if theme:display_footer_email }}
-            <a href="mailto:{{ info.email }}" class="hover-underline text-light text-lg">{{ info.email }}</a>
-        {{/if}}
-        </div>
-        <div>
-            {{ if theme:footer_image.extension != 'svg' }} 
-                {{
-                    partial:components/picture
-                    class="object-cover w-96 h-96"
-                    :image="theme:logo_mark"
-                    sizes="(min-width: 200px) 35vw, 90vw"
-                }}
-            {{ else }}
-                {{ svg :src="theme:footer_image" :class="theme:footer_image.classes" }}
-            {{ /if}}
+<footer class="global-footer | h-screen relative w-full overflow-hidden bg-dark" data-scroll-section id="site-footer">
+    <div class="global-footer__content h-full" data-scroll data-scroll-speed="-6" data-scroll-target="#site-footer">
+        <div class="global-footer__main | container h-full md:py-24 py-14 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
+            <div class="mb-10 sm:mb-0">
+            {{
+                partial:components/heading
+                size="h1"
+                el="h3"
+                label="{theme:footer_heading}"
+                class="text-light text-center sm:text-left"
+            }}
+            {{ if theme:display_footer_email }}
+                <a href="mailto:{{ info.email }}" class="hover-underline text-light text-lg">{{ info.email }}</a>
+            {{/if}}
+            </div>
+            <div>
+                {{ if theme:footer_image.extension != 'svg' }} 
+                    {{
+                        partial:components/picture
+                        class="object-cover w-96 h-96"
+                        :image="theme:logo_mark"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                    }}
+                {{ else }}
+                    {{ svg :src="theme:footer_image" :class="theme:footer_image.classes" }}
+                {{ /if}}
+            </div>
         </div>
     </div>
 </footer>

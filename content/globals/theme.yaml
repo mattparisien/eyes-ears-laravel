@@ -44,11 +44,11 @@ data:
   footer_heading: 'Hear to Listen'
   footer_image: logos/animated-face-svg.svg
   favicon: favicons/favicon.png
-  favicon_256: favicons/apple-touch-icon.png
-  favicon_192: favicons/android-chrome-192x192.png
-  favicon_180: favicons/apple-touch-icon.png
-  favicon_32: favicons/favicon-32x32.png
-  favicon_16: favicons/favicon-16x16.png
+  favicon_256: images/favicons/favicon-256.png
+  favicon_192: images/favicons/favicon-192.png
+  favicon_180: images/favicons/favicon-180.png
+  favicon_32: images/favicons/favicon-32.png
+  favicon_16: images/favicons/favicon-16.png
   page_title: 'Page not found'
   page_desc:
     -

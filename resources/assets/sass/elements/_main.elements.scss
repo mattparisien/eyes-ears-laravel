@@ -5,26 +5,28 @@ main.footer-offset {
         pointer-events: all;
     }
 
-    & > *:last-child {
+    & > * > section:last-child {
         position: relative;
+        z-index: 1;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             width: 100%;
             height: 2rem;
-            bottom: -2rem;
+            bottom: -1.9rem;
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
+            z-index: 2;
         }
 
         &[data-theme="dark"]::after {
-             @apply bg-dark;
+            @apply bg-dark;
         }
 
         &[data-theme="light"]::after {
-             @apply bg-light;
+            @apply bg-light;
         }
     }
 }

@@ -1,15 +1,17 @@
-<div class="mobile-menu | {{mobile_menu:breakpoint }}:hidden flex items-center justify-center bg-light flex items-center w-auto {{ var:menu_classes }}" aria-expanded="false">
-    <div class="container h-full">
-        <div class="relative h-full flex items-center justify-center">
-            <ul class="mobile-menu__nav | flex flex-col items-center justify-center w-full px-3 lg:px-0 lg:py-0 lg:space-x-8">
-                {{ nav:navigation include_home="true" }} {{ partial:components.menu_item
-                color="light" }} {{ /nav:navigation }}
-            </ul>
-            <div
-                class="mobile-menu__brand-line | text-light absolute left-0 bottom-0 mb-3">
-                {{ info:brand_line }}
+<div class="mobile-menu | h-screen {{mobile_menu:breakpoint }}:hidden w-auto {{ var:menu_classes }}" aria-expanded="false">
+    <div class="mobile-menu__inner | w-full h-full bg-dark header-offset">
+        <div class="container h-full">
+            <div class="relative h-full flex items-center justify-center">
+                <ul class="mobile-menu__nav | flex flex-col items-center justify-center w-full px-3 lg:px-0 lg:py-0 lg:space-x-8">
+                    {{ nav:navigation include_home="true" }} {{ partial:components.menu_item
+                    color="light" }} {{ /nav:navigation }}
+                </ul>
+                <div
+                    class="mobile-menu__brand-line | text-light absolute left-0 bottom-0 mb-3">
+                    {{ info:brand_line }}
+                </div>
+                <div class="mobile-menu__socials | absolute right-0 bottom-0 mb-3">{{ partial:layout/footer-items/social_media align="right" }}</div>
             </div>
-            <div class="mobile-menu__socials | absolute right-0 bottom-0 mb-3">{{ partial:layout/footer-items/social_media align="right" }}</div>
         </div>
     </div>
 </div>

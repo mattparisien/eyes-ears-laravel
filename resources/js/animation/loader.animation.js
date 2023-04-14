@@ -2,17 +2,23 @@ import gsap from "gsap";
 
 const introContainer = document.getElementById("intro");
 const logo = introContainer.querySelector(".site-intro__logo");
+const words = [...introContainer.querySelectorAll(".word-group")];
 const chars = [...introContainer.querySelectorAll("[data-letter-id]")].sort(
     (a, b) => a.dataset.letterId - b.dataset.letterId
 );
-const words = [...introContainer.querySelectorAll(".word-group")];
-const headerLogoWidth = document
+
+const { width, height, top } = document
     .getElementById("header-logo")
-    .getBoundingClientRect().width;
+    .getBoundingClientRect();
+
 const tl = gsap.timeline();
 
 //Set intiial postiion of DOM elements to ready them for animation
 const setInitialAttrs = () => {
+    gsap.set(logo, {
+        width,
+        height
+    })
     gsap.set(chars, {
         y: "400%",
     });
@@ -48,16 +54,15 @@ const animate = (onCompleteCb) => {
         .to(logo, {
             y: -(
                 window.innerHeight / 2 -
-                logo.getBoundingClientRect().height / 2
+                (logo.getBoundingClientRect().height / 2) - top
             ),
             duration: 2,
-            width: headerLogoWidth,
             ease: "power3.inOut",
             onComplete: () => {
                 removeFromDOM();
                 onCompleteCb();
             },
-        });
+        }, 2);
 };
 
 const initLoader = (onCompleteCb) => {

@@ -2,3 +2,7 @@ name: 'Matthew Parisien'
 super: true
 id: 065e308f-1c8a-4553-9b33-83437fbbdaf8
 password_hash: $2y$10$hNgD/bGIvxcjM5kqzfPxK.fRXIztI8hVX3Tva0.EOigkbh2/0WNZu
+preferences:
+  assets:
+    assets:
+      mode: grid
