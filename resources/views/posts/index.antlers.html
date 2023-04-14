@@ -2,14 +2,18 @@
     
     <div class="container">
         {{ collection from="posts" as="posts" }}
-            <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-                {{ posts }}
-                    {{ partial:components.project
-                        has_link="true"
-                        link="{url}"
-                        description="{date}"
-                    }}
-                {{ /posts }}
+            <div class="project-grid | pb-40 flex">
+                {{ posts chunk="3" }}
+                    <div class="project-grid__col | flex-1">
+                        {{chunk}}
+                        {{ partial:components.project_card
+                            has_link="true"
+                            link="{url}"
+                            description="{date}"
+                        }}
+                        {{/chunk}}
+                    </div>
+                {{ /posts  }}
             </div>
             {{ paginate }}
                 {{ if prev_page or next_page }}

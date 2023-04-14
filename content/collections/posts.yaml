@@ -1,6 +1,13 @@
 title: Posts
 template: posts/show
+layout: layout
 revisions: false
+route: '{{ if depth == 1 }}{{ mount }}{{ /if }}{{ parent_uri }}/{{ slug }}'
+sort_dir: asc
 date_behavior:
   past: public
   future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

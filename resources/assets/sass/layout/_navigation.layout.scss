@@ -21,6 +21,7 @@ html.is-page-bottom {
     z-index: 9;
     transition: background-color 0.3s $ease-smooth;
 
+
     &__inner {
         height: 60vh;
         min-height: 600px;
@@ -57,6 +58,10 @@ html.is-page-bottom {
         }
     }
 
+    &:not(.is-show)  {
+        pointer-events: none;
+    }
+
     &:not(.is-show) &__inner {
         transform: translateY(-100%);
     }
@@ -73,6 +78,7 @@ html.is-page-bottom {
 
     &.is-show {
         @apply bg-light;
+        display: block;
 
         #{$menu}__nav li {
             transform: translateY(0);

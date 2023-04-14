@@ -3,6 +3,7 @@ import barba from "@barba/core";
 import gsap from "gsap";
 import initLoader from "../animation/loader.animation";
 import { toggleLoading, toggleChangingViews } from "../actions";
+import STATES from '../actions/states';
 import config from '../config';
 import {html} from "../utils/environment";
  
@@ -10,9 +11,6 @@ export default class extends module {
 
     constructor(m) {
         super(m);
-
-        
-
         const enterAnimation    = this.pageTransitionEnter;
         const exitAnimation     = this.pageTransitionExit;
         const delay             = this.delay;
@@ -28,6 +26,12 @@ export default class extends module {
     
                     once() {
                         //initial animation on page load
+                        if (STATES.IS_INTRO_DISABLED) {
+                            html.classList.add(config.CSS_CLASS.INTRO_DISABLED);
+                            toggleLoading();
+                            return;
+                        }
+
                         initLoader(toggleLoading);
                     },
     
