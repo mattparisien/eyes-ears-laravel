@@ -17,9 +17,10 @@
                 label="{theme:footer_heading}"
                 class="text-light text-center sm:text-left"
                 split-module="footer"
+                :attrs="'data-scroll'"
             }}
             {{ if theme:display_footer_email }}
-                <a href="mailto:{{ info.email }}" class="hover-underline text-light lg:text-2xl text-xl">{{ info.email }}</a>
+                <a href="mailto:{{ info.email }}" class="inline-block hover-underline text-light lg:text-2xl text-xl" data-scroll data-module-split data-split-type="chars">{{ info.email }}</a>
             {{/if}}
             </div>
             <div>

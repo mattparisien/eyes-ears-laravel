@@ -1,7 +1,7 @@
 html.is-changing-views:not(html.is-ready) main.is-old {
     [data-module-split] {
         .char {
-            transform: translateY(-150%);
+            transform: translateY(-100%);
         }
     }
 }
@@ -20,16 +20,23 @@ html.is-ready {
     }
 }
 
+.is-inview[data-split-type="chars"] {
+    .char {
+        transform: none;
+    }
+}
+
 [data-module-split] {
     overflow: hidden;
     .char {
+        transition: transform 1.2s $ease-power3-in-out;
         transform: translateY(150%);
 
-        @for $i from 1 through 20 {
+        @for $i from 1 through 50 {
             $delay: calc(0.03 * $i);
 
             &:nth-child(#{$i}) {
-                transition: transform 2s $ease-power3-in-out #{$delay}s;
+                transition-delay: #{$delay}s;
             }
         }
     }

@@ -13,7 +13,7 @@ types:
 split-attrs: data-module-split data-split-type="chars" 
 ---
 
-<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ class }}" {{ split-module ? view:split-attrs : "" }}>
+<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ class }}" {{ split-module ? view:split-attrs : "" }} {{ attrs }}>
 {{ label }}
 {{ if underline }}
 {{ svg src="assets/images/decorative/strokes/stroke-underline.svg" class="heading-underline | fill-primary-900" }}
