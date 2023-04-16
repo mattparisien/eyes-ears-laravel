@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681419891
+updated_at: 1681649208
 blocks:
   -
     id: 0Ws43Wo1
@@ -38,6 +38,55 @@ blocks:
     enabled: true
     image: megaphone-svg.svg
     block_theme: dark
+  -
+    id: lgjdowey
+    version: steps_section_8
+    title: 'Finding your Rhythm'
+    steps:
+      -
+        id: lgjdpwq2
+        title: 'Our Approach'
+        description: 'Following your creative vision, we uncover your social impact motive and create unique offerings to support your goals. We manage every aspect of the partnership so you can focus on your mission and work.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjdq4qa
+        title: 'Next Steps'
+        description: 'We help you find the right fit, whether that is an aligned musician or nonprofit organization; we facilitate a sustained connection.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjdqeor
+        title: 'Creating a Vision'
+        description: 'We brainstorm and present your team with personalized partnership ideas until we find what feels authentic for you.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjdqwwu
+        title: 'Moving The Needle'
+        description: 'We measure the impact achieved from your partnership including reach, overall audience experience, educational information disseminated, and funds raised.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjdraa6
+        title: 'Why This Matters'
+        description: 'If we can make social change a basis for connection between audiences and artists, the possibilities for positive revolution are endless.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjeidp5
+        title: 'Why This Matters'
+        description: 'If we can make social change a basis for connection between audiences and artists, the possibilities for positive revolution are endless.'
+        type: new_set
+        enabled: true
+      -
+        id: lgjeikof
+        title: 'Moving The Needle'
+        description: 'We measure the impact achieved from your partnership including reach, overall audience experience, educational information disseminated, and funds raised.'
+        type: new_set
+        enabled: true
+    type: steps
+    enabled: true
   -
     id: eXboG76k
     version: feature_multiple_7

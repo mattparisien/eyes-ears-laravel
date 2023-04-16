@@ -11,6 +11,7 @@ fields:
         steps_section_5: 'Variant 5'
         steps_section_6: 'Variant 6'
         steps_section_7: 'Variant 7'
+        steps_section_8: 'Variant 8'
       display: 'Step Variant'
       default: steps_section_1
       type: button_group
@@ -19,6 +20,8 @@ fields:
       listable: hidden
       validate:
         - required
+      instructions_position: above
+      visibility: visible
   -
     handle: title
     field:
@@ -88,3 +91,7 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+      instructions_position: above
+      visibility: visible
+      previews: true
+      max_sets: 9

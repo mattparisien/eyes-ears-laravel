@@ -1,0 +1,11 @@
+.words {
+    font-size: clamp(2rem, 10vw, 6rem);
+    line-height: 13vw;
+}
+.hero-broken {
+    height: calc(100vh - $header-height);
+
+    .hero-graphic {
+        transform: scale(1);
+    }
+}

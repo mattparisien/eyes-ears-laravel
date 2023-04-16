@@ -1,0 +1,38 @@
+---
+gridItemPos:
+  0: 'md:col-start-1'
+  1: 'md:col-start-2'
+  2: 'md;col-start-3'
+  3: 'md:col-start-2'
+  4: 'md:col-start-1'
+---
+
+
+<div class="steps | container py-16">
+    {{ if title }}
+        <div class="mb-10 text-center">
+            {{ partial:components.heading label="{title}" size="h2" }}
+        </div>
+    {{ /if }}
+    <div class="steps__grid">
+        {{ steps chunk="5"}}
+            {{chunk}}
+                <div class="steps__grid__item | flex flex-col ">
+                    {{
+                        partial:components/picture
+                        :image="image"
+                        class="object-contain w-full h-auto mb-4 max-h-40"
+                        sizes="(min-width: 200px) 35vw, 90vw"
+                    }}
+                    <div class="text-center">
+                        {{ partial:components.heading label="{title}" size="h5" }}
+
+                        {{ if description }}
+                            {{ partial:components.lead label="{description}" class="mt-2" }}
+                        {{ /if }}
+                    </div>
+                </div>
+            {{/chunk}}
+        {{ /steps }}
+    </div>
+</div>

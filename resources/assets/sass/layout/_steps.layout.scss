@@ -1,0 +1,45 @@
+.steps {
+    &__grid {
+        @apply grid;
+        @apply gap-10;
+
+        @screen sm {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @screen lg {
+            grid-template-columns: repeat(3, 1fr);
+            @apply gap-6;
+        }
+
+        &__item {
+            @screen sm {
+                &:nth-child(2n) {
+                    grid-column: 2 / span 1;
+                }
+            }
+
+            @screen lg {
+                &:nth-child(2n) {
+                    grid-column: 2 / span 1;
+                }
+
+                &:nth-child(3n) {
+                    grid-column: 3 / span 1;
+                }
+            }
+
+            @for $i from 1 through 9 {
+                &:nth-child(#{$i}) {
+                    grid-row-start: $i;
+                    grid-row-end: $i + 1;
+                }
+            }
+
+            &:nth-child(6),
+            &:nth-child(7) {
+                display: none;
+            }
+        }
+    }
+}
