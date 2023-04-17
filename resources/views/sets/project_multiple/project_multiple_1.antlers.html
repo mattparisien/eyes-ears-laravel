@@ -9,7 +9,7 @@
 
             {{ collection:posts limit="{max_items}" }}
                 {{ partial:components.carousel_item }}
-                    {{ partial:components.project_card has_link="true" link="/posts/{slug}"}}
+                    {{ partial:components.project_card has_link="true" link="/posts/{slug}" frame="false"}}
                 {{ /partial:components.carousel_item }}
             {{ /collection:posts}}
 

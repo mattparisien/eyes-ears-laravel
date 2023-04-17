@@ -1,7 +1,8 @@
-<div class="carousel" data-module-carousel data-slides-per-view="{{ slidesPerView }}">
+<div class="carousel | relative" data-module-carousel data-slides-per-view="{{ slidesPerView }}">
     <div class="swiper">
         <div class="swiper-wrapper">
             {{ slot }}
         </div>
+        {{ partial:components.carousel-controls }}
     </div>
 </div>

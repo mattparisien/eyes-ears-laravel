@@ -1,0 +1,19 @@
+---
+classes:
+    btn:
+        shared: 'carousel__btn | absolute top-1/2 z-10 w-12 h-12 -translate-y-1/2'
+        prev: 'swiper-button-prev left-0 ml-2'
+        next: 'swiper-button-next right-0 mr-2'
+    arrow: 
+        shared: 'w-full p-2 z-10'
+        prev: 'rotate-180'
+        next: ''
+---
+
+
+<button class="{{view:classes.btn.shared}} {{view:classes.btn[direction]}}" type="button">
+    <div class="carousel__btn__inner | relative w-full h-full flex items-center justify-center">
+        <div class="carousel__btn__circle | absolute w-full h-full rounded-full bg-primary-900"></div>
+        {{ svg src="assets/svg/arrow.svg" class="{{view:classes.arrow.shared}} {{view:classes.arrow[direction]}}"}}
+    </div>
+</button>
