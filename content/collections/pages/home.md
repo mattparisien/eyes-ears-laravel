@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681649208
+updated_at: 1681741667
 blocks:
   -
     id: 0Ws43Wo1
@@ -141,7 +141,7 @@ blocks:
         enabled: true
         has_link: false
     type: feature_multiple
-    enabled: true
+    enabled: false
     description: 'Beautiful designs, powerful features is all you need. SEO friendly websites that match up with all the requirements of browsers.'
   -
     id: sxNRCPBo
@@ -152,7 +152,7 @@ blocks:
       - images/Amazon-Frame.png
       - images/Ups-Frame.png
     type: logo_cloud
-    enabled: true
+    enabled: false
   -
     id: srVxbzID
     version: testimonial_section_7
@@ -196,7 +196,7 @@ blocks:
     image: raveena_at_earth_sessions_in_san_francisco_0128c04e24.webp
     toggle: false
     type: feature_single
-    enabled: true
+    enabled: false
     block_theme: light
   -
     id: qdUBjAZi
@@ -237,7 +237,7 @@ blocks:
         has_icon: true
         icon: images/uil_globe.png
     type: stats
-    enabled: true
+    enabled: false
   -
     id: byLr7uur
     version: feature_single_4
@@ -249,7 +249,7 @@ blocks:
     image: images/Phone-Mockup-1640105713.png
     toggle: false
     type: feature_single
-    enabled: true
+    enabled: false
     block_theme: light
   -
     id: RKTQUMw7
@@ -260,5 +260,21 @@ blocks:
     toggle: false
     type: cta_section
     enabled: false
+  -
+    id: lgkvrlrh
+    project_summary_variant: project_summary_1
+    max_items: 10
+    items_per_view: 4
+    image_filter: grayscale
+    type: project_summary
+    enabled: false
+  -
+    id: lgkwduwy
+    version: project_multiple_1
+    title: 'Our Work'
+    type: project_multiple
+    enabled: true
+    max_items: 10
+    items_per_view: 4
 custom_page_header: false
 ---

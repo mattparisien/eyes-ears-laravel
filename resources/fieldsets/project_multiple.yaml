@@ -74,3 +74,15 @@ fields:
       type: replicator
       icon: replicator
       listable: hidden
+  -
+    handle: max_items
+    field: project_summary.max_items
+    config:
+      unless:
+        version: 'not project_multiple_1'
+  -
+    handle: items_per_view
+    field: project_summary.items_per_view
+    config:
+      unless:
+        version: 'not project_multiple_1'

@@ -80,8 +80,15 @@ fields:
           fields:
             -
               import: testimonial
+        project_summary:
+          display: 'Project Summary'
+          fields:
+            -
+              import: project_summary
       display: Blocks
       type: replicator
       icon: replicator
       listable: hidden
       instructions_position: above
+      visibility: visible
+      previews: true

@@ -1,0 +1,55 @@
+title: 'Project Summary'
+fields:
+  -
+    handle: project_summary_variant
+    field:
+      options:
+        project_summary_1: 'Variant 1'
+        project_summary_2: 'Variant 2'
+      default: project_summary_1
+      display: 'Project Summary Variant'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: max_items
+    field:
+      display: 'Max Items'
+      type: integer
+      icon: integer
+      instructions: 'Choose the max amount of items to display'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: items_per_view
+    field:
+      default: '4'
+      display: 'Items Per View'
+      type: integer
+      icon: integer
+      instructions: 'The amount of items to display per carousel view (this will always default to 1 on mobile)'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: image_filter
+    field:
+      options:
+        grayscale: grayscale
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Image Filter'
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible

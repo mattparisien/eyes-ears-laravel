@@ -280,17 +280,17 @@
     "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-800-normal.woff2"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-dad7710e.css",
+    "file": "assets/index-bf196f2f.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-58adb051.css",
+    "file": "assets/tailwind-ab85bd27.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
   "resources/js/site.css": {
-    "file": "assets/site-5ae91114.css",
+    "file": "assets/site-dbdca2f1.css",
     "src": "resources/js/site.css"
   },
   "resources/js/site.js": {
@@ -332,9 +332,9 @@
       "assets/manrope-latin-800-normal-1aa8fd33.woff2"
     ],
     "css": [
-      "assets/site-5ae91114.css"
+      "assets/site-dbdca2f1.css"
     ],
-    "file": "assets/site-e5841c9c.js",
+    "file": "assets/site-25c88874.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }

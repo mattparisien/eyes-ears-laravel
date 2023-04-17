@@ -17,7 +17,9 @@ export default class extends module {
         this.resize();
 
         this.scroll.on('call', (func, way, obj, id) => {
-            this[func[0]]?.(way, obj);
+            // this.call(fn, arg, "Scroll", "main")
+
+           
         });
 
         this.scroll.on('scroll', (args) => {

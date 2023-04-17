@@ -1,12 +1,18 @@
 <div class="container py-16 md:py-20">
     {{ if title }}
-        <div class="max-w-3xl mb-12">
-            {{ partial:components.heading label="{title}" size="h3" }}
+        <div class="max-w-3xl mb-12 mx-auto">
+            {{ partial:components.heading label="{title}" size="h3" class="text-center" }}
         </div>
     {{ /if }}
-    <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
-        {{ projects }}
-            {{ partial:components.project }}
-        {{ /projects }}
-    </div>
+    {{ partial:components.carousel :slidesPerView="items_per_view"}}
+        
+
+            {{ collection:posts limit="{max_items}" }}
+                {{ partial:components.carousel_item }}
+                    {{ partial:components.project_card has_link="true" link="/posts/{slug}"}}
+                {{ /partial:components.carousel_item }}
+            {{ /collection:posts}}
+
+        
+    {{ /partial:components.carousel}}
 </div>

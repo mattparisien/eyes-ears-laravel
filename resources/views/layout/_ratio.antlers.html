@@ -1,0 +1,9 @@
+---
+ratios:
+    landscape: "ratio-4/5"
+    portrait: "ratio-5/4"
+---
+
+<div class="{{ view:ratios[ratio] }} relative">
+    <div class="absolute top-0 left-0 w-full h-full">{{slot}}</div>
+</div>
