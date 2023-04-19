@@ -67,6 +67,8 @@ export default class extends module {
                 },
             ],
         });
+
+        
     }
     
     pageTransitionExit()  {
@@ -100,12 +102,20 @@ export default class extends module {
     };
 
     updateModules(ctx = this, newContainer) {
-        console.log(ctx, 'the context')
-        ctx.call('update', newContainer, 'app')
+        //Update modules except scroller
+        ctx.call('update', newContainer, 'app');
+
+        //Reinitialize the scroller
+        // ctx.call('init', null, "Scroll", "main")
+
     }
 
     destroyModules(ctx = this, oldContainer) {
-        ctx.call('destroy', document.body, 'app');
+        //Destroy modules that aren't the scroller
+        ctx.call('destroy', oldContainer, 'app');
+
+        //Destroy scroller seperately
+        // ctx.call('destroy', null, "Scroll", "main");
     }
 
 }

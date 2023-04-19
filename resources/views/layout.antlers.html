@@ -28,11 +28,12 @@
         {{ partial:layout/transition_card }}
         
         <!-- Content -->
-        <main class="min-h-screen header-offset footer-offset bg-light" data-module-scroll>
-            <div data-barba="container" class="h-full">
+        <main class="min-h-screen header-offset footer-offset bg-light" data-barba="container">
+            <div class="scroller | h-full">
                 {{ template_content }}
-            </div>
+            
             {{# Footer Partials #}} {{ partial src="layout/_footer" }}
+            </div>
         </main>
         
     </body>

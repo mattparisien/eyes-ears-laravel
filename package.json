@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "watch": "vite build --watch"
+        "watch": "vite build --watch",
+        "serve": "php artisan serve"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",

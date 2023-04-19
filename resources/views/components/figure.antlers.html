@@ -1,0 +1,25 @@
+---
+ratios:
+    portrait: "ratio-4:5"
+    landscape: "ratio-4:5"
+    square: "ratio-1:1"
+    video: "ratio-16:9"
+    ultrawide: "ratio-21:9"
+---
+
+<figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.square }}">
+    <div class="absolute w-full h-full top-0 left-0">
+        {{ media }}
+            {{ if is_image }}
+                {{ partial:components.picture :image="media" }}
+            {{/if}}
+            {{ if is_video }}
+                {{ partial:components.video :video="media" {{ options }} }}
+            {{/if}}
+        {{ /media }}
+    </div>
+{{ if caption}} 
+    <figcaption>{{caption}}</figcaption>
+{{/if}}
+
+</figure>

@@ -5,8 +5,6 @@
         </div>
     {{ /if }}
     {{ partial:components.carousel :slidesPerView="items_per_view"}}
-        
-
             {{ collection:posts limit="{max_items}" }}
                 {{ partial:components.carousel_item }}
                     {{ partial:components.project_card has_link="true" link="/posts/{slug}" frame="false"}}
@@ -15,4 +13,7 @@
 
         
     {{ /partial:components.carousel}}
+    <div class="w-full flex justify-center">
+        {{ partial:components.button link="/hello" label="Browse our work" class="mx-auto mt-20" radius="pill" size="lg" }}
+    </div>
 </div>

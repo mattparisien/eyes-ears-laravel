@@ -9,7 +9,6 @@ export default class extends module {
     }
 
     init() { // Init is called automatically
-        console.log('has init!')
     }
 
     initSplitText(m) { 
