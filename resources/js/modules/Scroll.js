@@ -1,11 +1,9 @@
-import { module } from 'modujs';
 import LocomotiveScroll from 'locomotive-scroll';
-import { html } from "../utils/environment";
+import { module } from 'modujs';
 
 export default class extends module {
     constructor(m) {
         super(m);
-        console.log('this should only be called oncesss')
     }
 
 
@@ -14,8 +12,8 @@ export default class extends module {
         if (!this.scroll) {
             this.scroll = new LocomotiveScroll({
                 el: this.el,
-                smooth: true
             });
+            this.headerRef = this.modules.Header.global;
         } else {
             this.scroll.update();
         }
@@ -29,19 +27,37 @@ export default class extends module {
            
         // });
 
-        // this.scroll.on('scroll', (args) => {
+        this.scroll.on('scroll', (args) => {
+            // const isTop = this.isDocumentTop(args);
             
-        //     const isDocumentBottom   = args.delta.y >= args.limit.y;
-        //     const header             = this.modules.Header.global;
-        //     const isHeaderHidden     = header.isHidden;
-        //     const hasHtmlBottomClass = html.classList.contains("is-page-bottom");
+            
+            
+            // console.log('hello!')
+            // const isDocumentBottom   = args.delta.y >= args.limit.y;
+            // const header             = this.modules.Header.global;
+            // const isHeaderHidden     = header.isHidden;
+            // const hasHtmlBottomClass = html.classList.contains("is-page-bottom");
 
-        //     if (isDocumentBottom && !hasHtmlBottomClass) {
-        //         html.classList.add("is-page-bottom")
-        //     } else if (!isDocumentBottom && hasHtmlBottomClass) {
-        //         html.classList.remove("is-page-bottom");
-        //     }
-        // })
+            // if (isDocumentBottom && !hasHtmlBottomClass) {
+            //     html.classList.add("is-page-bottom")
+            // } else if (!isDocumentBottom && hasHtmlBottomClass) {
+            //     html.classList.remove("is-page-bottom");
+            // }
+        })
+
+
+   
+        this.scroll.on("call", (args, direction, el) => {
+
+            this.call(args[0], {direction, args, el}, args[1], "main");
+        })
+
+
+    }
+
+    getSectionTheme(section) {
+        const {color} = window.getComputedStyle(section);
+        this.headerRef.el.style.color = color;
     }
 
     
@@ -51,6 +67,11 @@ export default class extends module {
             
             this.scroll.update();
         })
+    }
+
+    isDocumentTop(args) {
+        const headerHeight = this.headerRef.height;
+        return args.scroll.y <= headerHeight;
     }
 
     update() {

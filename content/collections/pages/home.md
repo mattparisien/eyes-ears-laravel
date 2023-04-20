@@ -11,20 +11,25 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1681741667
+updated_at: 1682003283
 blocks:
   -
     id: 0Ws43Wo1
-    version: hero_section_2
-    hero_image: logos/animated-face-svg.svg
+    version: hero_section_5
     type: hero
     enabled: true
     toggle: false
     broken_text: social-impact-agency
-    broken_heading:
-      word_1: Social
-      word_2: Impact
-      word_3: Agency
+    title: 'Social Impact Agency'
+    has_description: false
+    hero_video: videos/earth-sessions/patagonia-brooklyn-earth-session-sizzle-reel.mov
+    block_theme: yellow-2
+    background_overlay:
+      -
+        id: 620Ix3Op
+        color: dark
+        opacity: 40
+    background_video: videos/earth-sessions/patagonia-brooklyn-earth-session-sizzle-reel.mov
   -
     id: CBnV22Z8
     version: feature_single_1
@@ -276,5 +281,6 @@ blocks:
     enabled: true
     max_items: 10
     items_per_view: 4
+    is_grayscale: true
 custom_page_header: false
 ---

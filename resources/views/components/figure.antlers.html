@@ -6,10 +6,11 @@ ratios:
     square: "ratio-1:1"
     video: "ratio-16:9"
     ultrawide: "ratio-21:9"
+    fill: "ratio-fill"
 ---
 
 <figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.preserve }}">
-    <div class="{{ratio ? 'absolute' : ''}} w-full h-full top-0 left-0">
+    <div class="{{ratio && ratio != 'fill' ? 'absolute' : ''}} w-full h-full top-0 left-0">
         {{ media }}
             {{ if is_image }}
                 {{ partial:components.picture :image="media" }}

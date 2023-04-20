@@ -2,6 +2,10 @@
     padding-top: $header-height;
 }
 
+.no-header-offset {
+    margin-top: -$header-height;
+}
+
 // .footer-offset {
 
 //     margin-bottom: $footer-height-mobile;

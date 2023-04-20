@@ -7,3 +7,18 @@ section[data-theme="dark"] {
     @apply bg-dark;
     @apply text-light;
 }
+
+section[data-theme="yellow"] {
+    @apply bg-primary-900;
+    @apply text-dark;
+}
+
+section[data-theme="yellow-2"] {
+    @apply bg-dark;
+    @apply text-primary-900;
+}
+
+section[data-theme="yellow-3"] {
+    @apply bg-transparent;
+    @apply text-primary-900;
+}

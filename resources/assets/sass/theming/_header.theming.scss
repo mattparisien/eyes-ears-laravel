@@ -1,0 +1,58 @@
+.global-header {
+
+    $header: &;
+    
+    &[data-theme="yellow-2"] {
+        
+        @apply text-primary-900;
+        @apply bg-dark;
+
+        &#{$header}.is-hero-theme {
+            border-bottom: 1px solid;
+            @apply border-primary-900;
+            @apply bg-transparent;
+        }
+
+        svg {
+            @apply fill-primary-900;
+        }
+
+        .toggle-button {
+           &__circle {
+            @apply bg-primary-900;
+           }
+
+           &::before, &::after {
+            @apply bg-dark;
+           }
+        }
+
+        a::after {
+            @apply bg-primary-900;
+        }
+    }
+
+    &[data-theme="light"] {
+        
+        @apply text-dark;
+        @apply bg-light;
+
+        svg {
+            @apply fill-dark;
+        }
+
+        .toggle-button {
+           &__circle {
+            @apply bg-dark;
+           }
+
+           &::before, &::after {
+            @apply bg-light;
+           }
+        }
+
+        a::after {
+            @apply bg-dark;
+        }
+    }
+}

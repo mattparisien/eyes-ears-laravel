@@ -1,3 +1,4 @@
+import { first } from 'lodash';
 import { module } from 'modujs';
 
 export default class extends module {
@@ -6,10 +7,12 @@ export default class extends module {
     constructor(m) {
         super(m);
         this.el = m.el;
+P
     }
     
 
     init() {
+        
     }
 
     animateContent(obj) {
@@ -29,6 +32,8 @@ export default class extends module {
         this.call(fn, arg, "Scroll", "main")
 
     }
+
+ 
 
     animateCircle({el, progress}) {
             if (!this.circleHeight) this.circleHeight = el.getBoundingClientRect().height;

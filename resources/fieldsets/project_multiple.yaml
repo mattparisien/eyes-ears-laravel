@@ -86,3 +86,16 @@ fields:
     config:
       unless:
         version: 'not project_multiple_1'
+  -
+    handle: is_grayscale
+    field:
+      default: false
+      display: 'Grayscale items?'
+      type: toggle
+      icon: toggle
+      instructions: 'Choose whether you would like to display the carousel items in black & white'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required

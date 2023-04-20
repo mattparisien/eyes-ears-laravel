@@ -12,13 +12,13 @@
         transition: transform 0.6s $ease-power2-in-out;
     }
 
-    &:not(.text-light)::after {
-        @apply bg-dark;
-    }
+    // &:not(.text-light)::after {
+    //     @apply bg-dark;
+    // }
 
-    &.text-light::after {
-        @apply bg-light #{!important};
-    }
+    // &.text-light::after {
+    //     @apply bg-light #{!important};
+    // }
 
     &:not(.is-active)::after {
         transform: scaleX(0);

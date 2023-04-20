@@ -1,8 +1,8 @@
 .global-header {
     $header: &;
     transition: background-color 300ms ease;
+
     
-    @apply bg-light;
 
     &__logo svg {
         @apply fill-dark;

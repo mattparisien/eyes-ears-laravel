@@ -12,6 +12,8 @@ states:
             dark: "text-neutral-500 hover:text-dark"
 ---
 
+{{# {{ if current_uri === url}}{{ if color }}{{ view:states.active.colors[color]}}{{ else }}{{view:states.active.colors.dark }}{{ /if }}{{ else }}{{ if color }}{{ view:states.inactive.colors[color] }}{{ else }}{{ view:states.inactive.colors.dark }}{{ /if }}{{ /if }} #}}
+
 {{ if toggle_button }}
 <li class="py-2 lg:py-0">
     {{ partial:components.button link="{url}" color="{button_variant}"
@@ -20,7 +22,7 @@ states:
 {{ else }}
 <li>
     <a
-        class="{{ view:classes.shared }} {{ if current_uri === url}}{{ if color }}{{ view:states.active.colors[color]}}{{ else }}{{view:states.active.colors.dark }}{{ /if }}{{ else }}{{ if color }}{{ view:states.inactive.colors[color] }}{{ else }}{{ view:states.inactive.colors.dark }}{{ /if }}{{ /if }}"
+        class="{{ view:classes.shared }}"
         href="{{ url }}"
     >
         {{ title }}

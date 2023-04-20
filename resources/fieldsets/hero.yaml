@@ -80,6 +80,9 @@ fields:
       max_files: 1
       instructions_position: above
       show_filename: true
+      visibility: visible
+      unless:
+        version: 'equals hero_section_5'
   -
     import: button
   -
@@ -101,3 +104,87 @@ fields:
         - sometimes
       unless:
         version: 'not hero_section_2'
+  -
+    handle: background_video
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: 'Background Video'
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      unless:
+        version: 'not hero_section_5'
+      validate:
+        - sometimes
+        - 'mimes:mp4,mov'
+  -
+    handle: block_theme
+    field: feature_single.block_theme
+    config:
+      options:
+        light: Light
+        dark: Dark
+        yellow: 'Yellow     (yellow background + dark text)'
+        yellow-2: 'Yellow 2 (dark background + yellow text)'
+        yellow-3: 'Yellow 3 (transparent background + yellow text)'
+  -
+    handle: background_overlay
+    field:
+      fields:
+        -
+          handle: color
+          field:
+            options:
+              dark: Dark
+              light: Light
+            multiple: false
+            max_items: 1
+            clearable: false
+            searchable: true
+            taggable: false
+            push_tags: false
+            cast_booleans: false
+            display: Color
+            type: select
+            icon: select
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            validate:
+              - required
+        -
+          handle: opacity
+          field:
+            min: 0
+            max: 100
+            step: 1
+            default: 50
+            display: Opacity
+            type: range
+            icon: range
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            validate:
+              - sometimes
+      mode: table
+      max_rows: 1
+      min_rows: 1
+      reorderable: true
+      display: 'Background Overlay'
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes
+      unless:
+        version: 'not hero_section_5'

@@ -1,10 +1,16 @@
+---
+sectionAttrs: 
+    1: 'data-scroll data-scroll-call="themeUpdate, Header" data-scroll-repeat data-scroll-offset="95%"' 
+---
+
 {{ if custom_page_header }}
     {{ partial src="sets/headers/{header_version}" }}
 {{ /if }}
 
 
 {{ blocks }}
-<section data-theme="{{block_theme || 'light'}}" data-scroll-section>
+
+<section class="block-section" data-theme="{{block_theme || 'light'}}" {{ view:sectionAttrs[index] }}>
     {{ partial src="sets/{type}/{version}" }}
 </section>
 {{ /blocks }}
