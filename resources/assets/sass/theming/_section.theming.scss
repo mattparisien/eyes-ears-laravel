@@ -2,7 +2,7 @@ section[data-theme="light"] {
     @apply bg-light;
     @apply text-dark;
     
-    svg path {
+    .stroke-svg {
         @apply stroke-dark;
     }
 }
