@@ -1,11 +1,19 @@
 section[data-theme="light"] {
     @apply bg-light;
     @apply text-dark;
+    
+    svg path {
+        @apply stroke-dark;
+    }
 }
 
 section[data-theme="dark"] {
     @apply bg-dark;
     @apply text-light;
+
+    svg path {
+        @apply stroke-light;
+    }
 }
 
 section[data-theme="yellow"] {
@@ -16,6 +24,11 @@ section[data-theme="yellow"] {
 section[data-theme="yellow-2"] {
     @apply bg-dark;
     @apply text-primary-900;
+
+
+    svg path {
+        @apply stroke-primary-900;
+    }
 }
 
 section[data-theme="yellow-3"] {

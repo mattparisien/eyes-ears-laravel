@@ -10,7 +10,7 @@ const toggleMobileMenu = () => {
     if (STATES.IS_MENU_OPEN) {
         menuBtn.classList.add("is-menu-open");
         menu.classList.add("is-show");
-        header.classList.add("is-dark");
+        header.setAttribute("data-theme", "dark");
         menuBtn.setAttribute("aria-expanded", true);
         menu.setAttribute("aria-expanded", true);
         STATES.IS_MENU_OPEN = true;

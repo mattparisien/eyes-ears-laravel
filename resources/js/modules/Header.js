@@ -45,13 +45,15 @@ export default class extends module {
     }
 
     themeUpdate({direction}) {
-
         if (direction === "enter") {
             this.setTheme("light");
-            this.el.classList.remove("is-hero-theme");
-        } else if (direction === "exit") {
+            this.el.classList.remove("is-hero-header");
+
+            this.hasThemeUpdated = !this.hasThemeUpdated;
+
+        } else if (direction === "exit" && !this.hasThemeUpdated) {
             this.setTheme(this.initialTheme);
-            this.el.classList.add("is-hero-theme");
+            this.el.classList.add("is-hero-header");
         }
 
         

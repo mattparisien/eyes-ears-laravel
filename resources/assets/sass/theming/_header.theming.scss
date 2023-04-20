@@ -7,7 +7,7 @@
         @apply text-primary-900;
         @apply bg-dark;
 
-        &#{$header}.is-hero-theme {
+        &#{$header}.is-hero-header {
             border-bottom: 1px solid;
             @apply border-primary-900;
             @apply bg-transparent;

@@ -1,8 +1,8 @@
 ---
 overlay:
     colors:
-        dark: 'bg-black'
-        light: 'bg-white'
+        dark: "bg-black"
+        light: "bg-white"
 ---
 
 <div class="hero | no-header-offset relative bg-gray-200 h-screen">
@@ -10,8 +10,9 @@ overlay:
         class="flex flex-wrap w-full h-full items-center justify-center z-10 sticky"
     >
         {{ partial:components.heading size="h1" label="{{title}}"
-        class="uppercase font-black text-center max-w-6xl"
-        attrs="data-module-split data-split-type='chars'"}} {{#
+        class="uppercase text-center max-w-6xl" attrs="data-module-split
+        data-split-type='words, chars' style='font-weight: 800;'"}} 
+        {{#
         <div class="order-none w-full md:w-1/2 md:px-4 md:order-first z-10">
             <div class="mb-8 text-center md:text-left">
                 {{ partial:components.heading label="{title}" size="h1" }} {{ if
@@ -29,9 +30,12 @@ overlay:
     </div>
     <div class="absolute w-full h-full top-0 left-0">
         {{ partial:components.figure :media="background_video" ratio="fill"
-        options="autoplay playsinline loop muted"}}
-        {{ background_overlay }}
-            <div class="absolute w-full h-full top-0 left-0 {{view:overlay.colors[color]}}" style="opacity: {{opacity}}%"></div>
+        options="autoplay playsinline loop muted"}} {{ background_overlay }}
+        <div
+            class="absolute w-full h-full top-0 left-0 {{view:overlay.colors[color]}}"
+            style="opacity: 40%"
+        ></div>
         {{/background_overlay}}
     </div>
+    {{ svg src="assets/svg/animated-squiggle-arrow.svg" class="animated-squiggle-arrow absolute bottom-10 right-1/2 w-28 transform rotate-12 fill-none [&>*]:!fill-none [&>*]:stroke-[10]" }}
 </div>
