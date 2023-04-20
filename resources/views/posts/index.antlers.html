@@ -1,16 +1,19 @@
-    {{ partial:sets.hero.hero_section_1 label="{title}" }}
+    {{ partial:sets.hero.hero_section_1 }}
     
     <div class="container">
         {{ collection from="posts" as="posts" }}
-            <div class="project-grid | pb-40 flex">
+            <div class="masonry-grid | pb-40">
                 {{ posts chunk="3" }}
-                    <div class="project-grid__col | flex-1">
+                    <div class="masonry-grid__col | flex-1">
                         {{chunk}}
+                        <div class="masonry-grid__item">
                         {{ partial:components.project_card
                             has_link="true"
                             link="{url}"
                             description="{date}"
+                            frame="true"
                         }}
+                        </div>
                         {{/chunk}}
                     </div>
                 {{ /posts  }}

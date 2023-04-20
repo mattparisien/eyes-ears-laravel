@@ -1,18 +1,10 @@
-.animated-face-svg {
-    width: 200px;
-    height: 200px;
-    transform: translateX(-10%);
-}
-
 .megaphone-svg {
     transform: rotate(-30deg);
 
-    @media(max-width: 768px) {
-        transform: rotate(-30deg)scale(0.8);
+    @media (max-width: 768px) {
+        transform: rotate(-30deg) scale(0.8);
     }
 }
-
-
 
 body .animated-face-svg:not(.global-footer .animated-face-svg) {
     .face {

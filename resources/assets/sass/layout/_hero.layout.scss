@@ -1,11 +1,59 @@
-.words {
-    font-size: clamp(2rem, 10vw, 6rem);
-    line-height: 13vw;
-}
 .hero-broken {
-    height: calc(100vh - $header-height);
+    > * {
+        height: 100%;
+    }
 
-    .hero-graphic {
-        transform: scale(1);
+    .words {
+        font-size: 2rem;
+    }
+
+    .animated-face-svg {
+        width: 200px;
+        height: 200px;
+        transform: translateX(-10%);
+        margin-bottom: 4rem;
+    }
+
+
+    @screen sm {
+        height: 65vh;
+
+        .words{
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+        }
+
+        .animated-face-svg {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    @screen md {
+        height: 70vh;
+
+        .words {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+        .animated-face-svg {
+            width: 160px;
+            height: 160px;
+        }
+    }
+
+    @screen lg {
+        height: calc(100vh - $header-height);
+
+        .words {
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+
+        .animated-face-svg {
+            width: 200px;
+            height: 200px;
+        }
     }
 }

@@ -1,5 +1,6 @@
 ---
 ratios:
+    preserve: ''
     portrait: "ratio-4:5"
     landscape: "ratio-4:5"
     square: "ratio-1:1"
@@ -7,8 +8,8 @@ ratios:
     ultrawide: "ratio-21:9"
 ---
 
-<figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.square }}">
-    <div class="absolute w-full h-full top-0 left-0">
+<figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.preserve }}">
+    <div class="{{ratio ? 'absolute' : ''}} w-full h-full top-0 left-0">
         {{ media }}
             {{ if is_image }}
                 {{ partial:components.picture :image="media" }}

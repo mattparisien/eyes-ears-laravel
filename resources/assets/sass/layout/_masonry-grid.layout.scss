@@ -1,0 +1,34 @@
+.masonry-grid {
+    $gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 100%;
+
+        &:not(:last-child) {
+            margin-right: $gap;
+        }
+
+        > * {
+            display: block;
+            margin-bottom: $gap;
+        }
+
+    
+
+        @screen md {
+            flex-basis: calc(100% / 2 - $gap);
+            width: calc(100% / 2 - $gap);
+        }
+
+        @screen lg {
+            flex-basis: calc(100% / 3 - $gap);
+            width: calc(100% / 3 - $gap);
+        }
+    }
+}
