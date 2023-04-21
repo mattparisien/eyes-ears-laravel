@@ -55,12 +55,11 @@ export default class extends module {
                     
                         //animate enter state
                         const done = this.async();
-                        updateModules(context, data.next.container);
-                        enterAnimation();
                         await done();
                         await delay(300)
+                        enterAnimation();
+                        updateModules(context, data.next.container);
                         toggleChangingViews();
-                        delay(900);
                         toggleLoading();
 
                     },
@@ -102,12 +101,11 @@ export default class extends module {
     };
 
     updateModules(ctx = this, newContainer) {
-        //Update modules except scroller
+        //Update modules inside new page
         ctx.call('update', newContainer, 'app');
 
-        //Reinitialize the scroller
-        // ctx.call('init', null, "Scroll", "main")
-
+        //Update header
+        ctx.call('update', null, 'Header', 'main');
     }
 
     destroyModules(ctx = this, oldContainer) {
@@ -115,7 +113,7 @@ export default class extends module {
         ctx.call('destroy', oldContainer, 'app');
 
         //Destroy scroller seperately
-        // ctx.call('destroy', null, "Scroll", "main");
+        ctx.call('destroy', null, "Scroll", "main");
     }
 
 }

@@ -10,7 +10,7 @@ sectionAttrs:
 
 {{ blocks }}
 
-<section class="block-section" data-theme="{{block_theme || 'light'}}" {{ view:sectionAttrs[index] }}>
+<section data-block-section data-theme="{{block_theme || 'light'}}" {{ view:sectionAttrs[index] }}>
     {{ partial src="sets/{type}/{version}" }}
 </section>
 {{ /blocks }}

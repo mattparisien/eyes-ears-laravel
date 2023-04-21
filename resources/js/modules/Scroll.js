@@ -7,11 +7,11 @@ export default class extends module {
     }
 
 
-    init() {
-        
+    init() { 
         if (!this.scroll) {
             this.scroll = new LocomotiveScroll({
                 el: this.el,
+                getDirection: true,
             });
             this.headerRef = this.modules.Header.global;
         } else {
@@ -28,6 +28,7 @@ export default class extends module {
         // });
 
         this.scroll.on('scroll', (args) => {
+            this.scrollDirection = args.direction;
             // const isTop = this.isDocumentTop(args);
             
             
@@ -47,13 +48,14 @@ export default class extends module {
 
 
    
-        this.scroll.on("call", (args, direction, el) => {
-
-            this.call(args[0], {direction, args, el}, args[1], "main");
+        this.scroll.on("call", (args, way, el) => {
+            this.call(args[0], {way, args, el, scrollDirection: this.scrollDirection}, args[1], "main");
         })
 
 
     }
+
+
 
     getSectionTheme(section) {
         const {color} = window.getComputedStyle(section);
@@ -79,6 +81,6 @@ export default class extends module {
     }
 
     destroy() {
-        // this.scroll.destroy();
+        this.scroll.destroy();
     }
 }

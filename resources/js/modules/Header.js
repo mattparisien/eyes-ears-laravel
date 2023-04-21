@@ -29,7 +29,7 @@ export default class extends module {
 
        //Sets the initial color of the header on page load based on the first section
        setInitialColor() {
-        const firstSection = document.querySelector(".block-section:nth-child(1)");
+        const firstSection = document.querySelector("section[data-block-section]:nth-child(1)");
         const firstSectionTheme = firstSection.dataset.theme;
         
         this.setTheme(firstSectionTheme);
@@ -44,20 +44,19 @@ export default class extends module {
         return this.el.dataset.theme;
     }
 
-    themeUpdate({direction}) {
-        if (direction === "enter") {
+    themeUpdate({way, scrollDirection, el}) {
+        if (way === "enter" && scrollDirection === "down") {
             this.setTheme("light");
             this.el.classList.remove("is-hero-header");
-
-            this.hasThemeUpdated = !this.hasThemeUpdated;
-
-        } else if (direction === "exit" && !this.hasThemeUpdated) {
+        } else if (way === "exit" && scrollDirection === "up") {
             this.setTheme(this.initialTheme);
             this.el.classList.add("is-hero-header");
+            
         }
+    }
 
-        
-        
+    update() {
+        this.setInitialColor();
     }
 
 }
