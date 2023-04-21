@@ -9,7 +9,7 @@ ratios:
     fill: "ratio-fill"
 ---
 
-<figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.preserve }}">
+<figure class="relative overflow-hidden {{ ratio ? view:ratios[ratio] : view:ratios.preserve }} {{ class }}">
     <div class="{{ratio && ratio != 'fill' ? 'absolute' : ''}} w-full h-full top-0 left-0">
         {{ media }}
             {{ if is_image }}

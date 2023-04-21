@@ -13,6 +13,6 @@ types:
 split-attrs: data-module-split data-split-type="chars" 
 ---
 
-<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ class }}" {{ split-module ? view:split-attrs : "" }} {{ attrs }}>
+<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ class }}" {{ attrs }}>
 {{ label }}
 </{{ el or size or 'p' }}>

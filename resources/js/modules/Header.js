@@ -55,8 +55,16 @@ export default class extends module {
         }
     }
 
-    update() {
+    setHeroHeader() {
+
+        if (!this.el.classList.contains("is-hero-header"))
+        this.el.classList.add("is-hero-header");
+
         this.setInitialColor();
+    }
+
+    update() {
+        this.setHeroHeader();
     }
 
 }
