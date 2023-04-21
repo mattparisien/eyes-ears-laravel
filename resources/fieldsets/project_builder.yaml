@@ -1,0 +1,50 @@
+title: 'Project Builder'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: false
+      previews: true
+      sets:
+        stats:
+          display: stats
+          fields:
+            -
+              import: stats
+        feature_single:
+          display: feature_single
+          fields:
+            -
+              import: feature_single
+        feature_multiple:
+          display: feature_multiple
+          fields:
+            -
+              import: feature_multiple
+        social_media:
+          display: social_media
+          fields:
+            -
+              import: social_media
+        steps:
+          display: steps
+          fields:
+            -
+              import: steps
+        testimonial:
+          display: testimonial
+          fields:
+            -
+              import: testimonial
+        slideshow:
+          display: slideshow
+          fields:
+            -
+              import: slideshow
+      display: Blocks
+      type: replicator
+      icon: replicator
+      instructions: 'Build this project page using blocks'
+      listable: hidden
+      instructions_position: above
+      visibility: visible

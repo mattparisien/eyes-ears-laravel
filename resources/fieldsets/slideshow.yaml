@@ -1,0 +1,61 @@
+title: Slideshow
+fields:
+  -
+    handle: slideshow_images
+    field:
+      mode: list
+      container: assets
+      folder: images/projects
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 12
+      display: Images
+      type: assets
+      icon: assets
+      instructions: "Add the images you'd like to add to the slideshow"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes
+        - 'mimes:jpg,jpeg,png,webp'
+  -
+    handle: autoplay
+    field:
+      default: false
+      display: Autoplay
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes
+  -
+    handle: slides_per_view
+    field:
+      default: '1'
+      display: 'Slides Per View'
+      type: integer
+      icon: integer
+      instructions: 'How many slides per view are displayed until the user has to swipe (max is 4)'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes
+        - 'max:4'
+  -
+    handle: inset
+    field:
+      default: false
+      display: Inset
+      type: toggle
+      icon: toggle
+      instructions: 'Whether you would like the slideshow to span the full width of the viewport or to be inset'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes

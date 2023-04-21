@@ -1,11 +1,11 @@
+<article>
+
 <section data-block-section data-theme="light">
 {{ partial:sets.hero.hero_section_7 }}
 </section>
-
-<div class="container py-10">
-    {{ article }}
-        {{ partial src="sets/blog/{type}" }}
-    {{ /article }}
+        {{ blocks }}
+            {{ partial src="sets/{type}/{version}" }}
+        {{ /blocks }}
 
     <div class="max-w-3xl mx-auto mt-8 overflow-hidden">
         {{ partial:posts/post_details }}
@@ -20,4 +20,4 @@
             {{ partial:posts/author }}
         {{ /if }}
     </div>
-</div>
+</article>

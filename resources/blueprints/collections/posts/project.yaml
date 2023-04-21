@@ -42,6 +42,8 @@ sections:
           visibility: visible
           validate:
             - required
+      -
+        import: project_builder
   sidebar:
     display: Sidebar
     fields:
@@ -54,7 +56,6 @@ sections:
         handle: date
         field:
           type: date
-          required: true
           validate:
             - required
   SEO:

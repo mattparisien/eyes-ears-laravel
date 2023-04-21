@@ -1,0 +1,19 @@
+{{ if inset }} 
+    <div class="container">
+        {{ partial:components.carousel :slidesPerView="slides_per_view" }}
+            {{ slideshow_images}}
+                {{ partial:components.carousel_item }}  
+                    {{ partial:components.figure ratio="video" :media="url" :rounded="true" }}
+                {{ /partial:components.carousel_item}}  
+            {{ /slideshow_images}}
+        {{ /partial:components.carousel }}
+    </div>
+    {{else}}
+    {{ partial:components.carousel :slidesPerView="slides_per_view" }}
+            {{ slideshow_images}}
+                {{ partial:components.carousel_item }}  
+                    {{ partial:components.figure ratio="video" :media="url" :rounded="true" }}
+                {{ /partial:components.carousel_item}}  
+            {{ /slideshow_images}}
+    {{ /partial:components.carousel }}
+{{/if}}
