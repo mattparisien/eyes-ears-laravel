@@ -41,6 +41,11 @@ fields:
           fields:
             -
               import: slideshow
+        text_content:
+          display: 'Text Content'
+          fields:
+            -
+              import: text
       display: Blocks
       type: replicator
       icon: replicator

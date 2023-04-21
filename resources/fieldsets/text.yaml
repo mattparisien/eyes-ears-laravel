@@ -20,6 +20,15 @@ fields:
         - anchor
         - image
         - table
+        - h4
+        - h5
+        - h6
+        - underline
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
       container: assets
       save_html: false
       inline: false
@@ -43,3 +52,7 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+      sets:
+        new_set:
+          display: 'New Set'
+          fields: {  }

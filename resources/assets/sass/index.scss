@@ -1,13 +1,23 @@
+/* SETTINGS */
 @import "./settings/fonts.settings";
 @import "./settings/variables.settings";
+
+/* ELEMENTS */
 @import "./elements/document.elements";
 @import "./elements/main.elements";
+
+/* COMPONENTS */
 @import "./components/toggle_button.components";
+@import "./components/heading.components";
+
+/* UTILITIES */
 @import "./utilities/position.utilities";
 @import "./utilities/styles.utilities";
 @import "./utilities/spacing.utilities";
 @import "./utilities/ratio.utilities";
 @import "./utilities/transition.utilities";
+
+/* LAYOUTS */
 @import "./layout/navigation.layout";
 @import "./layout/intro_screen";
 @import "./layout/steps.layout";
@@ -15,9 +25,17 @@
 @import "./layout/hero.layout";
 @import "./layout/masonry-grid.layout";
 @import "./layout/project-card.layout";
+
+/* ANIMATIONS */
 @import "./animation/svg.animation";
 @import "./animation/split.animation";
+
+/* VENDOR */
 @import "./vendor/locomotive-scroll.scss";
+
+/* THEMING */
 @import "./theming/section.theming";
 @import "./theming/header.theming";
+
+/* SPECIFIC / MISC */
 @import "./specific/svg.specific";
