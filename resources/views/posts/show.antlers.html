@@ -1,10 +1,13 @@
 <article>
 
-<section data-block-section data-theme="light">
+<section data-block-section data-theme="{{block_theme || 'light'}}">
 {{ partial:sets.hero.hero_section_7 }}
 </section>
         {{ blocks }}
+        <section data-block-section data-theme="{{block_theme || 'light'}}">
             {{ partial src="sets/{type}/{version}" }}
+        </section>
+
         {{ /blocks }}
 
     <div class="max-w-3xl mx-auto mt-8 overflow-hidden">

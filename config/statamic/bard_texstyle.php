@@ -15,11 +15,10 @@ return [
 
         'title' => [
             'type' => 'heading',
-            'level' => 1,
+            'level' => 4,
             'name' => 'Title',
             'ident' => 'T',
             'icon' => null,
-            'class' => 'title',
             'cp_css' => 'text-decoration: underline; text-underline-offset: 0.1em; text-decoration-color: #c5ccd4',
             'cp_badge' => false,
         ],
@@ -29,8 +28,7 @@ return [
             'name' => 'Lead',
             'ident' => 'L',
             'icon' => null,
-            'class' => 'lead',
-            'cp_css' => 'font-size: 1.25em; margin-top: -0.5em',
+            'class' => 'text-xl max-w-prose mt-5',
             'cp_badge' => false,
         ],
 
@@ -49,7 +47,7 @@ return [
             'name' => 'Action',
             'ident' => 'A',
             'icon' => null,
-            'class' => 'action',
+            'class' => 'action hover-underline',
             'cp_css' => 'background: #737f8d; color: white; padding: 0.2em 0.5em; border-radius: 4px',
             'cp_badge' => false,
         ],
@@ -119,7 +117,6 @@ return [
                 5 => 'h5',
                 6 => 'h6',
             ],
-            'paragraph' => 'p-body',
         ],
     ],
 

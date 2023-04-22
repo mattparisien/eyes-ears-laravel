@@ -4,17 +4,15 @@ fields:
     handle: content
     field:
       collapse: false
-      placeholder: Hello!
-      always_show_set_button: true
+      always_show_set_button: false
       previews: true
-      smart_typography: true
+      smart_typography: false
       buttons:
         - h2
         - h3
         - bold
         - italic
         - unorderedlist
-        - orderedlist
         - removeformat
         - quote
         - anchor
@@ -28,7 +26,10 @@ fields:
         - alignleft
         - aligncenter
         - alignright
-        - alignjustify
+        - twocolumns
+        - title
+        - lead
+        - action
       container: assets
       save_html: false
       inline: false
@@ -44,7 +45,7 @@ fields:
       allow_source: true
       enable_input_rules: true
       enable_paste_rules: true
-      antlers: true
+      antlers: false
       remove_empty_nodes: false
       display: Content
       type: bard
@@ -52,7 +53,9 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
-      sets:
-        new_set:
-          display: 'New Set'
-          fields: {  }
+  -
+    handle: block_theme
+    field: hero.block_theme
+    config:
+      validate:
+        - required

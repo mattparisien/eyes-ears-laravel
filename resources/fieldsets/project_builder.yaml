@@ -45,7 +45,7 @@ fields:
           display: 'Text Content'
           fields:
             -
-              import: text
+              import: text_content
       display: Blocks
       type: replicator
       icon: replicator
