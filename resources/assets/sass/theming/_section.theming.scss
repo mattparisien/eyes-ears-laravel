@@ -14,6 +14,14 @@ section[data-theme="dark"] {
     svg path {
         @apply stroke-light;
     }
+
+    a {
+        transition: color 300ms $ease-smooth;
+    }
+
+    a:hover {
+        @apply text-primary-900;
+    }
 }
 
 section[data-theme="yellow"] {

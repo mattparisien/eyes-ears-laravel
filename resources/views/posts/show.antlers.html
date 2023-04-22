@@ -1,26 +1,12 @@
 <article>
-
-<section data-block-section data-theme="{{block_theme || 'light'}}">
-{{ partial:sets.hero.hero_section_7 }}
-</section>
-        {{ blocks }}
-        <section data-block-section data-theme="{{block_theme || 'light'}}">
-            {{ partial src="sets/{type}/{version}" }}
-        </section>
-
-        {{ /blocks }}
+    {{ partial:layout/block-section noGutters="true" }} {{ partial:sets.hero.hero_section_7 }} {{
+    /partial:layout/block-section }} {{ blocks }} {{
+    partial:layout/block-section gutter="md" }} {{ partial src="sets/{type}/{version}" }} {{
+    /partial:layout/block-section }} {{ /blocks }}
 
     <div class="max-w-3xl mx-auto mt-8 overflow-hidden">
-        {{ partial:posts/post_details }}
-
-        {{ if tags }}
-            {{ partial:posts/tags }}
-        {{ /if }}
-
-        {{ partial:posts/social_media_sharing }}
-
-        {{ if author }}
-            {{ partial:posts/author }}
-        {{ /if }}
+        {{ partial:posts/post_details }} {{ if tags }} {{ partial:posts/tags }}
+        {{ /if }} {{ partial:posts/social_media_sharing }} {{ if author }} {{
+        partial:posts/author }} {{ /if }}
     </div>
 </article>

@@ -1,0 +1,39 @@
+.text-content {
+    ul {
+        margin-top: 20px;
+        li {
+            margin-top: 15px;
+            padding-left: 1.5em;
+            position: relative;
+            
+            &, & p {
+                font-size: 1rem;
+                line-height: 23px;
+
+                @screen lg {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+            
+
+            a {
+                font-weight: 600;
+                border-bottom: 1px solid;
+                padding-bottom: 1px;
+            }
+            
+            &::before {
+                content: "•";
+                position: absolute;
+                top: 0;
+                left: 0.5em;
+                height: 100%;
+                font-size: 1em;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

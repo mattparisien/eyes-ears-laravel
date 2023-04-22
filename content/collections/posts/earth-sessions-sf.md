@@ -14,7 +14,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682123773
+updated_at: 1682201361
 blocks:
   -
     id: lgqlu8ji
@@ -55,7 +55,7 @@ blocks:
       - images/projects/earth-sessions/@mekhimarcelino-gglesjt-51.jpg
     inset_percentage: 40
   -
-    id: lgr828uh
+    id: lgsj5sqz
     content:
       -
         type: heading
@@ -70,12 +70,12 @@ blocks:
       -
         type: paragraph
         attrs:
-          textAlign: start
+          textAlign: left
           class: null
         content:
           -
             type: text
-            text: 'A decision as monumental as this one will radically change how we talk to and support those around us. We must be willing to listen, to have honest discussions, and to speak up. Staying silent perpetuates the stigma around topics like abortion, infant loss, sexual assault, reproductive health and bodily autonomy. Did you know…'
+            text: 'A decision as monumental as this one will radically change how we talk to and support those around us. We must be willing to listen, to have honest discussions, and to speak up. Staying silent perpetuates the stigma around topics like abortion, infant loss, sexual assault, reproductive health and bodily autonomy. Did you know...'
       -
         type: bulletList
         attrs:
@@ -100,75 +100,15 @@ blocks:
                         type: link
                         attrs:
                           class: null
-                          href: 'https://www.amnesty.org/en/what-we-do/sexual-and-reproductive-rights/abortion-facts/'
+                          href: 'statamic://entry::a01b3421-558b-45df-a692-90359dbf2587'
                           rel: 'noopener noreferrer'
-                          target: _blank
+                          target: null
                           title: null
-                      -
-                        type: bold
                     text: source
                   -
                     type: text
                     text: )
-          -
-            type: listItem
-            content:
-              -
-                type: paragraph
-                attrs:
-                  textAlign: left
-                  class: null
-                content:
-                  -
-                    type: text
-                    text: 'Nearly 1 in 5 women have experienced completed or attempted rape during their lifetime ('
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          class: null
-                          href: 'https://www.cdc.gov/injury/features/sexual-violence/index.html#:~:text=Nearly%201%20in%205%20women,it%20occurred%20before%20age%2010.'
-                          rel: 'noopener noreferrer'
-                          target: _blank
-                          title: null
-                      -
-                        type: bold
-                    text: source
-                  -
-                    type: text
-                    text: )
-          -
-            type: listItem
-            content:
-              -
-                type: paragraph
-                attrs:
-                  textAlign: left
-                  class: null
-                content:
-                  -
-                    type: text
-                    text: 'Roughly 10-15 in every 100 pregnancies end in miscarriage ('
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          class: null
-                          href: 'https://www.marchofdimes.org/complications/miscarriage.aspx'
-                          rel: 'noopener noreferrer'
-                          target: _blank
-                          title: null
-                      -
-                        type: bold
-                    text: source
-                  -
-                    type: text
-                    text: )
+    block_theme: dark
     type: text_content
     enabled: true
-    block_theme: dark
 ---

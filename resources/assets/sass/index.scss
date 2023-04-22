@@ -17,6 +17,7 @@
 @import "./utilities/spacing.utilities";
 @import "./utilities/ratio.utilities";
 @import "./utilities/transition.utilities";
+@import "./utilities/width.utilities";
 
 /* LAYOUTS */
 @import "./layout/navigation.layout";
@@ -26,6 +27,7 @@
 @import "./layout/hero.layout";
 @import "./layout/masonry-grid.layout";
 @import "./layout/project-card.layout";
+@import "./layout/text-content.layout";
 
 /* ANIMATIONS */
 @import "./animation/svg.animation";

@@ -52,13 +52,11 @@ return [
             'cp_badge' => false,
         ],
 
-        'squarelist' => [
+        'bulletList' => [
             'type' => 'bulletList',
-            'name' => 'Square List',
+            'name' => 'Bullet List',
             'ident' => '■',
             'icon' => null,
-            'class' => 'square-list',
-            'cp_css' => 'list-style-type: square',
             'cp_badge' => false,
         ],
 

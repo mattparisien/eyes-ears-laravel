@@ -1,8 +1,7 @@
-    <section data-block-section data-theme="{{block_theme || 'light'}}">
+    {{ partial:layout/block-section no_y_padding="true" }}
         {{ partial:sets.hero.hero_section_1 }}
-    </section>
-    <section data-block-section data-theme="{{block_theme || 'light'}}">
-        <div class="container">
+    {{ /partial:layout/block-section }}
+    {{ partial:layout/block-section }}
         {{ collection from="posts" as="posts" }}
             <div class="masonry-grid | pb-40">
                 {{ posts chunk="3" }}
@@ -28,6 +27,5 @@
                 {{ /if }}
             {{ /paginate }}
         {{ /collection }}
-        </div>
-    </section>
+    {{ /partial:layout/block-section }}
 

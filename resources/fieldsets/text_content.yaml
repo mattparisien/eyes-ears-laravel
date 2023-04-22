@@ -30,6 +30,7 @@ fields:
         - title
         - lead
         - action
+        - bulletList
       container: assets
       save_html: false
       inline: false
