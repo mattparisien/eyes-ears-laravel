@@ -46,6 +46,11 @@ fields:
           fields:
             -
               import: text_content
+        image_gallery:
+          display: image_gallery
+          fields:
+            -
+              import: image_gallery
       display: Blocks
       type: replicator
       icon: replicator

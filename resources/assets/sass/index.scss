@@ -2,6 +2,11 @@
 @import "./settings/fonts.settings";
 @import "./settings/variables.settings";
 
+/* THEMING */
+@import "./theming/mixins.theming";
+@import "./theming/section.theming";
+@import "./theming/header.theming";
+
 /* ELEMENTS */
 @import "./elements/document.elements";
 @import "./elements/main.elements";
@@ -10,6 +15,7 @@
 /* COMPONENTS */
 @import "./components/toggle_button.components";
 @import "./components/heading.components";
+@import "./components/social-media.components";
 
 /* UTILITIES */
 @import "./utilities/position.utilities";
@@ -28,6 +34,7 @@
 @import "./layout/masonry-grid.layout";
 @import "./layout/project-card.layout";
 @import "./layout/text-content.layout";
+@import "./layout/grid.layout";
 
 /* ANIMATIONS */
 @import "./animation/svg.animation";
@@ -35,10 +42,6 @@
 
 /* VENDOR */
 @import "./vendor/locomotive-scroll.scss";
-
-/* THEMING */
-@import "./theming/section.theming";
-@import "./theming/header.theming";
 
 /* SPECIFIC / MISC */
 @import "./specific/svg.specific";

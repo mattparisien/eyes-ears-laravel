@@ -2,7 +2,7 @@
 ratios:
     preserve: ''
     portrait: "ratio-4:5"
-    landscape: "ratio-4:5"
+    landscape: "ratio-5:4"
     square: "ratio-1:1"
     video: "ratio-16:9"
     ultrawide: "ratio-21:9"
@@ -21,9 +21,7 @@ ratios:
             {{/if}}
             {{ /media }}
         {{/if}}
-        {{ if url and is_image }}
-            {{ partial:components.picture :image="url" cover="true"}}
-        {{/if}}
+
     </div>
 {{ if image_credit}} 
     <figcaption>{{image_credit}}</figcaption>

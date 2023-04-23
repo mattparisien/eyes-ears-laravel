@@ -1,0 +1,63 @@
+@mixin theme-light {
+    --bg-color: theme("colors.light");
+    --fg-color: theme("colors.dark");
+
+    @apply bg-light;
+    @apply text-dark;
+
+    .stroke-svg {
+        @apply stroke-dark;
+    }
+}
+
+@mixin theme-dark {
+    --bg-color: theme("colors.dark");
+    --fg-color: theme("colors.light");
+
+    @apply bg-dark;
+    @apply text-light;
+
+    .stroke-svg {
+        @apply stroke-light;
+    }
+
+    a {
+        transition: color 300ms $ease-smooth;
+    }
+
+    a {
+        &:not(a:has(svg)) {
+            &:hover {
+                @apply text-primary-900;
+            }
+        }
+    }
+}
+
+@mixin theme-yellow {
+    --bg-color: theme("colors.primary.900");
+    --fg-color: theme("colors.dark");
+
+    @apply bg-primary-900;
+    @apply text-dark;
+}
+
+@mixin theme-yellow-2 {
+    --bg-color: theme("colors.dark");
+    --fg-color: theme("colors.primary.900");
+
+    @apply bg-dark;
+    @apply text-primary-900;
+
+    svg path {
+        @apply stroke-primary-900;
+    }
+}
+
+@mixin theme-yellow-3 {
+    --bg-color: theme("colors.transparent");
+    --fg-color: theme("colors.primary.900");
+
+    @apply bg-transparent;
+    @apply text-primary-900;
+}

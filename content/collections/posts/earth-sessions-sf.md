@@ -14,7 +14,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682205831
+updated_at: 1682277138
 blocks:
   -
     id: lgqlu8ji
@@ -198,7 +198,7 @@ blocks:
     enabled: true
   -
     id: lgslqb6q
-    version: feature_single_1
+    version: feature_single_2
     title: 'About the Organization'
     description: 'Intersectional Environmentalist (501(c)3) is a climate justice community and resource hub centering people of color and historically excluded voices. They merge science, cultural wisdom, and creativity through curricula + interactive learning experiences to connect individuals with their local communities to root their environmental practice in equity and inclusion.'
     image: images/projects/earth-sessions/earth-sessions-sf-group.webp
@@ -206,4 +206,75 @@ blocks:
     block_theme: light
     type: feature_single
     enabled: true
+  -
+    id: lgtg0cir
+    images:
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-10.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-111.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-112.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-19.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-20.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-34.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-35.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-36.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-43.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-5.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-51.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-59.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-63.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-69.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-75.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-79.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-9.jpg
+      - images/projects/earth-sessions/@mekhimarcelino-gglesjt-94.jpg
+      - images/projects/earth-sessions/277173595_500554354775366_4493254505241606382_n.jpg
+      - images/projects/earth-sessions/amaria-at-earth-sessions-la.jpg
+    type: image_gallery
+    enabled: true
+    grid_styles:
+      -
+        id: lgtlzggj
+        columns_md: 3
+        columns_lg: 4
+        columns_sm: 1
+        type: columns
+        enabled: true
+    gutter:
+      -
+        id: q6gn60WH
+        gutter_lg: 2
+        gutter_md: 2
+        gutter_sm: 2
+    version: image_gallery_2
+    grid_builder:
+      -
+        id: d7BT0rbT
+        row_layout:
+          -
+            id: lgtp4faw
+            image_1: images/projects/earth-sessions/sf/earth_sessions_sf_ie_kiana_kazemi_0a292a5299.jpeg
+            image_2: images/projects/earth-sessions/sf/raveena_performing_at_earth_sessions_sf_c1a0bb3cfd.jpeg
+            image_3: images/projects/earth-sessions/sf/earth_sessions_sf_5_media_ac28e534c4.jpeg
+            type: three_columns
+            enabled: true
+            row_aspect_ratio: portrait
+            images:
+              - images/projects/earth-sessions/sf/raveena_performing_at_earth_sessions_sf_c1a0bb3cfd.jpeg
+              - images/projects/earth-sessions/sf/earth_sessions_sf_ie_kiana_kazemi_0a292a5299.jpeg
+              - images/projects/earth-sessions/sf/earth_sessions_sf_5_media_ac28e534c4.jpeg
+          -
+            id: lgtq8k8i
+            image_1: images/projects/earth-sessions/sf/earth_sessions_sf_raveena_performance_262ea2d8e0.jpeg
+            type: one_column
+            enabled: true
+            row_aspect_ratio: video
+            images: images/projects/earth-sessions/sf/earth_sessions_sf_raveena_meditatio_984bf9500e.jpeg
+          -
+            id: lgts22zt
+            images:
+              - images/projects/earth-sessions/sf/earth_sessions_5_media_sf_sponsor_944458f6a4.jpeg
+              - images/projects/earth-sessions/sf/earth_sessions_founder_leah_thomas_at_sf_show_5bb5784c7d.jpeg
+            row_aspect_ratio: square
+            type: two_columns
+            enabled: true
 ---

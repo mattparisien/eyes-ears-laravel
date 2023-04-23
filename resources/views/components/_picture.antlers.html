@@ -1,5 +1,18 @@
+---
+ratios:
+    preserve: ''
+    portrait: "ratio-4:5"
+    landscape: "ratio-5:4"
+    square: "ratio-1:1"
+    video: "ratio-16:9"
+    ultrawide: "ratio-21:9"
+    fill: "ratio-fill"
+---
+
 {{ if image  }}
-<div class="overflow-hidden w-full h-full">
+
+<div class="overflow-hidden w-full h-full relative rounded-md{{ratio ? (' ' + view:ratios[ratio]) : ''}}">
+    <div class="absolute w-full h-full">
     <picture>
         {{ asset :url="image" }}
             {{ if extension == 'gif' }}
@@ -43,5 +56,7 @@
             {{ /if }}
         {{ /asset }}
     </picture>
+    </div>
 </div>
+
 {{ /if }}

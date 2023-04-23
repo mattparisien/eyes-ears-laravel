@@ -25,6 +25,10 @@ html.is-page-bottom {
         height: 60vh;
         min-height: 600px;
         transition: transform 0.7s $ease-power3-in-out;
+
+        &[data-theme="dark"] {
+            @include theme-dark;
+        }
     }
 
     &__nav {

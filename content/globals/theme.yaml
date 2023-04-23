@@ -13,6 +13,7 @@ data:
       id: lgdn8n94
       title: Instagram
       url: 'https://www.instagram.com/eyes__ears/'
+      icon: svg/icons/instagram.svg
   logo_position: center
   menu_position: right
   show_links: true

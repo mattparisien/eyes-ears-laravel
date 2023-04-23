@@ -6,14 +6,10 @@
     {{ var:social_align value="mx-auto" }}
 {{ /if }}
 
-<ul class="flex flex-row items-center space-x-3 {{ var:social_align }}">
+<ul class="social-media">
     {{ theme:socials }}
-        <li class="group">
-            <a aria-label="visit {{ icon }}"
-                href="{{ url }}"
-                >
-                {{ svg :src="icon" class="w-6 h-6 text-white fill-current"}}
-            </a>
+        <li>
+                {{ partial:partials.social_link }} 
         </li>
     {{ /theme:socials }}
 </ul>

@@ -1,45 +1,19 @@
 section[data-theme="light"] {
-    @apply bg-light;
-    @apply text-dark;
-    
-    .stroke-svg {
-        @apply stroke-dark;
-    }
+    @include theme-light;
 }
 
 section[data-theme="dark"] {
-    @apply bg-dark;
-    @apply text-light;
-
-    svg path {
-        @apply stroke-light;
-    }
-
-    a {
-        transition: color 300ms $ease-smooth;
-    }
-
-    a:hover {
-        @apply text-primary-900;
-    }
+    @include theme-dark;
 }
 
 section[data-theme="yellow"] {
-    @apply bg-primary-900;
-    @apply text-dark;
+    @include theme-yellow;
 }
 
 section[data-theme="yellow-2"] {
-    @apply bg-dark;
-    @apply text-primary-900;
-
-
-    svg path {
-        @apply stroke-primary-900;
-    }
+    @include theme-yellow-2;
 }
 
 section[data-theme="yellow-3"] {
-    @apply bg-transparent;
-    @apply text-primary-900;
+    @include theme-yellow-3;
 }

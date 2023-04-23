@@ -1,0 +1,46 @@
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+        &:not(:last-child) {
+            @apply mr-3;
+        }
+
+        a {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%)scale(0);
+                transition: transform 0.39s $ease-smooth;
+                width: 170%;
+                height: 170%;
+                content: "";
+                background-color: var(--fg-color);
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            &:hover svg path {
+                fill: var(--bg-color);
+            }
+
+            &:hover::after {
+                transform: translate(-50%, -50%)scale(1);
+            }
+        }
+
+        svg {
+            z-index: 2;
+            position: sticky;
+            
+            path {
+                transition: fill 0.3s $ease-smooth;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div class="grid{{class}}" data-module-grid>
+    <div class="grid-sizer"></div>
+    <style>
+        .grid {
+            --gutter: 15px;
+        }
+    </style>
+    {{columns}}
+    <style>
+        .grid { --cols-sm: 1/{{columns_sm}}; --cols-md: 1/{{columns_md}}; --cols-lg: 1/{{columns_lg}};}
+    </style>
+    {{/columns}} {{ slot }}
+</div>

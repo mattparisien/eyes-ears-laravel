@@ -1,0 +1,7 @@
+{{ partial:layout.grid class=" grid-masonry" }}
+        {{ images }}
+            {{ partial:layout.grid-item }}
+                {{ partial:components.figure :media="images[index]" ratio="preserve" }}
+            {{ /partial:layout.grid-item }}
+        {{ /images }}
+{{ /partial:layout.grid }}

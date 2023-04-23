@@ -3,6 +3,9 @@
     $header: &;
     
     &[data-theme="yellow-2"] {
+
+        --bg-color: theme('colors.dark');
+        --fg-color: theme('colors.primary.900');
         
         @apply text-primary-900;
         @apply bg-dark;
@@ -33,7 +36,10 @@
     }
 
     &[data-theme="light"] {
-        
+    
+        --bg-color: theme('colors.light');
+        --fg-color: theme('colors.dark');
+
         @apply text-dark;
         @apply bg-light;
 
@@ -55,4 +61,5 @@
             @apply bg-dark;
         }
     }
+
 }

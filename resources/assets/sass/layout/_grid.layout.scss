@@ -1,0 +1,72 @@
+
+
+@mixin grid-custom-item-margin-x {
+    margin-left: calc(var(--gutter) / 2);
+    margin-right: calc(var(--gutter) / 2);
+}
+
+@mixin grid-custom-item-width($ratio) {
+    width: calc(99.99% * $ratio - var(--gutter));
+}
+
+.grid {
+
+    @screen md {
+        & {
+            margin-left: -calc(var(--gutter) / 2);
+            margin-right: -calc(var(--gutter) / 2);
+        }
+    }
+
+
+    &-item {
+        width: 100%;
+        float: left;
+        margin-bottom: var(--gutter);
+    }
+
+    &.grid-masonry {
+        @screen sm {
+            .grid-item {
+                width: calc(99.99% * var(--cols-sm) - var(--gutter));
+                @include grid-custom-item-margin-x;
+            }
+        }
+        @screen md {
+            .grid-item {
+                width: calc(99.99% * var(--cols-md) - var(--gutter));
+            }
+        }
+    
+        @screen lg {
+            .grid-item {
+                width: calc(99.99% * var(--cols-lg) - var(--gutter));
+            }
+        }
+    }
+
+    &.grid-custom {
+
+
+      
+        @screen md {
+
+            .grid-item.s-1\/3 {
+                @include grid-custom-item-width(1/3);
+                @include grid-custom-item-margin-x;
+            }
+
+            .grid-item.s-1\/2 {
+                @include grid-custom-item-width(1/2);
+                @include grid-custom-item-margin-x;
+            }
+
+            .grid-item.s-1\/1 {
+                @include grid-custom-item-width(1/1);
+                @include grid-custom-item-margin-x;
+            }
+        }
+    
+     
+    }
+}

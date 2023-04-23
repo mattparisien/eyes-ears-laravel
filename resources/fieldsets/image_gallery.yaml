@@ -1,0 +1,234 @@
+title: 'Image Gallery'
+fields:
+  -
+    handle: version
+    field:
+      options:
+        image_gallery_1: 'Variant 1'
+        image_gallery_2: 'Variant 2'
+      display: 'Image Gallery Variant'
+      type: button_group
+      icon: button_group
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+      default: image_gallery_1
+  -
+    handle: images
+    field: slideshow.slideshow_images
+    config:
+      max_files: 20
+      validate:
+        - sometimes
+        - 'mimes:jpg,jpeg,png,webp'
+  -
+    handle: columns
+    field:
+      fields:
+        -
+          handle: columns_lg
+          field:
+            display: 'Columns Lg'
+            type: integer
+            icon: integer
+            instructions: 'Amount of columns on a large screen'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            validate:
+              - sometimes
+              - 'max:4'
+        -
+          handle: columns_md
+          field:
+            display: 'Columns Md'
+            type: integer
+            icon: integer
+            instructions: 'Amount of columns on a medium / tablet screen'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            validate:
+              - sometimes
+              - 'max:4'
+        -
+          handle: columns_sm
+          field:
+            display: 'Columns Sm'
+            type: integer
+            icon: integer
+            instructions: 'Amount of columns on a small device'
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            validate:
+              - sometimes
+              - 'max:3'
+      mode: table
+      reorderable: true
+      display: Columns
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      max_rows: 1
+      min_rows: 1
+      add_row: 'Add column amounts'
+      validate:
+        - sometimes
+      unless:
+        version: 'not image_gallery_1'
+  -
+    handle: grid_builder
+    field:
+      fields:
+        -
+          handle: row_layout
+          field:
+            collapse: false
+            previews: true
+            sets:
+              three_columns:
+                display: 'Three columns'
+                fields:
+                  -
+                    handle: row_aspect_ratio
+                    field:
+                      options:
+                        portrait: 'Portrait (5:4)'
+                        landscape: 'Landscape  (4:5)'
+                        ultrawide: 'Ultrawide (21:9)'
+                        square: 'Square (1:1)'
+                        video: 'Television (16:9)'
+                      inline: false
+                      cast_booleans: false
+                      display: 'Row Aspect Ratio'
+                      type: radio
+                      icon: radio
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+                  -
+                    handle: images
+                    field:
+                      mode: list
+                      container: assets
+                      folder: images/projects
+                      restrict: false
+                      allow_uploads: true
+                      show_filename: true
+                      max_files: 3
+                      display: Images
+                      type: assets
+                      icon: assets
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+                        - 'mimes:jpg,jpeg,png,webp'
+              one_column:
+                display: 'One column'
+                fields:
+                  -
+                    handle: row_aspect_ratio
+                    field:
+                      options:
+                        portrait: 'Portrait (4:5)'
+                        landscape: 'Landscape (5:4)'
+                        ultrawide: 'Ultrawide (21:9)'
+                        square: 'Square (1:1)'
+                        video: 'Television (16:9)'
+                      inline: false
+                      cast_booleans: false
+                      display: 'Row Aspect Ratio'
+                      type: radio
+                      icon: radio
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+                  -
+                    handle: images
+                    field:
+                      mode: list
+                      container: assets
+                      folder: images/projects
+                      restrict: false
+                      allow_uploads: true
+                      show_filename: true
+                      max_files: 1
+                      display: Images
+                      type: assets
+                      icon: assets
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+                        - 'mimes:jpg,jpeg,png,webp'
+              two_columns:
+                display: 'Two columns'
+                fields:
+                  -
+                    handle: images
+                    field:
+                      mode: list
+                      container: assets
+                      restrict: false
+                      allow_uploads: true
+                      show_filename: true
+                      max_files: 2
+                      display: Images
+                      type: assets
+                      icon: assets
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+                        - 'mimes:jpg,jpeg,png,webp'
+                  -
+                    handle: row_aspect_ratio
+                    field:
+                      options:
+                        portrait: 'Portrait (4:5)'
+                        landscape: 'Landscape (5:4)'
+                        ultrawide: 'Ultrawide (21:9)'
+                        square: 'Square (1:1)'
+                      inline: false
+                      cast_booleans: false
+                      display: 'Row Aspect Ratio'
+                      type: radio
+                      icon: radio
+                      listable: hidden
+                      instructions_position: above
+                      visibility: visible
+                      validate:
+                        - required
+            display: 'Row Layout'
+            type: replicator
+            icon: replicator
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+      mode: stacked
+      reorderable: true
+      display: 'Grid Layout Builder'
+      type: grid
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      min_rows: 1
+      add_row: 'Add grid row'
+      validate:
+        - sometimes
+      unless:
+        version: 'not image_gallery_2'
