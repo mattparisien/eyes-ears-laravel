@@ -8,11 +8,11 @@ data:
       id: lgdn8299
       title: LinkedIn
       url: 'https://www.linkedin.com/company/the-eyes-and-ears-agency/'
+      icon: svg/icons/linkedin.svg
     -
       id: lgdn8n94
       title: Instagram
       url: 'https://www.instagram.com/eyes__ears/'
-      icon: svg/icons/instagram-1641400598.svg
   logo_position: center
   menu_position: right
   show_links: true
