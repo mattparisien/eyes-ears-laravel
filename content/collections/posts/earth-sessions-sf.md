@@ -14,7 +14,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682277138
+updated_at: 1682277641
 blocks:
   -
     id: lgqlu8ji
@@ -276,5 +276,14 @@ blocks:
               - images/projects/earth-sessions/sf/earth_sessions_founder_leah_thomas_at_sf_show_5bb5784c7d.jpeg
             row_aspect_ratio: square
             type: two_columns
+            enabled: false
+          -
+            id: lgtslyom
+            row_aspect_ratio: square
+            images:
+              - images/projects/earth-sessions/sf/courtney_morris_and_kiana_at_earth_sessions_sf_055e31be3f.jpeg
+              - images/projects/earth-sessions/sf/earth_sessions_sf_at_gray_area_c42aa533f2.jpeg
+              - images/projects/earth-sessions/sf/earth_sessions_sf_book_giveaway_6867d2bdf4.jpeg
+            type: three_columns
             enabled: true
 ---
