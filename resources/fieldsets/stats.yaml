@@ -5,12 +5,6 @@ fields:
     field:
       options:
         stats_section_1: 'Variant 1'
-        stats_section_2: 'Variant 2'
-        stats_section_3: 'Variant 3'
-        stats_section_4: 'Variant 4'
-        stats_section_5: 'Variant 5'
-        stats_section_6: 'Variant 6'
-        stats_section_7: 'Variant 7'
       display: Variant
       default: stats_section_1
       type: button_group
@@ -19,6 +13,8 @@ fields:
       listable: hidden
       validate:
         - required
+      instructions_position: above
+      visibility: visible
   -
     handle: title
     field:

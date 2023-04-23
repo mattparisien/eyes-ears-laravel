@@ -31,6 +31,9 @@ fields:
         - lead
         - action
         - bulletList
+        - code
+        - bts_styles
+        - bts_attributes
       container: assets
       save_html: false
       inline: false

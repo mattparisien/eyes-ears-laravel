@@ -1,23 +1,18 @@
-<div>
     <div class="flex flex-wrap items-center -mx-4">
         <div class="w-full px-4 mb-12 md:w-1/2 md:mb-0">
             {{ if image.extension != 'svg'  }} 
-            {{
-                partial:components/picture
-                :image="image"
-                cover="true"
-                sizes="(min-width: 200px) 35vw, 90vw"
-            }}
+            {{ partial:components.figure :media="image"  ratio="preserve" cover="true" izes="(min-width: 200px) 35vw, 90vw"
+        }}
             {{ else }}
             {{ svg :src="image" class="{image.classes}" }}
             {{/if}}
         </div>
         <div class="w-full px-4 md:w-1/2">
             <div class="max-w-lg">
-                {{ partial:components.heading label="{title}" size="h3" }}
+                {{ partial:components.heading label="{title}" size="h4" }}
 
                 {{ if description }}
-                    {{ partial:components.lead label="{description}" size="lg" class="mt-8" }}
+                    <p>{{description}}</p>
                 {{ /if }}
 
                 {{ if toggle and label }}
@@ -28,4 +23,3 @@
             </div>
         </div>
     </div>
-</div>

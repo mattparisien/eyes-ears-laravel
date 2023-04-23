@@ -14,7 +14,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682201361
+updated_at: 1682205831
 blocks:
   -
     id: lgqlu8ji
@@ -66,7 +66,7 @@ blocks:
         content:
           -
             type: text
-            text: "Get Comfortable with Tough Conversations\_"
+            text: 'About the Partnership'
       -
         type: paragraph
         attrs:
@@ -75,40 +75,135 @@ blocks:
         content:
           -
             type: text
-            text: 'A decision as monumental as this one will radically change how we talk to and support those around us. We must be willing to listen, to have honest discussions, and to speak up. Staying silent perpetuates the stigma around topics like abortion, infant loss, sexual assault, reproductive health and bodily autonomy. Did you know...'
+            text: 'Intersectional Environmentalist (IE), in partnership with The Eyes & Ears Agency and 5 Media, launched the sixth, and largest event yet, from our series of '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  class: null
+                  href: 'https://www.instagram.com/p/CjTVQYjuDMQ/'
+                  rel: 'noopener noreferrer'
+                  target: _blank
+                  title: null
+            text: 'Earth Sessions'
+          -
+            type: text
+            text: ' concerts.'
       -
-        type: bulletList
+        type: paragraph
         attrs:
+          textAlign: left
           class: null
         content:
           -
-            type: listItem
-            content:
+            type: text
+            text: 'Earth Sessions SF was hosted at the Grand Theater (Gray Area) on October 16 2022, featuring an acoustic performance and meditation led by artist-activist, '
+          -
+            type: text
+            marks:
               -
-                type: paragraph
+                type: link
                 attrs:
-                  textAlign: left
                   class: null
-                content:
-                  -
-                    type: text
-                    text: 'Around 1 in 4 pregnancies end in an abortion every year ('
-                  -
-                    type: text
-                    marks:
-                      -
-                        type: link
-                        attrs:
-                          class: null
-                          href: 'statamic://entry::a01b3421-558b-45df-a692-90359dbf2587'
-                          rel: 'noopener noreferrer'
-                          target: null
-                          title: null
-                    text: source
-                  -
-                    type: text
-                    text: )
+                  href: 'https://www.instagram.com/p/Cj3Gz9mJ0Ft/?hl=en'
+                  rel: 'noopener noreferrer'
+                  target: _blank
+                  title: null
+            text: Raveena
+          -
+            type: text
+            text: '. We also had the pleasure of hearing from Courtney Desiree Morris, a visual and conceptual artist and assistant professor of Gender and Women’s Studies at the University of California Berkeley, as she spoke with IE’s Director of Programming, Kiana Kazemi, about the intersections of eco-feminism, environmental racism, and queer ecologies.'
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'This Earth Sessions, our '
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  class: null
+                  href: 'https://www.instagram.com/p/Cjqhh0kO_sZ/'
+                  rel: 'noopener noreferrer'
+                  target: _blank
+                  title: null
+            text: 'book giveaway'
+          -
+            type: text
+            text: ' was specially curated by all the contributors that brought the event to life. We are proud to support local indie bookstores like Medicine for Nightmares, as we continue to offer free books at our events to allow for accessible + intersectional climate education.'
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'IE and The Eyes & Ears Agency extend a massive thank you to our sponsor, 5 Media, and Guayaki, Sweetgreen, and Eat the Change for supporting IE’s programmatic vision and helping bring Earth Sessions to life.'
+      -
+        type: paragraph
+        attrs:
+          textAlign: left
+          class: null
+        content:
+          -
+            type: text
+            text: 'Photos by Simrah Farrukh — Videos by Maxwell Alldread'
     block_theme: dark
     type: text_content
+    enabled: true
+  -
+    id: lgskumbc
+    version: stats_section_1
+    title: '260'
+    description: 'Total attendees'
+    stats:
+      -
+        id: lgskv59z
+        number: '260'
+        description: 'total attendees'
+        has_icon: true
+        type: new_set
+        enabled: true
+      -
+        id: lgskvbbt
+        number: '<24 hours'
+        description: 'TICKET SELLOUT'
+        has_icon: false
+        type: new_set
+        enabled: true
+      -
+        id: lgskvtd2
+        number: '203,124'
+        description: 'instagram reach'
+        has_icon: false
+        type: new_set
+        enabled: true
+      -
+        id: lgskw06m
+        number: '220'
+        description: 'book giveaway'
+        has_icon: false
+        type: new_set
+        enabled: true
+    type: stats
+    enabled: true
+  -
+    id: lgslqb6q
+    version: feature_single_1
+    title: 'About the Organization'
+    description: 'Intersectional Environmentalist (501(c)3) is a climate justice community and resource hub centering people of color and historically excluded voices. They merge science, cultural wisdom, and creativity through curricula + interactive learning experiences to connect individuals with their local communities to root their environmental practice in equity and inclusion.'
+    image: images/projects/earth-sessions/earth-sessions-sf-group.webp
+    toggle: false
+    block_theme: light
+    type: feature_single
     enabled: true
 ---

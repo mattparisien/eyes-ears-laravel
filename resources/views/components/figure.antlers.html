@@ -9,8 +9,8 @@ ratios:
     fill: "ratio-fill"
 ---
 
-<figure class="relative overflow-hidden {{ rounded ? "rounded-md" : '' }}{{ ratio ? view:ratios[ratio] : view:ratios.preserve }} {{ class }}">
-    <div class="{{ratio && ratio != 'fill' ? 'absolute' : ''}} w-full h-full top-0 left-0">
+<figure class="relative rounded-md overflow-hidden {{ rounded ? "rounded-md" : '' }}{{ ratio ? view:ratios[ratio] : view:ratios.preserve }} {{ class }}">
+    <div class="{{ratio && ratio != 'fill' && ratio != 'preserve' ? 'absolute' : ''}} w-full h-full top-0 left-0">
         {{ if media }}
             {{ media }}
             {{ if is_image }}
@@ -25,8 +25,8 @@ ratios:
             {{ partial:components.picture :image="url" cover="true"}}
         {{/if}}
     </div>
-{{ if caption}} 
-    <figcaption>{{caption}}</figcaption>
+{{ if image_credit}} 
+    <figcaption>{{image_credit}}</figcaption>
 {{/if}}
 
 </figure>
