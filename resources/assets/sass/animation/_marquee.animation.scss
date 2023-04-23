@@ -1,0 +1,34 @@
+.marquee {
+    &-item {
+        & > * {
+            position: relative;
+
+            &::after {
+                content: "•";
+                right: 0;
+                @apply ml-8;
+            }
+
+            &:not(:last-child) {
+                @apply mr-8;
+            }
+        }
+
+        & {
+            @apply mr-10;
+            position: relative;
+        }
+
+        animation: move 20s linear infinite;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

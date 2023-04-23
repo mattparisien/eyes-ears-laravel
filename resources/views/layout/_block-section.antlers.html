@@ -1,6 +1,9 @@
 
 <section class="block-section {{noGutters ? '' :' py-20'}}" data-block-section data-theme="{{block_theme || 'light'}}" {{attrs}}>
-    <div class="container">
-    {{slot}}
+    {{ if !noContainer }}
+        <div class="container">{{slot}}</div>
+        {{else}}
+        {{slot}}
+    {{/if}}
     </div>
 </section>

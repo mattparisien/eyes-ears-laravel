@@ -19,14 +19,9 @@ main {
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
             z-index: 2;
+            background-color: var(--bg-color);
         }
 
-        &[data-theme="dark"]::after {
-            @apply bg-dark;
-        }
-
-        &[data-theme="light"]::after {
-            @apply bg-light;
-        }
+        
     }
 }

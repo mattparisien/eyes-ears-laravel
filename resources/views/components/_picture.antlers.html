@@ -12,7 +12,7 @@ ratios:
 {{ if image  }}
 
 <div class="overflow-hidden w-full h-full relative rounded-md{{ratio ? (' ' + view:ratios[ratio]) : ''}}">
-    <div class="absolute w-full h-full">
+    <div class="{{ratio ? 'absolute ' : ''}}w-full h-full">
     <picture>
         {{ asset :url="image" }}
             {{ if extension == 'gif' }}
