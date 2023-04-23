@@ -52,7 +52,7 @@ fields:
           field:
             mode: list
             container: assets
-            folder: social
+            folder: svg/icons
             restrict: true
             allow_uploads: true
             show_filename: true
@@ -63,6 +63,7 @@ fields:
             listable: hidden
             instructions_position: above
             width: 25
+            visibility: visible
       mode: table
       reorderable: true
       display: Social
@@ -70,3 +71,4 @@ fields:
       icon: grid
       listable: hidden
       instructions_position: above
+      visibility: visible
