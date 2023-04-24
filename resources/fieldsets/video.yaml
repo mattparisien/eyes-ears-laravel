@@ -1,0 +1,13 @@
+title: Video
+fields:
+  -
+    handle: embedded_video
+    field:
+      display: 'Embedded Video'
+      type: video
+      icon: video
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required

@@ -51,6 +51,11 @@ fields:
           fields:
             -
               import: image_gallery
+        video:
+          display: video
+          fields:
+            -
+              import: video
       display: Blocks
       type: replicator
       icon: replicator

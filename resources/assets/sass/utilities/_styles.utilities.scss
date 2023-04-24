@@ -28,3 +28,11 @@
         transform: scaleX(1);
     }
 }
+
+.bg-invert {
+    background-color: var(--fg-color);
+}
+
+.text-invert {
+    color: var(--bg-color);
+}
