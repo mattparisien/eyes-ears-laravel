@@ -3,22 +3,14 @@
     {{ /partial:layout/block-section }}
     {{ partial:layout/block-section }}
         {{ collection from="posts" as="posts" }}
-            <div class="masonry-grid | pb-40">
-                {{ posts chunk="3" }}
-                    <div class="masonry-grid__col | flex-1">
-                        {{chunk}}
-                        <div class="masonry-grid__item">
-                        {{ partial:components.project_card
-                            has_link="true"
-                            link="{url}"
-                            description="{date}"
-                            frame="true"
-                        }}
-                        </div>
-                        {{/chunk}}
-                    </div>
-                {{ /posts  }}
-            </div>
+            {{partial:layout/grid layout="masonry" columns_sm='2' columns_md='3' columns_lg='3'}}
+                {{posts}}
+                        {{partial:layout/grid-item}}
+                            {{ partial:components.project_card }}
+
+                        {{/partial:layout/grid-item}}    
+                {{/posts}}
+            {{/partial:layout/grid}}
             {{ paginate }}
                 {{ if prev_page or next_page }}
                     <div class="py-10 mx-auto md:py-16">

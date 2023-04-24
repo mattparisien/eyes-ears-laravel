@@ -5,11 +5,11 @@ sizes:
         three_columns: 's-1/3'
 ---
 
-{{ partial:layout.grid class=" grid-custom" }}
+{{ partial:layout.grid layout="custom" }}
         {{grid_builder}}
                 {{row_layout}}
                         {{images}}
-                                {{ partial:layout.grid-item class=" {{view:sizes[type]}}" attrs="data-event-action='open-lightbox' data-img-src='{{url}}'" }}
+                                {{ partial:layout.grid-item class=" {{view:sizes[type]}}" attrs="data-event-action='open-lightbox' data-img-src='{{url}}'" plus="true" }}
                                         {{partial:components.picture :image="url" :alt="alt" ratio="{{row_aspect_ratio}}" lazy="true" cover="true"}}
                                 {{/partial:layout.grid-item}}
                         {{/images}}

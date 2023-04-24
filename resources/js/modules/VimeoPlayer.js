@@ -11,6 +11,7 @@ export default class extends module {
         super(m);
         this.el = m.el;
         this.playBtn = document.querySelector(`[data-video-toggler-id='${this.el.dataset.moduleVimeoPlayer}']`);
+        this.overlay = document.querySelector('data-video-overlay-id')
         
 
     }    
@@ -24,17 +25,39 @@ export default class extends module {
         this.onPlay();
     }
 
+    hideToggler() {
+
+        this.playBtn.classList.remove("hidden");
+    }
+
+    showToggler() {
+        this.playBtn.classList.add("hidden");
+    }
+
+    showControls() {
+        this.el.src = this.el.src.replace('controls=false', 'controls=true')
+    }
+
     onPlay() {
+
+        const showControls = this.showControls.bind(this);
+
         this.vimeoPlayer.on('play', () => {
-            this.playBtn.classList.add("hidden");
+            showControls();
         })
     }
 
 
 
     listenForPlayClick() {
-        console.log(this.vimeoPlayer);
-        this.playBtn.addEventListener("click", this.vimeoPlayer.play);
+        const player = this.vimeoPlayer;
+        const hideToggler = this.hideToggler.bind(this);
+
+
+        this.playBtn.addEventListener("click", () => {
+            player.play();
+            hideToggler();
+        });
     }
 
     load({el}) {
