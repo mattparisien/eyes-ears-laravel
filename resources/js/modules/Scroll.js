@@ -49,6 +49,7 @@ export default class extends module {
 
    
         this.scroll.on("call", (args, way, el) => {
+            console.log('called!')
             this.call(args[0], {way, args, el, scrollDirection: this.scrollDirection}, args[1], "main");
         })
 

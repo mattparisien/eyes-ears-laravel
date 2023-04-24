@@ -3,7 +3,7 @@
         {{ partial:components.carousel :slidesPerView="slides_per_view" }}
             {{ slideshow_images}}
                 {{ partial:components.carousel_item }}  
-                    {{ partial:components.figure ratio="video" :media="url" :rounded="true" }}
+                    {{ partial:components.picture ratio="video" :image="url" cover="true" }}
                 {{ /partial:components.carousel_item}}  
             {{ /slideshow_images}}
         {{ /partial:components.carousel }}
@@ -12,7 +12,7 @@
     {{ partial:components.carousel :slidesPerView="slides_per_view" }}
             {{ slideshow_images}}
                 {{ partial:components.carousel_item }}  
-                    {{ partial:components.figure ratio="video" :media="url" :rounded="true" }}
+                    {{ partial:components.picture ratio="video" :image="url" }}
                 {{ /partial:components.carousel_item}}  
             {{ /slideshow_images}}
     {{ /partial:components.carousel }}

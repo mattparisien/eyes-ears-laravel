@@ -28,6 +28,7 @@ sections:
           visibility: visible
           validate:
             - required
+          folder: images/projects/earth-sessions
       -
         handle: client
         field:
@@ -56,8 +57,18 @@ sections:
         handle: date
         field:
           type: date
+          required: true
           validate:
             - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - posts
+          max_items: 1
+          listable: false
+          localizable: true
   SEO:
     display: SEO
     fields:

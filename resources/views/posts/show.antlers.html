@@ -1,4 +1,4 @@
-<article>
+
     {{ partial:layout/block-section noGutters="true" }}
         {{ partial:sets.hero.hero_section_7 }}
         {{/partial:layout/block-section }}
@@ -15,11 +15,19 @@
     </div> #}}
     {{ collection:next collection="posts" limit="1" sort="date:asc" }}
     {{partial:layout/block-section block_theme="yellow" noGutters="true" noContainer="true"}}
-        <a href="{{url}}" class="pt-10 md:pt-20 block relative">
-        <div class="flex justify-between items-start container">
-            <div>•</div>
+        <a href="{{url}}" class="pt-10 md:pt-20 block relative" data-scroll data-scroll-call="themeUpdate, Header">
+        <div class="flex justify-between items-center container">
+            <div style="font-size: 5rem; line-height: 4rem;">→</div>
             <div class="text-2xl md:text-4xl">Next</div>
         </div>
+
+         {{# {{ paginate }}
+                {{ if prev_page or next_page }}
+                    <div class="py-10 mx-auto md:py-16">
+                        {{ partial:partials._pagination }}
+                    </div>
+                {{ /if }}
+            {{ /paginate }} #}}
         
         <div class="pt-40 text-4xl whitespace-nowrap md:text-6xl font-bold">
             {{partial:components.marquee}}
@@ -34,4 +42,4 @@
         </a>
     {{/partial:layout/block-section}}
     {{ /collection:next in="posts" as="posts" limit="1"  }}
-</article>
+

@@ -32,7 +32,7 @@ export default class extends module {
                     slidesPerView: this.slidesPerView - 2 < 1 ? 1 : this.slidesPerView - 2
                 }
             }
-          });;
+        });;
 
     }
     
@@ -41,5 +41,8 @@ export default class extends module {
 
     }
 
+    loadItems() {
+        
+    }
 
 }

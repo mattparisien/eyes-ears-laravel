@@ -27,11 +27,11 @@ sections:
           placeholder: 'Sammy Steiner'
           input_type: text
           prepend: 'Photo by'
-          antlers: false
+          antlers: true
           display: 'Image Credit'
           type: text
           icon: text
           instructions: "Only enter the person's name (i.e. Sammy Steiner)"
-          listable: hidden
+          listable: true
           instructions_position: above
           visibility: visible

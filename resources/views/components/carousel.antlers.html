@@ -1,4 +1,4 @@
-<div class="carousel | relative" data-module-carousel data-slides-per-view="{{ slidesPerView }}">
+<div class="carousel | relative{{class}}" data-module-carousel data-slides-per-view="{{ slidesPerView || 1 }}"{{attrs}}>
     <div class="swiper">
         <div class="swiper-wrapper">
             {{ slot }}

@@ -58,5 +58,8 @@ ratios:
     </picture>
     </div>
 </div>
+{{ if credit }}
+<div class="text-left text-gray-400 mt-3 text-sm">Photo by {{ image.image_credit }}</div>
+{{/if}}
 
 {{ /if }}

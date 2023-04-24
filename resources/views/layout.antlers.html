@@ -26,10 +26,16 @@
 
         {{# Transition Card #}}
         {{ partial:layout/transition_card }}
+
+
+        {{# Lightbox #}}
+        {{ partial:components/gallery-lightbox }}
+        
+
         
         <!-- Content -->
         <main class="header-offset footer-offset bg-light" data-barba="container">
-            <div class="scroller | h-full" data-module-scroll="main">
+            <div data-module-scroll="main">
                 {{ template_content }}
                 {{ partial:layout.footer }}
             </div>

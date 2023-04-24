@@ -9,8 +9,8 @@ sizes:
         {{grid_builder}}
                 {{row_layout}}
                         {{images}}
-                                {{ partial:layout.grid-item class=" {{view:sizes[type]}}"}}
-                                        {{partial:components.picture :image="url" :alt="alt" ratio="{{row_aspect_ratio}}" cover="true"}}
+                                {{ partial:layout.grid-item class=" {{view:sizes[type]}}" attrs="data-event-action='open-lightbox' data-img-src='{{url}}'" }}
+                                        {{partial:components.picture :image="url" :alt="alt" ratio="{{row_aspect_ratio}}" lazy="true" cover="true"}}
                                 {{/partial:layout.grid-item}}
                         {{/images}}
                 {{/row_layout}}

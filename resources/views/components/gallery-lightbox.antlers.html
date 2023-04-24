@@ -1,0 +1,25 @@
+<div class="gallery-lightbox | fixed w-screen h-screen px-10 pt-3 bg-dark text-light z-50 transition-opacity duration-300 ease-smooth opacity-0 hidden" data-module-lightbox>
+    <script type="text/template">
+        const loadMedia  = (media) => {
+
+            let template = "";
+
+            media.forEach(media => {
+                template +=
+                `<div class="swiper-slide">
+                        {{ partial:components.picture :image="media.url" }}
+                </div>`
+            })
+        }
+    </script>
+    <div class="gallery-lightbox__inner | relative w-full h-full flex items-center justify-center">
+    {{ partial:components/carousel class=" w-full h-full" attrs="data-load-container"}}
+    {{ /partial:components/carousel }}
+
+    <button class="absolute right-0 top-0 hover:rotate" data-event-action="close-lightbox">
+        {{ svg src="/assets/svg/icons/close.svg" class="fill-transparent [&>*]:fill-light w-6 h-6" preserveAspectRatio="none" }}
+    </button>
+    </div>
+</div>
+
+
