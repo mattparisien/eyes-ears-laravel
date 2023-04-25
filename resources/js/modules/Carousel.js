@@ -32,7 +32,7 @@ export default class extends module {
                     slidesPerView: this.slidesPerView - 2 < 1 ? 1 : this.slidesPerView - 2
                 }
             }
-        });;
+        });
 
     }
     
@@ -45,4 +45,25 @@ export default class extends module {
         
     }
 
+    template(items) {
+        return `
+        <div data-module-carousel data-slides-per-view="1">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    ${
+                        items.forEach(item => {
+                            `
+                            <div class="swiper-slide">
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            `
+                        })
+                    }
+                </div>
+            </div>
+        </div>
+        `
+    }
 }

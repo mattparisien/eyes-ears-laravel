@@ -1,0 +1,9 @@
+---
+colors:
+    dark: '[&>*]:stroke-dark'
+    light: '[&>*]:stroke-light'
+---
+
+<div {{attrs}} class="animated-squiggle-arrow">
+{{ svg src="assets/svg/animated-squiggle-arrow.svg" class="animated-squiggle-arrow__svg fill-none [&>*]:!fill-none [&>*]:stroke-[10] {{color ? view:colors[color] : view:colors['dark'] }}{{class}}"}}
+</div>

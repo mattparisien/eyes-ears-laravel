@@ -2,13 +2,24 @@ $arrow-tail-offset: 670px;
 $arrow-easing: $ease-power3-in-out;
 
 .animated-squiggle-arrow {
-    path {
-        transition: stroke-dashoffset 2s $ease-power3-in-out;
+
+    $self: &;
+
+    &.is-inview #{$self}__svg {
+        path:nth-child(1) {
+            stroke-dashoffset: 0px;
+        }
     }
 
-    path:nth-child(1) {
-        stroke-dasharray: $arrow-tail-offset;
-        stroke-dashoffset: $arrow-tail-offset;
+    &__svg {
+        path {
+            transition: stroke-dashoffset 2s $ease-power3-in-out;
+        }
+    
+        path:nth-child(1) {
+            stroke-dasharray: $arrow-tail-offset;
+            stroke-dashoffset: $arrow-tail-offset;
+        }
     }
 }
 
@@ -39,7 +50,7 @@ html.is-ready .hero-graphic {
     transition: transform 2s $ease-power4-out 0.5s;
 }
 
-html.is-ready .animated-squiggle-arrow {
+html.is-ready .hero .animated-squiggle-arrow {
     path:nth-child(1) {
         stroke-dashoffset: 0px;
     }

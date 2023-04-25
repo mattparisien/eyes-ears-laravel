@@ -7,11 +7,13 @@ export default class extends module {
         this.el = m.el;
         this.loadContainer = this.el.querySelector("[data-load-container]");
         this.carouselId = this.el.querySelector("[data-module-carousel");
+        this.openBtns = document.querySelectorAll("[data-lightbox-action='open']")
         this.closeBtn = this.el.querySelector("[data-lightbox-action='close']");
         this.isOpen = false;
         this.closeHandler = null;
         this.context = null;
 
+        this.onOpen();
         this.onClose();
     }
     
@@ -62,6 +64,18 @@ export default class extends module {
     onClose() {
         const context = this;
         this.closeBtn.addEventListener("click", context.hide.bind(context))
+    }
+
+    onOpen() {
+        const ctx = this;
+        this.openBtns.forEach(btn => {
+            btn.addEventListener("click", e => {
+                ctx.show({
+                    title: e.currentTarget.dataset.lightboxContext,
+                    id: e.currentTarget.dataset.lightboxId
+                });
+            })
+        })  
     }
 
     load() {

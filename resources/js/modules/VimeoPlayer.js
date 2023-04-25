@@ -46,22 +46,6 @@ export default class extends module {
         })
     }
 
-
-
-    listenForLightbox() {
-        
-        const onOpen = (e) => {
-            this.call('show', {
-                title: e.currentTarget.dataset.lightboxContext,
-                id: e.currentTarget.dataset.lightboxId
-            }, "Lightbox", "main");
-        }
-
-        this.playBtn.addEventListener("click", onOpen);
-       
-    }
-
-
     template() {
         return `
                 <div class="lg:!max-w-6xl md:max-w-3xl container mx-auto w-full flex items-center justify-center z-10">
@@ -99,13 +83,11 @@ export default class extends module {
         const init              = this.initPlayer.bind(this);
         const play              = this.play.bind(this);
         const onPlay            = this.onPlay.bind(this);
-        const listenForLightbox = this.listenForLightbox.bind(this);
 
         this.load(el).then(success => {
             init();
             play();
             onPlay();
-            listenForLightbox();
         })
         .catch(err => console.log('Error loading iframe src: ', err))
        

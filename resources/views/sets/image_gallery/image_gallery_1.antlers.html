@@ -1,7 +1,7 @@
 {{ partial:layout.grid layout="masonry" }}
         {{ images }}
             {{ partial:layout.grid-item }}
-                {{ partial:components.figure :media="images[index]" ratio="preserve" lazy="true" }}
+                {{ partial:components.picture :image="images[index]" ratio="preserve" lazy="true" }}
             {{ /partial:layout.grid-item }}
         {{ /images }}
 {{ /partial:layout.grid }}

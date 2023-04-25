@@ -23,7 +23,6 @@
                 <a href="mailto:{{ info.email }}" class="inline-block hover-underline text-light lg:text-2xl text-xl" data-scroll data-module-split data-split-type="chars">{{ info.email }}</a>
             {{/if}}
             </div>
-            <div>
                 {{ if theme:footer_image.extension != 'svg' }} 
                     {{
                         partial:components/picture
@@ -32,9 +31,12 @@
                         sizes="(min-width: 200px) 35vw, 90vw"
                     }}
                 {{ else }}
-                    {{ svg :src="theme:footer_image" :class="theme:footer_image.classes" }}
+                    {{ svg :src="theme:footer_image" class="animated-face-svg w-52 h-52 sm:w-40 sm:h-40 lg:w-52 lg:h-52" }}
                 {{ /if}}
-            </div>
+        </div>
+        <div class="global-footer__bottom | text-light mb-5 container max-w-none absolute right-0 bottom-0 ">
+            <div>{{site_name}}</div>
+            {{ partial:layout/footer-items/social_media class=" items-center justify-end"}}
         </div>
     </div>
 </footer>
