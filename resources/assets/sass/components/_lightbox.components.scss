@@ -4,10 +4,26 @@
     &__bg {
         transform: scaleY(0);
         transform-origin: top;
-        transition: transform 1s $ease-power3-in-out;
+        transition: transform 0.8s $ease-power3-out;
     }
 
-    &.is-open #{$lightbox}__bg {
-        transform: scaleY(1);
+    &__close-btn {
+        opacity: 0;
+        transition: opacity 300ms ease 0.2s;
+    }
+
+    iframe, video, embed {
+        opacity: 0;
+        transition: opacity 300ms ease 0.3s;
+    }
+
+    &.is-open {
+        #{$lightbox}__bg {
+            transform: scaleY(1);
+        }
+
+        iframe,video,embed, #{$lightbox}__close-btn {
+            opacity: 1;
+        }
     }
 }

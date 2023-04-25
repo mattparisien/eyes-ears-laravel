@@ -3,13 +3,17 @@ classes: 'inline-block font-medium focus:outline-none focus-visible:ring focus:r
 sizes:
   sm: 'px-3 py-[6px] text-xs'
   md: 'px-4 py-[10px] text-sm'
-  lg: 'px-[26px] py-[10px] text-xl'
+  lg: 'px-[26px] py-[5px] text-xl'
   xl: 'px-6 py-4 text-xl' 
 types:
   brand: 'bg-primary-900 text-white hover:text-primary-900 hover:bg-white hover:border-2 hover:border-primary-900 border-2 border-transparent'
   secondary: 'bg-gray-200 text-primary-900 hover:border-2 hover:border-primary-900 border-2 border-transparent'
   white: 'text-primary-900 bg-white hover:bg-transparent hover:text-primary-900 hover:border-2 hover:border-primary-900 border-2 border-transparent'
+  pill: "rounded-[30px]"
   custom: ""
+colors:
+  light: "border-light border-[1px] text-light hover:bg-light hover:text-dark"
+  dark: "border-dark border-[1px] text-dark hover:text-light hover:bg-dark"
 border:
   square: 'rounded-lg'
   pill:  'rounded-[30px]'
@@ -24,7 +28,9 @@ border:
     </a>
 {{ else }}
     <button type="{{ button_type or 'submit' }}"
-        class="{{ view:classes }} {{ size ? view:sizes[size] : view:sizes['xl']  }} {{ color ? view:types[color] : view:types['brand']  }} {{ radius ? view:border[radius] : view:border['square'] }} {{ class }}">
+        class="{{ view:classes }} {{color ? view:colors[color] : view:colors['dark']}}  {{ size ? view:sizes[size] : view:sizes['xl']  }} {{ type ? view:types[type] : view:types['brand']  }} {{ class }}"
+        {{attrs}}
+        >
         {{ label }}
     </button>
 {{ /if }}

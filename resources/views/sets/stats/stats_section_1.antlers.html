@@ -1,14 +1,11 @@
-<div>
     <div
         class="grid divide-y divide-white md:divide-y-0 md:divide-x md:grid-cols-4 divide-opacity-40"
     >
         {{ stats }}
         <div class="px-5 py-5 text-center md:py-0">
-            <p class="text-5xl font-extrabold">{{ number }}</p>
-
+            <p class="text-5xl font-extrabold" data-scroll data-scroll-call="launch, Shuffle, {{id}}" data-module-shuffle="{{id}}">{{ number }}</p>
             {{ if description }} {{ partial:components.lead
             label="{description}" size="lg" color="dark" class="uppercase"}} {{ /if }}
         </div>
         {{ /stats }}
     </div>
-</div>

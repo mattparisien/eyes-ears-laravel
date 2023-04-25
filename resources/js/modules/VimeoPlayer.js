@@ -64,7 +64,7 @@ export default class extends module {
 
     template() {
         return `
-                <div class="container | w-full flex items-center justify-center z-10">
+                <div class="lg:!max-w-6xl md:max-w-3xl container mx-auto w-full flex items-center justify-center z-10">
                     <div class="relative overflow-hidden ratio-16:9 rounded-md">
                         <iframe
                         src=${this.rawSrc}&controls=true&muted=0&autoplay=1

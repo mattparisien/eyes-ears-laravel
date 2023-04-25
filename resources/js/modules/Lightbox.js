@@ -11,6 +11,8 @@ export default class extends module {
         this.isOpen = false;
         this.closeHandler = null;
         this.context = null;
+
+        this.onClose();
     }
     
 
@@ -39,6 +41,7 @@ export default class extends module {
             
             setTimeout(() => {
                 this.el.classList.add("hidden");
+                this.loadContainer.innerHTML = "";
             }, 1000);
         
     }
@@ -49,19 +52,16 @@ export default class extends module {
         this.loadContainer.innerHTML = iframe;
     }
 
-
     initContext() {
         switch(this.context.title) {
             case 'single-vimeo':
                     this.loadSingleVimeo();
         }
     }
-   
-    listenForClose() {
-        this.closeHandler = this.hide;
-        
+
+    onClose() {
         const context = this;
-        this.closeBtn.addEventListener("click", () => this.hide(context));        
+        this.closeBtn.addEventListener("click", context.hide.bind(context))
     }
 
     load() {
