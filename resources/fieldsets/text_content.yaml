@@ -8,19 +8,11 @@ fields:
       previews: true
       smart_typography: false
       buttons:
-        - h2
-        - h3
         - bold
         - italic
         - unorderedlist
-        - removeformat
         - quote
-        - anchor
         - image
-        - table
-        - h4
-        - h5
-        - h6
         - underline
         - horizontalrule
         - alignleft
@@ -31,9 +23,9 @@ fields:
         - lead
         - action
         - bulletList
-        - code
         - bts_styles
         - bts_attributes
+        - threecolumns
       container: assets
       save_html: false
       inline: false

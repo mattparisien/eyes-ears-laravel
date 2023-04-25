@@ -1,4 +1,9 @@
 .text-content {
+
+    &:not(:has(.two-columns)) {
+        @apply max-w-709;
+    }
+
     a {
         font-weight: 600;
         border-bottom: 1px solid;
