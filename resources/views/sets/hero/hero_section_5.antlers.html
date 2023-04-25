@@ -29,8 +29,10 @@ overlay:
         #}}
     </div>
     <div class="absolute w-full h-full top-0 left-0">
-        {{ partial:components.figure :media="background_video" ratio="fill"
-        options="autoplay playsinline loop muted"}} {{ background_overlay }}
+            {{ partial:components.video autoplay="true" id="hero-video" preserveAspectRatio="true" }} 
+        
+        
+        {{ background_overlay }}
         <div
             class="absolute w-full h-full top-0 left-0 {{view:overlay.colors[color]}}"
             style="opacity: 40%"

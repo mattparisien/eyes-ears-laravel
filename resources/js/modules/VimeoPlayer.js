@@ -10,9 +10,15 @@ export default class extends module {
 
         super(m);
         this.el = m.el;
-        this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
-        this.src = this.el.dataset.src;
-        this.rawSrc = this.el.dataset.rawSrc;
+        this.id = m.el.dataset.moduleVimeoPlayer;
+
+        if (this.id !== "hero-video") {
+            this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
+            this.src = this.el.dataset.src;
+            this.rawSrc = this.el.dataset.rawSrc;
+        }
+        
+        
     }    
 
     init() {

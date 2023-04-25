@@ -8,6 +8,11 @@ html.has-scroll-dragging {
     -ms-user-select: none;
     user-select: none;
 }
+
+html body {
+    overflow-x: hidden;
+}
+
 .has-scroll-smooth body {
     overflow: hidden;
 }

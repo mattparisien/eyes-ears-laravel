@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682003283
+updated_at: 1682452347
 blocks:
   -
     id: 0Ws43Wo1
@@ -30,6 +30,8 @@ blocks:
         color: dark
         opacity: 40
     background_video: videos/earth-sessions/patagonia-brooklyn-earth-session-sizzle-reel.mov
+    embedded_video: 'https://vimeo.com/820544843?share=copy'
+    fallback_image: raveena_at_earth_sessions_in_san_francisco_0128c04e24.webp
   -
     id: CBnV22Z8
     version: feature_single_1
