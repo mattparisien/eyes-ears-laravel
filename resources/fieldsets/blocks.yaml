@@ -85,6 +85,11 @@ fields:
           fields:
             -
               import: project_summary
+        quote:
+          display: Quote
+          fields:
+            -
+              import: quote
       display: Blocks
       type: replicator
       icon: replicator

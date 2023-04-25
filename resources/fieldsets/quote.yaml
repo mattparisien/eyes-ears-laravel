@@ -1,0 +1,27 @@
+title: Quote
+fields:
+  -
+    handle: excerpt
+    field:
+      antlers: false
+      display: Excerpt
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: source
+    field:
+      input_type: text
+      antlers: false
+      display: Source
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
