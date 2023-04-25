@@ -22,16 +22,18 @@ export default class extends module {
 
     initPlayer() {
         this.vimeoPlayer = new Player(this.el);
-        this.onPlay();
     }
 
     hideToggler() {
+        this.playBtn.classList.add("hidden");
+    }
 
-        this.playBtn.classList.remove("hidden");
+    play() {
+        this.vimeoPlayer.play();
     }
 
     showToggler() {
-        this.playBtn.classList.add("hidden");
+        this.playBtn.classList.remove("hidden");
     }
 
     showControls() {
@@ -40,11 +42,6 @@ export default class extends module {
 
     onPlay() {
 
-        const showControls = this.showControls.bind(this);
-
-        this.vimeoPlayer.on('play', () => {
-            showControls();
-        })
     }
 
 
@@ -53,16 +50,39 @@ export default class extends module {
         const player = this.vimeoPlayer;
         const hideToggler = this.hideToggler.bind(this);
 
-
         this.playBtn.addEventListener("click", () => {
             player.play();
             hideToggler();
         });
     }
 
-    load({el}) {
-        el.el.src = el.el.dataset.src;
-        this.initPlayer();
-        this.listenForPlayClick();
+    load(el) {
+        console.log(el);
+       return new Promise((resolve, reject) => {
+            el.el.addEventListener("load", () => {
+                resolve();
+            });
+
+            el.el.src = el.el.dataset.src;
+
+            setTimeout(() => {
+                reject();
+            }, 4000);
+       })
+    }
+
+    triggerPlayer({el}) {
+
+        const init = this.initPlayer.bind(this);
+        const play = this.play.bind(this);
+        const onPlay = this.listenForPlayClick.bind(this);
+
+        this.load(el).then(success => {
+            init();
+            play();
+            onPlay();
+        })
+        .catch(err => console.log('Error loading iframe src: ', err))
+       
     }
 }

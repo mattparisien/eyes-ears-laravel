@@ -26,6 +26,9 @@ export default class extends module {
 
            
         // });
+        setTimeout(() => {
+            this.scroll.update();
+        }, 100);
 
         this.scroll.on('scroll', (args) => {
             this.scrollDirection = args.direction;
@@ -46,8 +49,6 @@ export default class extends module {
             // }
         })
 
-
-   
         this.scroll.on("call", (args, way, el) => {
             this.call(args[0], {way, args, el, scrollDirection: this.scrollDirection}, args[1], args[2]);
         })

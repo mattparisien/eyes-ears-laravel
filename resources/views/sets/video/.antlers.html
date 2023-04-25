@@ -1,7 +1,7 @@
 <div class="max-w-5xl py-8 mx-auto">
     <div class="relative overflow-hidden ratio-16:9 rounded-md">
         {{ if embedded_video | is_embeddable }}
-            <iframe data-module-vimeo-player="{{id}}" data-scroll data-scroll-call="load, VimeoPlayer, {{id}}" data-src="{{ embedded_video | embed_url }}&controls=false&transparency=false&autopause=false&loop=1&muted=1" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; encrypted-media"
+            <iframe data-module-vimeo-player="{{id}}" data-scroll data-scroll-call="triggerPlayer, VimeoPlayer, {{id}}" data-src="{{ embedded_video | embed_url }}&controls=false&transparency=false&autopause=false&loop=1&muted=1" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; encrypted-media"
                 class="absolute inset-0 w-full h-full border-0"></iframe>
         {{ /if }}
         <button type="button" class="play-btn | absolute-center focus:outline-none text-light uppercase text-3xl z-10" data-video-toggler data-video-toggler-id="{{id}}">
