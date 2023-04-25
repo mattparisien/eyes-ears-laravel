@@ -1,3 +1,7 @@
 html.is-loading {
     cursor: wait;
 }
+
+html.is-scroll-locked {
+    overflow-y: hidden;
+}

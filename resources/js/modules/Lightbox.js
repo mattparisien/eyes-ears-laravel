@@ -5,10 +5,12 @@ export default class extends module {
     constructor(m) {
         super(m);
         this.el = m.el;
+        this.loadContainer = this.el.querySelector("[data-load-container]");
         this.carouselId = this.el.querySelector("[data-module-carousel");
-        this.closeBtn = this.el.querySelector("[data-event-action='close-lightbox']");
+        this.closeBtn = this.el.querySelector("[data-lightbox-action='close']");
         this.isOpen = false;
         this.closeHandler = null;
+        this.context = null;
     }
     
 
@@ -16,28 +18,43 @@ export default class extends module {
         
     }
 
-    show() {
+    show(context) {        
 
-        if (!this.closeHandler) this.listenForClose();
-
+        this.context = context;
 
         this.el.classList.remove("hidden");
+        
         setTimeout(() => {
-            this.el.classList.remove("opacity-0");
+            this.el.classList.add("is-open");
         }, 100);
 
-        this.load();
+        this.initContext();
     }
 
     hide() {
 
         if (this.closeHandler) this.closeBtn.removeEventListener("click", this.closeHandler);
 
+            this.el.classList.remove("is-open");
+            
+            setTimeout(() => {
+                this.el.classList.add("hidden");
+            }, 1000);
+        
+    }
 
-        this.el.classList.add("opacity-0");
-        setTimeout(() => {
-            this.el.classList.add("hidden");
-        }, 200);
+    loadSingleVimeo() {
+        const iframe = this.modules.VimeoPlayer[this.context.id].template();
+        console.log(iframe);
+        this.loadContainer.innerHTML = iframe;
+    }
+
+
+    initContext() {
+        switch(this.context.title) {
+            case 'single-vimeo':
+                    this.loadSingleVimeo();
+        }
     }
    
     listenForClose() {

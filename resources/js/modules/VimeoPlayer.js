@@ -10,10 +10,9 @@ export default class extends module {
 
         super(m);
         this.el = m.el;
-        this.playBtn = document.querySelector(`[data-video-toggler-id='${this.el.dataset.moduleVimeoPlayer}']`);
-        this.overlay = document.querySelector('data-video-overlay-id')
-        
-
+        this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
+        this.src = this.el.dataset.src;
+        this.rawSrc = this.el.dataset.rawSrc;
     }    
 
     init() {
@@ -41,23 +40,47 @@ export default class extends module {
     }
 
     onPlay() {
-
+        const el = this.el;
+        this.vimeoPlayer.on("play", () => {
+            el.classList.remove("opacity-0")
+        })
     }
 
 
 
-    listenForPlayClick() {
-        const player = this.vimeoPlayer;
-        const hideToggler = this.hideToggler.bind(this);
+    listenForLightbox() {
+        
+        const onOpen = (e) => {
+            this.call('show', {
+                title: e.currentTarget.dataset.lightboxContext,
+                id: e.currentTarget.dataset.lightboxId
+            }, "Lightbox", "main");
+        }
 
-        this.playBtn.addEventListener("click", () => {
-            player.play();
-            hideToggler();
-        });
+        this.playBtn.addEventListener("click", onOpen);
+       
+    }
+
+
+    template() {
+        return `
+                <div class="container | w-full flex items-center justify-center z-10">
+                    <div class="relative overflow-hidden ratio-16:9 rounded-md">
+                        <iframe
+                        src=${this.rawSrc}&controls=true&muted=0&autoplay=1
+                        frameborder="0"
+                        allowfullscreen
+                        webkitallowfullscreen
+                        mozallowfullscreen
+                        allow="autoplay; encrypted-media"
+                        class="absolute inset-0 w-full h-full border-0"
+                        ></iframe>
+                    </div>
+                </div>
+        `;
     }
 
     load(el) {
-        console.log(el);
        return new Promise((resolve, reject) => {
             el.el.addEventListener("load", () => {
                 resolve();
@@ -73,14 +96,16 @@ export default class extends module {
 
     triggerPlayer({el}) {
 
-        const init = this.initPlayer.bind(this);
-        const play = this.play.bind(this);
-        const onPlay = this.listenForPlayClick.bind(this);
+        const init              = this.initPlayer.bind(this);
+        const play              = this.play.bind(this);
+        const onPlay            = this.onPlay.bind(this);
+        const listenForLightbox = this.listenForLightbox.bind(this);
 
         this.load(el).then(success => {
             init();
             play();
             onPlay();
+            listenForLightbox();
         })
         .catch(err => console.log('Error loading iframe src: ', err))
        

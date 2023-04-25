@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
     content: [
         "./resources/**/*.antlers.html",
@@ -137,5 +139,8 @@ module.exports = {
         require("@tailwindcss/typography"),
         // eslint-disable-next-line no-undef
         require("tailwindcss-debug-screens"),
+        plugin(function({ addVariant }) {
+            addVariant("is-open", ".is-open &");
+          })
     ],
 };

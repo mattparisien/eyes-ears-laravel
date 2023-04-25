@@ -1,0 +1,13 @@
+.lightbox {
+    $lightbox: &;
+
+    &__bg {
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 1s $ease-power3-in-out;
+    }
+
+    &.is-open #{$lightbox}__bg {
+        transform: scaleY(1);
+    }
+}
