@@ -66,6 +66,11 @@ fields:
           fields:
             -
               import: text_layout
+        insta_post:
+          display: 'Insta Post'
+          fields:
+            -
+              import: insta_post
       display: Blocks
       type: replicator
       icon: replicator

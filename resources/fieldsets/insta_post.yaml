@@ -1,0 +1,111 @@
+title: 'Insta Post'
+fields:
+  -
+    handle: handle
+    field:
+      input_type: text
+      prepend: '@'
+      antlers: false
+      display: Handle
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: verified
+    field:
+      default: false
+      display: Verified
+      type: toggle
+      icon: toggle
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: caption
+    field:
+      antlers: false
+      display: Caption
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: media
+    field:
+      collapse: false
+      previews: true
+      sets:
+        video:
+          display: Video
+          fields:
+            -
+              import: video
+        image:
+          display: Image
+          fields:
+            -
+              handle: image
+              field:
+                mode: list
+                container: assets
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Image
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                validate:
+                  - 'mimes:jpg,jpeg,png,webp'
+        slideshow:
+          display: Slideshow
+          fields:
+            -
+              import: slideshow
+      display: Media
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: avatar
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Avatar
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+        - 'mimes:jpg,jpeg,png,webp'

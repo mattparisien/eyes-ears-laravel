@@ -1,5 +1,5 @@
-<div class="grid-item{{class}}"{{attrs}}>{{slot}}
+<{{el or 'div'}} class="grid-item{{class}}"{{attrs}}>{{slot}}
     {{if plus}}
     <div class="grid-item__plus | absolute right-0 top-0 mr-3 mt-2 text-gray-400 group-hover:text-light transition-color duration-300 ease-smooth">+</div>
     {{/if}}
-</div>
+</{{el or 'div'}}>
