@@ -9,8 +9,17 @@ export default class extends module {
         super(m);
 
         this.slidesPerView = m.el.dataset.slidesPerView;
+        this.el = m.el;
 
-        this.swiper = new Swiper(m.el.querySelector(".swiper"), {
+        if (!this.el.hasAttribute("data-init-disabled")) {
+            this.createSwiper();
+        }
+
+
+    }
+
+    createSwiper() {
+        this.swiper = new Swiper(this.el.querySelector(".swiper"), {
             modules: [Navigation],
             speed: 400,
             spaceBetween: 20,
@@ -33,7 +42,6 @@ export default class extends module {
                 }
             }
         });
-
     }
     
 
@@ -45,25 +53,20 @@ export default class extends module {
         
     }
 
-    template(items) {
-        return `
-        <div data-module-carousel data-slides-per-view="1">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    ${
-                        items.forEach(item => {
-                            `
-                            <div class="swiper-slide">
-                                <div>
-                                    
-                                </div>
-                            </div>
-                            `
-                        })
-                    }
-                </div>
-            </div>
-        </div>
-        `
+    template(items, onCreate) {
+
+            items.forEach(item => {
+
+                const slide = document.createElement("div");
+                const figure = document.createElement("figure");
+
+                slide.classList.add("swiper-slide");
+                figure.classList.add('overflow-hidden', 'w-full', 'h-full', 'relative', 'rounded-md', 'bg-primary-900');
+                
+                figure.appendChild(item);
+                slide.appendChild(figure);
+
+                onCreate(slide);
+            });
     }
 }

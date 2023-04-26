@@ -11,7 +11,7 @@ ratios:
 
 {{ if image  }}
 
-<figure class="overflow-hidden w-full h-full relative rounded-md{{lazy ? ' bg-primary-900 ' : ''}}{{ratio ? (' ' + view:ratios[ratio]) : ''}}">
+<figure class="overflow-hidden w-full h-full relative rounded-md{{lazy ? ' bg-primary-900 ' : ''}}{{ratio ? (' ' + view:ratios[ratio]) : ''}}" {{containerAttrs}}>
     
     <div class="{{ratio && ratio != 'preserve' ? 'absolute ' : ''}}w-full h-full">
         {{ asset :url="image" }}

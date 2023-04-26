@@ -11,6 +11,9 @@
     }
 
     ul {
+
+        $list: &;
+
         margin-top: 20px;
         li {
             margin-top: 15px;
@@ -27,17 +30,24 @@
                     line-height: 28px;
                 }
             }
+        }
 
-            &::before {
-                content: "•";
-                position: absolute;
-                top: 0;
-                left: 0.5em;
-                height: 100%;
-                font-size: 1em;
-                display: flex;
-                align-items: center;
-            }
+        & li::before {
+            position: absolute;
+            top: 0;
+            left: 0.5em;
+            height: 100%;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+        }
+
+        &:not(.check-list) li::before {
+            content: "•";
+        }
+
+        &.check-list li::before {
+            content: "✓";
         }
     }
 }

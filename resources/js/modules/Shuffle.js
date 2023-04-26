@@ -1,6 +1,5 @@
+import gsap from 'gsap';
 import { module } from 'modujs';
-import SplitText from 'gsap/SplitText';
-import { set } from 'lodash';
  
 export default class extends module {
     constructor(m) {
@@ -11,13 +10,11 @@ export default class extends module {
         this.currText   = this.text;
 
         this.maxNum     =  this.text.match(/\d+/)[0];
-        this.startNum   =  0;
-        this.prevNum    =  this.startNum;
-        this.currNum    =  this.startNum;
-        
-        this.interval = 3 * this.maxNum.length;
 
-        this.timeOut = 1000;
+        this.animConfig = {
+            currNum: 1,
+            target: this.maxNum
+        }
     }
 
     init() { // Init is called automatically
@@ -45,20 +42,41 @@ export default class extends module {
         this.currText = this.currText.replace(this.currNum, this.increment())
     }
 
+    initFrameAnim() {
+
+        let num = Number(this.animConfig.currNum.toFixed(0)).toLocaleString('en-US');
+        this.el.innerText = num;
+        this.frame = requestAnimationFrame(this.initFrameAnim.bind(this));
+    }
+
     animate() {
         const ctx = this;
+
         this.el.innerText = this.el.innerText.replace(this.maxNum, 0);
 
-        this.timer = setInterval(() => {
-            
-            if (ctx.currNum >= ctx.maxNum) {
-                clearInterval(ctx.timer);
-            } else {
-                this.increment();
-            this.el.innerText = this.el.innerText.replace(this.prevNum, this.currNum);
-            this.prevNum = this.currNum;
+
+        gsap.to(this.animConfig, {
+            currNum: ctx.animConfig.target,
+            ease: 'power3.out',
+            duration: 3,
+            onComplete: () => {
+                cancelAnimationFrame(ctx.frame);        
             }
-        }, this.interval);
+        })
+
+        this.initFrameAnim();
+
+
+        // this.timer = setInterval(() => {
+            
+        //     if (ctx.currNum >= ctx.maxNum) {
+        //         clearInterval(ctx.timer);
+        //     } else {
+        //         this.increment();
+        //     this.el.innerText = this.el.innerText.replace(this.prevNum, this.currNum);
+        //     this.prevNum = this.currNum;
+        //     }
+        // }, this.interval);
 
   
     }

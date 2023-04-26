@@ -14,7 +14,9 @@ export default class extends module {
     initSplitText(m) { 
         this.splitText = new SplitText(m.el, {
             type: this.splitTypes.join(","),
-            charsClass: "char"
+            charsClass: "char",
+            linesClass: "line text-center",
+            wordsClass: "word"
         })
     }
     

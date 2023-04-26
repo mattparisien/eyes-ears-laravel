@@ -63,13 +63,18 @@ return [
         'romanlist' => [
             'type' => 'orderedList',
             'name' => 'Roman List',
-            'ident' => 'IV',
+            'ident' => '•',
             'icon' => null,
             'class' => 'roman-list',
-            'cp_css' => [
-                '&' => 'list-style-type: upper-roman',
-                '& ol' => 'list-style-type: lower-roman',
-            ],
+            'cp_badge' => false,
+        ],
+
+        'checklist' => [
+            'type' => 'bulletList',
+            'name' => 'Check List',
+            'ident' => '-',
+            'icon' => null,
+            'class' => 'check-list',
             'cp_badge' => false,
         ],
 

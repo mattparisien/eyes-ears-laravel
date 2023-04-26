@@ -75,7 +75,9 @@
     <div
         class="lightbox__inner | w-full h-full relative flex items-center justify-center"
         data-load-container
-    ></div>
+    >
+    {{ partial:components.carousel class=" container hidden max-h-4xl" noInit="true" moduleTitle="lightbox" }}
+    </div>
     <div
         class="lightbox__bg | w-full h-full absolute top-0 left-0 bg-dark pointer-events-none"
     ></div>

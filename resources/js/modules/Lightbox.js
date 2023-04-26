@@ -50,7 +50,6 @@ export default class extends module {
 
     loadSingleVimeo() {
         const iframe = this.modules.VimeoPlayer[this.context.id].template();
-        console.log(iframe);
         this.loadContainer.innerHTML = iframe;
     }
 
@@ -58,7 +57,31 @@ export default class extends module {
         switch(this.context.title) {
             case 'single-vimeo':
                     this.loadSingleVimeo();
+                    break;
+            case 'carousel':
+                    this.loadCarousel();
+                    break;
         }
+    }
+
+    loadCarousel() {
+        const carouselModuleTitle = this.context.target.dataset.carousel;
+        this.call('createSwiper', null, 'Carousel', carouselModuleTitle);
+        
+        const module    = this.modules.Carousel[carouselModuleTitle];
+        const container = this.context.target.parentNode;
+        const items     = [...[...container.querySelectorAll(`[data-carousel='${carouselModuleTitle}']`)].map(node => node.querySelector("[data-lightbox-carousel-item]"))];        
+
+        const onCreate = (templateItem) => {
+            module.swiper.wrapperEl.appendChild(templateItem);
+        }
+
+        const template = module.template(items, onCreate);
+
+        module.el.classList.remove('hidden');
+        
+        
+        
     }
 
     onClose() {
@@ -72,6 +95,7 @@ export default class extends module {
             btn.addEventListener("click", e => {
                 ctx.show({
                     title: e.currentTarget.dataset.lightboxContext,
+                    target: e.currentTarget,
                     id: e.currentTarget.dataset.lightboxId
                 });
             })
