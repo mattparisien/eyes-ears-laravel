@@ -56,14 +56,10 @@ export default class extends module {
 
     }
 
-
-
     getSectionTheme(section) {
         const {color} = window.getComputedStyle(section);
         this.headerRef.el.style.color = color;
     }
-
-    
 
     resize() {
         window.addEventListener("resize", () => {
@@ -75,6 +71,17 @@ export default class extends module {
     isDocumentTop(args) {
         const headerHeight = this.headerRef.height;
         return args.scroll.y <= headerHeight;
+    }
+
+    lazyLoad({el}) {
+        const img = new Image();
+        
+        img.onload = () => {
+            el.el.src = el.el.dataset.src;
+            el.el.classList.add("is-loaded");
+        }
+
+        img.src = el.el.dataset.src;
     }
 
     update() {

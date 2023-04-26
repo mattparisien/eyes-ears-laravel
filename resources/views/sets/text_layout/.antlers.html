@@ -1,0 +1,11 @@
+<div class="text-layout | flex flex-col w-full md:flex-row items-start justify-between max-w-1024">
+    {{columns}}
+    <div class="text-layout__column {{col_css_classes}}">
+        {{rows}}
+            <div class="text-layout__row {{row_css_classes}}">
+                {{content}}
+            </div>
+        {{/rows}}
+    </div>
+    {{/columns}}
+</div>

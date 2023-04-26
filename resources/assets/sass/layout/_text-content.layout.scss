@@ -1,6 +1,6 @@
-.text-content {
+.text-content, .text-layout {
 
-    &:not(:has(.two-columns)) {
+    &.text-content:not(:has(.two-columns)) {
         @apply max-w-709;
     }
 

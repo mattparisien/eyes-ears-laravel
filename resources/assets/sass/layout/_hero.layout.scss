@@ -57,3 +57,44 @@
         }
     }
 }
+
+.hero {
+
+    $circle-radius-md: 4.3rem;
+    $circle-radius: 3.6rem;
+
+    .circle-feature {
+        position: relative;
+
+        $circle: &;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc($circle-radius / -2.2);
+            right: calc($circle-radius / -2.2);
+            width: $circle-radius;
+            height: $circle-radius;
+            border-radius: 50%;
+            @apply bg-primary-900;
+            mix-blend-mode: multiply;
+            transform: scale(0);
+            transition: transform 1.1s $ease-power3-in-out;
+        }
+
+    }
+
+
+    @screen md {
+        .circle-feature::after {
+            width: $circle-radius-md;
+            height: $circle-radius-md;
+            top: calc($circle-radius-md / -2.2);
+            right: calc($circle-radius-md / -2.2);
+        }
+    }
+}
+
+html.is-ready .hero .circle-feature::after {
+    transform: scale(1);
+}

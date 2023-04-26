@@ -37,3 +37,71 @@
 .text-invert {
     color: var(--bg-color);
 }
+
+
+[data-theme="dark"] .circle {
+    &-left::after, &-right::after {
+        mix-blend-mode: screen;
+        opacity: 0.5;
+    }
+}
+
+
+[data-theme="light"] .circle {
+    &-left::after, &-right::after {
+        mix-blend-mode: multiply;
+    }
+}
+
+[data-theme="yellow"] .circle {
+    &-left::after, &-right::after {
+        display: none;
+    }
+}
+
+[data-theme="yellow-2"] .circle {
+    &-left::after, &-right::after {
+        mix-blend-mode: screen;
+        opacity: 0.3;
+    }
+}
+
+.circle {
+
+
+    &-left, &-right {
+        position: relative;
+        display: inline-block;
+
+        &::after {
+            content: '';
+            position: absolute;
+        }
+    }
+
+    &-left::after {
+        left: 0;
+        top: 0;
+        width: 2.5em;
+        height: 2.5em;
+        @apply bg-primary-900;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -0.9em; 
+    }
+
+    &-right::after {
+        right: 0;
+        top: 0;
+        width: 2.5em;
+        height: 2.5em;
+        @apply bg-primary-900;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        right: -0.9em; 
+    }
+    
+}

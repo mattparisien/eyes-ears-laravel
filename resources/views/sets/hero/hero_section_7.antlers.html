@@ -16,7 +16,7 @@
                         el="div"
                         size="h2"
                         class="text-center"
-                        attrs="data-module-split data-split-type='lines, chars'"
+                        attrs="data-module-split data-split-type='lines, words, chars'"
                     }}
                 {{ client }}
                     
@@ -24,7 +24,7 @@
                             label="{title}"
                             el="div"
                             size="h5"
-                            class="text-center"
+                            weight="regular"
                             attrs="data-module-split data-split-type='lines, chars'"
                         }}
                 {{ /client }}
@@ -33,9 +33,9 @@
                 size="{button_size}" color="{button_variant}" }} {{ /if }}
             </div>
 
-            <div class="w-full md:w-1/2 ">
-                <div class="w-1/2 mx-auto md:w-3/4 md:ml-auto lg:w-1/2 lg:mx-auto">
-                    {{ partial:components.picture ratio="landscape" ratio="portrait" credit="true"
+            <div class="w-full md:w-1/2">
+                <div class="circle-feature | w-1/2 mx-auto md:w-3/4 md:ml-auto lg:w-1/2 lg:mx-auto">
+                    {{ partial:components.picture ratio="portrait" credit="true" cover="true"
                     sizes="(min-width: 200px) 35vw, 90vw" }}
                 </div>
             </div>

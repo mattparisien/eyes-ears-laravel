@@ -62,4 +62,31 @@
         }
     }
 
+    &[data-theme="dark"] {
+    
+        --bg-color: theme('colors.light');
+        --fg-color: theme('colors.dark');
+
+        @apply text-light;
+        @apply bg-transparent;
+
+        svg {
+            @apply fill-light;
+        }
+
+        .toggle-button {
+           &__circle {
+            @apply bg-light;
+           }
+
+           &::before, &::after {
+            @apply bg-dark #{!important};
+           }
+        }
+
+        a::after {
+            @apply bg-dark;
+        }
+    }
+
 }

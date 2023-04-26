@@ -26,6 +26,11 @@ fields:
         - bts_styles
         - bts_attributes
         - threecolumns
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
       container: assets
       save_html: false
       inline: false

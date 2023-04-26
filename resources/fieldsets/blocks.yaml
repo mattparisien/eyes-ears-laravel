@@ -90,6 +90,11 @@ fields:
           fields:
             -
               import: quote
+        text_layout:
+          display: 'Text Layout'
+          fields:
+            -
+              import: text_layout
       display: Blocks
       type: replicator
       icon: replicator

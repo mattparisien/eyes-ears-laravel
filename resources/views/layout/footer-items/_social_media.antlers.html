@@ -1,3 +1,11 @@
+---
+sizes: 
+    sm: 'w-5 h-5 md:w-4 md:h-4'
+    md: 'w-5 h-5'
+    lg: 'w-5 h-5 md:w-7 md:h-7'
+    xl: 'w-5 h-5 md:w-8 md:h-8'
+---
+
 {{ if align === 'left' }}
     {{ var:social_align value="mr-auto" }}
 {{ elseif align === 'right' }}
@@ -9,7 +17,7 @@
 <ul class="social-media{{class}}">
     {{ theme:socials }}
         <li>
-                {{ partial:partials.social_link }} 
+                {{ partial:partials.social_link class="{{size ? view:sizes[size] : view:sizes['sm']}}" }} 
         </li>
     {{ /theme:socials }}
 </ul>

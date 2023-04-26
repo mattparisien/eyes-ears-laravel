@@ -129,29 +129,29 @@ return [
 
     'attributes' => [
 
-        // 'heading' => [
-        //     'id' => [
-        //         'type' => 'text',
-        //         'display' => 'ID',
-        //         'default' => null,
-        //         'rendered' => true,
-        //     ],
-        // ],
+        'heading' => [
+            'id' => [
+                'type' => 'text',
+                'display' => 'ID',
+                'default' => null,
+                'rendered' => true,
+            ],
+        ],
 
-        // 'orderedList' => [
-        //     'start' => [
-        //         'type' => 'text',
-        //         'display' => 'Start',
-        //         'default' => null,
-        //         'rendered' => true,
-        //     ],
-        //     'reversed' => [
-        //         'type' => 'toggle',
-        //         'display' => 'Reversed',
-        //         'default' => null,
-        //         'rendered' => true,
-        //     ],
-        // ],
+        'orderedList' => [
+            'start' => [
+                'type' => 'text',
+                'display' => 'Start',
+                'default' => null,
+                'rendered' => true,
+            ],
+            'reversed' => [
+                'type' => 'toggle',
+                'display' => 'Reversed',
+                'default' => null,
+                'rendered' => true,
+            ],
+        ],
 
     ],
 

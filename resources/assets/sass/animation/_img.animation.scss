@@ -1,0 +1,13 @@
+html.is-ready {
+
+
+    div:not(div.image-gallery) img.lazy-img {
+        transition: opacity 1.3s $ease-smooth;
+        opacity: 0;
+
+        &.is-inview.is-loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}

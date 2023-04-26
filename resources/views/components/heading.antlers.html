@@ -1,18 +1,24 @@
 ---
 sizes:
-    h1: 'xl:text-8xl md:text-6xl sm:text-5xl text-4xl font-bold'
-    h2: 'lg:text-5xl md:text-4xl text-3xl font-bold'
-    h3: 'md:text-4xl text-3xl font-bold'
-    h4: 'md:text-3xl text-2xl font-bold'
-    h5: 'md:text-2xl text-xl font-semibold'
-    h6: 'md:text-xl text-lg font-bold'
+    h1: 'xl:text-8xl md:text-6xl sm:text-5xl text-4xl'
+    h2: 'lg:text-5xl md:text-4xl text-3xl'
+    h3: 'md:text-4xl text-3xl'
+    h4: 'md:text-3xl text-2xl'
+    h5: 'md:text-2xl text-xl'
+    h6: 'md:text-xl text-lg'
 types:
     gray: 'text-gray-900'
     light-gray: 'text-gray-100'
     white: 'text-white'
+weights:
+    regular: 'font-regular'
+    medium: 'font-medium'
+    bold: 'font-bold'
+    ultrabold: 'font-ultrabold'
+    black: 'font-black'
 split-attrs: data-module-split data-split-type="chars" 
 ---
 
-<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ class }}" {{ attrs }}>
+<{{ el or size or 'p' }} class="{{ size ? view:sizes[size] : view:sizes['h2'] }} {{ weight ? view:weights[weight] : view:weights['bold'] }} {{ class }}" {{ attrs }}>
 {{ label }}
 </{{ el or size or 'p' }}>

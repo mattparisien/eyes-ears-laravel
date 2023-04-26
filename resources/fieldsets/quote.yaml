@@ -25,3 +25,6 @@ fields:
       visibility: visible
       validate:
         - required
+  -
+    handle: block_theme
+    field: hero.block_theme

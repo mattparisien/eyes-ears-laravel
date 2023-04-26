@@ -1,0 +1,58 @@
+title: 'Text Layout'
+fields:
+  -
+    handle: columns
+    field:
+      collapse: false
+      previews: true
+      sets:
+        column:
+          display: Column
+          fields:
+            -
+              handle: rows
+              field:
+                collapse: false
+                previews: true
+                sets:
+                  row:
+                    display: Row
+                    fields:
+                      -
+                        import: text_content
+                      -
+                        handle: row_css_classes
+                        field:
+                          input_type: text
+                          antlers: false
+                          display: 'CSS Classes'
+                          type: text
+                          icon: text
+                          instructions: 'Add custom css classes to the row container'
+                          listable: hidden
+                          instructions_position: above
+                          visibility: visible
+                display: Rows
+                type: replicator
+                icon: replicator
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+            -
+              handle: col_css_classes
+              field:
+                input_type: text
+                antlers: false
+                display: 'CSS Classes'
+                type: text
+                icon: text
+                instructions: 'Add css classes that will be added to the column container'
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+      display: Columns
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible

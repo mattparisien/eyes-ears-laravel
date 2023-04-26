@@ -16,6 +16,7 @@
             :image="image"
             cover="true"
             sizes="(min-width: 200px) 35vw, 90vw"
+            lazy="true"
         }}
         {{ else }}
         {{ svg :src="image" :class="image.classes" }}
