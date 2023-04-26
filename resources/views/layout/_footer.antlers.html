@@ -1,42 +1,51 @@
-{{ if (theme:footer_items | count) === 3 }}
-    {{ var:grid_classes value="md:grid-cols-3" }}
-{{ elseif (theme:footer_items | count) === 2 }}
-    {{ var:grid_classes value="md:grid-cols-2" }}
-{{ elseif (theme:footer_items | count) === 1 }}
-    {{ var:grid_classes value="grid-cols-1" }}
-{{ /if }}
+{{ if (theme:footer_items | count) === 3 }} {{ var:grid_classes
+value="md:grid-cols-3" }} {{ elseif (theme:footer_items | count) === 2 }} {{
+var:grid_classes value="md:grid-cols-2" }} {{ elseif (theme:footer_items |
+count) === 1 }} {{ var:grid_classes value="grid-cols-1" }} {{ /if }}
 
-<footer class="global-footer | h-screen relative w-full overflow-hidden bg-dark" data-scroll-section id="site-footer">
-    <div class="global-footer__content h-full" data-scroll data-scroll-speed="-6" data-scroll-target="#site-footer">
-        <div class="global-footer__main | container h-full md:py-24 py-14 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
-            <div class="mb-10 sm:mb-0">
-            {{
-                partial:components/heading
-                size="h1"
-                el="h3"
-                label="{theme:footer_heading}"
-                class="text-light text-center sm:text-left"
-                split-module="footer"
-                :attrs="'data-scroll'"
-            }}
-            {{ if theme:display_footer_email }}
-                <a href="mailto:{{ info.email }}" class="inline-block hover-underline text-light lg:text-2xl text-xl" data-scroll data-module-split data-split-type="chars">{{ info.email }}</a>
-            {{/if}}
+<footer
+    class="global-footer | h-screen relative w-full overflow-hidden bg-dark"
+    data-scroll-section
+    id="site-footer"
+>
+    <div
+        class="global-footer__content h-full"
+        data-scroll
+        data-scroll-speed="-6"
+        data-scroll-target="#site-footer"
+    >
+        <div
+            class="global-footer__main | container h-full pb-5 flex flex-col justify-between"
+        >
+        <div class="h-10"></div>
+            <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-between w-full">
+                <div class="mb-10 sm:mb-0">
+                    {{ partial:components/heading size="h1" el="h3"
+                    label="{theme:footer_heading}" class="text-light text-center
+                    sm:text-left" split-module="footer" :attrs="'data-scroll'"
+                    }} {{ if theme:display_footer_email }}
+                    <a
+                        href="mailto:{{ info.email }}"
+                        class="inline-block hover-underline text-light lg:text-2xl text-xl"
+                        data-scroll
+                        data-module-split
+                        data-split-type="chars"
+                        >{{ info.email }}</a
+                    >
+                    {{/if}}
+                </div>
+                {{ if theme:footer_image.extension != 'svg' }} {{
+                partial:components/picture class="object-cover w-96 h-96"
+                :image="theme:logo_mark" sizes="(min-width: 200px) 35vw, 90vw"
+                }} {{ else }} {{ svg :src="theme:footer_image"
+                class="animated-face-svg w-52 h-52 sm:w-40 sm:h-40 lg:w-52
+                lg:h-52" }} {{ /if}}
             </div>
-                {{ if theme:footer_image.extension != 'svg' }} 
-                    {{
-                        partial:components/picture
-                        class="object-cover w-96 h-96"
-                        :image="theme:logo_mark"
-                        sizes="(min-width: 200px) 35vw, 90vw"
-                    }}
-                {{ else }}
-                    {{ svg :src="theme:footer_image" class="animated-face-svg w-52 h-52 sm:w-40 sm:h-40 lg:w-52 lg:h-52" }}
-                {{ /if}}
-        </div>
-        <div class="global-footer__bottom | text-light mb-5 container max-w-none absolute right-0 bottom-0 ">
-            <div>{{site_name}}</div>
-            {{ partial:layout/footer-items/social_media class=" items-center justify-end"}}
+            <div class="flex items-end justify-between text-light">
+                <div>{{info:site_name}}</div>
+                {{ partial:layout/footer-items/social_media class=" items-center
+                justify-end"}}
+            </div>
         </div>
     </div>
 </footer>

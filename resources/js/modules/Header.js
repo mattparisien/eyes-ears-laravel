@@ -10,6 +10,15 @@ export default class extends module {
         this.el = m.el;
         this.height = this.el.getBoundingClientRect().height;
         this.setInitialColor();
+
+        this.menuToggler = document.querySelector("[data-header-menu-toggler]");
+        this.menu = document.querySelector("[data-header-menu]");
+        this.isMenuOpen = false;
+        this.prevTheme = null;
+        this.navSwitchBreakpoint = 768;
+
+        this.onMenuToggle();
+        this.onResize();
     }
     
 
@@ -36,12 +45,74 @@ export default class extends module {
         this.initialTheme = firstSectionTheme;
     }
 
+    setPrevTheme(theme) {
+        this.prevTheme = theme;
+    }
+
+    onMenuToggle() {
+        const toggler = this.menuToggler;
+        const menu = this.menu;
+        const header = this.el;
+        const setPrevTheme = this.setPrevTheme.bind(this);
+        const open = this.openMenu.bind(this);
+        const close = this.closeMenu.bind(this);
+
+        this.menuToggler.addEventListener("click", () => {
+
+            
+            this.isMenuOpen = !this.isMenuOpen;
+
+        
+            if (this.isMenuOpen) {
+
+                setPrevTheme(header.dataset.theme);
+                open();
+
+            } else {
+                close();
+            }
+
+        })
+    }
+
+    openMenu() {
+        this.menuToggler.classList.add("is-menu-open");
+        this.menuToggler.setAttribute("aria-expanded", true);
+
+        this.menu.classList.add("is-show");
+        this.menu.setAttribute("aria-expanded", true);
+
+        this.el.setAttribute("data-theme", "dark");
+    }
+
+    closeMenu() {
+        this.menuToggler.classList.remove("is-menu-open");
+        this.menuToggler.setAttribute("aria-expanded", false);
+
+        this.menu.classList.remove("is-show");
+        this.menu.setAttribute("aria-expanded", false);
+
+        this.el.setAttribute("data-theme", this.prevTheme);
+    }
+
     setTheme(theme) {
         this.el.setAttribute("data-theme", theme);
     }
 
     getTheme() {
         return this.el.dataset.theme;
+    }
+
+    onResize() {
+
+        const closeMenu = this.closeMenu.bind(this);
+        const breakpoint = this.navSwitchBreakpoint;
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > breakpoint) {
+                    closeMenu();
+            }
+        })
     }
 
     themeUpdate({way, scrollDirection, el}) {
