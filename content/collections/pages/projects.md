@@ -12,5 +12,29 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682619588
+updated_at: 1682619947
+blocks:
+  -
+    id: lgzgcc2e
+    version: hero_section_1
+    title: Projects
+    has_description: false
+    toggle: false
+    block_theme: light
+    embedded_video: '{{partial:components.project-carx}}'
+    fallback_image: 2d9537abdbcefe44cb9446f12c0a4604.jpeg
+    type: hero
+    enabled: true
+  -
+    id: lgzgclyl
+    project_summary_variant: project_summary_2
+    items_per_view: 4
+    type: project_summary
+    enabled: false
+  -
+    id: lgzgd6pq
+    version: project_multiple_2
+    is_grayscale: false
+    type: project_multiple
+    enabled: true
 ---
