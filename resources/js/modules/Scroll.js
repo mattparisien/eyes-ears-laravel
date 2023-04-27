@@ -18,7 +18,7 @@ export default class extends module {
             this.scroll.update();
         }
 
-        // this.resize();
+        this.resize();
 
         // this.scroll.on('call', (func, way, obj, id) => {
             
@@ -62,9 +62,11 @@ export default class extends module {
     }
 
     resize() {
+
+        const scroller = this.scroll;
+
         window.addEventListener("resize", () => {
-            
-            this.scroll.update();
+            scroller.update();
         })
     }
 

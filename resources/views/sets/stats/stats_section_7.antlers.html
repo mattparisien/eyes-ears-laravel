@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="container pb-20 -mt-96 md:-mt-28">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-{{stats | length}}">
         {{ stats }}
             <div style="background-image: url('/assets/hexagon.svg');"
                 class="flex items-center justify-center w-64 h-64 mx-auto bg-center bg-no-repeat">

@@ -18,10 +18,12 @@ export default class extends module {
 
     show() {
         this.collapsableItem.style.maxHeight = "100%"
+        this.btn.innerText = "Read less";
     }
 
     hide() {
         this.collapsableItem.style.maxHeight = null;
+        this.btn.innerText = "Read more";
     }
 
     onClick() {

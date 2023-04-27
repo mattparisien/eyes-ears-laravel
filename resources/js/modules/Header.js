@@ -115,7 +115,7 @@ export default class extends module {
         })
     }
 
-    themeUpdate({way, scrollDirection, el}) {
+    heroHeaderUpdate({way, scrollDirection, el}) {
         if (way === "enter" && scrollDirection === "down") {
             this.setTheme("light");
             this.el.classList.remove("is-hero-header");
@@ -124,6 +124,11 @@ export default class extends module {
             this.el.classList.add("is-hero-header");
             
         }
+    }
+
+    themeUpdate({way, scrollDirection, el}) {
+        const theme = el.el.dataset.theme;
+        this.setTheme(theme);
     }
 
     setHeroHeader() {

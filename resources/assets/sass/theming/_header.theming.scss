@@ -2,6 +2,38 @@
 
     $header: &;
     
+    &[data-theme="yellow"] {
+        --bg-color: theme('colors.primary.900');
+        --fg-color: theme('colors.dark');
+        
+        @apply text-dark;
+        @apply bg-primary-900;
+
+        &#{$header}.is-hero-header {
+            border-bottom: 1px solid;
+            @apply border-primary-900;
+            @apply bg-transparent;
+        }
+
+        svg {
+            @apply fill-dark;
+        }
+
+        .toggle-button {
+           &__circle {
+            @apply bg-dark;
+           }
+
+           &::before, &::after {
+            @apply bg-light;
+           }
+        }
+
+        a::after {
+        @apply bg-dark;
+        }
+    }
+
     &[data-theme="yellow-2"] {
 
         --bg-color: theme('colors.dark');

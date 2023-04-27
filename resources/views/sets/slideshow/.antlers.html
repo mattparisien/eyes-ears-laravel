@@ -12,7 +12,7 @@
     {{ partial:components.carousel :slidesPerView="slides_per_view" }}
             {{ slideshow_images}}
                 {{ partial:components.carousel_item }}  
-                    {{ partial:components.picture ratio="video" :image="url" lazy="true" attrs="data-scroll-offset='15%'" }}
+                    {{ partial:components.picture :ratio="slide_ratio || 'video'" :image="url" lazy="true" cover="true" attrs="data-scroll-offset='15%'" }}
                 {{ /partial:components.carousel_item}}  
             {{ /slideshow_images}}
     {{ /partial:components.carousel }}

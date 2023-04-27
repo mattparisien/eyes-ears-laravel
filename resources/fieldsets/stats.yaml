@@ -95,3 +95,6 @@ fields:
       validate:
         - required
       instructions_position: above
+      visibility: visible
+      previews: true
+      max_sets: 5

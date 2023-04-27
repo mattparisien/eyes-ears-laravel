@@ -1,9 +1,14 @@
+---
+sectionAttrs: 
+    0: 'data-scroll data-scroll-call="heroHeaderUpdate, Header, main" data-scroll-repeat data-scroll-offset="95%"' 
+---
 
-    {{ partial:layout/block-section noGutters="true" }}
+
+    {{ partial:layout/block-section noGutters="true"}}
         {{ partial:sets.hero.hero_section_7 }}
         {{/partial:layout/block-section }}
         {{ blocks }}
-            {{partial:layout/block-section gutter="md" }}
+            {{partial:layout/block-section gutter="md" attrs="{{view:sectionAttrs[index]}}" }}
                 {{ partial src="sets/{type}/{version}" }}
             {{/partial:layout/block-section }}
         {{ /blocks }}
@@ -15,7 +20,7 @@
     </div> #}}
     {{ collection:next collection="posts" limit="1" sort="date:asc" }}
     {{partial:layout/block-section block_theme="yellow" noGutters="true" noContainer="true"}}
-        <a href="{{url}}" class="pt-10 md:pt-20 block relative" data-scroll data-scroll-call="themeUpdate, Header, 'main">
+        <a href="{{url}}" class="pt-10 md:pt-20 block relative">
         <div class="flex justify-between items-center container">
             {{svg src="assets/svg/arrow-simple.svg" class=" w-28 md:w-40 [&>*]:stroke-dark [&>*]:stroke-2 " }}
             <div class="text-3xl md:text-4xl font-medium">Next</div>

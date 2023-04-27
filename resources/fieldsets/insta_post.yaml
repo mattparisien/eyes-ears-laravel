@@ -91,6 +91,7 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+      max_sets: 1
   -
     handle: avatar
     field:

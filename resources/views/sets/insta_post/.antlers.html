@@ -1,4 +1,5 @@
-<div class="insta-post | max-w-lg border border-gray-400 rounded-md mx-auto bg-white">
+<div class="insta-post | max-w-md border border-gray-400 rounded-md mx-auto bg-white">
+
     <div class="w-full flex items-center py-3 px-4 border-b border-b-gray-400">
         <div class="w-10 h-10 rounded-full" style="background-image: url({{avatar}}); background-size: cover; background-position: center;"></div>
         <a class="text-xl ml-4" href="{{link}}" target="_blank" rel="noreferrer noopener">{{ '@' + handle }}</a>
@@ -6,16 +7,21 @@
         <img src="assets/images/icons/insta-verified.png" class="w-4 h-4 ml-2" />
         {{/if}}
     </div>
-    {{media}}
-    {{if image | image}}
-        {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true"}}
-    {{/if}}
-    {{/media}}
+
+    {{ media }}
+
+        {{if is_image }}
+            {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true"}}
+        {{/if}}
+
+        {{ partial:sets/slideshow/. slide_ratio='preserve' }}
+
+    {{ /media }}
     <div class="w-full border-t border-t-gray-400 px-4 py-3" data-module-collapsable>
         <div class="overflow-hidden max-h-12 w-full" data-collapsable-item>
-            <p class="text-sm mt-0"><span class="font-bold inline-block mr-2">{{'@' + handle}}</span><span>{{ caption | substr(0, 150)}}</span> <span>{{ caption | substr(150, length)}}</span></spam></p>
+            <p class="text-sm" style="margin-top: 0px;"><span class="font-bold inline-block mr-2">{{'@' + handle}}</span><span>{{ caption | substr(0, 150)}}</span> <span>{{ caption | substr(150, length)}}</span></spam></p>
         </div>
-        <button class="block ml-auto font-bold mt-4" data-collapsable-button>Read more</button>
+        <button class="block ml-auto font-bold mt-4 text-gray-400 hover:text-dark transition-color ease-smooth duration-300" data-collapsable-button>Read more</button>
     
     </div>
 </div>

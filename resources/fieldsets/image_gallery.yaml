@@ -232,3 +232,6 @@ fields:
         - sometimes
       unless:
         version: 'not image_gallery_2'
+  -
+    handle: block_theme
+    field: hero.block_theme
