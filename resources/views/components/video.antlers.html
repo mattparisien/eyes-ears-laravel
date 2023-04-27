@@ -1,5 +1,17 @@
+---
+ratios:
+    preserve: 'ratio-preserve'
+    portrait: "ratio-4:5"
+    landscape: "ratio-5:4"
+    square: "ratio-1:1"
+    video: "ratio-16:9"
+    ultrawide: "ratio-21:9"
+    fill: "ratio-fill"
+---
+
+
 <div
-    class="relative overflow-hidden ratio-16:9 rounded-md"
+    class="relative overflow-hidden {{ratio ? view:ratios[ratio] : view:ratios['video']}} rounded-md"
     
 >
     {{ if embedded_video | is_embeddable }}
@@ -9,6 +21,7 @@
         data-scroll-call="triggerPlayer, VimeoPlayer, {{id}}"
         data-src="{{ embedded_video | embed_url }}&controls=false&transparency=false&autopause=false&loop=1&muted=1"
         data-raw-src="{{ embedded_video | embed_url }}"
+        data-vimeo-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         frameborder="0"
         allowfullscreen
         webkitallowfullscreen

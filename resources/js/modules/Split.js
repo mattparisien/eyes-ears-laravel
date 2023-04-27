@@ -6,6 +6,7 @@ export default class extends module {
         super(m);
         this.splitTypes = m.el.dataset.splitType.split(",");
         this.initSplitText(m);
+        this.onResize();
     }
 
     init() { // Init is called automatically
@@ -15,7 +16,7 @@ export default class extends module {
         this.splitText = new SplitText(m.el, {
             type: this.splitTypes.join(","),
             charsClass: "char",
-            linesClass: "line text-center",
+            linesClass: "line text-center overflow-hidden",
             wordsClass: "word"
         })
     }
@@ -24,8 +25,12 @@ export default class extends module {
         this.splitText?.revert().split();
     }
  
-    doSomething() {
-        console.log('Hello world');
+
+    onResize() {
+        const refresh = this.refreshSplitText.bind(this);
+        window.addEventListener("resize", () => {
+            refresh();
+        })
     }
 
 }

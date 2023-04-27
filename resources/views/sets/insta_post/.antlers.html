@@ -4,17 +4,27 @@
         <div class="w-10 h-10 rounded-full" style="background-image: url({{avatar}}); background-size: cover; background-position: center;"></div>
         <a class="text-xl ml-4" href="{{link}}" target="_blank" rel="noreferrer noopener">{{ '@' + handle }}</a>
         {{if verified}}
-        <img src="assets/images/icons/insta-verified.png" class="w-4 h-4 ml-2" />
+        <img src="/assets/images/icons/insta-verified.png" class="w-4 h-4 ml-2" />
         {{/if}}
     </div>
 
     {{ media }}
 
-        {{if is_image }}
+        {{if type == "image" }}
             {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true"}}
+            {{elseif type == "video" }}
+                {{ partial:components.video ratio='preserve' }}
+            {{else }}
+                {{partial:sets/slideshow/. slidesPerView="1" slideRatio='preserve'}}
         {{/if}}
 
-        {{ partial:sets/slideshow/. slide_ratio='preserve' }}
+        {{ if video }}
+            {{ partial:components.video }}
+        {{/if}}
+        
+
+        
+
 
     {{ /media }}
     <div class="w-full border-t border-t-gray-400 px-4 py-3" data-module-collapsable>

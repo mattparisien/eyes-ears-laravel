@@ -8,11 +8,17 @@ export default class extends module {
         this.el = m.el;
     }
     
+    reloadLayout() {
+        console.log('called!')
+        this.msnry?.layout();
+    }
 
     init() {
         this.msnry = new Masonry(this.el, {
             itemSelector: '.grid-item',
-        })
+        });
+
+        console.log(this.msnry);
 
         this.initLightboxOnClick();
     }

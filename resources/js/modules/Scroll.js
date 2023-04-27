@@ -77,8 +77,18 @@ export default class extends module {
 
     lazyLoad({el}) {
         const img = new Image();
+
+        const ctx = this;
         
         img.onload = () => {
+
+            const callback = el.el.dataset.loadCall;
+
+            if (callback) {
+                const args = callback.split(",");
+                ctx.call(args[0].trim(), null, args[1].trim(), args[2].trim());
+            }
+
             el.el.src = el.el.dataset.src;
             el.el.classList.add("is-loaded");
         }

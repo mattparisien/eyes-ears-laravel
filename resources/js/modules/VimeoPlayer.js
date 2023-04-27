@@ -11,13 +11,13 @@ export default class extends module {
         super(m);
         this.el = m.el;
         this.id = m.el.dataset.moduleVimeoPlayer;
+        this.options = m.el.dataset.vimeoOptions ? m.el.dataset.vimeoOptions.split(",") : [];
 
         if (this.id !== "hero-video") {
             this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
             this.src = this.el.dataset.src;
             this.rawSrc = this.el.dataset.rawSrc;
         }
-        
         
     }    
 
@@ -27,6 +27,7 @@ export default class extends module {
 
     initPlayer() {
         this.vimeoPlayer = new Player(this.el);
+        this.initOptions();
     }
 
     hideToggler() {
@@ -70,7 +71,29 @@ export default class extends module {
         `;
     }
 
+    calculateHeight() {
+        const ctx = this;
+        Promise.all([this.vimeoPlayer.getVideoWidth(), this.vimeoPlayer.getVideoHeight()]).then(function(dimensions) {
+            var width = dimensions[0];
+            var height = dimensions[1];
+            const ratio = height / width;
+            
+            ctx.el.parentNode.style.setProperty('--ratio-percent', ratio * 100 + "%")
+        });
+    }
+
+    initOptions() {
+        if (!this.options || !this.options.length) return;
+
+        const ctx = this;
+
+        this.options.forEach(option => {
+            ctx.call(option, null, "VimeoPlayer", this.id);
+        })
+    }
+
     load(el) {
+        const ctx = this;
        return new Promise((resolve, reject) => {
             el.el.addEventListener("load", () => {
                 resolve();

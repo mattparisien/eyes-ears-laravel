@@ -51,3 +51,10 @@
         object-position: center;
     }
 }
+
+.ratio-preserve {
+    display: block;
+    padding-bottom: var(--ratio-percent);
+    content: "";
+    width: 100%;
+}

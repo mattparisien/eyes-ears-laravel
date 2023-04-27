@@ -1,4 +1,4 @@
-<div class="grid grid-{{layout}}" data-module-grid {{attrs}}>
+<div class="grid grid-{{layout}}" data-module-grid="{{id}}" {{attrs}}>
     <div class="grid-sizer"></div>
     <style>
         .grid {
@@ -13,7 +13,7 @@
     {{ columns }}
     <style>
         .grid { --cols-sm: 1/{{columns_sm}}; --cols-md: 1/{{columns_md}}; --cols-lg: 1/{{columns_lg}};}
-</style>
+    </style>
     {{ /columns }}
     {{ slot }}
 </div>

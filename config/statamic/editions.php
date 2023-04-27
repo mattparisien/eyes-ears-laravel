@@ -1,5 +1,5 @@
 <?php return [
-    'pro' => false,
+    'pro' => true,
     'addons' => [
         'jacksleight/statamic-bard-texstyle' => 'pro',
     ],

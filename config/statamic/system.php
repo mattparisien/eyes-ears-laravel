@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'license_key' => env('STATAMIC_LICENSE_KEY'),
+    'license_key' => 'npdlq5d4qj5j4m8y',
 
     /*
     |--------------------------------------------------------------------------
