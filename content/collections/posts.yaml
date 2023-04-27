@@ -1,6 +1,7 @@
 title: Projects
 template: posts/show
 layout: layout
+mount: 0e32c16c-2b00-43f7-a929-6218d59cd432
 revisions: false
 route: '{{ if depth == 1 }}{{ mount }}{{ /if }}{{ parent_uri }}/{{ slug }}'
 date: true
