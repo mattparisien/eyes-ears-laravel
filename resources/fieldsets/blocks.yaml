@@ -90,6 +90,11 @@ fields:
           fields:
             -
               import: quote
+        text_content:
+          display: 'Text Content'
+          fields:
+            -
+              import: text_content
         text_layout:
           display: 'Text Layout'
           fields:
