@@ -1,8 +1,7 @@
 import LocomotiveScroll from 'locomotive-scroll';
 import { module } from 'modujs';
-import {html} from "../utils/environment";
-import {getDocHeight} from "../utils/doc";
-import $ from "jquery";
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 export default class extends module {
     constructor(m) {
@@ -11,11 +10,17 @@ export default class extends module {
 
 
     init() { 
+
+        gsap.registerPlugin(ScrollToPlugin);
+
+
         if (!this.scroll) {
             this.scroll = new LocomotiveScroll({
                 el: this.el,
                 getDirection: true,
             });
+
+            this.anchorLinks = Array.from(document.querySelectorAll('[data-scroll-behaviour="smooth"]'))
             this.headerRef   = this.modules.Header.main;
             this.sections    = Array.from(this.scroll.el.querySelectorAll("[data-scroll-section]"));
             this.lastSection = this.sections.slice(-1).pop();
@@ -26,6 +31,7 @@ export default class extends module {
         }
 
         this.resize();
+        this.initAnchorLinks();
 
         setTimeout(() => {
             this.scroll.update();
@@ -45,6 +51,24 @@ export default class extends module {
 
         this.scroll.on("call", (args, way, el) => {
             this.call(args[0], {way, args, el, scrollDirection: this.scrollDirection}, args[1], args[2]);
+        })
+    }
+
+    initAnchorLinks() {
+        this.anchorLinks.forEach(link => {
+            link.addEventListener("click", e => {
+                
+                e.preventDefault();
+
+                const target       = e.currentTarget.getAttribute("href");
+
+                gsap.to(window, {
+                    scrollTo: target,
+                    duration: 2.4,
+                    ease: 'expo.inOut'
+                })
+                                
+            })
         })
     }
 

@@ -1,8 +1,5 @@
 tree:
   -
-    id: ca190a65-9060-4566-a7f3-0afb907c8b88
-    entry: 66a11842-28e6-46d8-9175-1725973b8f25
-  -
     id: e10c58d6-e26f-441c-98ab-f893fff26a4f
     title: About
     url: /about
@@ -14,3 +11,10 @@ tree:
     id: cb9e86fb-2246-46be-95ea-644dfcf0bc69
     title: Press
     url: /press
+  -
+    id: efadb1ca-0b4d-44f3-ba8b-901b7530470f
+    title: Contact
+    url: '#site-bottom'
+    data:
+      toggle_button: false
+      html_attributes: 'data-scroll-behaviour="smooth"'

@@ -2,14 +2,16 @@ sections:
   main:
     display: Main
     fields:
-      - handle: toggle_button
+      -
+        handle: toggle_button
         field:
           default: false
-          display: "Toggle Button"
+          display: 'Toggle Button'
           type: toggle
           icon: toggle
           listable: hidden
-      - handle: button_variant
+      -
+        handle: button_variant
         field:
           options:
             brand: Brand
@@ -17,37 +19,52 @@ sections:
             outline: Outline
             white: White
           default: brand
-          display: "Button Variant"
+          display: 'Button Variant'
           type: button_group
           icon: button_group
-          instructions: "Button variant, default brand."
+          instructions: 'Button variant, default brand.'
           width: 50
           listable: hidden
           if:
-            toggle_button: "equals true"
-      - handle: button_size
+            toggle_button: 'equals true'
+      -
+        handle: button_size
         field:
           options:
             sm: Small
             md: Medium
             lg: Large
-            xl: "Extra Large"
+            xl: 'Extra Large'
           default: md
-          display: "Button Size"
+          display: 'Button Size'
           type: button_group
           icon: button_group
-          instructions: "Select button size, default medium."
+          instructions: 'Select button size, default medium.'
           width: 50
           listable: hidden
           if:
-            toggle_button: "equals true"
-      - handle: target_blank
+            toggle_button: 'equals true'
+      -
+        handle: target_blank
         field:
           default: false
-          display: "Target Blank"
+          display: 'Target Blank'
           type: toggle
           icon: toggle
-          instructions: "Open link in new tab or window."
+          instructions: 'Open link in new tab or window.'
           listable: hidden
           if:
-            toggle_button: "equals true"
+            toggle_button: 'equals true'
+      -
+        handle: html_attributes
+        field:
+          placeholder: 'data-something="true"'
+          input_type: text
+          antlers: false
+          display: 'HTML Attributes'
+          type: text
+          icon: text
+          instructions: 'Add custom html attributes that will be added directly to the anchor link tag'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
