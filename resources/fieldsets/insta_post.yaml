@@ -110,3 +110,4 @@ fields:
       validate:
         - required
         - 'mimes:jpg,jpeg,png,webp'
+      folder: images/icons
