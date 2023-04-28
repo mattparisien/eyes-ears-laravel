@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682681570
+updated_at: 1682681706
 blocks:
   -
     id: lgdsxru7
@@ -80,11 +80,11 @@ blocks:
           -
             type: image
             attrs:
-              src: 'asset::assets::3-1682080935.jpg'
+              src: 'asset::assets::3db5c9701a643e05b4b8f6590d55d7c9d2cd588a-1000x800.jpeg'
               alt: null
     block_theme: light
     type: text_content
-    enabled: false
+    enabled: true
   -
     id: lh0h5hpc
     columns:
@@ -167,5 +167,5 @@ blocks:
         type: column
         enabled: true
     type: text_layout
-    enabled: true
+    enabled: false
 ---
