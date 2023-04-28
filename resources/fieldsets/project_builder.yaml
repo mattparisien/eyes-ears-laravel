@@ -7,37 +7,37 @@ fields:
       previews: true
       sets:
         stats:
-          display: stats
+          display: Stats
           fields:
             -
               import: stats
         feature_single:
-          display: feature_single
+          display: 'Feature Single'
           fields:
             -
               import: feature_single
         feature_multiple:
-          display: feature_multiple
+          display: 'Feature Multiple'
           fields:
             -
               import: feature_multiple
         social_media:
-          display: social_media
+          display: 'Social Media'
           fields:
             -
               import: social_media
         steps:
-          display: steps
+          display: Steps
           fields:
             -
               import: steps
         testimonial:
-          display: testimonial
+          display: Testimonial
           fields:
             -
               import: testimonial
         slideshow:
-          display: slideshow
+          display: Slideshow
           fields:
             -
               import: slideshow
@@ -47,12 +47,12 @@ fields:
             -
               import: text_content
         image_gallery:
-          display: image_gallery
+          display: 'Image Gallery'
           fields:
             -
               import: image_gallery
         video:
-          display: video
+          display: Video
           fields:
             -
               import: video
