@@ -10,7 +10,7 @@ fields:
       instructions_position: above
       visibility: visible
       validate:
-        - required
+        - sometimes
   -
     handle: fallback_image
     field:
@@ -28,4 +28,4 @@ fields:
       instructions_position: above
       visibility: visible
       validate:
-        - required
+        - sometimes
