@@ -101,6 +101,10 @@ export default class extends module {
     };
 
     updateModules(ctx = this, newContainer) {
+        
+        //Update lightbox
+        ctx.call('update', null, 'Lightbox', 'main');
+
         //Update modules inside new page
         ctx.call('update', newContainer, 'app');
 
@@ -112,8 +116,14 @@ export default class extends module {
         //Destroy modules that aren't the scroller
         ctx.call('destroy', oldContainer, 'app');
 
+        //Destroy lightbox context and listeners
+        ctx.call('destroy', null, 'Lightbox', 'main');
+
         //Destroy scroller seperately
         ctx.call('destroy', null, "Scroll", "main");
+
+        
+        
     }
 
 }

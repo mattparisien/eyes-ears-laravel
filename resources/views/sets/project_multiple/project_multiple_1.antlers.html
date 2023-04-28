@@ -5,7 +5,7 @@
         </div>
     {{ /if }}
     {{ partial:components.carousel :slidesPerView="items_per_view"}}
-            {{ collection:posts limit="{max_items}" }}
+            {{ collection:posts limit="{max_items}" sort="date:desc" }}
                 {{ partial:components.carousel_item }}
                     {{ partial:components.project_card has_link="true" link="/posts/{slug}" frame="false" ratio="portrait" }}
                 {{ /partial:components.carousel_item }}

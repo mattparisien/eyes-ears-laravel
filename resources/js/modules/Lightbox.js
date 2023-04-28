@@ -17,11 +17,6 @@ export default class extends module {
         this.onClose();
     }
     
-
-    init() {
-        
-    }
-
     show(context) {        
 
         this.context = context;
@@ -92,18 +87,38 @@ export default class extends module {
     onOpen() {
         const ctx = this;
         this.openBtns.forEach(btn => {
-            btn.addEventListener("click", e => {
+
+            const onClick = e => {
                 ctx.show({
                     title: e.currentTarget.dataset.lightboxContext,
                     target: e.currentTarget,
                     id: e.currentTarget.dataset.lightboxId
                 });
-            })
+            }
+
+            btn.addEventListener("click", onClick);
+
+
         })  
     }
 
-    load() {
-        
+    destroy() {
+        this.openBtns.forEach(btn => {
+            btn.replaceWith(btn.cloneNode(true));
+        })
+
+        this.closeBtn.replaceWith(this.closeBtn.cloneNode(true))
+    }
+
+    update() {
+        this.openBtns = document.querySelectorAll("[data-lightbox-action='open']")
+        this.closeBtn = this.el.querySelector("[data-lightbox-action='close']");
+        this.isOpen = false;
+        this.closeHandler = null;
+        this.context = null;
+
+        this.onOpen();
+        this.onClose();
     }
 
 }

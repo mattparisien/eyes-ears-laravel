@@ -1,5 +1,6 @@
 
 
+
 @mixin grid-custom-item-margin-x {
     margin-left: calc(var(--gutter) / 2);
     margin-right: calc(var(--gutter) / 2);
@@ -11,6 +12,17 @@
 
 .grid {
 
+    &-sizer {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        background: #efefef;
+        float: left;
+        width: calc(99.99% * var(--max-cols) - var(--gutter));
+        margin-left: calc(var(--gutter) / 2);
+        margin-right: calc(var(--gutter) / 2);
+    }
+
     @screen md {
         & {
             margin-left: -calc(var(--gutter) / 2);
@@ -21,7 +33,6 @@
 
     &-item {
         width: 100%;
-        float: left;
         margin-bottom: var(--gutter);
 
         &__plus {

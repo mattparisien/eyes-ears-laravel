@@ -9,3 +9,10 @@
         transform: scale(1.2);
     }
 }
+
+html.is-ready {
+    .on-ready\:anim {
+        transform: none;
+        opacity: 1;
+    }
+}

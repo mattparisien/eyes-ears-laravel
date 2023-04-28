@@ -18,7 +18,7 @@ sectionAttrs:
         {{ /if }} {{ partial:posts/social_media_sharing }} {{ if author }} {{
         partial:posts/author }} {{ /if }}
     </div> #}}
-    {{ collection:next collection="posts" limit="1" sort="date:asc" }}
+    {{ collection:next collection="posts" limit="1" sort="date:desc" }}
     {{partial:layout/block-section block_theme="yellow" noGutters="true" noContainer="true"}}
         <a href="{{url}}" class="pt-10 md:pt-20 block relative">
         <div class="flex justify-between items-center container">
