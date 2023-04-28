@@ -35,11 +35,11 @@
         
         <!-- Content -->
         <main class="header-offset footer-offset bg-light" data-barba="container">
-            <span data-module-scroll="main">
+            <span data-module-scroll="main" data-scroll-container>
                 {{ template_content }}
-                {{ partial:layout.footer }}
             </span>
         </main>
+        {{ partial:layout.footer }}
         
     </body>
 </html>

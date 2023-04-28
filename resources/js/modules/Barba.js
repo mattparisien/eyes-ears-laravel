@@ -119,8 +119,7 @@ export default class extends module {
         //Destroy lightbox context and listeners
         ctx.call('destroy', null, 'Lightbox', 'main');
 
-        //Destroy scroller seperately
-        ctx.call('destroy', null, "Scroll", "main");
+        
 
         
         

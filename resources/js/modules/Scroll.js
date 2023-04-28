@@ -1,9 +1,12 @@
 import LocomotiveScroll from 'locomotive-scroll';
 import { module } from 'modujs';
+import {html} from "../utils/environment";
+import {getDocHeight} from "../utils/doc";
+import $ from "jquery";
 
 export default class extends module {
     constructor(m) {
-        super(m);
+        super(m);        
     }
 
 
@@ -13,47 +16,55 @@ export default class extends module {
                 el: this.el,
                 getDirection: true,
             });
-            this.headerRef = this.modules.Header.global;
+            this.headerRef   = this.modules.Header.main;
+            this.sections    = Array.from(this.scroll.el.querySelectorAll("[data-scroll-section]"));
+            this.lastSection = this.sections.slice(-1).pop();
+            this.isBottom    = false;
+
         } else {
             this.scroll.update();
         }
 
         this.resize();
 
-        // this.scroll.on('call', (func, way, obj, id) => {
-            
-        //     // this.call(fn, arg, "Scroll", "main")
-
-           
-        // });
         setTimeout(() => {
             this.scroll.update();
         }, 100);
 
         this.scroll.on('scroll', (args) => {
             this.scrollDirection = args.direction;
-            // const isTop = this.isDocumentTop(args);
             
+            const isDocumentBottom   = this.isDocumentBottom();
             
-            
-            // console.log('hello!')
-            // const isDocumentBottom   = args.delta.y >= args.limit.y;
-            // const header             = this.modules.Header.global;
-            // const isHeaderHidden     = header.isHidden;
-            // const hasHtmlBottomClass = html.classList.contains("is-page-bottom");
-
-            // if (isDocumentBottom && !hasHtmlBottomClass) {
-            //     html.classList.add("is-page-bottom")
-            // } else if (!isDocumentBottom && hasHtmlBottomClass) {
-            //     html.classList.remove("is-page-bottom");
-            // }
+            if (isDocumentBottom && !this.isBottom) {
+                this.isBottom = true;
+            } else if (!isDocumentBottom && this.isBottom) {
+                this.isBottom = false;
+            }
         })
 
         this.scroll.on("call", (args, way, el) => {
             this.call(args[0], {way, args, el, scrollDirection: this.scrollDirection}, args[1], args[2]);
         })
+    }
 
+    setContainerHeight() {
+        this.containerHeight = this.getContainerHeight();
+    }
 
+    getContainerHeight() {
+        return this.container.getBoundingClientRect().height;
+    }
+
+    isDocumentBottom() {
+        const {bottom}     = this.lastSection.getBoundingClientRect();
+        const headerHeight = this.headerRef.height;
+
+        if (bottom < headerHeight) {
+            return true;
+        }
+
+        return false;
     }
 
     getSectionTheme(section) {
@@ -91,6 +102,9 @@ export default class extends module {
 
             el.el.src = el.el.dataset.src;
             el.el.classList.add("is-loaded");
+
+            //Update the scroll instance once the image loads to recalculate height, since the image (may) have stretched th scroll container
+            
         }
 
         img.src = el.el.dataset.src;
@@ -98,6 +112,7 @@ export default class extends module {
 
     update() {
         this.scroll.update();
+        this.setContainerHeight();
     }
 
     destroy() {

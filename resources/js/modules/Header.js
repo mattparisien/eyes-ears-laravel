@@ -139,6 +139,10 @@ export default class extends module {
         this.setInitialColor();
     }
 
+    footerHeader({way, scrollDirection, el}) {
+        console.log('footer header called!');
+    }
+
     update() {
         this.setHeroHeader();
     }

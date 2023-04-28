@@ -13,7 +13,7 @@
         {{if type == "image" }}
             {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true"}}
             {{elseif type == "video" }}
-                {{ partial:components.video ratio='preserve' }}
+                {{ partial:components.video ratio='preserve' autoplay="true" controls="true" }}
             {{else }}
                 {{partial:sets/slideshow/. slidesPerView="1" slideRatio='preserve'}}
         {{/if}}

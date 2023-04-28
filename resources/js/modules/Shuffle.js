@@ -11,6 +11,7 @@ export default class extends module {
 
         this.maxNum     =  this.text.match(/\d+/)[0];
 
+
         this.animConfig = {
             currNum: 1,
             target: this.maxNum
@@ -43,16 +44,20 @@ export default class extends module {
     }
 
     initFrameAnim() {
-
         let num = Number(this.animConfig.currNum.toFixed(0)).toLocaleString('en-US');
+        
         this.el.innerText = num;
         this.frame = requestAnimationFrame(this.initFrameAnim.bind(this));
     }
 
+    getInnerNumber() {
+        return this.el.innerText.match(/\d+/)[0];
+    }
+
     animate() {
         const ctx = this;
-
         this.el.innerText = this.el.innerText.replace(this.maxNum, 0);
+        console.log(this.el.innerText)
 
 
         gsap.to(this.animConfig, {
@@ -65,18 +70,6 @@ export default class extends module {
         })
 
         this.initFrameAnim();
-
-
-        // this.timer = setInterval(() => {
-            
-        //     if (ctx.currNum >= ctx.maxNum) {
-        //         clearInterval(ctx.timer);
-        //     } else {
-        //         this.increment();
-        //     this.el.innerText = this.el.innerText.replace(this.prevNum, this.currNum);
-        //     this.prevNum = this.currNum;
-        //     }
-        // }, this.interval);
 
   
     }

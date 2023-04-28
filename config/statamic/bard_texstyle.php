@@ -98,6 +98,16 @@ return [
             'cp_badge' => true,
         ],
 
+        'inlineimage' => [
+            'type' => 'div',
+            'name' => 'Inline Image',
+            'ident' => '❙❙❙',
+            'icon' => null,
+            'class' => 'three-columns',
+            'cp_css' => 'column-count: 3; column-gap: 16px',
+            'cp_badge' => true,
+        ],
+
     ],
 
     /*
