@@ -11,27 +11,25 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682452347
+updated_at: 1682765521
 blocks:
   -
     id: 0Ws43Wo1
-    version: hero_section_5
+    version: hero_section_2
     type: hero
     enabled: true
     toggle: false
     broken_text: social-impact-agency
-    title: 'Social Impact Agency'
-    has_description: false
     hero_video: videos/earth-sessions/patagonia-brooklyn-earth-session-sizzle-reel.mov
-    block_theme: yellow-2
-    background_overlay:
-      -
-        id: 620Ix3Op
-        color: dark
-        opacity: 40
+    block_theme: light
     background_video: videos/earth-sessions/patagonia-brooklyn-earth-session-sizzle-reel.mov
     embedded_video: 'https://vimeo.com/820544843?share=copy'
     fallback_image: raveena_at_earth_sessions_in_san_francisco_0128c04e24.webp
+    hero_image: logos/animated-face-svg.svg
+    broken_heading:
+      word_1: Social
+      word_2: Impact
+      word_3: Agency
   -
     id: CBnV22Z8
     version: feature_single_1
