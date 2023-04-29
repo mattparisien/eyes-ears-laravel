@@ -11,7 +11,7 @@ export default class extends module {
         this.height = this.el.getBoundingClientRect().height;
         this.setInitialColor();
 
-        this.menuToggler         = document.querySelector("[data-header-menu-toggler]");
+        this.menuToggler         = document.querySelector("[data-header='menu-toggler']");
         this.menu                = document.querySelector("[data-header='menu']");
         this.menuItems           = Array.from(document.querySelectorAll("[data-header='menu'] .mobile-menu__nav li a"));
         this.isMenuOpen          = false;
