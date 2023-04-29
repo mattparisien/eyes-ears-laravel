@@ -11,10 +11,11 @@ export default class extends module {
         this.height = this.el.getBoundingClientRect().height;
         this.setInitialColor();
 
-        this.menuToggler = document.querySelector("[data-header-menu-toggler]");
-        this.menu = document.querySelector("[data-header-menu]");
-        this.isMenuOpen = false;
-        this.prevTheme = null;
+        this.menuToggler         = document.querySelector("[data-header-menu-toggler]");
+        this.menu                = document.querySelector("[data-header='menu']");
+        this.menuItems           = Array.from(document.querySelectorAll("[data-header='menu'] .mobile-menu__nav li a"));
+        this.isMenuOpen          = false;
+        this.prevTheme           = null;
         this.navSwitchBreakpoint = 768;
 
         this.onMenuToggle();
@@ -57,6 +58,7 @@ export default class extends module {
         const open = this.openMenu.bind(this);
         const close = this.closeMenu.bind(this);
 
+        //Listen for burger button click
         this.menuToggler.addEventListener("click", () => {
 
             
@@ -72,6 +74,14 @@ export default class extends module {
                 close();
             }
 
+        })
+
+        //Listen for menu link clicks (close menu if clicked)
+        this.menuItems.forEach(item => {
+            item.addEventListener("click", () => {
+                close();
+                this.isMenuOpen = false;
+            })
         })
     }
 

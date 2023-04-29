@@ -3,10 +3,19 @@ html:not(html.has-scroll-smooth) {
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: -1;
     }
 
     main {
         margin-bottom: 100vh;
+    }
+}
+
+.global-footer {
+    &[data-theme="light"] {
+        @include theme-light;
+    }
+
+    &[data-theme="dark"] {
+        @include theme-dark;
     }
 }

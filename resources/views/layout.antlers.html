@@ -12,7 +12,7 @@
     </head>
 
     <body
-        class="flex flex-col justify-between min-h-screen font-sans antialiased {{ environment === 'local' ?= 'debug-screens' }}"
+        class="flex flex-col justify-between min-h-screen font-sans antialiased bg-light {{ environment === 'local' ?= 'debug-screens' }}"
         aria-live="polite"
         data-module-barba
         data-barba="wrapper"
@@ -34,7 +34,7 @@
 
         
         <!-- Content -->
-        <main class="header-offset footer-offset bg-light" data-barba="container">
+        <main class="header-offset footer-offset bg-light z-[2]" data-barba="container">
             <span data-module-scroll="main" data-scroll-container>
                 {{ template_content }}
             </span>
