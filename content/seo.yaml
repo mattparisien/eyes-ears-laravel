@@ -5,6 +5,5 @@ site_name_position: after
 site_name_separator: '&mdash;'
 canonical_url: '@seo:slug'
 image: '@seo:image'
-twitter_handle: eyes__ears
 priority: 0.5
 change_frequency: monthly
