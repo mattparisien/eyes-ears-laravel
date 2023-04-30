@@ -11,6 +11,21 @@ sections:
           validate:
             - required
       -
+        handle: content_description
+        field:
+          input_type: text
+          character_limit: 160
+          antlers: false
+          display: 'Content Description'
+          type: text
+          icon: text
+          instructions: 'Describe this project in 150-160 characters'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
         handle: image
         field:
           mode: grid
@@ -305,3 +320,9 @@ sections:
           localizable: true
           listable: hidden
           display: Image
+      -
+        handle: seo
+        field:
+          type: seo_pro
+          listable: false
+          display: SEO
