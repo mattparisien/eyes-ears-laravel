@@ -39,7 +39,7 @@ return [
     */
 
     'copy' => [
-        public_path('build/assets/css') => 'css',
+        public_path('css') => 'css',
         public_path('js') => 'js',
     ],
 
@@ -87,7 +87,7 @@ return [
     */
 
     'glide' => [
-        'directory' => 'img',
+        'directory' => 'assets',
         'override' => true,
     ],
 
