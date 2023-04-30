@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682873211
+updated_at: 1682874017
 blocks:
   -
     id: lgdsxru7
@@ -159,7 +159,7 @@ blocks:
                   -
                     type: image
                     attrs:
-                      src: 'asset::assets::2d9537abdbcefe44cb9446f12c0a4604.jpeg'
+                      src: 'asset::assets::raveena_ig_post_2_ce73270360.webp'
                       alt: null
             block_theme: light
             type: row
@@ -167,7 +167,7 @@ blocks:
         type: column
         enabled: true
     type: text_layout
-    enabled: false
+    enabled: true
   -
     id: lh3n96ws
     content:
@@ -219,6 +219,6 @@ blocks:
     block_theme: light
     image: 3db5c9701a643e05b4b8f6590d55d7c9d2cd588a-1000x800.jpeg
     type: wrapped_text
-    enabled: true
+    enabled: false
 content_description: 'We believe music is a language of connection and a powerful tool to spread waves of change.'
 ---
