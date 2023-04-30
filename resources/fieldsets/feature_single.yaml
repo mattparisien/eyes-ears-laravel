@@ -73,3 +73,16 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
+  -
+    handle: image_frame
+    field:
+      default: false
+      display: 'Image Frame'
+      type: toggle
+      icon: toggle
+      instructions: "Choose whether you'd like to display the frame around the image"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
