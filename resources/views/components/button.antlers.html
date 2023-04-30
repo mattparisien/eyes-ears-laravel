@@ -21,6 +21,7 @@ border:
 
 {{ if link }}
     <a href="{{ link }}" target="{{ target_blank ? '_blank' : '_self' }}"
+        rel="noreferrer noopener"
         class="{{ view:classes }} relative mt-10 after:absolute after:left-0 after:top-1/2 after:-translate-y-1/2 after:w-12 after:h-12 after:rounded-full after:bg-primary-900 after:z-0 after:transition-[width] hover:after:w-full after:duration-700 after:ease-power3-in-out">
         <div class="z-10 sticky px-5 uppercase">
           {{ label }}
