@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682874351
+updated_at: 1682874454
 blocks:
   -
     id: lgdsxru7
@@ -236,9 +236,13 @@ blocks:
 
       I am humbled to play a role in the new generation of artist-activists who are directly engaged in the change they want to see in the world.
     image: images/founder-sammy-steiner-feature-image.jpeg
-    toggle: false
+    toggle: true
     block_theme: light
     type: feature_single
     enabled: true
+    label: 'Get in touch'
+    button_variant: brand
+    button_size: md
+    target_blank: false
 content_description: 'We believe music is a language of connection and a powerful tool to spread waves of change.'
 ---
