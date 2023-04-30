@@ -43,6 +43,9 @@ sections:
           visibility: visible
           validate:
             - required
+          max_items: 1
+          collections:
+            - clients
       -
         import: project_builder
   sidebar:
