@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682438037
+updated_at: 1682858602
 blocks:
   -
     id: lgdt0qj7
@@ -84,4 +84,5 @@ blocks:
         label: 'Read more'
     type: feature_multiple
     enabled: true
+content_description: 'The Eyes & Ears Agency as featured in publications.'
 ---
