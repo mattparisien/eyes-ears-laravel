@@ -13,5 +13,8 @@ preview_targets:
   -
     label: Entry
     url: '{permalink}'
+inject:
+  seo:
+    title: '@seo:title'
 structure:
   root: false
