@@ -100,6 +100,11 @@ fields:
           fields:
             -
               import: text_layout
+        wrapper_text:
+          display: 'Wrapper Text'
+          fields:
+            -
+              import: wrapped_text
       display: Blocks
       type: replicator
       icon: replicator
