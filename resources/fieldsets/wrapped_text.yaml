@@ -1,7 +1,0 @@
-title: 'Wrapped Text'
-fields:
-  -
-    import: text_content
-  -
-    handle: image
-    field: feature_single.image
