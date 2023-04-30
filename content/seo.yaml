@@ -1,4 +1,4 @@
-title: Title
+title: '@seo:title'
 description: '@seo:content_description'
 site_name: 'The Eyes and Ears Agency'
 site_name_position: after
