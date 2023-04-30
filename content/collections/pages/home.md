@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682879106
+updated_at: 1682879467
 blocks:
   -
     id: 0Ws43Wo1
@@ -117,6 +117,7 @@ blocks:
         type: new_set
         enabled: true
         image: images/Product-Hunt-Frame.png
+        title: 'Erez Zobary'
       -
         id: FFNM6ewK
         description: |-
