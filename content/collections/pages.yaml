@@ -6,6 +6,7 @@ route: '{parent_uri}/{slug}'
 sort_dir: asc
 inject:
   seo:
+    title: title
     site_name: false
     image: '@seo:assets/3.jpg'
 structure:
