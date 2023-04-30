@@ -1,0 +1,48 @@
+.share-widget {
+
+    $padding: 0.8rem;
+    $item-width: 2.8rem;
+
+    transform: translateX(100%);
+    transition: transform 0.6s $ease-power2-out;
+    
+    z-index: 3;
+
+    $self: &;
+
+    &:hover {
+        transform: none;
+
+        #{$self}__link:first-child {
+            transform: translateX(120%);
+            z-index: 1;
+        }
+    }
+
+    &__link {
+        width: $item-width;
+        height: $item-width;
+        padding: $padding;
+        box-sizing: border-box;
+        @apply bg-light;
+
+        &:first-child {
+            transition: transform 0.7s $ease-power2-out;
+            position: absolute;
+            left: -($item-width);
+            @apply border;
+            @apply border-gray-300;
+        }
+
+        &:not(:first-child) {
+            z-index: 2;
+            @apply border-t;
+            @apply border-b;
+            @apply border-gray-300;
+        }
+
+        &:nth-child(2) {
+            @apply border-l;
+        }
+    }
+}

@@ -2,6 +2,8 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { module } from 'modujs';
 import gsap from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import {html} from "../utils/environment";
+import {getDocHeight} from "../utils/doc";
 
 export default class extends module {
     constructor(m) {
@@ -43,8 +45,10 @@ export default class extends module {
             const isDocumentBottom   = this.isDocumentBottom();
             
             if (isDocumentBottom && !this.isBottom) {
+                html.classList.add("is-page-bottom");
                 this.isBottom = true;
             } else if (!isDocumentBottom && this.isBottom) {
+                html.classList.remove("is-page-bottom");
                 this.isBottom = false;
             }
         })
@@ -60,14 +64,15 @@ export default class extends module {
                 
                 e.preventDefault();
 
-                const target       = e.currentTarget.getAttribute("href");
+                if (!this.isBottom) {
+                    const target       = e.currentTarget.getAttribute("href");
 
-                gsap.to(window, {
-                    scrollTo: target,
-                    duration: 2.4,
-                    ease: 'expo.inOut'
-                })
-                                
+                    gsap.to(window, {
+                        scrollTo: target,
+                        duration: 2.4,
+                        ease: 'expo.inOut'
+                    })
+                }               
             })
         })
     }
@@ -81,10 +86,14 @@ export default class extends module {
     }
 
     isDocumentBottom() {
-        const {bottom}     = this.lastSection.getBoundingClientRect();
-        const headerHeight = this.headerRef.height;
 
-        if (bottom < headerHeight) {
+        
+
+        const docHeight    = getDocHeight();
+        const headerHeight = this.headerRef.height;
+        const breakpoint   = window.scrollY + window.innerHeight;
+
+        if (breakpoint >= docHeight - headerHeight / 2) {
             return true;
         }
 

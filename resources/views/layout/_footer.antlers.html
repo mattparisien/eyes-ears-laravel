@@ -4,7 +4,7 @@ var:grid_classes value="md:grid-cols-2" }} {{ elseif (theme:footer_items |
 count) === 1 }} {{ var:grid_classes value="grid-cols-1" }} {{ /if }}
 
 <footer
-    class="global-footer | h-screen relative w-full overflow-hidden bg-dark"
+    class="global-footer | relative w-full overflow-hidden bg-dark"
     data-scroll-section
     data-theme="dark"
     id="site-footer"
@@ -27,10 +27,10 @@ count) === 1 }} {{ var:grid_classes value="grid-cols-1" }} {{ /if }}
                     }} {{ if theme:display_footer_email }}
                     <a
                         href="mailto:{{ info.email }}"
-                        class="inline-block hover-underline text-light lg:text-2xl text-xl"
+                        class="inline-block hover-underline text-light lg:text-2xl text-xl hover:!text-light"
                         data-scroll
-                        data-module-split
-                        data-split-type="chars"
+
+           
                         >{{ info.email }}</a
                     >
                     {{/if}}

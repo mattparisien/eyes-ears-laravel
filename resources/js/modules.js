@@ -9,4 +9,5 @@ export { default as Lightbox } from "./modules/Lightbox";
 export { default as VimeoPlayer } from "./modules/VimeoPlayer";
 export { default as Shuffle } from "./modules/Shuffle";
 export { default as Collapsable } from "./modules/Collapsable";
+export { default as ShareWidget } from "./modules/ShareWidget";
 

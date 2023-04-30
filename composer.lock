@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56c08f16feced708d384d618dbbf8084",
+    "content-hash": "56bfeaedfa58dd62c7ffab9763e3dee8",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -179,62 +179,6 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
-        },
-        {
-            "name": "cnj/seotamic",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cnj-digital/seotamic.git",
-                "reference": "ce1c3c553bf608fa29a61aff34cc2a3381287209"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cnj-digital/seotamic/zipball/ce1c3c553bf608fa29a61aff34cc2a3381287209",
-                "reference": "ce1c3c553bf608fa29a61aff34cc2a3381287209",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0",
-                "statamic/cms": "^3.3.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^7.0",
-                "phpunit/phpunit": "^9.5.10"
-            },
-            "type": "statamic-addon",
-            "extra": {
-                "statamic": {
-                    "name": "Seotamic",
-                    "description": "Simple SEO addon for Statamic v3"
-                },
-                "laravel": {
-                    "providers": [
-                        "Cnj\\Seotamic\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Cnj\\Seotamic\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Martin Koterle",
-                    "email": "martin@cnj.si"
-                }
-            ],
-            "description": "Simple SEO addon for Statamic v3",
-            "support": {
-                "issues": "https://github.com/cnj-digital/seotamic/issues",
-                "source": "https://github.com/cnj-digital/seotamic/tree/v2.1.0"
-            },
-            "time": "2022-07-19T07:09:26+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -5308,6 +5252,50 @@
                 }
             ],
             "time": "2023-03-20T20:19:25+00:00"
+        },
+        {
+            "name": "statamic/seo-pro",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/statamic/seo-pro.git",
+                "reference": "df48578972d754ce397460a3fa63fe2c5cc627ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/df48578972d754ce397460a3fa63fe2c5cc627ba",
+                "reference": "df48578972d754ce397460a3fa63fe2c5cc627ba",
+                "shasum": ""
+            },
+            "require": {
+                "statamic/cms": "~3.3.0 || ~3.4.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.20.0 || ^6.22.0 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Seo Pro",
+                    "description": "Seo Pro addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Statamic\\SeoPro\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Statamic\\SeoPro\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "issues": "https://github.com/statamic/seo-pro/issues",
+                "source": "https://github.com/statamic/seo-pro/tree/4.0.1"
+            },
+            "time": "2023-02-06T23:27:09+00:00"
         },
         {
             "name": "statamic/stringy",

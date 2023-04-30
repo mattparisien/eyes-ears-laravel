@@ -6,11 +6,27 @@ html:not(html.has-scroll-smooth) {
     }
 
     main {
-        margin-bottom: 100vh;
+        margin-bottom: $footer-height-mobile;
+
+        @screen #{$footer-breakpoint} {
+            margin-bottom: $footer-height-desktop;
+        }
     }
 }
 
 .global-footer {
+
+    height: $footer-height-mobile;
+
+    @screen #{$footer-breakpoint} {
+        height: $footer-height-desktop;
+
+
+        .animated-face-svg {
+            transform: translateX(14%)
+        }
+    }
+
     &[data-theme="light"] {
         @include theme-light;
     }

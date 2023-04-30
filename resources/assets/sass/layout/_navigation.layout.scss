@@ -1,11 +1,5 @@
 $base-delay: 0.17;
 
-html.is-page-bottom {
-    .global-header {
-        transform: translateY(-100%);
-    }
-}
-
 .global-header {
     z-index: $header-z-index;
     transition: transform 0.4s $ease-smooth;

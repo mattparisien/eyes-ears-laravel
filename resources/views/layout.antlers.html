@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}} {{
-        seotamic }} {{ vite
+        {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}}
+        {{ seo_pro:meta }}
+        {{ vite
         src="resources/css/tailwind.css|resources/js/site.js" }} {{ vite
         src="resources/assets/sass/index.scss" }}
     </head>

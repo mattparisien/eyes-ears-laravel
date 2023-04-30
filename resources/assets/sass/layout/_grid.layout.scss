@@ -16,7 +16,6 @@
         display: block;
         overflow: hidden;
         position: relative;
-        background: #efefef;
         float: left;
         width: calc(99.99% * var(--max-cols) - var(--gutter));
         margin-left: calc(var(--gutter) / 2);

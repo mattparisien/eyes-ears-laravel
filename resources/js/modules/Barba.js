@@ -117,12 +117,7 @@ export default class extends module {
         ctx.call('destroy', oldContainer, 'app');
 
         //Destroy lightbox context and listeners
-        ctx.call('destroy', null, 'Lightbox', 'main');
-
-        
-
-        
-        
+        ctx.call('destroy', null, 'Lightbox', 'main');  
     }
 
 }

@@ -1,4 +1,3 @@
-import { first } from 'lodash';
 import { module } from 'modujs';
 
 export default class extends module {
