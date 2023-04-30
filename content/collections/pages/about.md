@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682681706
+updated_at: 1682858613
 blocks:
   -
     id: lgdsxru7
@@ -168,4 +168,5 @@ blocks:
         enabled: true
     type: text_layout
     enabled: false
+content_description: 'We believe music is a language of connection and a powerful tool to spread waves of change.'
 ---
