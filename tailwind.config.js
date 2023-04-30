@@ -82,7 +82,8 @@ module.exports = {
                 nav: "0px 1px 0px #E5E9F2",
                 gray: "0px 30px 40px rgba(212, 217, 232, 0.2)",
                 dark: "0px 10px 20px rgba(41, 41, 42, 0.07)",
-                "dark-lg": "-2px 4px 45px rgba(0, 0, 0, 0.13)",
+                "grey-lg": "0 2vw 4vw rgba(0, 0, 0, 0.14)",
+                
             },
             typography: (theme) => ({
                 lg: {
