@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682872971
+updated_at: 1682873211
 blocks:
   -
     id: lgdsxru7
@@ -169,7 +169,7 @@ blocks:
     type: text_layout
     enabled: false
   -
-    id: lh3n3v4c
+    id: lh3n96ws
     content:
       -
         type: paragraph
@@ -218,7 +218,7 @@ blocks:
             text: 'I am humbled to play a role in the new generation of artist-activists who are directly engaged in the change they want to see in the world.'
     block_theme: light
     image: 3db5c9701a643e05b4b8f6590d55d7c9d2cd588a-1000x800.jpeg
-    type: wrapper_text
+    type: wrapped_text
     enabled: true
 content_description: 'We believe music is a language of connection and a powerful tool to spread waves of change.'
 ---
