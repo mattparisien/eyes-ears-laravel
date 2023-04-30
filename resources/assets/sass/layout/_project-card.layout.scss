@@ -71,57 +71,71 @@
             transition-delay: 0.05s;
         }
     }
+}
 
-    .frame {
-        $stroke-offset: -4px;
-        $stroke-delay: 0.09;
+.frame {
+    $stroke-offset: -4px;
+    $stroke-delay: 0.09;
 
-        pointer-events: none;
-        z-index: 3;
-        transition: transform 1.3s $ease-power3-out;
-        transform: rotate(-15deg) scale(0.7);
+    pointer-events: none;
+    z-index: 3;
+    transition: transform 1.3s $ease-power3-out;
+    transform: rotate(-15deg) scale(0.7);
 
-        &__stroke {
-            transition: transform 1s $ease-power3-out;
-            position: absolute;
+    &__stroke {
+        transition: transform 1s $ease-power3-out;
+        position: absolute;
+    }
+
+    &__stroke[data-frame-location="top"],
+    &__stroke[data-frame-location="bottom"] {
+        transform: scaleX(0);
+    }
+
+    &__stroke[data-frame-location="left"],
+    &__stroke[data-frame-location="right"] {
+        transform: scaleY(0);
+    }
+
+    &__stroke[data-frame-location="top"] {
+        width: 100%;
+        left: 0;
+        top: $stroke-offset;
+        @apply fill-green-700;
+    }
+
+    &__stroke[data-frame-location="right"] {
+        right: $stroke-offset;
+        height: 100%;
+        transition-delay: #{$stroke-delay * 2}s;
+        @apply fill-blue-800;
+    }
+
+    &__stroke[data-frame-location="bottom"] {
+        bottom: $stroke-offset;
+        width: 100%;
+        transition-delay: #{$stroke-delay * 3}s;
+        @apply fill-red-600;
+    }
+
+    &__stroke[data-frame-location="left"] {
+        left: 0;
+        height: 100%;
+        transition-delay: #{$stroke-delay * 4}s;
+        @apply fill-primary-900;
+    }
+}
+
+html.is-ready {
+    figure.is-loaded + .frame {
+        & {
+            transform: none !important;
+            opacity: 1;
         }
 
-        &__stroke[data-frame-location="top"],
-        &__stroke[data-frame-location="bottom"] {
-            transform: scaleX(0);
-        }
-
-        &__stroke[data-frame-location="left"],
-        &__stroke[data-frame-location="right"] {
-            transform: scaleY(0);
-        }
-
-        &__stroke[data-frame-location="top"] {
-            width: 100%;
-            left: 0;
-            top: $stroke-offset;
-            @apply fill-green-700;
-        }
-
-        &__stroke[data-frame-location="right"] {
-            right: $stroke-offset;
-            height: 100%;
-            transition-delay: #{$stroke-delay * 2}s;
-            @apply fill-blue-800;
-        }
-
-        &__stroke[data-frame-location="bottom"] {
-            bottom: $stroke-offset;
-            width: 100%;
-            transition-delay: #{$stroke-delay * 3}s;
-            @apply fill-red-600;
-        }
-
-        &__stroke[data-frame-location="left"] {
-            left: 0;
-            height: 100%;
-            transition-delay: #{$stroke-delay * 4}s;
-            @apply fill-primary-900;
+        .frame__stroke {
+            transform: none !important;
+            opacity: 1;
         }
     }
 }

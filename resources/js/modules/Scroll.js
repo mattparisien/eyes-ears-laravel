@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import {html} from "../utils/environment";
 import {getDocHeight} from "../utils/doc";
+import $ from "jquery";
 
 export default class extends module {
     constructor(m) {
@@ -135,6 +136,7 @@ export default class extends module {
 
             el.el.src = el.el.dataset.src;
             el.el.classList.add("is-loaded");
+            $(el.el).closest("figure").addClass("is-loaded");
 
             //Update the scroll instance once the image loads to recalculate height, since the image (may) have stretched th scroll container
             
