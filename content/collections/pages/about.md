@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682874181
+updated_at: 1682874351
 blocks:
   -
     id: lgdsxru7
@@ -223,7 +223,7 @@ blocks:
     enabled: false
   -
     id: lh3ntijc
-    version: feature_single_1
+    version: feature_single_2
     title: 'Sammy Steiner'
     description: |-
       I believe music is a language of connection and a powerful tool to spread waves of change.
