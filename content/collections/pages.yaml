@@ -6,7 +6,6 @@ route: '{parent_uri}/{slug}'
 sort_dir: asc
 inject:
   seo:
-    title: 'The Eyes and Ears Agency'
     site_name: false
     image: '@seo:assets/3.jpg'
 structure:
