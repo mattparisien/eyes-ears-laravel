@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682879467
+updated_at: 1682879502
 blocks:
   -
     id: 0Ws43Wo1
@@ -116,7 +116,6 @@ blocks:
         position: Artist
         type: new_set
         enabled: true
-        image: images/Product-Hunt-Frame.png
         title: 'Erez Zobary'
       -
         id: FFNM6ewK
@@ -129,14 +128,12 @@ blocks:
         position: 'Co-Founders Dionysian Artist Management'
         type: new_set
         enabled: true
-        image: images/Booking-Frame.png
       -
         id: Dr7ny3vM
         description: 'Landtamic saved our time in designing my company page.'
         has_author: true
         full_name: 'Doe John'
         position: 'Founder of Amazon'
-        image: images/Amazon-Frame.png
         type: new_set
         enabled: false
     type: testimonial
