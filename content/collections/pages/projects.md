@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682619947
+updated_at: 1682858629
 blocks:
   -
     id: lgzgcc2e
@@ -37,4 +37,5 @@ blocks:
     is_grayscale: false
     type: project_multiple
     enabled: true
+content_description: 'Discover our work and learn more about our past partnerships.'
 ---
