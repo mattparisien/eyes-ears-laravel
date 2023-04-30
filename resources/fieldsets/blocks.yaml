@@ -100,8 +100,8 @@ fields:
           fields:
             -
               import: text_layout
-        wrapper_text:
-          display: 'Wrapper Text'
+        wrapped_text:
+          display: 'Wrapped Text'
           fields:
             -
               import: wrapped_text
