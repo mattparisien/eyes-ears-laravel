@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682852408
+updated_at: 1682858569
 blocks:
   -
     id: 0Ws43Wo1
@@ -137,4 +137,5 @@ blocks:
     type: testimonial
     enabled: true
 custom_page_header: false
+content_description: 'The Eyes & Ears Agency creates sustained positive change by building a bridge between the music industry and impactful nonprofit organizations.'
 ---
