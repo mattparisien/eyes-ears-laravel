@@ -91,7 +91,7 @@ sections:
     display: SEO
     fields:
       -
-        handle: seotamic_image
+        handle: social_image
         field:
           container: assets
           mode: grid
@@ -103,6 +103,9 @@ sections:
           localizable: true
           listable: hidden
           display: Image
+          instructions_position: above
+          visibility: visible
+          show_filename: true
       -
         handle: seo
         field:
