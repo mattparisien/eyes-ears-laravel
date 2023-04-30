@@ -1,2 +1,7 @@
 title: 'Wrapped text'
-fields: {  }
+fields:
+  -
+    import: text_content
+  -
+    handle: image
+    field: feature_single.image
