@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682858569
+updated_at: 1682879106
 blocks:
   -
     id: 0Ws43Wo1
@@ -43,6 +43,7 @@ blocks:
     enabled: true
     image: megaphone-svg.svg
     block_theme: dark
+    image_frame: false
   -
     id: lgjdowey
     version: steps_section_8
@@ -109,19 +110,22 @@ blocks:
     testimonials:
       -
         id: BQh4guMw
-        description: "To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landtamic is one of the best landing page UI kit I have come across. It's so flexible, well organised and easily editable."
+        description: 'Working with Eyes & Ears is an amazing, seamless, meaningful & impactful experience as an artist. Sammy communicates ideas in a fresh, inclusive way & really pushes artists to think beyond the music and get more involved in their communities.'
         has_author: true
-        full_name: 'John Doe'
-        position: 'President of Product Hunt'
+        full_name: 'Erez Zobary'
+        position: Artist
         type: new_set
         enabled: true
         image: images/Product-Hunt-Frame.png
       -
         id: FFNM6ewK
-        description: 'I used landtamic and created a landing page for my startup within a week. The Landtamic UI Kit is simple and highly intuitive, so anyone can use it.'
+        description: |-
+          E&E’s thorough research on local causes, collaborative approach with Charlie, and swift execution of the event took away any stress surrounding the campaign and allowed us to focus on creating a meaningful experience for Charlie’s fans while also making a sizable donation to City Harvest.
+
+          In addition to City Harvest, Sammy and Eyes & Ears have been instrumental in Charlie’s partnership(s) with Leah Thomas and the Intersectional Environmentalist movement. Her focus, organization, and motivation guided each of these activations - and we’re excited to continue collaborating!
         has_author: true
-        full_name: 'Jane Doe'
-        position: 'COO at Booking'
+        full_name: 'Andrew Idarraga and Benji Sheinman'
+        position: 'Co-Founders Dionysian Artist Management'
         type: new_set
         enabled: true
         image: images/Booking-Frame.png
@@ -133,7 +137,7 @@ blocks:
         position: 'Founder of Amazon'
         image: images/Amazon-Frame.png
         type: new_set
-        enabled: true
+        enabled: false
     type: testimonial
     enabled: true
 custom_page_header: false
