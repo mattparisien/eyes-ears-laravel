@@ -11,6 +11,21 @@ sections:
           validate:
             - required
       -
+        handle: content_description
+        field:
+          input_type: text
+          character_limit: 160
+          antlers: false
+          display: 'Content Description'
+          type: text
+          icon: text
+          instructions: 'Describe this page contextually in 150-160 characters'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          validate:
+            - required
+      -
         handle: custom_page_header
         field:
           default: false
@@ -101,21 +116,6 @@ sections:
           listable: hidden
           instructions_position: above
           visibility: visible
-      -
-        handle: content_description
-        field:
-          input_type: text
-          character_limit: 160
-          antlers: false
-          display: 'Content Description'
-          type: text
-          icon: text
-          instructions: 'Describe this page contextually in 150-160 characters'
-          listable: hidden
-          instructions_position: above
-          visibility: visible
-          validate:
-            - required
   sidebar:
     display: Sidebar
     fields:
