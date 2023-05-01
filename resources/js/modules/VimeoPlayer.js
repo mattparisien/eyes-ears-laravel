@@ -1,10 +1,10 @@
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
 import Player from '@vimeo/player';
 
 
 
 
-export default class extends module {
+export default class extends BaseModule {
 
     constructor(m) {
 

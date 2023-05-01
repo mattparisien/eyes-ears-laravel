@@ -1,8 +1,8 @@
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
 import Swiper, {Navigation, Autoplay} from "swiper";
 import 'swiper/css';
 
-export default class extends module {
+export default class extends BaseModule {
 
 
     constructor(m) {

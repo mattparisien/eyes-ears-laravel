@@ -1,4 +1,4 @@
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
 import barba from "@barba/core";
 import gsap from "gsap";
 import initLoader from "../animation/loader.animation";
@@ -7,7 +7,7 @@ import STATES from '../actions/states';
 import config from '../config';
 import {html} from "../utils/environment";
  
-export default class extends module {
+export default class extends BaseModule {
 
     constructor(m) {
         super(m);

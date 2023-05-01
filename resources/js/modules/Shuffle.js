@@ -1,7 +1,7 @@
 import gsap from 'gsap';
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
  
-export default class extends module {
+export default class extends BaseModule {
     constructor(m) {
         super(m);
         this.el = m.el;

@@ -1,12 +1,12 @@
 import LocomotiveScroll from 'locomotive-scroll';
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
 import gsap from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import {html} from "../utils/environment";
 import {getDocHeight} from "../utils/doc";
 import $ from "jquery";
 
-export default class extends module {
+export default class extends BaseModule {
     constructor(m) {
         super(m);        
     }

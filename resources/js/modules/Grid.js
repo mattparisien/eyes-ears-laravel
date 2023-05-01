@@ -1,7 +1,7 @@
-import { module } from 'modujs';
+import { module as BaseModule } from 'modujs';
 import Masonry from 'masonry-layout';
 
-export default class extends module {
+export default class extends BaseModule {
 
     constructor(m) {
         super(m);

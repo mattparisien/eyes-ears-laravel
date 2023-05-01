@@ -13,15 +13,14 @@ const mix = require("laravel-mix");
 
 //SCSS CONFIG
 mix.js("resources/js/site.js", "public/js")
-    .sass("resources/assets/sass/index.scss", "public/css")
-    .js("resources/js/site.js", "public/js")
-    .sass("resources/assets/sass/index.scss", "public/css")
+    .sass("resources/sass/index.scss", "public/css")
     .postCss("resources/css/tailwind.css", "public/css", [
         require("postcss-import"),
         require("tailwindcss/nesting"),
         require("tailwindcss"),
     ])
-    .copyDirectory("resources/assets/fonts", "public/fonts")
+    .copyDirectory("resources/fonts", "public/fonts");
+
 
 if (mix.inProduction()) {
     mix.version();
