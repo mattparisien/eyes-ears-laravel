@@ -10,10 +10,10 @@
                     {{ partial:components.lead label="{description}" size="lg" class="md:w-3/5" }}
                 {{ /if }}
             </div>
-            <div class="grid grid-rows-2 gap-8 md:grid-flow-col grid-col-1">
+            <div class="grid grid-rows-{{(testimonials | length) / 2}} gap-8 md:grid-flow-col grid-col-1">
                 {{ testimonials }}
-                    <div class="{{ index === 0 ?= 'row-span-2 pt-32' }}">
-                        <div class="p-4 bg-white rounded-lg md:p-8 shadow-2xl">
+                    <div class="{{ index === 0 ?= 'row-span-2 pt-20' }}">
+                        <div class="p-4 bg-light rounded-lg md:p-8 shadow-grey-lg border border-gray-200">
                             {{ if image }}
                                 <div class="max-w-[140px] mb-8">
                                     {{
