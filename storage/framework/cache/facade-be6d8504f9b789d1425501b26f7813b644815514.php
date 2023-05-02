@@ -1,13 +1,13 @@
 <?php
 
-namespace Facades\Statamic\Fields;
+namespace Facades\Statamic\UpdateScripts;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Statamic\Fields\FieldRepository
+ * @see \Statamic\UpdateScripts\Manager
  */
-class FieldRepository extends Facade
+class Manager extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class FieldRepository extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Statamic\Fields\FieldRepository';
+        return 'Statamic\UpdateScripts\Manager';
     }
 }
