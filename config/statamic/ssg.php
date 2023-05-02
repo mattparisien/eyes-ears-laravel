@@ -39,10 +39,13 @@ return [
     */
 
     'copy' => [
-        public_path('build/assets') => 'build/assets',
+        public_path('build/assets/index-35f39f72.css') => 'build/assets',
+        public_path('build/assets/site-dbdca2f1.css') => 'build/assets',
+        public_path('build/assets/tailwind-808a21ec.css') => 'build/assets',
+        public_path('build/assets/site-50685842.js') => 'build/assets',
         public_path('assets') => 'assets',
         public_path('fonts') => 'fonts',
-        public_path('favicon.ico') => 'favicon.ico',
+        public_path('favicon.ico') => 'favicon.ico', 
     ],
 
     'symlinks' => [
