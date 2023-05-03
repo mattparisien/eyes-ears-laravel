@@ -3,6 +3,7 @@
 /public/storage
 /public/vendor/statamic
 /storage/*.key
+/storage/framework/cache
 /vendor
 .env
 .env.backup
