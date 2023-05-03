@@ -80,7 +80,6 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
             "@php please ssg:clear",
-            "@php please cache:clear",
             "@php please ssg:generate"
         ]
     }
