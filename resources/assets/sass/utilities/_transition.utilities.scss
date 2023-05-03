@@ -10,8 +10,18 @@
     }
 }
 
+.on-ready\:fade-down {
+    transition-property: transform, opacity;
+    @apply opacity-0 transform -translate-y-full duration-1000 ease-smooth;
+}
+
 html.is-ready {
     .on-ready\:anim {
+        transform: none;
+        opacity: 1;
+    }
+
+    .on-ready\:fade-down {
         transform: none;
         opacity: 1;
     }

@@ -24,7 +24,7 @@
                             el="div"
                             size="h5"
                             weight="medium"
-                            class="opacity-0 transform -translate-y-full transition-[transform, opacity] delay-1000 duration-1000 ease-smooth on-ready:anim text-center mt-3"
+                            class="on-ready:fade-down delay-1000 text-center mt-3"
                         }}
                 {{ /client }}
                
@@ -34,7 +34,7 @@
 
             <div class="w-full md:w-1/2">
                 <div class="circle-feature | w-1/2 mx-auto md:w-3/4 md:ml-auto lg:w-1/2 lg:mx-auto">
-                    {{ partial:components.picture ratio="portrait" credit="true" cover="true"
+                    {{ partial:components.picture ratio="portrait" credit="true" cover="true" creditClass="on-ready:fade-down"
                     sizes="(min-width: 200px) 35vw, 90vw" }}
                 </div>
             </div>
