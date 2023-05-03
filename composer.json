@@ -76,7 +76,7 @@
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "build": [
-            "npm run production",
+            "npm run build",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
             "@php artisan key:generate",
             "@php please ssg:clear",
