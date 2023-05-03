@@ -3,7 +3,7 @@ description: '@seo:content_description'
 site_name: 'The Eyes and Ears Agency'
 site_name_position: after
 site_name_separator: '&mdash;'
-canonical_url: '@seo:slug'
+canonical_url: '@seo:permalink'
 image: '@seo:image'
 priority: 0.5
 change_frequency: monthly
