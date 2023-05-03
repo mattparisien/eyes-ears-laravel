@@ -1,24 +1,4 @@
 {
-  "Walsheim-Black.woff": {
-    "file": "assets/Walsheim-Black-076c299b.woff",
-    "src": "Walsheim-Black.woff"
-  },
-  "Walsheim-Bold.woff": {
-    "file": "assets/Walsheim-Bold-47b3573a.woff",
-    "src": "Walsheim-Bold.woff"
-  },
-  "Walsheim-Medium.woff": {
-    "file": "assets/Walsheim-Medium-713e2c61.woff",
-    "src": "Walsheim-Medium.woff"
-  },
-  "Walsheim-Regular.woff": {
-    "file": "assets/Walsheim-Regular-66e53ad9.woff",
-    "src": "Walsheim-Regular.woff"
-  },
-  "Walsheim-UltraBold.woff": {
-    "file": "assets/Walsheim-UltraBold-74ac52ec.woff",
-    "src": "Walsheim-UltraBold.woff"
-  },
   "manrope-all-400-normal.woff": {
     "file": "assets/manrope-all-400-normal-1920a0f3.woff",
     "src": "manrope-all-400-normal.woff"
@@ -320,12 +300,12 @@
     "src": "public/fonts/Walsheim-UltraBold.woff"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-dc528d28.css",
+    "file": "assets/index-d4e11972.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-438ca670.css",
+    "file": "assets/tailwind-5597e16a.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
