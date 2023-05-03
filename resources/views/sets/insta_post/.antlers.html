@@ -11,7 +11,7 @@
     {{ media }}
 
         {{if type == "image" }}
-            {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true"}}
+            {{partial:components.picture cover="true" ratio="preserve" :image="image" lazy="true" attrs="data-scroll-offset='-20%'"}}
             {{elseif type == "video" }}
                 {{ partial:components.video ratio='preserve' autoplay="true" controls="true" }}
             {{else }}
