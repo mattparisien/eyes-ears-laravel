@@ -44,7 +44,7 @@
     }
 
     @screen lg {
-        height: calc(100vh - $header-height);
+        height: calc($vh - $header-height);
 
         .words {
             font-size: 6rem;

@@ -16,12 +16,16 @@ $base-delay: 0.17;
     transition: background-color 0.3s $ease-smooth;
 
     &__inner {
-        height: 60vh;
-        min-height: 600px;
+        height: calc($vh * 0.6);
+        min-height: 500px;
         transition: transform 0.7s $ease-power3-in-out;
 
         &[data-theme="dark"] {
             @include theme-dark;
+        }
+
+        @screen md {
+            min-height: 600px;
         }
     }
 

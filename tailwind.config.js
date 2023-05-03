@@ -78,6 +78,12 @@ module.exports = {
                     100: "#D5FAFC",
                 },
             },
+            height: {
+                screen: "calc(var(--vh, 1vh) * 100)"
+            },
+            minHeight: {
+                screen: "calc(var(--vh, 1vh) * 100)"
+            },
             boxShadow: {
                 nav: "0px 1px 0px #E5E9F2",
                 gray: "0px 30px 40px rgba(212, 217, 232, 0.2)",

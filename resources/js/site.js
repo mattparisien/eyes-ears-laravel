@@ -10,6 +10,11 @@ import Alpine from "alpinejs";
 import modular from "modujs";
 import * as modules from "./modules";
 
+const setVh = () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
 window.onload = (e) => {
     init();
 };
@@ -22,4 +27,7 @@ const init = () => {
     });
 
     app.init(app);
+    setVh();
+
+    window.addEventListener("resize", setVh);
 };

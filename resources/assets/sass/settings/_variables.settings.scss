@@ -1,4 +1,5 @@
 //Global constants
+$vh: calc(var(--vh, 1vh) * 100);
 $header-z-index:             49;
 $header-height:              5rem;
 $footer-breakpoint:          sm;
