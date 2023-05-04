@@ -1,7 +1,6 @@
 title: Projects
 template: posts/show
 layout: layout
-mount: ac3cb166-1957-454a-8003-92305a45e533
 revisions: false
 route: '{{ if depth == 1 }}{{ mount }}{{ /if }}{{ parent_uri }}/{{ slug }}'
 date: true
