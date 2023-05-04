@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::statamic('site.webmanifest', 'partials._manifest', [
 Route::statamic('/sitemap.xml', 'partials._sitemap', [
     'layout' => null
 ]);
+
+URL::forceScheme('https');
