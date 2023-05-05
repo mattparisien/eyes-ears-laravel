@@ -4,8 +4,9 @@ theme:menu_position === 'center' }} {{ var:menu_classes value="mx-auto" }} {{
 elseif theme:menu_position === 'left' }} {{ if theme:logo_position === 'center'
 }} {{ var:menu_classes value="lg:order-first" }} {{ else }} {{ var:menu_classes
 value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
+{{nav:navigation as="nav_var" }}
 
-<header class="global-header | fixed w-screen z-50 is-hero-header" data-module-header="main">
+<header class="global-header | fixed w-screen z-50 is-hero-header" data-module-header="main" style="--nav-count: {{nav_var | count}}">
     <nav
         class="flex items-center justify-between bg-transparent"
         aria-labelledby="nav-heading"
@@ -27,5 +28,7 @@ value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
             </div>
         </div>
     </nav>
+    {{ partial:layout.mobile_menu }}
 </header>
-{{ partial:layout.mobile_menu }}
+{{ /nav:navigation }}
+

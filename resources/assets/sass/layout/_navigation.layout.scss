@@ -11,21 +11,24 @@ $base-delay: 0.17;
 
 .mobile-menu {
     position: fixed;
+    top: 0;
     width: 100vw;
-    z-index: $header-z-index - 1;
+    z-index: -1;
     transition: background-color 0.3s $ease-smooth;
 
     &__inner {
-        height: calc($vh * 0.6);
+        max-height: $vh;
         min-height: 500px;
         transition: transform 0.7s $ease-power3-in-out;
+        height: calc($vh * 0.51 + (40px * var(--nav-count)));
+
 
         &[data-theme="dark"] {
             @include theme-dark;
         }
 
         @screen md {
-            min-height: 600px;
+            height: calc($vh * 0.51 + (48px * var(--nav-count)));
         }
     }
 
