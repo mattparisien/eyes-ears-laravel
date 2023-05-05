@@ -1,17 +1,19 @@
 ---
 ratios:
     preserve: ''
-    portrait: "ratio-4:5"
-    landscape: "ratio-5:4"
-    square: "ratio-1:1"
-    video: "ratio-16:9"
-    ultrawide: "ratio-21:9"
-    fill: "ratio-fill"
+    portrait: " ratio-4:5"
+    landscape: " ratio-5:4"
+    square: " ratio-1:1"
+    video: " ratio-16:9"
+    ultrawide: " ratio-21:9"
+    fill: " ratio-fill"
+rounded: "rounded-md overflow-hidden"
 ---
 
 {{ if image }}
-<div class="{{ratio ? view:ratios[ratio] : ''}}">
-    <picture class="{{!ratio || ratio != 'preserve' ? 'absolute left-0 top-0 w-full h-full' : ''}}">
+{{ scope:imgScope }}
+<figure class="rounded-md overflow-hidden">
+    <picture class="relative{{ratio ? view:ratios[ratio] : ''}}">
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
                 <img class="{{ class }}" src="{{ url }}" alt="{{ alt }}" />
@@ -40,7 +42,7 @@ ratios:
                 >
                 <img
                     {{ if cover }}
-                        class="object-cover w-full h-full {{ class }}"
+                        class="{{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}w-full h-full object-cover w-full h-full {{ class }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
                         class="{{ class }}"
@@ -56,5 +58,9 @@ ratios:
             {{ /if }}
         {{ /asset }}
     </picture>
-</div>
+    {{ if credit && image.image_credit }}
+    <figcaption class="mt-2 text-sm text-gray-400 text-right on-ready:fade-down">Photo by {{image.image_credit}}</figcaption>
+    {{ /if }}
+</figure>
+{{ /scope:imgScope  }}
 {{ /if }}

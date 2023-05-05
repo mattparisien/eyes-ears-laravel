@@ -22,7 +22,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | When generating addons via `php please make:addon`, this path will be
-    | used by default. You can still specify custom repository paths in
+| used by default. You can still specify custom repository paths in
     | your composer.json, but this is the path used by the generator.
     |
     */
