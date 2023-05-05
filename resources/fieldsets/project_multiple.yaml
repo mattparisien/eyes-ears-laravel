@@ -99,3 +99,5 @@ fields:
       visibility: visible
       validate:
         - required
+  -
+    import: button

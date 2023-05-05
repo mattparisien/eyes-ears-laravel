@@ -23,7 +23,8 @@
 
             {{ if toggle and label }}
                 <div class="mt-8">
-                    {{ partial:components.link_button size="{button_size}" icon="md" color="{button_variant}" }}
+                    {{ partial:components.button link="{{link}}" label="{{label}}" radius="pill" size="lg" }}
+
                 </div>
             {{ /if }}
         </div>

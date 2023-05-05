@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1683304248
+updated_at: 1683307336
 blocks:
   -
     id: 0Ws43Wo1
@@ -101,6 +101,9 @@ blocks:
     enabled: true
     items_per_view: 4
     is_grayscale: true
+    toggle: true
+    label: 'Browse our work'
+    link: 'entry::ac3cb166-1957-454a-8003-92305a45e533'
   -
     id: srVxbzID
     version: testimonial_section_7
