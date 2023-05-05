@@ -127,7 +127,7 @@
 }
 
 html.is-ready {
-    figure + .frame.onload {
+figure + .frame.onload {
         & {
             transform: none !important;
             opacity: 1;
