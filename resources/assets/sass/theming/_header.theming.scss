@@ -15,7 +15,7 @@
             @apply bg-transparent;
         }
 
-        svg {
+        #{$header}__logo svg {
             @apply fill-dark;
         }
 
@@ -29,7 +29,7 @@
            }
         }
 
-        a::after {
+        .desktop-nav li a::after {
         @apply bg-dark;
         }
     }
@@ -48,7 +48,7 @@
             @apply bg-transparent;
         }
 
-        svg {
+        #{$header}__logo svg {
             @apply fill-primary-900;
         }
 
@@ -62,7 +62,7 @@
            }
         }
 
-        a::after {
+        .desktop-nav li a::after {
             @apply bg-primary-900;
         }
     }
@@ -75,7 +75,7 @@
         @apply text-dark;
         @apply bg-light;
 
-        svg {
+        #{$header}__logo svg {
             @apply fill-dark;
         }
 
@@ -89,7 +89,7 @@
            }
         }
 
-        a::after {
+        .desktop-nav li a::after {
             @apply bg-dark;
         }
     }
@@ -102,7 +102,7 @@
         @apply text-light;
         @apply bg-transparent;
 
-        svg {
+        #{$header}__logo svg {
             @apply fill-light;
         }
 
@@ -116,7 +116,7 @@
            }
         }
 
-        a::after {
+        .desktop-nav li a::after {
             @apply bg-dark;
         }
     }
