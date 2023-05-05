@@ -149,7 +149,6 @@ export default class extends module {
     }
 
     footerHeader({way, scrollDirection, el}) {
-        console.log('footer header called!');
     }
 
     update() {
