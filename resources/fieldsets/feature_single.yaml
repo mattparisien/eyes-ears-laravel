@@ -33,11 +33,13 @@ fields:
   -
     handle: description
     field:
-      antlers: false
+      antlers: true
       display: Description
       type: textarea
       icon: textarea
       listable: hidden
+      instructions_position: above
+      visibility: visible
   -
     handle: image
     field:

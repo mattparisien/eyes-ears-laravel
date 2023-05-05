@@ -11,14 +11,14 @@ value="lg:mr-auto lg:pl-8" }} {{ /if }} {{ /if }}
         aria-labelledby="nav-heading"
     >
         <div class="container">
-            <div class="relative flex flex-wrap items-center justify-between">
-                <div class="global-header__logo | absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center {{ var:logo_classes }}" id="header-logo">
+            <div class="global-header__layout relative flex items-center justify-between ml-auto">
+                <div class="global-header__logo | flex items-center {{ var:logo_classes }}" id="header-logo">
                     <a aria-label="logo" href="/">
-                        {{ svg :src="theme:logo_normal" aria-label="logo icon" role="img" class="object-contain w-full h-auto max-w-[8rem]" }}
+                        {{ svg :src="theme:logo_normal" aria-label="logo icon" role="img" class="object-contain w-full h-auto" }}
                     </a>
                 </div>
                 <ul
-                    class="desktop-nav | ml-auto breakpoint-{{mobile_menu:breakpoint}} space-x-8"
+                    class="desktop-nav | breakpoint-{{mobile_menu:breakpoint}} space-x-6 ml-7"
                 >
                     {{ nav:navigation include_home="true" }} {{
                     partial:components.menu_item }} {{ /nav:navigation }}

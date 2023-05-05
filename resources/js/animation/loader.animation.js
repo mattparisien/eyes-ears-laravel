@@ -23,7 +23,8 @@ const initLoader = (onCompleteCb) => {
 const setInitialAttrs = () => {
     gsap.set(logo, {
         width,
-        height
+        height,
+        scale: 2
     })
     gsap.set(chars, {
         y: "400%",
@@ -48,6 +49,11 @@ const animate = (onCompleteCb) => {
             stagger: 0.1,
             duration: 2.3,
         })
+        .to(logo, {
+            scale: 1,
+            duration: 2,
+            ease: "power3.inOut",
+        }, 1.8)
         .to(
             words,
             {
@@ -59,8 +65,7 @@ const animate = (onCompleteCb) => {
         )
         .to(logo, {
             y: -(
-                window.innerHeight / 2 -
-                (logo.getBoundingClientRect().height / 2) - top
+                window.innerHeight / 2 - (height / 2) - top
             ),
             duration: 2,
             ease: "power3.inOut",
@@ -68,7 +73,7 @@ const animate = (onCompleteCb) => {
                 removeFromDOM();
                 onCompleteCb();
             },
-        }, 2);
+        }, 1.8);
 };
 
     setInitialAttrs();

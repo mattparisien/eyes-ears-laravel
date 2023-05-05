@@ -3,6 +3,7 @@ sectionAttrs:
     0: 'data-scroll data-scroll-call="heroHeaderUpdate, Header, main" data-scroll-repeat data-scroll-offset="95%"' 
 noContainerBlocks:
     slideshow: true
+    image: true
 ---
 
 
@@ -10,7 +11,7 @@ noContainerBlocks:
         {{ partial:sets.hero.hero_section_7 }}
         {{/partial:layout/block-section }}
         {{ blocks }}
-            {{partial:layout/block-section gutter="md" attrs="{{view:sectionAttrs[index]}}" noContainer="{view:noContainerBlocks[type] && !inset}" }}
+            {{partial:layout/block-section gutter="md" noGutters="{{inset === false}}" attrs="{{view:sectionAttrs[index]}}" noContainer="{view:noContainerBlocks[type] && !inset}" }}
                 {{ partial src="sets/{type}/{version}" }}
             {{/partial:layout/block-section }}
         {{ /blocks }}
