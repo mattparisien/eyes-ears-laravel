@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1683307336
+updated_at: 1683319800
 blocks:
   -
     id: 0Ws43Wo1
@@ -44,6 +44,7 @@ blocks:
     image: megaphone-svg.svg
     block_theme: dark
     image_frame: false
+    css_classes: '[&>*:nth-child(1)]:scale-105'
   -
     id: lgjdowey
     version: steps_section_8
