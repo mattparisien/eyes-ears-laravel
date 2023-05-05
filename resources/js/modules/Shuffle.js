@@ -57,7 +57,6 @@ export default class extends module {
     animate() {
         const ctx = this;
         this.el.innerText = this.el.innerText.replace(this.maxNum, 0);
-        console.log(this.el.innerText)
 
 
         gsap.to(this.animConfig, {

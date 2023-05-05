@@ -10,7 +10,6 @@ export default class extends module {
     }
     
     launch(way, obj) {
-        console.log(obj)
     }
  
 }
