@@ -86,3 +86,15 @@ fields:
         - required
   -
     import: button
+  -
+    handle: css_classes
+    field:
+      input_type: text
+      antlers: false
+      display: 'CSS Classes'
+      type: text
+      icon: text
+      instructions: 'Optional css classes to add to the block container'
+      listable: hidden
+      instructions_position: above
+      visibility: visible

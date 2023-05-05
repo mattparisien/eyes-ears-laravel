@@ -11,6 +11,7 @@ export default class extends module {
 
     constructor(m) {
         super(m);
+        const isIntroDisabled   = this.isIntroDisabled;
         const enterAnimation    = this.pageTransitionEnter;
         const exitAnimation     = this.pageTransitionExit;
         const delay             = this.delay;
@@ -26,7 +27,7 @@ export default class extends module {
     
                     once() {
                         //initial animation on page load
-                        if (STATES.IS_INTRO_DISABLED) {
+                        if (isIntroDisabled()) {
                             html.classList.add(config.CSS_CLASS.INTRO_DISABLED);
                             toggleLoading();
                             return;
@@ -65,9 +66,11 @@ export default class extends module {
                     },
                 },
             ],
-        });
+        }); 
+    }
 
-        
+    isIntroDisabled() {
+        return !document.getElementById("intro") || STATES.IS_INTRO_DISABLED;
     }
     
     pageTransitionExit()  {

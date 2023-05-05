@@ -131,19 +131,6 @@ sections:
     display: SEO
     fields:
       -
-        handle: seotamic_image
-        field:
-          container: assets
-          mode: grid
-          restrict: false
-          allow_uploads: true
-          max_files: 1
-          type: assets
-          instructions: "If not set, the general image will be used. It's best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width."
-          localizable: true
-          listable: hidden
-          display: Image
-      -
         handle: seo
         field:
           type: seo_pro

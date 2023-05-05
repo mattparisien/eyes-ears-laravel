@@ -1,19 +1,25 @@
 import gsap from "gsap";
 
-const introContainer = document.getElementById("intro");
-const logo = introContainer.querySelector(".site-intro__logo");
-const words = [...introContainer.querySelectorAll(".word-group")];
-const chars = [...introContainer.querySelectorAll("[data-letter-id]")].sort(
-    (a, b) => a.dataset.letterId - b.dataset.letterId
-);
 
-const { width, height, top } = document
-    .getElementById("header-logo")
-    .getBoundingClientRect();
+const initLoader = (onCompleteCb) => {
 
-const tl = gsap.timeline();
 
-//Set intiial postiion of DOM elements to ready them for animation
+    const introContainer = document.getElementById("intro");
+    const logo = introContainer.querySelector(".site-intro__logo");
+    const words = [...introContainer.querySelectorAll(".word-group")];
+    const chars = [...introContainer.querySelectorAll("[data-letter-id]")].sort(
+        (a, b) => a.dataset.letterId - b.dataset.letterId
+    );
+
+    const { width, height, top } = document
+        .getElementById("header-logo")
+        .getBoundingClientRect();
+
+    const tl = gsap.timeline();
+
+
+
+    //Set intiial postiion of DOM elements to ready them for animation
 const setInitialAttrs = () => {
     gsap.set(logo, {
         width,
@@ -65,7 +71,6 @@ const animate = (onCompleteCb) => {
         }, 2);
 };
 
-const initLoader = (onCompleteCb) => {
     setInitialAttrs();
     animate(onCompleteCb);
 };
