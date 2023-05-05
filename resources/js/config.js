@@ -10,6 +10,7 @@ const config = Object.freeze({
     // CSS class names
     CSS_CLASS: {
         LOADING: "is-loading",
+        FIRST_LOAD: "is-first-load",
         READY: "is-ready",
         LOADED: "is-loaded",
         CHANGING_VIEWS: "is-changing-views",

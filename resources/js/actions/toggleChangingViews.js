@@ -5,6 +5,11 @@ import config from "../config";
 const toggleChangingViews = () => {
     STATES.IS_CHANGING_VIEWS = !STATES.IS_CHANGING_VIEWS;
 
+    if (STATES.IS_FIRST_LOAD) {
+        html.classList.remove(config.CSS_CLASS.FIRST_LOAD);
+        STATES.IS_FIRST_LOAD = false;
+    }
+
     if (STATES.IS_CHANGING_VIEWS) {
         html.classList.add(config.CSS_CLASS.CHANGING_VIEWS);
     } else {

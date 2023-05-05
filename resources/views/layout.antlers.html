@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="is-loading">
+<html lang="en" class="is-loading is-first-load">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="noindex,nofollow">
+        {{ if !config:app:search_indexing_enabled }}
+            <meta name="robots" content="noindex,nofollow">    
+        {{/if}}
+        
 
         {{# Favicon #}} {{ partial:partials/favicons }} {{# SEO Meta Tags #}}
         {{ seo_pro:meta }}
@@ -23,9 +26,9 @@
         {{# Navigation Partials #}}
         {{ partial:layout/navigation }}
         
-        {{# Intro Partials #}}
+        {{# Intro Partials (discard from live preview) #}}    
         {{ partial:layout/site_intro }}
-        
+      
 
         {{# Transition Card #}}
         {{ partial:layout/transition_card }}

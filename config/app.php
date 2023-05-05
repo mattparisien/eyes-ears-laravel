@@ -194,4 +194,19 @@ return [
         // ...
     ])->toArray(),
 
+
+        /*
+    |--------------------------------------------------------------------------
+    | Search indexing
+    |--------------------------------------------------------------------------
+    |
+    | Determines whether the site is to be indexed by search engines
+    | 
+    |
+    */
+
+    'search_indexing_enabled' => env('SEARCH_INDEXING_ENABLED', true)
+    
 ];
+
+
