@@ -59,3 +59,6 @@ fields:
       visibility: visible
       validate:
         - sometimes
+  -
+    handle: block_theme
+    field: hero.block_theme

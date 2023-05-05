@@ -1,24 +1,4 @@
 {
-  "Walsheim-Black.woff": {
-    "file": "assets/Walsheim-Black-076c299b.woff",
-    "src": "Walsheim-Black.woff"
-  },
-  "Walsheim-Bold.woff": {
-    "file": "assets/Walsheim-Bold-47b3573a.woff",
-    "src": "Walsheim-Bold.woff"
-  },
-  "Walsheim-Medium.woff": {
-    "file": "assets/Walsheim-Medium-713e2c61.woff",
-    "src": "Walsheim-Medium.woff"
-  },
-  "Walsheim-Regular.woff": {
-    "file": "assets/Walsheim-Regular-66e53ad9.woff",
-    "src": "Walsheim-Regular.woff"
-  },
-  "Walsheim-UltraBold.woff": {
-    "file": "assets/Walsheim-UltraBold-74ac52ec.woff",
-    "src": "Walsheim-UltraBold.woff"
-  },
   "manrope-all-400-normal.woff": {
     "file": "assets/manrope-all-400-normal-1920a0f3.woff",
     "src": "manrope-all-400-normal.woff"
@@ -374,7 +354,7 @@
     "css": [
       "assets/site-dbdca2f1.css"
     ],
-    "file": "assets/site-767ed8c8.js",
+    "file": "assets/site-2b3dd307.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }

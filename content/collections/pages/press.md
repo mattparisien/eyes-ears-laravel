@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1682858602
+updated_at: 1683301535
 blocks:
   -
     id: lgdt0qj7
@@ -53,7 +53,7 @@ blocks:
         link: 'https://tevaonline.ca/?id=how-earth-sessions-by-intersectional-environmentalist-combines-art-and-activism'
         target_blank: true
         type: card
-        enabled: true
+        enabled: false
       -
         id: lgvd2rhv
         title: INSIDER
