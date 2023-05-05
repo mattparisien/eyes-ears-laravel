@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1683301535
+updated_at: 1683305951
 blocks:
   -
     id: lgdt0qj7
@@ -77,7 +77,7 @@ blocks:
         title: 'The Daily Orange'
         description: 'EDM artist Ekali partners with local nonprofit through student-run agency'
         has_link: true
-        link: 'EDM artist Ekali partners with local nonprofit through student-run agency'
+        link: 'https://dailyorange.com/2020/03/edm-artist-ekali-partners-local-nonprofit-student-run-agency/'
         target_blank: true
         type: card
         enabled: true
