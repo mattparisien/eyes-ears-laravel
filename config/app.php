@@ -205,7 +205,21 @@ return [
     |
     */
 
-    'search_indexing_enabled' => env('SEARCH_INDEXING_ENABLED', true)
+    'search_indexing_enabled' => env('SEARCH_INDEXING_ENABLED', true),
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Miscellaneous front-end environment variables
+    |--------------------------------------------------------------------------
+    |
+    | 
+    | 
+    |
+    */
+
+    //Determines whether the site's intro screen is enabled
+    'intro_enabled' => env('INTRO_ENABLED', true)
     
 ];
 

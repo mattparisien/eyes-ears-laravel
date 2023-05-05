@@ -26,7 +26,10 @@
         {{ partial:layout/navigation }}
         
         {{# Intro Partials (discard from live preview) #}}    
-        {{ partial:layout/site_intro }}
+
+        {{ if config:app:intro_enabled }}
+            {{ partial:layout/site_intro }}
+        {{/if}}
       
 
         {{# Transition Card #}}
