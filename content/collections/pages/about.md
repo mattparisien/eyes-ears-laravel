@@ -12,7 +12,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1683311011
+updated_at: 1683311967
 blocks:
   -
     id: lgdsxru7
@@ -47,7 +47,7 @@ blocks:
     button_size: md
     target_blank: false
     image_frame: true
-    link: 'mailto:hello@eyesandearsagency.com'
+    link: 'mailto:sammy@eyesandearsagency.com'
     css_classes: 'md:[&>*:nth-child(1)]:ml-48 !items-start'
 content_description: 'We believe music is a language of connection and a powerful tool to spread waves of change.'
 ---
