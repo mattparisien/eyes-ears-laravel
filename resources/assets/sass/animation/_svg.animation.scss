@@ -10,6 +10,7 @@ $arrow-easing: $ease-power3-in-out;
     &__svg {
         path {
             transition: stroke-dashoffset 1s $ease-power3-out;
+            stroke-linecap: round;
         }
     
         path:nth-child(1) {
