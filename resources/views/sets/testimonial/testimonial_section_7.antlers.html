@@ -2,7 +2,7 @@
     <div class="container">
         <div class="relative max-w-5xl mx-auto">
             {{ svg src="md-backtick" class="absolute w-16 h-auto fill-current md:w-28 lg:w-32 md:left-14 md:-top-12 -top-6 opacity-30 text-primary-900" }}
-            <div class="text-center md:text-left md:ml-[15%] max-w-lg">
+            <div class="text-center md:text-left md:ml-[15%] max-w-lg md:mb-20">
                 {{ if title }}
                     {{ partial:components.heading label="{title}" size="h2"}}
                 {{ /if }}
@@ -12,7 +12,7 @@
             </div>
             <div class="grid grid-rows-{{(testimonials | length) / 2}} gap-8 md:grid-flow-col grid-col-1">
                 {{ testimonials }}
-                    <div class="{{ index === 0 ?= 'row-span-2 pt-20' }}">
+                    <div class="{{ index === 0 ?= 'row-span-2 pt-10' }}">
                         <div class="p-4 bg-light rounded-lg md:p-8 shadow-grey-lg border border-gray-200">
                             {{ if image }}
                                 <div class="max-w-[140px] mb-8">
