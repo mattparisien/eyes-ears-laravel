@@ -1,9 +1,9 @@
-<div class="hero | w-full py-20">
+<div class="hero project-hero | w-full py-20">
         <div
             class="flex flex-col items-center space-y-8 text-center md:space-y-0 md:flex-row md:text-left"
         >
             <div
-                class="md:w-1/2 md:mt-0 md:mb-0 mb-8"
+                class="relative md:w-1/2 md:mt-0 md:mb-0 mb-8"
             >
                     {{ partial:components.heading
                         label="{title}"
@@ -30,6 +30,8 @@
                
                 {{ if toggle and label }} {{ partial:components.button
                 size="{button_size}" color="{button_variant}" }} {{ /if }}
+
+                {{ partial:components.squiggle-arrow containerClass="absolute left-1/2 -translate-x-1/2 -bottom-full w-28 h-28"}}
             </div>
 
             <div class="w-full md:w-1/2">
@@ -39,4 +41,5 @@
                 </div>
             </div>
         </div>
+        
 </div>
