@@ -4407,16 +4407,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.16",
+            "version": "v0.11.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "151b145906804eea8e5d71fea23bfb470c904bfb"
+                "reference": "3dc5d4018dabd80bceb8fe1e3191ba8460569f0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/151b145906804eea8e5d71fea23bfb470c904bfb",
-                "reference": "151b145906804eea8e5d71fea23bfb470c904bfb",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3dc5d4018dabd80bceb8fe1e3191ba8460569f0a",
+                "reference": "3dc5d4018dabd80bceb8fe1e3191ba8460569f0a",
                 "shasum": ""
             },
             "require": {
@@ -4477,9 +4477,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.16"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.17"
             },
-            "time": "2023-04-26T12:53:57+00:00"
+            "time": "2023-05-05T20:02:42+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -5262,16 +5262,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.4.9",
+            "version": "v3.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "70f91a03adb2119e2d3b366d2c85916fd11d8a72"
+                "reference": "fdfe4d15280a74617f1ec517324fde5e15bf6a1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/70f91a03adb2119e2d3b366d2c85916fd11d8a72",
-                "reference": "70f91a03adb2119e2d3b366d2c85916fd11d8a72",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/fdfe4d15280a74617f1ec517324fde5e15bf6a1a",
+                "reference": "fdfe4d15280a74617f1ec517324fde5e15bf6a1a",
                 "shasum": ""
             },
             "require": {
@@ -5350,7 +5350,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.4.9"
+                "source": "https://github.com/statamic/cms/tree/v3.4.10"
             },
             "funding": [
                 {
@@ -5358,7 +5358,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-03T14:37:08+00:00"
+            "time": "2023-05-05T20:19:02+00:00"
         },
         {
             "name": "statamic/seo-pro",
