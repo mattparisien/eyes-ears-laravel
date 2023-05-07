@@ -87,7 +87,7 @@
             "@php artisan key:generate",
             "@php please ssg:clear",
             "@php please cache:clear",
-            "@php please ssg:generate"
+            "@php please ssg:generate --recent"
         ]
     }
 }
