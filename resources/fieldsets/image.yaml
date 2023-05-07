@@ -26,3 +26,26 @@ fields:
     config:
       validate:
         - sometimes
+  -
+    handle: crop
+    field:
+      options:
+        landscape: 'Landscape (5:4)'
+        portrait: 'Portrait (4:5)'
+        video: 'Video (16:9)'
+        square: 'Square (1:1)'
+        ultrawide: 'Ultrawide (21:9)'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Crop
+      type: select
+      icon: select
+      instructions: "Select the crop ratio leave (empty to preserve the image's ratio)"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
