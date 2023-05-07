@@ -25,6 +25,14 @@
 
 }
 
+.ratio-9\:21 {
+    display: block;
+    padding-bottom: calc(9 / 21 * 100%);
+    content: "";
+    width: 100%;
+
+}
+
 .ratio-1\:1 {
     display: block;
     padding-bottom: 100%;
@@ -50,6 +58,13 @@
         object-fit: cover;
         object-position: center;
     }
+}
+
+.ratio-screen {
+    display: block;
+    padding-bottom: calc($vh - $header-height);
+    content: "";
+    width: 100%;
 }
 
 .ratio-preserve {
