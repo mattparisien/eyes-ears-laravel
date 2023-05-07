@@ -26,3 +26,29 @@ fields:
     config:
       validate:
         - sometimes
+  -
+    handle: crop
+    field:
+      options:
+        'landscape ': 'Landscape (5:4)'
+        video: 'Video (16:9)'
+        ultrawide: 'Ultrawide (9:21)'
+        square: 'Square (1:1)'
+        portrait: 'Portrait (4:5)'
+        screen: 'Screen (take up available vertical screen space)'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Crop
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+  -
+    handle: block_theme
+    field: hero.block_theme
