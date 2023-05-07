@@ -38,6 +38,14 @@
     background-color: var(--fg-color);
 }
 
+.fg-current {
+    color: var(--fg-color);
+}
+
+.bg-current {
+    background-color: var(--bg-color);
+}
+
 .text-invert {
     color: var(--bg-color);
 }

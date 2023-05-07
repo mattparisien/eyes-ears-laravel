@@ -11,7 +11,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: general
 updated_by: 065e308f-1c8a-4553-9b33-83437fbbdaf8
-updated_at: 1683372504
+updated_at: 1683463659
 blocks:
   -
     id: 0Ws43Wo1
@@ -129,14 +129,7 @@ blocks:
         position: 'Co-Founders Dionysian Artist Management'
         type: new_set
         enabled: true
-      -
-        id: Dr7ny3vM
-        description: 'Landtamic saved our time in designing my company page.'
-        has_author: true
-        full_name: 'Doe John'
-        position: 'Founder of Amazon'
-        type: new_set
-        enabled: false
+        title: 'Andrew Idarraga and Benji Sheinman'
     type: testimonial
     enabled: true
 custom_page_header: false

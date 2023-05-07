@@ -9,8 +9,6 @@ fields:
         feature_single_3: 'Variant 3'
         feature_single_4: 'Variant 4'
         feature_single_5: 'Variant 5'
-        feature_single_6: 'Variant 6'
-        feature_single_7: 'Variant 7'
       display: 'Feature Variant'
       default: feature_single_1
       type: button_group
@@ -19,6 +17,7 @@ fields:
       validate:
         - required
       instructions_position: above
+      visibility: visible
   -
     handle: title
     field:

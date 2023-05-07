@@ -6,11 +6,6 @@ fields:
       options:
         project_multiple_1: 'Variant 1'
         project_multiple_2: 'Variant 2'
-        project_multiple_3: 'Variant 3'
-        project_multiple_4: 'Variant 4'
-        project_multiple_5: 'Variant 5'
-        project_multiple_6: 'Variant 6'
-        project_multiple_7: 'Variant 7'
       display: 'Project Multiple Variant'
       default: project_multiple_1
       type: button_group
@@ -19,6 +14,8 @@ fields:
       listable: hidden
       validate:
         - required
+      instructions_position: above
+      visibility: visible
   -
     handle: title
     field:

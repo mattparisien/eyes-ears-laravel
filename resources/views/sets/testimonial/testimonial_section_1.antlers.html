@@ -1,4 +1,4 @@
-<div class="bg-dark text-light md:py-16 py-14">
+<div class="bg-dark text-light md:py-16 py-14 rounded-md">
     <div class="container">
         <div class="mb-10 text-center">
             {{ if title }}
@@ -6,7 +6,7 @@
             {{ /if }}
             {{ if description }}
                 <div class="px-4 mt-2 md:px-0">
-                    {{ partial:components.lead label="{description}" size="lg" }}
+                    {{ partial:components.lead label="{description}" size="lg" class="fg-current" }}
                 </div>
             {{ /if }}
         </div>
@@ -14,18 +14,18 @@
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {{ testimonials }}
                 <div class="flex flex-col text-center">
-                    <div class="flex-1 px-4 py-10 bg-white rounded-lg lg:px-10">
+                    <div class="flex-1 px-4 py-10 bg-light rounded-lg lg:px-10">
                         {{ if title }}
-                            {{ partial:components.heading label="{title}" size="h5" }}
+                            {{ partial:components.heading label="{title}" size="h5" class="fg-current"}}
                         {{ /if }}
 
                         <div class="max-w-xs mx-auto mt-2">
-                            {{ partial:components.lead label="{description}" size="sm" }}
+                            {{ partial:components.lead label="{description}" size="sm" class="fg-current" }}
                         </div>
                     </div>
                     <!-- Triangle -->
                     <div class="w-6 mx-auto overflow-hidden">
-                        <div class="w-6 h-4 origin-top-left transform -rotate-45 bg-white"></div>
+                        <div class="w-6 h-4 origin-top-left transform -rotate-45 bg-light"></div>
                     </div>
                     <!-- Triangle -->
                     {{ if has_author }}
@@ -41,7 +41,7 @@
                                 </div>
                             {{ /if }}
 
-                            {{ partial:components.lead label="{full_name}" weight="bold" }}
+                            {{ partial:components.lead label="{full_name}" weight="bold" class="fg-current"}}
 
                             {{ if position }}
                                 {{ partial:components.lead label="{position}" size="sm" color="medium-gray" }}
