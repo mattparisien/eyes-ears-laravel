@@ -62,3 +62,27 @@ fields:
   -
     handle: block_theme
     field: hero.block_theme
+  -
+    handle: slide_ratio
+    field:
+      options:
+        landscape: 'Landscape (5:4)'
+        portrait: 'Portrait (4:5)'
+        square: 'Square (1:1)'
+        video: 'Video (16:9)'
+        ultrawide: 'Ultrawide (9:21)'
+        screen: 'Screen (take up available screen space)'
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: 'Slide ratio'
+      type: select
+      icon: select
+      instructions: 'Select the ratio of the slides'
+      listable: hidden
+      instructions_position: above
+      visibility: visible

@@ -320,12 +320,12 @@
     "src": "public/fonts/Walsheim-UltraBold.woff"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-6b0254d5.css",
+    "file": "assets/index-10ea4737.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-c5784365.css",
+    "file": "assets/tailwind-894830b3.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },
@@ -374,7 +374,7 @@
     "css": [
       "assets/site-dbdca2f1.css"
     ],
-    "file": "assets/site-81fe13c1.js",
+    "file": "assets/site-1cb9d6fc.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }

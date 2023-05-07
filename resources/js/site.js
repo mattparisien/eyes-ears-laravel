@@ -20,6 +20,7 @@ window.onload = (e) => {
 };
 
 const init = () => {
+
     Alpine.start();
 
     const app = new modular({
@@ -27,6 +28,7 @@ const init = () => {
     });
 
     app.init(app);
+
     setVh();
 
     window.addEventListener("resize", setVh);

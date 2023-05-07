@@ -5,8 +5,9 @@ ratios:
     landscape: " ratio-5:4"
     square: " ratio-1:1"
     video: " ratio-16:9"
-    ultrawide: " ratio-21:9"
+    ultrawide: " ratio-9:21"
     fill: " ratio-fill"
+    screen: " ratio-screen"
 rounded: "rounded-md overflow-hidden"
 ---
 
@@ -42,7 +43,7 @@ rounded: "rounded-md overflow-hidden"
                 >
                 <img
                     {{ if cover }}
-                        class="{{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
+                    class="{{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
                         style="object-position: {{ focus | background_position }}"
                     {{ else }}
                         class="{{ class }}"
