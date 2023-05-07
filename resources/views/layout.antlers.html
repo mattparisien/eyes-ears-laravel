@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="is-loading is-first-load">
+<html lang="en" class="is-loading is-first-load overflow-x-hidden">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,7 +17,7 @@
     </head>
 
     <body
-        class="flex flex-col justify-between min-h-screen font-sans antialiased bg-light overflow-x-hidden {{ environment === 'local' ?= 'debug-screens' }}"
+        class="flex flex-col justify-between min-h-screen font-sans antialiased bg-light {{ environment === 'local' ?= 'debug-screens' }}"
         aria-live="polite"
         data-module-barba
         data-barba="wrapper"

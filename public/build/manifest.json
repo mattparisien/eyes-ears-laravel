@@ -320,12 +320,12 @@
     "src": "public/fonts/Walsheim-UltraBold.woff"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-6689b562.css",
+    "file": "assets/index-bbc04296.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
   "resources/css/tailwind.css": {
-    "file": "assets/tailwind-e9629d0e.css",
+    "file": "assets/tailwind-3ea4f5e8.css",
     "isEntry": true,
     "src": "resources/css/tailwind.css"
   },

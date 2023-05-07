@@ -13,7 +13,7 @@ rounded: "rounded-md overflow-hidden"
 {{ if image }}
 {{ scope:imgScope }}
 <figure>
-    <picture class="relative{{ratio ? view:ratios[ratio] : ''}}">
+    <picture class="relative{{ratio ? view:ratios[ratio] : ''}}{{class ?= " {{class}}"}}">
         {{ asset :url="image" }}
             {{ if extension == 'svg' || extension == 'gif' }}
                 <img class="{{ class }} {{!noRounded ?= "rounded-md"}}" src="{{ url }}" alt="{{ alt }}" />
