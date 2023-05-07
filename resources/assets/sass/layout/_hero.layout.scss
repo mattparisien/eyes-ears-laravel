@@ -83,8 +83,9 @@
 
 .hero {
 
-    $circle-radius-md: 4.3rem;
-    $circle-radius: 3.6rem;
+    $circle-radius-lg: 4.3rem;
+    $circle-radius-sm: 3.6rem;
+    $circle-radius: 3rem;
 
     .circle-feature {
         position: relative;
@@ -94,26 +95,36 @@
         &::after {
             content: '';
             position: absolute;
-            top: calc($circle-radius / -2.2);
-            right: calc($circle-radius / -2.2);
-            width: $circle-radius;
-            height: $circle-radius;
             border-radius: 50%;
             @apply bg-primary-900;
             mix-blend-mode: multiply;
             transform: scale(0);
             transition: transform 1.1s $ease-power3-in-out;
+            top: calc($circle-radius / -2.2);
+            right: calc($circle-radius / -2.2);
+            width: $circle-radius;
+            height: $circle-radius;
         }
 
     }
 
 
+    @screen sm {
+        .circle-feature::after {
+            top: calc($circle-radius-sm / -2.2);
+            right: calc($circle-radius-sm / -2.2);
+            width: $circle-radius-sm;
+            height: $circle-radius-sm;
+        }
+    }
+
+
     @screen lg {
         .circle-feature::after {
-            width: $circle-radius-md;
-            height: $circle-radius-md;
-            top: calc($circle-radius-md / -2.2);
-            right: calc($circle-radius-md / -2.2);
+            width: $circle-radius-lg;
+            height: $circle-radius-lg;
+            top: calc($circle-radius-lg / -2.2);
+            right: calc($circle-radius-lg / -2.2);
         }
     }
 }
