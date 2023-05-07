@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="is-loading is-first-load overflow-x-hidden">
+<html lang="en" class="overflow-x-hidden is-loading is-first-load{{live_preview ?= " is-live-preview"}}">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,6 +14,16 @@
         src="resources/css/tailwind.css|resources/assets/sass/index.scss|resources/js/site.js"
         }} 
         
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBL2X5VKM6"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CBL2X5VKM6');
+        </script>
+
     </head>
 
     <body

@@ -9,6 +9,7 @@ import "@fontsource/manrope/800.css";
 import Alpine from "alpinejs";
 import modular from "modujs";
 import * as modules from "./modules";
+import { isPreview } from "./utils/environment";
 
 const setVh = () => {
     let vh = window.innerHeight * 0.01;
@@ -20,6 +21,7 @@ window.onload = (e) => {
 };
 
 const init = () => {
+
     Alpine.start();
 
     const app = new modular({
@@ -27,6 +29,7 @@ const init = () => {
     });
 
     app.init(app);
+
     setVh();
 
     window.addEventListener("resize", setVh);
