@@ -38,7 +38,6 @@ return [
     */
 
     'widgets' => [
- 
         // [
         //     'type' => 'collection',
         //     'collection' => 'posts',
