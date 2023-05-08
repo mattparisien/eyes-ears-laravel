@@ -27,10 +27,16 @@
 
 .ratio-9\:21 {
     display: block;
+    padding-bottom: calc(21 / 9 * 100%);
+    content: "";
+    width: 100%;
+}
+
+.ratio-21\:9 {
+    display: block;
     padding-bottom: calc(9 / 21 * 100%);
     content: "";
     width: 100%;
-
 }
 
 .ratio-1\:1 {
