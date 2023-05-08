@@ -99,10 +99,11 @@ fields:
                     field:
                       options:
                         portrait: 'Portrait (5:4)'
+                        insta_story: 'Instagram Story (9:16)'
                         landscape: 'Landscape  (4:5)'
                         ultrawide: 'Ultrawide (21:9)'
-                        square: 'Square (1:1)'
                         video: 'Television (16:9)'
+                        square: 'Square (1:1)'
                       inline: false
                       cast_booleans: false
                       display: 'Row Aspect Ratio'
@@ -144,6 +145,7 @@ fields:
                         ultrawide: 'Ultrawide (21:9)'
                         square: 'Square (1:1)'
                         video: 'Television (16:9)'
+                        insta_story: 'Instagram Story (9:16)'
                       inline: false
                       cast_booleans: false
                       display: 'Row Aspect Ratio'
@@ -199,7 +201,9 @@ fields:
                     field:
                       options:
                         portrait: 'Portrait (4:5)'
+                        insta_story: 'Instagram Story (9:16)'
                         landscape: 'Landscape (5:4)'
+                        video: 'Vide (16:9)'
                         ultrawide: 'Ultrawide (21:9)'
                         square: 'Square (1:1)'
                       inline: false
