@@ -48,6 +48,13 @@
     width: 100%;
 }
 
+.ratio-9\:16 {
+    display: block;
+    padding-bottom: calc(16 / 9 * 100%);
+    content: "";
+    width: 100%;
+}
+
 .ratio-fill {
     width: 100%;
     height: 100%;
