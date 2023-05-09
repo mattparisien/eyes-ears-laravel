@@ -12,6 +12,7 @@ export default class extends module {
         this.el = m.el;
         this.id = m.el.dataset.moduleVimeoPlayer;
         this.options = m.el.dataset.vimeoOptions ? m.el.dataset.vimeoOptions.split(",") : [];
+        this.hasPlayed = false;
 
         if (this.id !== "hero-video") {
             this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
@@ -48,7 +49,9 @@ export default class extends module {
 
     onPlay() {
         const el = this.el;
+        const ctx = this;
         this.vimeoPlayer.on("play", () => {
+            ctx.hasPlayed = true;
             el.classList.remove("opacity-0")
         })
     }
@@ -108,6 +111,8 @@ export default class extends module {
     }
 
     triggerPlayer({el}) {
+
+        if (this.hasPlayed) return;
 
         const init              = this.initPlayer.bind(this);
         const play              = this.play.bind(this);
