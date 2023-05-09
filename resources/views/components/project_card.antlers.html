@@ -1,4 +1,4 @@
- <a class="project-card | relative" href="/projects/{{slug}}">
+ <a class="project-card | relative block" href="/projects/{{slug}}">
      <div class="project-card__inner | relative rounded-lg overflow-hidden h-auto max-h-[600px]">
          {{ partial:components.picture :image="image" cover="true" ratio='{{ratio || "preserve"}}' class="{{is_grayscale ?= 'grayscale'}}"}}
           <div class="project-card__info | p-4 absolute top-0 left-0 w-full h-full flex flex-col justify-between">
