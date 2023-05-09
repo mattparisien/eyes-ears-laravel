@@ -49,12 +49,11 @@ rounded: "rounded-md overflow-hidden"
                     {{ else }}
                         class="{{ class }}"
                     {{ /if }}
-                    src="{{ glide:image preset='lg' }}"
+                    src="{{ glide:image preset='xs' }}"
                     alt="{{ alt ensure_right='.' }}"
                     width="{{ image.width }}"
                     height="{{ image.height }}"
                     {{ if lazy }}
-                        loading="lazy"
                     {{ /if }}
                 >
             {{ /if }}
