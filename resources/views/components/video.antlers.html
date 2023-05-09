@@ -19,6 +19,7 @@ ratios:
         data-module-vimeo-player="{{id}}"
         data-scroll
         data-scroll-call="triggerPlayer, VimeoPlayer, {{id}}"
+        data-scroll-offset="-90%"
         data-src="{{ embedded_video | embed_url }}&controls={{controls || 'false'}}&transparency=false&autopause=false&loop=1&muted=1"
         data-raw-src="{{ embedded_video | embed_url }}"
         data-vimeo-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
