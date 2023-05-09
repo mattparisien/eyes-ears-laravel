@@ -19,7 +19,8 @@
 
     @screen md {
         height: 70vh;
-        max-height: none;
+        min-height: 400px;
+
 
         .words {
             font-size: 4rem;
@@ -49,6 +50,7 @@
 
     @screen lg {
         height: calc($vh - $header-height);
+        min-height: 580px;
         max-height: none;
 
         .words {
@@ -59,6 +61,12 @@
         .animated-face-svg {
             width: 255px;
             height: 255px;
+        }
+    }
+
+    @media screen and (width: 1024px) and (height: 600px) {
+        .words {
+            @apply text-6xl;
         }
     }
 }
