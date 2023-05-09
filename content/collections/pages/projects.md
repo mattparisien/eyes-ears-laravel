@@ -22,7 +22,6 @@ blocks:
     toggle: false
     block_theme: light
     embedded_video: '{{partial:components.project-carx}}'
-    fallback_image: 2d9537abdbcefe44cb9446f12c0a4604.jpeg
     type: hero
     enabled: true
   -
