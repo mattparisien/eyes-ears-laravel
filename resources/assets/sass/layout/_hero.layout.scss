@@ -15,22 +15,11 @@
     }
 
 
-    @screen sm {
-        height: 65vh;
 
-        .words{
-            font-size: 3.5rem;
-            line-height: 4.5rem;
-        }
-
-        .animated-face-svg {
-            width: 190px;
-            height: 190px;
-        }
-    }
 
     @screen md {
         height: 70vh;
+        max-height: none;
 
         .words {
             font-size: 4rem;
@@ -43,8 +32,24 @@
         }
     }
 
+    @screen sm {
+        height: 65vh;
+        max-height: 600px;
+
+        .words{
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+        }
+
+        .animated-face-svg {
+            width: 190px;
+            height: 190px;
+        }
+    }
+
     @screen lg {
         height: calc($vh - $header-height);
+        max-height: none;
 
         .words {
             font-size: 6rem;
@@ -110,6 +115,7 @@
 
 
     @screen sm {
+
         .circle-feature::after {
             top: calc($circle-radius-sm / -2.2);
             right: calc($circle-radius-sm / -2.2);
@@ -120,6 +126,7 @@
 
 
     @screen lg {
+
         .circle-feature::after {
             width: $circle-radius-lg;
             height: $circle-radius-lg;
