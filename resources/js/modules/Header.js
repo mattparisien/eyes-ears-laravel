@@ -1,3 +1,4 @@
+import { capitalize } from 'lodash';
 import { module } from 'modujs';
 
 export default class extends module {
@@ -36,8 +37,8 @@ export default class extends module {
         this.el.classList.remove("is-hidden")
     }
 
-       //Sets the initial color of the header on page load based on the first section
-       setInitialColor() {
+    //Sets the initial color of the header on page load based on the first section
+    setInitialColor() {
         const firstSection = document.querySelector("section[data-block-section]:nth-child(1)");
         const firstSectionTheme = firstSection.dataset.theme;
         
@@ -53,6 +54,7 @@ export default class extends module {
         const toggler = this.menuToggler;
         const menu = this.menu;
         const header = this.el;
+        const ctx = this;
         const setPrevTheme = this.setPrevTheme.bind(this);
         const open = this.openMenu.bind(this);
         const close = this.closeMenu.bind(this);
@@ -61,11 +63,10 @@ export default class extends module {
         this.menuToggler.addEventListener("click", () => {
 
             
-            this.isMenuOpen = !this.isMenuOpen;
+            ctx.isMenuOpen = !ctx.isMenuOpen;
 
         
             if (this.isMenuOpen) {
-
                 setPrevTheme(header.dataset.theme);
                 open();
 
@@ -100,7 +101,6 @@ export default class extends module {
 
         this.menu.classList.remove("is-show");
         this.menu.setAttribute("aria-expanded", false);
-
         this.el.setAttribute("data-theme", this.prevTheme);
     }
 
@@ -113,13 +113,16 @@ export default class extends module {
     }
 
     onResize() {
-
-        const closeMenu = this.closeMenu.bind(this);
+        const ctx        = this;
+        const closeMenu  = this.closeMenu.bind(this);
         const breakpoint = this.navSwitchBreakpoint;
 
         window.addEventListener("resize", () => {
-            if (window.innerWidth > breakpoint) {
+            
+            if (window.innerWidth > breakpoint && this.isMenuOpen) {
+                
                     closeMenu();
+                    ctx.isMenuOpen = false;
             }
         })
     }
