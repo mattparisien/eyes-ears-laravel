@@ -56,6 +56,11 @@ fields:
           fields:
             -
               import: video
+        vimeo_embed:
+          display: 'Vimeo Embed'
+          fields:
+            -
+              import: vimeo_embed
         quote:
           display: Quote
           fields:

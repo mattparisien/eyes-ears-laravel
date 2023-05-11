@@ -1,0 +1,19 @@
+title: 'Vimeo Embed'
+fields:
+  -
+    handle: video_link
+    field:
+      display: 'Video Link'
+      type: link
+      icon: link
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - required
+  -
+    handle: fallback_image
+    field: video.fallback_image
+    config:
+      validate:
+        - sometimes

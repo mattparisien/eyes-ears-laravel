@@ -1,35 +1,6 @@
 title: Video
 fields:
   -
-    handle: embedded_video
-    field:
-      display: 'Embedded Video'
-      type: video
-      icon: video
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      validate:
-        - sometimes
-  -
-    handle: fallback_image
-    field:
-      mode: list
-      container: assets
-      restrict: false
-      allow_uploads: true
-      show_filename: true
-      max_files: 1
-      display: 'Fallback Image'
-      type: assets
-      icon: assets
-      instructions: "Choose an image to display if your video doesn't load property or until the video loads"
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      validate:
-        - sometimes
-  -
     handle: video_file
     field:
       mode: list
@@ -50,3 +21,21 @@ fields:
       folder: videos
       max_files: 1
       min_files: 1
+  -
+    handle: fallback_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: 'Fallback Image'
+      type: assets
+      icon: assets
+      instructions: "Choose an image to display if your video doesn't load property or until the video loads"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      validate:
+        - sometimes

@@ -110,6 +110,11 @@ fields:
           fields:
             -
               import: image
+        vimeo_embed:
+          display: 'Vimeo Embed'
+          fields:
+            -
+              import: vimeo_embed
       display: Blocks
       type: replicator
       icon: replicator
