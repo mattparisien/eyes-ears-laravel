@@ -17,6 +17,7 @@ ratios:
     <video
         data-module-video-player="{{id}}"
         data-video-player-ctx="native"
+        data-video-player-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         data-scroll
         data-scroll-call="triggerPlayer, VideoPlayer, {{id}}"
         data-scroll-offset="-90%"
@@ -26,10 +27,8 @@ ratios:
         playsinline
         muted
         loop
-        data-video-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         class="absolute inset-0 w-full h-full border-0"
     ></video>
-    <video src="{{url}}"></video>
 
     {{ if !autoplay}}
     <button type="button" class="play-btn | absolute-center focus:outline-none text-light uppercase text-3xl z-10" data-lightbox-action="open" data-lightbox-id="{{id}}" data-lightbox-context="single-video">

@@ -18,12 +18,12 @@ ratios:
     <iframe
         data-module-video-player="{{id}}"
         data-video-player-ctx="vimeo"
+        data-video-player-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         data-scroll
         data-scroll-call="triggerPlayer, VideoPlayer, {{id}}"
         data-scroll-offset="-90%"
         data-src="{{ embedded_video | embed_url }}&controls={{controls || 'false'}}&transparency=false&autopause=false&loop=1&muted=1"
         data-raw-src="{{ embedded_video | embed_url }}"
-        data-video-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         frameborder="0"
         allowfullscreen
         webkitallowfullscreen

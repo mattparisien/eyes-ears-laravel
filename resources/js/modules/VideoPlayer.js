@@ -11,7 +11,7 @@ export default class extends module {
         this.el        = m.el;
         this.id        = m.el.dataset.moduleVideoPlayer;
         this.videoCtx  = m.el.dataset.videoPlayerCtx; //Can be vimeo || native
-        this.options   = m.el.dataset.vimeoOptions ? m.el.dataset.videoOptions.split(",") : [];
+        this.options   = m.el.dataset.videoPlayerOptions ? m.el.dataset.videoPlayerOptions.split(",") : [];
         this.hasPlayed = false;
         
 
@@ -66,17 +66,6 @@ export default class extends module {
                 ctx.hasPlayed = true;
                 el.classList.remove("opacity-0")
             })
-        } else if (this.videoCtx == "native") {
-            this.videoPlayer.addEventListener("loadeddata", (e) => {
-
-
-                ctx.setWidth(e.target.videoWidth);
-                ctx.setHeight(e.target.videoHeight);
-
-                if (e.target.readyState >= 3) {
-                    el.classList.remove("opacity-0");
-                }
-            })
         }
     }
 
@@ -123,15 +112,22 @@ export default class extends module {
         const ctx = this;
         let w, h, r;
 
+        const setRatio = (ratio) => {
+            ctx.el.parentNode.style.setProperty('--ratio-percent', ratio * 100 + "%")
+        }
+
         if (ctx.videoCtx == "vimeo") {
             Promise.all([this.vimeoPlayer.getVideoWidth(), this.vimeoPlayer.getVideoHeight()]).then(function(dimensions) {
                 w = dimensions[0];
                 h = dimensions[1];
                 r = height / width;
-                ctx.el.parentNode.style.setProperty('--ratio-percent', ratio * 100 + "%")
+                setRatio(r);
             });
         } else if (ctx.videoCtx == "native") {
-            console.log(this.ctx);
+            w = ctx.width;
+            h = ctx.height;
+            r = h / w;
+            setRatio(r)
         }  
     }
 
@@ -146,6 +142,9 @@ export default class extends module {
     }
 
     load(el, ctx) {
+
+        const self = this;
+
        return new Promise((resolve, reject) => {
 
             if (ctx == 'vimeo') {
@@ -153,7 +152,10 @@ export default class extends module {
                     resolve();
                 });
             } else if (ctx == 'native') {
-                el.el.addEventListener("loadeddata", () => {
+                el.el.addEventListener("loadeddata", (e) => {
+                    self.setWidth(e.target.videoWidth);
+                    self.setHeight(e.target.videoHeight);
+                    
                     resolve();
                 })
             } else {
