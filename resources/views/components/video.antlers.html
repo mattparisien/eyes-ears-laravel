@@ -14,28 +14,25 @@ ratios:
     class="relative overflow-hidden {{ratio ? view:ratios[ratio] : view:ratios['video']}} rounded-md"
     
 >
-    {{ if embedded_video | is_embeddable }}
-    <iframe
+    <video
         data-module-video-player="{{id}}"
+        data-video-player-ctx="native"
         data-scroll
         data-scroll-call="triggerPlayer, VideoPlayer, {{id}}"
         data-scroll-offset="-90%"
-        data-src="{{ embedded_video | embed_url }}&controls={{controls || 'false'}}&transparency=false&autopause=false&loop=1&muted=1"
-        data-raw-src="{{ embedded_video | embed_url }}"
-        data-vimeo-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
-        frameborder="0"
-        allowfullscreen
-        webkitallowfullscreen
-        mozallowfullscreen
-        allow="autoplay; encrypted-media"
+        data-src="{{ video_file }}"
+        data-raw-src="{{ video_file }}"
+        {{ controls ?= "controls" }}
+        playsinline
+        muted
+        loop
+        data-video-options="{{ ratio == 'preserve' ? "calculateHeight" : ''}}"
         class="absolute inset-0 w-full h-full border-0"
-    ></iframe>
-    {{ else }}
+    ></video>
     <video src="{{url}}"></video>
-    {{ /if }}
 
     {{ if !autoplay}}
-    <button type="button" class="play-btn | absolute-center focus:outline-none text-light uppercase text-3xl z-10" data-lightbox-action="open" data-lightbox-id="{{id}}" data-lightbox-context="single-vimeo">
+    <button type="button" class="play-btn | absolute-center focus:outline-none text-light uppercase text-3xl z-10" data-lightbox-action="open" data-lightbox-id="{{id}}" data-lightbox-context="single-video">
         <div class="bg-dark w-full h-full py-2 px-6 flex items-center" style="border-radius: 2rem;"><span>Play</span> {{svg src="/assets/svg/icons/play.svg" class="[&>*]:fill-light w-5 h-5 mb-1 ml-2 pb-px"}}</div>
     </button>
     {{/if}}

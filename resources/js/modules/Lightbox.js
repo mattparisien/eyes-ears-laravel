@@ -43,15 +43,16 @@ export default class extends module {
         
     }
 
-    loadSingleVimeo() {
-        const iframe = this.modules.VimeoPlayer[this.context.id].template();
-        this.loadContainer.innerHTML = iframe;
+    loadSingleVideo() {
+        const el = this.modules.VideoPlayer[this.context.id].template(this.context.title);
+        this.loadContainer.innerHTML = el;
     }
 
     initContext() {
         switch(this.context.title) {
+            case 'single-video':
             case 'single-vimeo':
-                    this.loadSingleVimeo();
+                    this.loadSingleVideo();
                     break;
             case 'carousel':
                     this.loadCarousel();

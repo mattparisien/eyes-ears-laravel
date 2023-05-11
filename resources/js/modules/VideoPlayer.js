@@ -8,10 +8,12 @@ export default class extends module {
     constructor(m) {
 
         super(m);
-        this.el = m.el;
-        this.id = m.el.dataset.moduleVimeoPlayer;
-        this.options = m.el.dataset.vimeoOptions ? m.el.dataset.vimeoOptions.split(",") : [];
+        this.el        = m.el;
+        this.id        = m.el.dataset.moduleVideoPlayer;
+        this.videoCtx  = m.el.dataset.videoPlayerCtx; //Can be vimeo || native
+        this.options   = m.el.dataset.vimeoOptions ? m.el.dataset.videoOptions.split(",") : [];
         this.hasPlayed = false;
+        
 
         if (this.id !== "hero-video") {
             this.playBtn = document.querySelector(`[data-lightbox-action='open'][data-lightbox-id=${this.el.dataset.moduleVimeoPlayer}]`);
@@ -26,7 +28,8 @@ export default class extends module {
     }
 
     initPlayer() {
-        this.vimeoPlayer = new Player(this.el);
+
+        this.videoPlayer = this.videoCtx == "vimeo" ? new Player(this.el) : this.el;
         this.initOptions();
     }
 
@@ -35,7 +38,7 @@ export default class extends module {
     }
 
     play() {
-        this.vimeoPlayer.play();
+        this.videoPlayer.play();
     }
 
     showToggler() {
@@ -46,42 +49,90 @@ export default class extends module {
         this.el.src = this.el.src.replace('controls=false', 'controls=true')
     }
 
+    setWidth(w) {
+        this.width = w;
+    }
+
+    setHeight(h) {
+        this.height = h;
+    }
+
     onPlay() {
         const el = this.el;
         const ctx = this;
-        this.vimeoPlayer.on("play", () => {
-            ctx.hasPlayed = true;
-            el.classList.remove("opacity-0")
-        })
+
+        if (this.videoCtx == "vimeo") {
+            this.vimeoPlayer?.on("play", () => {
+                ctx.hasPlayed = true;
+                el.classList.remove("opacity-0")
+            })
+        } else if (this.videoCtx == "native") {
+            this.videoPlayer.addEventListener("loadeddata", (e) => {
+
+
+                ctx.setWidth(e.target.videoWidth);
+                ctx.setHeight(e.target.videoHeight);
+
+                if (e.target.readyState >= 3) {
+                    el.classList.remove("opacity-0");
+                }
+            })
+        }
     }
 
-    template() {
-        return `
+    template(ctx) {
+
+        if (ctx == "single-vimeo") {
+            return `
+            <div class="lg:!max-w-6xl md:max-w-3xl container mx-auto w-full flex items-center justify-center z-10">
+                <div class="relative overflow-hidden ratio-16:9 rounded-md">
+                    <iframe
+                    src=${this.rawSrc}&controls=true&muted=0&autoplay=1
+                    frameborder="0"
+                    allowfullscreen
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allow="autoplay; encrypted-media"
+                    class="absolute inset-0 w-full h-full border-0"
+                    ></iframe>
+                </div>
+            </div>
+            `;
+        } else if (ctx == "single-video") {
+            return `
                 <div class="lg:!max-w-6xl md:max-w-3xl container mx-auto w-full flex items-center justify-center z-10">
                     <div class="relative overflow-hidden ratio-16:9 rounded-md">
-                        <iframe
-                        src=${this.rawSrc}&controls=true&muted=0&autoplay=1
-                        frameborder="0"
-                        allowfullscreen
-                        webkitallowfullscreen
-                        mozallowfullscreen
-                        allow="autoplay; encrypted-media"
+                        <video
+                        src=${this.rawSrc}
+                        controls
+                        playsinline
+                        loop
                         class="absolute inset-0 w-full h-full border-0"
-                        ></iframe>
+                        ></video>
                     </div>
                 </div>
         `;
+        }
+
+        
     }
+
+
 
     calculateHeight() {
         const ctx = this;
-        Promise.all([this.vimeoPlayer.getVideoWidth(), this.vimeoPlayer.getVideoHeight()]).then(function(dimensions) {
-            var width = dimensions[0];
-            var height = dimensions[1];
-            const ratio = height / width;
-            
-            ctx.el.parentNode.style.setProperty('--ratio-percent', ratio * 100 + "%")
-        });
+        let w, h, r;
+
+        if (ctx.videoCtx == "vimeo") {
+            Promise.all([this.vimeoPlayer.getVideoWidth(), this.vimeoPlayer.getVideoHeight()]).then(function(dimensions) {
+                w = dimensions[0];
+                h = dimensions[1];
+                r = height / width;
+                ctx.el.parentNode.style.setProperty('--ratio-percent', ratio * 100 + "%")
+            });
+        } else if (ctx.videoCtx == "native") {
+            console.log(this.ctx);
+        }  
     }
 
     initOptions() {
@@ -90,21 +141,29 @@ export default class extends module {
         const ctx = this;
 
         this.options.forEach(option => {
-            ctx.call(option, null, "VimeoPlayer", this.id);
+            ctx.call(option, null, "VideoPlayer", this.id);
         })
     }
 
-    load(el) {
-        const ctx = this;
+    load(el, ctx) {
        return new Promise((resolve, reject) => {
-            el.el.addEventListener("load", () => {
-                resolve();
-            });
 
+            if (ctx == 'vimeo') {
+                el.el.addEventListener("load", () => {
+                    resolve();
+                });
+            } else if (ctx == 'native') {
+                el.el.addEventListener("loadeddata", () => {
+                    resolve();
+                })
+            } else {
+                reject('No valid video context passed as a data attribute');
+            }
+            
             el.el.src = el.el.dataset.src;
 
             setTimeout(() => {
-                reject();
+                reject('Load timeout');
             }, 4000);
        })
     }
@@ -117,12 +176,12 @@ export default class extends module {
         const play              = this.play.bind(this);
         const onPlay            = this.onPlay.bind(this);
 
-        this.load(el).then(success => {
+        this.load(el, this.videoCtx).then(success => {
             init();
             play();
             onPlay();
         })
-        .catch(err => console.log('Error loading iframe src: ', err))
+        .catch(err => console.log(`Error in VideoPlayer module (id ${this.id}) load method: `, err))
        
     }
 }

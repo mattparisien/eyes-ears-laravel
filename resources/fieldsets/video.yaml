@@ -46,5 +46,7 @@ fields:
       validate:
         - required
         - 'mimes:mov,mp4'
-        - file
         - 'max_filesize:70000'
+      folder: videos
+      max_files: 1
+      min_files: 1
