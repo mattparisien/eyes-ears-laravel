@@ -1,10 +1,9 @@
 <div class="image-gallery">
     {{scope:layout}}
 {{ partial:layout.grid layout="masonry" scope="hello" :id="layout.id"}}
-    {{var:id}}
         {{ images }}
-            {{ partial:layout.grid-item }}
-                {{ partial:components.picture :image="images[index]" ratio="preserve" lazy="true" cover="true" attrs="data-load-call='reloadLayout, Grid, {layout:id}'" }}
+            {{ partial:layout.grid-item attrs="style='--ratio: {{ratio}}'"}}
+                {{ partial:components.picture :image="url" ratio="preserve" lazy="true" cover="true" attrs="data-load-call='reloadLayout, Grid, {layout:id}'" }}
             {{ /partial:layout.grid-item }}
         {{ /images }}
 {{ /partial:layout.grid }}

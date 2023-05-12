@@ -67,6 +67,20 @@ export default class extends module {
                 },
             ],
         }); 
+
+        // disable automatic page view
+        gtag('config', 'G-CBL2X5VKM6', {
+            send_page_view: false,
+        });
+  
+        // after each transition, push page_view event to Analytics
+        barba.hooks.after(() => {
+            gtag('event', 'page_view', {
+            'page_title': document.title,
+            'page_location': location.href,
+            'page_path': location.pathname,
+            });
+        });
     }
 
     isIntroDisabled() {

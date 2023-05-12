@@ -12,56 +12,25 @@ ratios:
 rounded: "rounded-md overflow-hidden"
 ---
 
-{{ if image }}
-{{ scope:imgScope }}
 <figure>
-    <picture class="relative{{ratio ? view:ratios[ratio] : ''}}{{class ?= " {{class}}"}}">
-        {{ asset :url="image" }}
-            {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }} {{!noRounded ?= "rounded-md"}}" src="{{ url }}" alt="{{ alt }}" />
-            {{ else }}
-                <source
-                    srcset="
-                        {{ glide:image preset='xs-webp' }} 320w,
-                        {{ glide:image preset='sm-webp' }} 480w,
-                        {{ glide:image preset='md-webp' }} 768w,
-                        {{ glide:image preset='lg-webp' }} 1280w,
-                        {{ glide:image preset='xl-webp' }} 1440w,
-                        {{ glide:image preset='2xl-webp' }} 1680w"
-                    sizes="{{ sizes }}"
-                    type="image/webp"
-                >
-                <source
-                    srcset="
-                        {{ glide:image preset='xs' }} 320w,
-                        {{ glide:image preset='sm' }} 480w,
-                        {{ glide:image preset='md' }} 768w,
-                        {{ glide:image preset='lg' }} 1280w,
-                        {{ glide:image preset='xl' }} 1440w,
-                        {{ glide:image preset='2xl' }} 1680w"
-                    sizes="{{ sizes }}"
-                    type="{{ image.mime_type }}"
-                >
-                <img
-                    {{ if cover }}
-                    class="{{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
-                        style="object-position: {{ focus | background_position }}"
-                    {{ else }}
-                        class="{{ class }}"
-                    {{ /if }}
-                    src="{{ glide:image preset='xs' }}"
-                    alt="{{ alt ensure_right='.' }}"
-                    width="{{ image.width }}"
-                    height="{{ image.height }}"
-                    {{ if lazy }}
-                    {{ /if }}
-                >
-            {{ /if }}
-        {{ /asset }}
-    </picture>
+    <img 
+
+    />
+        <img
+        {{ if cover }}
+        class="{{ratio && ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
+            style="object-position: {{ focus | background_position }}"
+        {{ else }}
+            class="{{ class }}"
+        {{ /if }}
+        src="{{ glide:image preset='xs' }}"
+        alt="{{ alt ensure_right='.' }}"
+        {{ if lazy }}
+            loading="lazy"
+        {{ /if }}
+    >
     {{ if credit && image.image_credit }}
         <figcaption class="mt-2 text-xs sm:text-sm text-gray-400 text-right on-ready:fade-down">Photo by {{image.image_credit}}</figcaption>
     {{ /if }}
 </figure>
-{{ /scope:imgScope  }}
 {{ /if }}
