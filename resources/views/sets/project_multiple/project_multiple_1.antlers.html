@@ -7,7 +7,7 @@
     {{ partial:components.carousel :slidesPerView="items_per_view"}}
             {{ collection:posts limit="{max_items}" sort="date:desc" }}
                 {{ partial:components.carousel_item }}
-                    {{ partial:components.project_card has_link="true" link="/posts/{slug}" frame="false" ratio="portrait" picture_sizes="(min-width: 1560px) 369px, (min-width: 1300px) 305px, (min-width: 780px) 236px, (min-width: 660px) 294px, calc(94.12vw - 14px)" }}
+                    {{ partial:components.project_card has_link="true" link="/posts/{slug}" frame="false" crop="portrait" picture_sizes="(min-width: 1560px) 369px, (min-width: 1300px) 305px, (min-width: 780px) 236px, (min-width: 660px) 294px, calc(94.12vw - 14px)" }}
                 {{ /partial:components.carousel_item }}
             {{ /collection:posts}}
 

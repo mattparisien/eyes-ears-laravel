@@ -23,6 +23,7 @@ rounded: "rounded-md overflow-hidden"
             data-src="{{url}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
             {{ else }}
             src="{{url}}" 
+            onload="this.classList.add('is-loaded')"
         {{ /if}}
         />
         <div class="img-loader | absolute w-full h-full top-0 left-0 bg-primary-900 transition-opacity ease-smooth duration-1000"></div>
