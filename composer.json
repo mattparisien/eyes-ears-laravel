@@ -19,6 +19,7 @@
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.7",
+        "mitydigital/sitemapamic": "^2.3",
         "predis/predis": "^2.1",
         "spatie/statamic-responsive-images": "^3.1",
         "statamic/cms": "^3.4",
