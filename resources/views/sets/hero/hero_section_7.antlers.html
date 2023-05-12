@@ -28,9 +28,9 @@
 
             <div class="w-full md:w-1/2 max-w-709">
                 <div class="circle-feature | w-1/2 mx-auto lg:w-2/5 md:ml-auto lg:mx-auto">
-                    {{ partial:components.picture ratio="portrait" credit="true" cover="true" creditClass="on-ready:fade-down"
-                    sizes="(min-width: 1540px) 284px, (min-width: 1280px) 250px, (min-width: 1040px) 198px, (min-width: 780px) 184px, (min-width: 680px) 304px, calc(47.22vw - 8px)"
-                }}
+                    {{image}}
+                    {{ partial:components.picture crop="portrait" credit="true" cover="true" creditClass="on-ready:fade-down" lazy="true"}}
+                    {{/image}}
                 </div>
             </div>
         </div>

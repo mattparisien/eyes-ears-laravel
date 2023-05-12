@@ -11,56 +11,21 @@ ratios:
     screen: " ratio-screen"
 rounded: "rounded-md overflow-hidden"
 ---
-
 {{ if image }}
-{{ scope:imgScope }}
-<figure>
-    <picture class="relative{{ratio ? view:ratios[ratio] : ''}}{{class ?= " {{class}}"}}">
-        {{ asset :url="image" }}
-            {{ if extension == 'svg' || extension == 'gif' }}
-                <img class="{{ class }} {{!noRounded ?= "rounded-md"}}" src="{{ url }}" alt="{{ alt }}" />
+<figure class="rounded-md overflow-hidden">
+    <div class="relative{{!crop || crop == "preserve" ? ' ': view:ratios[crop]}}"
+        {{ if (!crop || crop == 'preserve')}}
+            style="padding-top: {{(height / width) * 100}}%;"
+        {{/if}}
+    >
+        <img class="absolute w-full h-full top-0 left-0 object-cover" 
+        {{ if lazy }}
+            data-src="{{url}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
             {{ else }}
-                <source
-                    srcset="
-                        {{ glide:image preset='xs-webp' }} 320w,
-                        {{ glide:image preset='sm-webp' }} 480w,
-                        {{ glide:image preset='md-webp' }} 768w,
-                        {{ glide:image preset='lg-webp' }} 1280w,
-                        {{ glide:image preset='xl-webp' }} 1440w,
-                        {{ glide:image preset='2xl-webp' }} 1680w"
-                    sizes="{{ sizes }}"
-                    type="image/webp"
-                >
-                <source
-                    srcset="
-                        {{ glide:image preset='xs' }} 320w,
-                        {{ glide:image preset='sm' }} 480w,
-                        {{ glide:image preset='md' }} 768w,
-                        {{ glide:image preset='lg' }} 1280w,
-                        {{ glide:image preset='xl' }} 1440w,
-                        {{ glide:image preset='2xl' }} 1680w"
-                    sizes="{{ sizes }}"
-                    type="{{ image.mime_type }}"
-                >
-                <img
-                    {{ if cover }}
-                    class="{{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
-                        style="object-position: {{ focus | background_position }}"
-                    {{ else }}
-                        class="{{ class }}"
-                    {{ /if }}
-                    src="{{ glide:image preset='xs' }}"
-                    alt="{{ alt ensure_right='.' }}"
-                    {{ if lazy }}
-                        loading="lazy"
-                    {{ /if }}
-                >
-            {{ /if }}
-        {{ /asset }}
-    </picture>
-    {{ if credit && image.image_credit }}
-        <figcaption class="mt-2 text-xs sm:text-sm text-gray-400 text-right on-ready:fade-down">Photo by {{image.image_credit}}</figcaption>
-    {{ /if }}
+            src="{{url}}" 
+        {{ /if}}
+        />
+        <div class="img-loader | absolute w-full h-full top-0 left-0 bg-primary-900 transition-opacity ease-smooth duration-1000"></div>
+    </div>
 </figure>
-{{ /scope:imgScope  }}
-{{ /if }}
+{{/if}}

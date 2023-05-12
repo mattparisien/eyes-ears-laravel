@@ -10,4 +10,8 @@ html.is-ready {
             opacity: 1;
         }
     }
+
+    img.is-loaded + .img-loader {
+        opacity: 0;
+    }
 }

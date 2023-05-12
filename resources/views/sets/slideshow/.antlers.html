@@ -4,10 +4,9 @@
             {{ slideshow_images}}
                 {{ partial:components.carousel_item }}  
                     {{ partial:components.picture
-                        ratio="{{slide_ratio || 'video'}}"
+                        crop="{{slide_ratio || 'video'}}"
                         :image="url" cover="true"
                         lazy="true"
-                        sizes="(min-width: 440px) 100vw, (min-width: 400px) 400px, (min-width: 360px) 360px, calc(50vw + 150px)"
                         attrs="data-scroll-offset='15%'"  }}
                 {{ /partial:components.carousel_item}}  
             {{ /slideshow_images}}
@@ -17,7 +16,13 @@
     {{ partial:components.carousel :slidesPerView="slides_per_view" :autoplay="autoplay" }}
             {{ slideshow_images}}
                 {{ partial:components.carousel_item }}  
-                    {{ partial:components.picture noRounded="true" :ratio="slide_ratio || 'video'" :image="url" lazy="true" cover="true" attrs="data-scroll-offset='15%'" }}
+                    {{ partial:components.picture
+                        noRounded="true"
+                        :crop="slide_ratio || 'video'"
+                        :image="url"
+                        lazy="true"
+                        attrs="data-scroll-offset='15%'"
+                    }}
                 {{ /partial:components.carousel_item}}  
             {{ /slideshow_images}}
     {{ /partial:components.carousel }}

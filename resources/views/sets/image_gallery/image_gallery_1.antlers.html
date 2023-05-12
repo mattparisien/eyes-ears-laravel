@@ -3,7 +3,9 @@
 {{ partial:layout.grid layout="masonry" scope="hello" :id="layout.id"}}
         {{ images }}
             {{ partial:layout.grid-item attrs="style='--ratio: {{ratio}}'"}}
-                {{ partial:components.picture :image="url" ratio="preserve" lazy="true" cover="true" attrs="data-load-call='reloadLayout, Grid, {layout:id}'" }}
+            {{ asset url="{{images[index]}}" }}
+                {{ partial:components.picture  crop="preserve" lazy="true" attrs="data-load-call='reloadLayout, Grid, {layout:id}'" }}
+            {{/asset}}
             {{ /partial:layout.grid-item }}
         {{ /images }}
 {{ /partial:layout.grid }}

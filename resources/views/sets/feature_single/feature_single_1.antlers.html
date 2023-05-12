@@ -1,7 +1,7 @@
     <div class="feature-single | flex flex-wrap items-center -mx-4{{css_classes ?= " " + css_classes}}">
         <div class="w-full px-4 mb-12 md:w-1/2 md:mb-0">
             {{ if image.extension != 'svg'  }} 
-            {{ partial:components.picture :image="image"  ratio="preserve" credit="true" cover="true" lazy="true" attrs="data-scroll-offset='15%'"" sizes="(min-width: 200px) 35vw, 90vw"
+            {{ partial:components.picture :image="image"  crop="preserve" credit="true" cover="true" lazy="true" attrs="data-scroll-offset='15%'"" sizes="(min-width: 200px) 35vw, 90vw"
         }}
             {{ else }}
             {{ svg :src="image" class="{image.classes}" }}

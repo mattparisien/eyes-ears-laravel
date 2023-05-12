@@ -10,7 +10,7 @@ sizes:
                 {{row_layout}}
                         {{images}}
                                 {{ partial:layout.grid-item class=" {{view:sizes[type]}}"  }}
-                                        {{partial:components.picture :image="url" :alt="alt" ratio="{{row_aspect_ratio}}" lazy="true" cover="true" attrs='data-lightbox-carousel-item'}}
+                                        {{partial:components.picture :image="url" :alt="alt" crop="{{row_aspect_ratio}}" lazy="true" cover="true" attrs='data-lightbox-carousel-item'}}
                                 {{/partial:layout.grid-item}}
                         {{/images}}
                 {{/row_layout}}

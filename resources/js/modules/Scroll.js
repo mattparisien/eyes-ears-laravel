@@ -121,6 +121,7 @@ export default class extends module {
     }
 
     lazyLoad({el}) {
+        console.log('called!')
         const img = new Image();
 
         const ctx = this;
