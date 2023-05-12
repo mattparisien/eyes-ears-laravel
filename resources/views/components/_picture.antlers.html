@@ -20,9 +20,9 @@ rounded: "rounded-md overflow-hidden"
     >
         <img class="absolute w-full h-full top-0 left-0 object-cover" 
         {{ if lazy }}
-            data-src="{{url}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
+            data-src="{{glide src="{{url}}" preset="{{glide_preset || 'md'}}"}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
             {{ else }}
-            src="{{url}}" 
+            src="{{glide src="{{url}}" preset="{{glide_preset || 'md'}}"}}"
             onload="this.classList.add('is-loaded')"
         {{ /if}}
         />
