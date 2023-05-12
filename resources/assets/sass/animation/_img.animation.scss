@@ -1,6 +1,4 @@
 html.is-ready {
-
-
     div:not(div.image-gallery) img.lazy-img {
         transition: opacity 1.3s $ease-smooth;
         opacity: 0;
@@ -10,8 +8,8 @@ html.is-ready {
             opacity: 1;
         }
     }
+}
 
-    img.is-loaded + .img-loader {
-        opacity: 0;
-    }
+img.is-loaded + .img-loader {
+    opacity: 0;
 }
