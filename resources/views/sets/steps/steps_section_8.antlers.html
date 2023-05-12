@@ -18,12 +18,6 @@ gridItemPos:
         {{ steps chunk="5"}}
             {{chunk}}
                 <div class="steps__grid__item | flex flex-col ">
-                    {{
-                        partial:components/picture
-                        :image="image"
-                        class="object-contain w-full h-auto mb-4 max-h-40"
-                        sizes="(min-width: 200px) 35vw, 90vw"
-                    }}
                     <div class="text-center">
                         {{ partial:components.underline_heading label="{title}" size="h5" }}
 

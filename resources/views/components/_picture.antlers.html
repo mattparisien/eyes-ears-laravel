@@ -12,25 +12,17 @@ ratios:
 rounded: "rounded-md overflow-hidden"
 ---
 
+{{ scope:imgScope }}
 <figure>
-    <img 
-
+    <div class="relative{{view:ratios[ratio]}}">
+    <img
+        class="object-cover {{imgScope:ratio && imgScope:ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
+        src="{{image.url || url}}"
+        data-src="{{image.url || url}}"
     />
-        <img
-        {{ if cover }}
-        class="{{ratio && ratio !== 'preserve' ? 'absolute left-0 top-0 ' : ''}}{{!noRounded ?= "rounded-md "}}w-full h-full object-cover w-full h-full {{ class }}"
-            style="object-position: {{ focus | background_position }}"
-        {{ else }}
-            class="{{ class }}"
-        {{ /if }}
-        src="{{ glide:image preset='xs' }}"
-        alt="{{ alt ensure_right='.' }}"
-        {{ if lazy }}
-            loading="lazy"
-        {{ /if }}
-    >
+    </div>
     {{ if credit && image.image_credit }}
         <figcaption class="mt-2 text-xs sm:text-sm text-gray-400 text-right on-ready:fade-down">Photo by {{image.image_credit}}</figcaption>
     {{ /if }}
 </figure>
-{{ /if }}
+{{ /scope:imgScope  }}
