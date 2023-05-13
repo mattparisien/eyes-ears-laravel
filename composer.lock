@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c11fd0dbb29040935bdbc0c78b3453d",
+    "content-hash": "0be88f9a288c4ba381d41da5ab5b0b75",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -5020,16 +5020,16 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "4211420d25eba80712bff236a98960ef68b866b7"
+                "reference": "594fd6462aad8ecee0b45ca5045acea4776667f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/4211420d25eba80712bff236a98960ef68b866b7",
-                "reference": "4211420d25eba80712bff236a98960ef68b866b7",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/594fd6462aad8ecee0b45ca5045acea4776667f1",
+                "reference": "594fd6462aad8ecee0b45ca5045acea4776667f1",
                 "shasum": ""
             },
             "require": {
@@ -5068,7 +5068,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/jsonlint/issues",
-                "source": "https://github.com/Seldaek/jsonlint/tree/1.9.0"
+                "source": "https://github.com/Seldaek/jsonlint/tree/1.10.0"
             },
             "funding": [
                 {
@@ -5080,7 +5080,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-01T13:37:23+00:00"
+            "time": "2023-05-11T13:16:46+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -5575,51 +5575,6 @@
                 "source": "https://github.com/statamic/Stringy"
             },
             "time": "2022-05-04T18:41:52+00:00"
-        },
-        {
-            "name": "stoffelio/statamic-live-preview-tag",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stoffelio/statamic-live-preview-tag.git",
-                "reference": "34df9209da80a88f24f219c311786e2eb1ca7117"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stoffelio/statamic-live-preview-tag/zipball/34df9209da80a88f24f219c311786e2eb1ca7117",
-                "reference": "34df9209da80a88f24f219c311786e2eb1ca7117",
-                "shasum": ""
-            },
-            "require": {
-                "statamic/cms": "^3.0"
-            },
-            "type": "statamic-addon",
-            "extra": {
-                "statamic": {
-                    "name": "Statamic Live Preview Tag",
-                    "description": "Adds Antlers tag to show or hide parts of templates in live preview mode."
-                },
-                "laravel": {
-                    "providers": [
-                        "Stoffelio\\StatamicLivePreviewTag\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Stoffelio\\StatamicLivePreviewTag\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Adds Antlers tag to show or hide parts of templates in live preview mode.",
-            "support": {
-                "issues": "https://github.com/stoffelio/statamic-live-preview-tag/issues",
-                "source": "https://github.com/stoffelio/statamic-live-preview-tag/tree/v1.0.0"
-            },
-            "time": "2022-02-19T05:12:06+00:00"
         },
         {
             "name": "symfony/console",
@@ -10024,16 +9979,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.7",
+            "version": "9.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2"
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/17d621b3aff84d0c8b62539e269e87d8d5baa76e",
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e",
                 "shasum": ""
             },
             "require": {
@@ -10107,7 +10062,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.8"
             },
             "funding": [
                 {
@@ -10123,7 +10078,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-14T08:58:40+00:00"
+            "time": "2023-05-11T05:14:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",

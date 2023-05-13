@@ -1,4 +1,5 @@
-data: {  }
+data:
+  alt: 'Photo of Ekali'
 size: 83097
 last_modified: 1683287651
 width: 720
