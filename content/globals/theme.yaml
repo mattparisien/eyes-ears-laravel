@@ -65,9 +65,4 @@ data:
   page_button_variant: brand
   page_button_size: xl
   page_target_blank: false
-  sitemap_collections:
-    - pages
-    - posts
-  sitemap_change_frequency: weekly
-  sitemap_priority: 0.5
   is_active: true

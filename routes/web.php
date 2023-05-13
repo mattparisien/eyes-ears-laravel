@@ -27,7 +27,8 @@ Route::statamic('site.webmanifest', 'partials._manifest', [
 ]);
 
 Route::statamic('/sitemap.xml', 'partials._sitemap', [
-    'layout' => null
+    'layout' => null,
+    'content_type' => 'application/xml'
 ]);
 
 if (env('APP_ENV') !== 'local') {

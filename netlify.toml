@@ -20,7 +20,3 @@
 [context.production.environment]
   #PHP_VERSION="^8.0||^8.1"
 
-[[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-	Content-Type = "application/xml"

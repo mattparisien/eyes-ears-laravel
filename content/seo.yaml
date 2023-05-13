@@ -2,6 +2,7 @@ title: '@seo:title'
 description: '@seo:content_description'
 site_name: 'The Eyes and Ears Agency'
 site_name_position: after
+site_name_separator: '|'
 canonical_url: '@seo:permalink'
 image: '@seo:image'
 priority: 0.5

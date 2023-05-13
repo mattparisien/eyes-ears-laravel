@@ -1,0 +1,110 @@
+1683940163s:3013:"<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>http://test.test</loc>
+        <lastmod>2023-05-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/press</loc>
+        <lastmod>2023-05-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/about</loc>
+        <lastmod>2023-05-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects</loc>
+        <lastmod>2023-04-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/earth-sessions-berkeley</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/future-earth-usal-ie-earth-sessions</loc>
+        <lastmod>2023-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/city-harvest</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/ekali</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/erez-zobary</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/earth-sessions-brooklyn</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/earth-sessions-la</loc>
+        <lastmod>2023-05-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/floating-x-earth-sessions</loc>
+        <lastmod>2023-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/earth-sessions-ny</loc>
+        <lastmod>2023-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/earth-sessions-sf</loc>
+        <lastmod>2023-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>http://test.test/projects/listening-by-moonrise-earth-sessions</loc>
+        <lastmod>2023-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
+";
