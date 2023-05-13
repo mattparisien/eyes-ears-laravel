@@ -23,6 +23,7 @@ rounded: "rounded-md overflow-hidden"
             data-src="{{glide src="{{url}}" preset="{{glide_preset || 'md'}}"}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
             {{ else }}
             src="{{glide src="{{url}}" preset="{{glide_preset || 'md'}}"}}"
+            alt="{{alt}}"
             onload="this.classList.add('is-loaded')"
         {{ /if}}
         />
