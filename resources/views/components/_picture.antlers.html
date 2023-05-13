@@ -18,7 +18,7 @@ rounded: "rounded-md overflow-hidden"
             style="padding-top: {{(height / width) * 100}}%;"
         {{/if}}
     >
-        <img class="absolute w-full h-full top-0 left-0 object-cover" 
+        <img class="absolute w-full h-full top-0 left-0 object-cover{{class ?= " {{class}}"}}" 
         {{ if lazy }}
             data-src="{{glide src="{{url}}" preset="{{glide_preset || 'md'}}"}}" data-scroll data-scroll-call="lazyLoad, Scroll, main"
             {{ else }}
