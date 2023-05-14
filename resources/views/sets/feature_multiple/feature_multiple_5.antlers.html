@@ -8,7 +8,7 @@
     </div>
 {{ /if }}
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 lg:gap-16">
         {{ features }}
             <{{ has_link ? 'a' : 'div' }} class="flex flex-col justify-center items-center text-center border-gray-300 border rounded-lg py-8 px-6 transition-shadow duration-300 hover:shadow-xl" {{ has_link ? "href={{link}}" : ''}} {{has_link ? "target={{target_blank ? '_blank' : '_self'}}" : ''}}>
                 {{ if image }}

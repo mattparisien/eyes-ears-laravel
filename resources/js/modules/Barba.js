@@ -142,7 +142,6 @@ export default class extends module {
 
     onClick() {
         const links = document.querySelectorAll("a[href]");
-        console.log(links)
 
         const handleClick = e => {
             if (e.currentTarget.href === window.location.href) {
