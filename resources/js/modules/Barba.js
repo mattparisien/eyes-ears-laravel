@@ -18,9 +18,12 @@ export default class extends module {
         const destroyModules    = this.destroyModules;
         const updateModules     = this.updateModules;
         const context           = this;
+
+        this.onClick();
         
         this.barbaInstance = barba.init({
             sync: true,
+            cacheIgnore: true,
             transitions: [
                 {
                     name: "default",
@@ -135,6 +138,22 @@ export default class extends module {
 
         //Destroy lightbox context and listeners
         ctx.call('destroy', null, 'Lightbox', 'main');  
+    }
+
+    onClick() {
+        const links = document.querySelectorAll("a[href]");
+        console.log(links)
+
+        const handleClick = e => {
+            if (e.currentTarget.href === window.location.href) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }
+
+        links.forEach(link => {
+            link.addEventListener("click", handleClick);
+        })
     }
 
 }

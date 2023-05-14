@@ -2,8 +2,25 @@ html.is-loading {
     cursor: wait;
 }
 
-
-
 html.is-scroll-locked {
     overflow-y: hidden;
+}
+
+html {
+   
+
+    ::-moz-selection { /* Code for Firefox */
+        @apply text-dark;
+        @apply bg-primary-900;
+      }
+
+    ::-webkit-selection { /* Code for Firefox */
+        @apply text-dark;
+        @apply bg-primary-900;
+      }
+      
+      ::selection {
+        @apply text-dark;
+        @apply bg-primary-900;
+      }
 }
