@@ -57,7 +57,6 @@ data:
         -
           type: text
           text: 'The page cannot be found.'
-  page_image: images/outer_space.png
   page_image_position: right
   page_toggle: true
   page_label: 'Go Back'
