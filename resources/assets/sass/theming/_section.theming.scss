@@ -6,6 +6,10 @@ section[data-theme="dark"] {
     @include theme-dark;
 }
 
+section[data-theme="dark"] + section[data-theme="dark"] {
+    padding-top: 0 !important;
+}
+
 section[data-theme="yellow"] {
     @include theme-yellow;
 }
