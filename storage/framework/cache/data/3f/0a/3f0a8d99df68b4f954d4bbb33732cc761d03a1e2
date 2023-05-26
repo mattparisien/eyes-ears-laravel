@@ -1,0 +1,104 @@
+1685138559s:4391:"<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app</loc>
+        <lastmod>2023-05-07T12:47:39+00:00</lastmod>
+                <priority> 1
+                    </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/press</loc>
+        <lastmod>2023-05-05T16:59:11+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/about</loc>
+        <lastmod>2023-05-05T19:51:10+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects</loc>
+        <lastmod>2023-04-30T12:43:49+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-berkeley</loc>
+        <lastmod>2023-05-08T18:36:36+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/future-earth-usal-ie-earth-sessions</loc>
+        <lastmod>2023-05-09T18:42:58+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/city-harvest</loc>
+        <lastmod>2023-05-08T18:37:25+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/ekali</loc>
+        <lastmod>2023-05-08T18:37:34+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/erez-zobary</loc>
+        <lastmod>2023-05-08T18:45:28+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-brooklyn</loc>
+        <lastmod>2023-05-08T18:50:51+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-la</loc>
+        <lastmod>2023-05-08T18:52:06+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/floating-x-earth-sessions</loc>
+        <lastmod>2023-05-09T18:41:20+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-ny</loc>
+        <lastmod>2023-05-09T18:40:07+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-sf</loc>
+        <lastmod>2023-05-09T20:03:58+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/listening-by-moonrise-earth-sessions</loc>
+        <lastmod>2023-05-09T18:43:13+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-eco-poetry-sf</loc>
+        <lastmod>2023-05-26T16:11:37+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-occidental-college</loc>
+        <lastmod>2023-05-26T16:45:51+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/ashnikko</loc>
+        <lastmod>2023-05-26T18:11:29+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+    <url>
+        <loc>https://voluble-monstera-ceea0c.netlify.app/projects/earth-sessions-designing-a-sustainable-future</loc>
+        <lastmod>2023-05-26T18:11:45+00:00</lastmod>
+                <priority> 0.8         </priority>
+    </url>
+
+</urlset>
+";
