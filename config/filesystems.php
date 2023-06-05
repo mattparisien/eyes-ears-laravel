@@ -34,7 +34,10 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-
+        'localDropboxBackup' => [
+            'driver' => 'local',
+            'root' => storage_path('~/dropbox/git-repos'),
+        ],
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
