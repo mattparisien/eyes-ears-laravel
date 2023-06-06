@@ -17,9 +17,9 @@
   # Default build command.
   command = "composer build"
 
+  # Track only specific directories
+  ignore = "git diff --quiet $COMMIT_REF $CACHED_COMMIT_REF -- content/collections content/collections/ content/globals/"
+
 [context.production.environment]
   #PHP_VERSION="^8.0||^8.1"
-
-  [build]
-  ignore = "git diff --quiet $COMMIT_REF $CACHED_COMMIT_REF -- content/collections content/collections/ content/globals/"
 
