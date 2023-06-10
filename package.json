@@ -4,7 +4,8 @@
         "dev": "vite",
         "build": "vite build",
         "watch": "vite build --watch",
-        "serve": "php artisan serve"
+        "serve": "php artisan serve",
+        "bundle-backup": "git bundle create ~/Dropbox/Sites/eyes-and-ears-cms/repo.bundle --all"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",
