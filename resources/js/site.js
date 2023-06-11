@@ -11,7 +11,7 @@ import modular from "modujs";
 import * as modules from "./modules";
 
 const setVh = () => {
-    let vh = window.innerHeight * 0.01;
+    let vh = (window.innerHeight * 0.01).toFixed(2);
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
