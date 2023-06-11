@@ -12,7 +12,7 @@
                 {{ partial:components.heading label="{title}" size="h4" }}
 
                 {{ if description }}
-                    <p>{{description | nl2br}}</p>
+                    <p data-nosnippet="true">{{description | nl2br}}</p>
                 {{ /if }}
 
                 {{ if toggle and label }}
