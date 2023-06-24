@@ -2,7 +2,8 @@
     <div class="container md:pt-24 pt-14">
         <div class="flex flex-col items-center mb-5 md:mb-20">
             
-            {{ partial:components.underline_heading label="{title}" size="h1" attrs="data-module-split data-split-type='lines, chars'"" }}
+            {{ partial:components.underline_heading label="{title}" size="h1" el="div" attrs="data-module-split data-split-type='lines, chars'"" }}
+            {{ partial:components.heading label="{{title | trim}}" el="h1" class="hidden" }}
 
             {{ if description }}
             <p class="mt-5 text-center max-w-xl"> {{ description }} </p>

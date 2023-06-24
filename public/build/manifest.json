@@ -160,7 +160,7 @@
     "src": "public/fonts/Walsheim-UltraBold.woff"
   },
   "resources/assets/sass/index.scss": {
-    "file": "assets/index-e256ac65.css",
+    "file": "assets/index-54ef1257.css",
     "isEntry": true,
     "src": "resources/assets/sass/index.scss"
   },
@@ -214,7 +214,7 @@
     "css": [
       "assets/site-dbdca2f1.css"
     ],
-    "file": "assets/site-3072af5e.js",
+    "file": "assets/site-ef4dfb9a.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }
