@@ -1,6 +1,8 @@
-data: {  }
+data:
+  alt: 'Warner Records artist Ashnikko foraging with Usal'
+  image_credit: 'Bella Rose'
 size: 1689868
-last_modified: 1686004842
+last_modified: 1686006114
 width: 798
 height: 1200
 mime_type: image/png
